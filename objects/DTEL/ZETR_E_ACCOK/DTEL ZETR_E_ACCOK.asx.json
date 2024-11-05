@@ -60,6 +60,17 @@
     "SCRTEXT_S":"Acoounting",
     "SCRTEXT_M":"Acoounting done",
     "SCRTEXT_L":"Acoounting done"
+   },
+   {
+    "ROLLNAME":"ZETR_E_ACCOK",
+    "DDLANGUAGE":"T",
+    "AS4LOCAL":"N",
+    "AS4VERS":0,
+    "DDTEXT":"Muhasebeleşme tamamlandı",
+    "REPTEXT":"Muhasebeleşme tamamlandı",
+    "SCRTEXT_S":"Muh.OK",
+    "SCRTEXT_M":"Muh.tamamlandı",
+    "SCRTEXT_L":"Muhasebeleşme tamamlandı"
    }
   ]
  },
