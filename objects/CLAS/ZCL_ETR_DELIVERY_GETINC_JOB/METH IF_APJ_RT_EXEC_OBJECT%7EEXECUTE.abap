@@ -37,7 +37,7 @@
     ENDIF.
     TRY.
         DATA(lo_log) = cl_bali_log=>create_with_header( cl_bali_header_setter=>create( object = 'ZETR_ALO_REGULATIVE'
-                                                                                      subobject = 'delivery_GETINC_JOB' ) ).
+                                                                                       subobject = 'DELIVERY_GETINC_JOB' ) ).
         LOOP AT lt_companies INTO DATA(ls_company).
           TRY.
               DATA(lo_delivery_operations) = zcl_etr_delivery_operations=>factory( ls_company-bukrs ).
