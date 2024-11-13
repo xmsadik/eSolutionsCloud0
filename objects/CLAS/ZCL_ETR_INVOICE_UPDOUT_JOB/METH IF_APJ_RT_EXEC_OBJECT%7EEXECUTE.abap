@@ -28,7 +28,7 @@
     IF lt_datum_range IS INITIAL.
       APPEND INITIAL LINE TO lt_datum_range ASSIGNING <ls_datum>.
       <ls_datum>-sign = 'I'.
-      <ls_datum>-option = 'EQ'.
+      <ls_datum>-option = 'BT'.
       <ls_datum>-low = cl_abap_context_info=>get_system_date( ) - 10.
       <ls_datum>-high = cl_abap_context_info=>get_system_date( ).
     ENDIF.
