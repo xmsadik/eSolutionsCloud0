@@ -11,7 +11,8 @@
                                                           WITH NON-UNIQUE SORTED KEY by_bukrs COMPONENTS bukrs,
           lt_companies   TYPE STANDARD TABLE OF ty_company,
           lt_datum_range TYPE RANGE OF datum,
-          lt_bukrs_range TYPE RANGE OF bukrs.
+          lt_bukrs_range TYPE RANGE OF bukrs,
+          lt_stacd_range TYPE RANGE OF zetr_e_stacd.
 
     LOOP AT it_parameters INTO DATA(ls_parameter).
       CASE ls_parameter-selname.
@@ -32,13 +33,49 @@
       <ls_datum>-high = cl_abap_context_info=>get_system_date( ).
     ENDIF.
 
+    APPEND INITIAL LINE TO lt_stacd_range ASSIGNING FIELD-SYMBOL(<ls_stacd>).
+    <ls_stacd>-sign = 'E'.
+    <ls_stacd>-option = 'EQ'.
+    <ls_stacd>-low = ''.
+    APPEND INITIAL LINE TO lt_stacd_range ASSIGNING <ls_stacd>.
+    <ls_stacd>-sign = 'E'.
+    <ls_stacd>-option = 'EQ'.
+    <ls_stacd>-low = '2'.
+
     TRY.
         DATA(lo_log) = cl_bali_log=>create_with_header( cl_bali_header_setter=>create( object = 'ZETR_ALO_REGULATIVE'
                                                                                        subobject = 'INVOICE_UPDOUT_JOB' ) ).
+        LOOP AT lt_bukrs_range ASSIGNING <ls_bukrs>.
+          DATA(lo_free_text) = cl_bali_free_text_setter=>create( severity = if_bali_constants=>c_severity_information
+                                                                 text     = 'Parameter : Company Code->' &&
+                                                                            <ls_bukrs>-sign &&
+                                                                            <ls_bukrs>-option &&
+                                                                            <ls_bukrs>-low &&
+                                                                            <ls_bukrs>-high ).
+          lo_log->add_item( lo_free_text ).
+        ENDLOOP.
+        LOOP AT lt_datum_range ASSIGNING <ls_datum>.
+          lo_free_text = cl_bali_free_text_setter=>create( severity = if_bali_constants=>c_severity_information
+                                                           text     = 'Parameter : Date->' &&
+                                                                      <ls_datum>-sign &&
+                                                                      <ls_datum>-option &&
+                                                                      <ls_datum>-low &&
+                                                                      <ls_datum>-high ).
+          lo_log->add_item( lo_free_text ).
+        ENDLOOP.
+        LOOP AT lt_stacd_range ASSIGNING <ls_stacd>.
+          lo_free_text = cl_bali_free_text_setter=>create( severity = if_bali_constants=>c_severity_information
+                                                           text     = 'Parameter : Status->' &&
+                                                                      <ls_stacd>-sign &&
+                                                                      <ls_stacd>-option &&
+                                                                      <ls_stacd>-low &&
+                                                                      <ls_stacd>-high ).
+          lo_log->add_item( lo_free_text ).
+        ENDLOOP.
         SELECT FROM zetr_t_ogdlv
           FIELDS docui, dlvno, bukrs
           WHERE bukrs IN @lt_bukrs_range
-            AND stacd NOT IN ('','2')
+            AND stacd IN @lt_stacd_range
             AND snddt IN @lt_datum_range
           INTO TABLE @lt_documents.
         IF sy-subrc = 0.
