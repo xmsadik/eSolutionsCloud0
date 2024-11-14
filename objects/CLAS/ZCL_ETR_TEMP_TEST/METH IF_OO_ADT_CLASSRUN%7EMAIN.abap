@@ -15,7 +15,7 @@
         AND j~AccountingDocument = z~DocumentNumber
         AND j~FiscalYear = z~FiscalYear
         WHERE z~StatusCode IN ('','2')
-          AND j~AccountingDocumentType IN ('KZ','DT','UE','DZ','DD')
+          AND j~AccountingDocumentType IN ('KZ','DT','UE','DZ','DD','KO')
         INTO TABLE @lt_uuid
         UP TO 1000 ROWS.
       IF sy-subrc = 0 AND lt_uuid IS NOT INITIAL.
