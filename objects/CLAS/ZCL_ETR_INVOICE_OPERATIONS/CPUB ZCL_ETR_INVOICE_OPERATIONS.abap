@@ -88,6 +88,17 @@ CLASS zcl_etr_invoice_operations DEFINITION
       RAISING
         cx_ble_runtime_error .
 
+    METHODS billdoc_cancellation_check
+      IMPORTING
+        bil_doc                  TYPE if_sd_bil_flex_canc_types=>ty_s_bil_doc
+        cancellation_bil_doc     TYPE if_sd_bil_flex_canc_types=>ty_s_cancellation_bil_doc
+      CHANGING
+        cancellation_bil_doc_res TYPE if_sd_bil_flex_canc_types=>ty_s_cancellation_bil_doc
+        bil_doc_canc_is_rejected TYPE if_sd_bil_flex_canc_types=>ty_v_bil_doc_canc_is_rejected
+        rejection_reason_text    TYPE if_sd_bil_flex_canc_types=>ty_v_rejection_reason_text
+      RAISING
+        cx_ble_runtime_error.
+
     METHODS get_partner_register_data
       IMPORTING
         !iv_customer   TYPE zetr_e_partner OPTIONAL
