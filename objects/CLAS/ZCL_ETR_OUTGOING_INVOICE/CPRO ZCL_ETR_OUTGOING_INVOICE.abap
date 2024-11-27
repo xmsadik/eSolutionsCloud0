@@ -1,6 +1,6 @@
   PROTECTED SECTION.
     DATA mo_invoice_operations TYPE REF TO zcl_etr_invoice_operations .
-    DATA ms_document TYPE zetr_t_oginv .
+    DATA ms_document TYPE mty_document .
     DATA mv_preview TYPE abap_boolean .
     DATA ms_invoice_ubl TYPE zif_etr_invoice_ubl21=>invoicetype .
     DATA mv_invoice_hash TYPE mty_hash_code .

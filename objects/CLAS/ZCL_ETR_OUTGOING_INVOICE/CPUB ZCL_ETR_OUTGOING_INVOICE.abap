@@ -328,6 +328,10 @@ CLASS zcl_etr_outgoing_invoice DEFINITION
     TYPES mty_invoice_rules_out TYPE STANDARD TABLE OF zetr_s_invoice_rules_out WITH EMPTY KEY.
     TYPES mty_kalsm TYPE c LENGTH 6.
 
+    TYPES BEGIN OF mty_document.
+    INCLUDE TYPE zetr_t_oginv.
+    TYPES END OF mty_document.
+
     CLASS-METHODS factory
       IMPORTING
         !iv_document_uuid TYPE sysuuid_c22
