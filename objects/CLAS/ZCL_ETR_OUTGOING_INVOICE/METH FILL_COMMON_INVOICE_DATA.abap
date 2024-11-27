@@ -61,45 +61,46 @@
         INTO @<ls_payment_means>-payeefinancialaccount-currencycode-content.
     ENDIF.
 
-*    IF ms_document-prfid EQ 'KAMU'.
-*      READ TABLE ms_invoice_ubl-accountingcustomerparty-party-partyidentification INTO DATA(ls_identification) WITH KEY schemeid = 'VKN'.
-*      IF sy-subrc EQ 0.
-*        DATA(lv_taxid) = ls_identification-content.
-*      ELSE.
-*        READ TABLE ms_invoice_ubl-accountingcustomerparty-party-partyidentification INTO ls_identification WITH KEY schemeid = 'TCKN'.
-*        IF sy-subrc EQ 0.
-*          lv_taxid = ls_identification-content.
-*        ENDIF.
-*      ENDIF.
-*      SELECT SINGLE *
-*        FROM /itetr/inv_eipi
-*        INTO ls_eipi
-*       WHERE taxid = lv_taxid.
-*      IF ls_eipi-kunnr IS INITIAL.
-*        ms_invoice_ubl-buyer_customer_party = ms_invoice_ubl-accountingcustomerparty.
-*      ELSE.
-*        mo_invoice_operations->get_customer_taxid(
-*          EXPORTING
-*            iv_kunnr      = ls_eipi-kunnr
-*          IMPORTING
-*            ev_taxid      = lv_taxid
-*            ev_tax_office = lv_tax_office
-*            ev_adrnr      = lv_adrnr ).
-*        ms_invoice_ubl-buyer_customer_party-party = ubl_fill_partner_data( iv_address_number = lv_adrnr
-*                                                                                 iv_tax_office     = lv_tax_office
-*                                                                                 iv_tax_id         = lv_taxid
-*                                                                                 iv_profile_id     = ms_document-prfid ).
-*      ENDIF.
-*
-*      IF ls_eipi-iban IS INITIAL.
-*        lx_etr_exception = zcx_etr_regulative_exception=>create_by_message( '098' ).
-*        RAISE EXCEPTION lx_etr_exception.
-*      ENDIF.
-*      APPEND INITIAL LINE TO ms_invoice_ubl-payment_means ASSIGNING <ls_payment_means>.
-*      <ls_payment_means>-payment_means_code-content = ls_eipi-payment.
-*      <ls_payment_means>-payee_financial_account-id-content = ls_eipi-iban.
-*      <ls_payment_means>-payee_financial_account-currency_code-content = ms_invoice_ubl-documentcurrencycode-content.
-*    ENDIF.
+    IF ms_document-prfid EQ 'KAMU'.
+      READ TABLE ms_invoice_ubl-accountingcustomerparty-party-partyidentification INTO DATA(ls_identification) WITH KEY schemeid = 'VKN'.
+      IF sy-subrc EQ 0.
+        DATA(lv_taxid) = ls_identification-content.
+      ELSE.
+        READ TABLE ms_invoice_ubl-accountingcustomerparty-party-partyidentification INTO ls_identification WITH KEY schemeid = 'TCKN'.
+        IF sy-subrc EQ 0.
+          lv_taxid = ls_identification-content.
+        ENDIF.
+      ENDIF.
+      SELECT SINGLE *
+        FROM zetr_t_eipi
+       WHERE taxid = @lv_taxid
+       INTO @DATA(ls_eipi).
+      IF ls_eipi-kunnr IS INITIAL.
+        ms_invoice_ubl-buyercustomerparty = ms_invoice_ubl-accountingcustomerparty.
+      ELSE.
+        SELECT SINGLE TaxNumber1 AS stcd1,
+                      TaxNumber2 AS stcd2,
+                      TaxNumber3 AS stcd3,
+                      AddressID AS adrnr
+          FROM I_Customer
+          WHERE Customer = @ls_eipi-kunnr
+          INTO @DATA(ls_partner_data).
+        ms_invoice_ubl-buyercustomerparty-party = ubl_fill_partner_data( iv_partner        = ls_eipi-kunnr
+                                                                         iv_address_number = ls_partner_data-adrnr
+                                                                         iv_tax_office     = CONV #( ls_partner_data-stcd1 )
+                                                                         iv_tax_id         = ls_partner_data-stcd2
+                                                                         iv_profile_id     = ms_document-prfid ).
+      ENDIF.
+
+      IF ls_eipi-iban IS INITIAL.
+        RAISE EXCEPTION TYPE zcx_etr_regulative_exception
+          MESSAGE e098(zetr_common).
+      ENDIF.
+      APPEND INITIAL LINE TO ms_invoice_ubl-paymentmeans ASSIGNING <ls_payment_means>.
+      <ls_payment_means>-paymentmeanscode-content = ls_eipi-payment.
+      <ls_payment_means>-payeefinancialaccount-id-content = ls_eipi-iban.
+      <ls_payment_means>-payeefinancialaccount-currencycode-content = ms_invoice_ubl-documentcurrencycode-content.
+    ENDIF.
 
     IF ms_document-inote IS NOT INITIAL.
       SPLIT ms_document-inote AT '*' INTO TABLE DATA(lt_notes).
@@ -241,4 +242,12 @@
         <ls_custom_parameter>-value = ms_invoice_ubl-accountingcustomerparty-party-contact-telephone-content.
       ENDIF.
     ENDIF.
+
+    APPEND INITIAL LINE TO ms_invoice_ubl-additionaldocumentreference ASSIGNING <ls_document_reference>.
+    <ls_document_reference>-id-content = ms_document-belnr.
+    lv_sydatum = cl_abap_context_info=>get_system_date( ).
+    CONCATENATE lv_sydatum(4) lv_sydatum+4(2) lv_sydatum+6(2)
+      INTO <ls_document_reference>-issuedate-content
+      SEPARATED BY '-'.
+    <ls_document_reference>-documenttype-content = 'BELNR'.
   ENDMETHOD.

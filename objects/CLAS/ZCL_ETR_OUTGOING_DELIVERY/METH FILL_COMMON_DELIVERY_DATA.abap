@@ -102,4 +102,12 @@
     ENDIF.
 
     ms_delivery_ubl-linecountnumeric-content = lines( ms_delivery_ubl-despatchline ).
+
+    APPEND INITIAL LINE TO ms_delivery_ubl-additionaldocumentreference ASSIGNING <ls_document_reference>.
+    <ls_document_reference>-id-content = ms_document-belnr.
+    lv_sydatum = cl_abap_context_info=>get_system_date( ).
+    CONCATENATE lv_sydatum(4) lv_sydatum+4(2) lv_sydatum+6(2)
+      INTO <ls_document_reference>-issuedate-content
+      SEPARATED BY '-'.
+    <ls_document_reference>-documenttype-content = 'BELNR'.
   ENDMETHOD.

@@ -11,7 +11,7 @@
     "CREATED_BY":"SAP_CUSTOMER",
     "CREATED_AT":"+20240903080520.5129550",
     "LAST_CHANGED_BY":"SAP_CUSTOMER",
-    "LAST_CHANGED_AT":"+20241111113033.2412370"
+    "LAST_CHANGED_AT":"+20241125103532.8598630"
    }
   ]
  },
@@ -402,6 +402,11 @@
    {
     "PROJECT_ID":"ZETR_DEF_TRANSLATIONS",
     "TYPE":"DATA_ELEM",
+    "NAME":"ZETR_E_EIPMC"
+   },
+   {
+    "PROJECT_ID":"ZETR_DEF_TRANSLATIONS",
+    "TYPE":"DATA_ELEM",
     "NAME":"ZETR_E_EKGRP"
    },
    {
@@ -732,6 +737,11 @@
    {
     "PROJECT_ID":"ZETR_DEF_TRANSLATIONS",
     "TYPE":"DOMAIN",
+    "NAME":"ZETR_D_EIPMC"
+   },
+   {
+    "PROJECT_ID":"ZETR_DEF_TRANSLATIONS",
+    "TYPE":"DOMAIN",
     "NAME":"ZETR_D_INCLUDE_EXCLUDE"
    },
    {
@@ -888,6 +898,11 @@
     "PROJECT_ID":"ZETR_DEF_TRANSLATIONS",
     "TYPE":"MTDT_XTNSN",
     "NAME":"ZETR_DDL_E_OUTGOING_DELTDAT"
+   },
+   {
+    "PROJECT_ID":"ZETR_DEF_TRANSLATIONS",
+    "TYPE":"MTDT_XTNSN",
+    "NAME":"ZETR_DDL_E_PUBLIC_IBAN_MAPPING"
    }
   ]
  },
@@ -901,12 +916,12 @@
     "TARGET_LANGUAGE":"T",
     "MAINTENANCE_STATUS":"NO_TRANSLA",
     "IMPORT_STATUS":"SUCCESS",
-    "LAST_IMPORTED_AT":"+20241111113033.2129370",
+    "LAST_IMPORTED_AT":"+20241125103532.8267450",
     "LAST_IMPORTED_BY":"SAP_CUSTOMER",
-    "LAST_UPLOADED_AT":"+20241111113025.9897920",
+    "LAST_UPLOADED_AT":"+20241125103523.6814330",
     "LAST_UPLOADED_BY":"SAP_CUSTOMER",
     "FILE_TYPE":"XLIFF",
-    "FILE_CONTENT":"<xliff xmlns=\"urn:oasis:names:tc:xliff:document:1.2\" version=\"1.2\">\n  <file datatype=\"plaintext\" original=\"ZETR_DEF_TRANSLATIONS\" source-language=\"en-US\" target-language=\"tr\">\n    <header>\n      <tool tool-company=\"SAP SE\" tool-id=\"urn:x-sap:maintain-translations-fiori-app\" tool-name=\"Maintain Translations Fiori App\" tool-version=\"1.0.0\"/>\n    </header>\n    <body>\n      <group datatype=\"x-METADATA_EXTENSION\" resname=\"ZETR_DDL_E_OUTGOING_DELIVERIES\">\n        <trans-unit id=\"METADATA_EXTENSION:ZETR_DDL_E_OUTGOING_DELIVERIES:UI.FACET$3$.LABEL:FIELD:DOCUMENTNUMBER\" maxwidth=\"40\" size-unit=\"char\">\n          <source>Partner Data</source>\n          <target>Muhatap Bilgileri</target>\n          <note>UI facet label for field group reference Fieldgroup2-ID of entity ZETR_DDL_P_OUTGOING_DELIVERIES.</note>\n        </trans-unit>\n        <trans-unit id=\"METADATA_EXTENSION:ZETR_DDL_E_OUTGOING_DELIVERIES:UI.FACET$4$.LABEL:FIELD:DOCUMENTNUMBER\" maxwidth=\"40\" size-unit=\"char\">\n          <source>Status Data</source>\n          <target>Durum Bilgileri</target>\n          <note>UI facet label for field group reference Fieldgroup4-ID of entity ZETR_DDL_P_OUTGOING_DELIVERIES.</note>\n        </trans-unit>\n        <trans-unit id=\"METADATA_EXTENSION:ZETR_DDL_E_OUTGOING_DELIVERIES:UI.FACET$5$.LABEL:FIELD:DOCUMENTNUMBER\" maxwidth=\"40\" size-unit=\"char\">\n          <source>Delivery Transport Data</source>\n          <target>İrsaliye Taşıma Bilgileri</target>\n          <note>UI facet label for line item reference TransportHeader of entity ZETR_DDL_P_OUTGOING_DELIVERIES.</note>\n        </trans-unit>\n        <trans-unit id=\"METADATA_EXTENSION:ZETR_DDL_E_OUTGOING_DELIVERIES:UI.FACET$6$.LABEL:FIELD:DOCUMENTNUMBER\" maxwidth=\"40\" size-unit=\"char\">\n          <source>Delivery Transporters</source>\n          <target>İrsaliye Taşıyıcıları</target>\n          <note>UI facet label for line item reference Transporters of entity ZETR_DDL_P_OUTGOING_DELIVERIES.</note>\n        </trans-unit>\n        <trans-unit id=\"METADATA_EXTENSION:ZETR_DDL_E_OUTGOING_DELIVERIES:UI.FACET$7$.LABEL:FIELD:DOCUMENTNUMBER\" maxwidth=\"40\" size-unit=\"char\">\n          <source>Delivery Items</source>\n          <target>İrsaliye Kalemleri</target>\n          <note>UI facet label for line item reference Items of entity ZETR_DDL_P_OUTGOING_DELIVERIES.</note>\n        </trans-unit>\n        <trans-unit id=\"METADATA_EXTENSION:ZETR_DDL_E_OUTGOING_DELIVERIES:UI.FACET$8$.LABEL:FIELD:DOCUMENTNUMBER\" maxwidth=\"40\" size-unit=\"char\">\n          <source>Delivery Contents</source>\n          <target>İrsaliye İçerikleri</target>\n          <note>UI facet label for line item reference Contents of entity ZETR_DDL_P_OUTGOING_DELIVERIES.</note>\n        </trans-unit>\n        <trans-unit id=\"METADATA_EXTENSION:ZETR_DDL_E_OUTGOING_DELIVERIES:UI.FACET$9$.LABEL:FIELD:DOCUMENTNUMBER\" maxwidth=\"40\" size-unit=\"char\">\n          <source>Delivery Logs</source>\n          <target>İrsaliye Logları</target>\n          <note>UI facet label for line item reference Logs of entity ZETR_DDL_P_OUTGOING_DELIVERIES.</note>\n        </trans-unit>\n      </group>\n    </body>\n  </file>\n</xliff>"
+    "FILE_CONTENT":"<xliff xmlns=\"urn:oasis:names:tc:xliff:document:1.2\" version=\"1.2\">\n  <file datatype=\"plaintext\" original=\"ZETR_DEF_TRANSLATIONS\" source-language=\"en-US\" target-language=\"tr\">\n    <header>\n      <tool tool-company=\"SAP SE\" tool-id=\"urn:x-sap:maintain-translations-fiori-app\" tool-name=\"Maintain Translations Fiori App\" tool-version=\"1.0.0\"/>\n    </header>\n    <body>\n      <group datatype=\"x-METADATA_EXTENSION\" resname=\"ZETR_DDL_E_PUBLIC_IBAN_MAPPING\">\n        <trans-unit id=\"METADATA_EXTENSION:ZETR_DDL_E_PUBLIC_IBAN_MAPPING:UI.HEADERINFO.TITLE.LABEL:ENTITY\" maxwidth=\"40\" size-unit=\"char\">\n          <source>eInvoice Public IBAN Mapping</source>\n\t\t  <target>eFatura Kamu IBAN Eşleme</target>\n          <note>UI header information title label of entity ZETR_DDL_P_PUBLIC_IBAN_MAPPING.</note>\n        </trans-unit>\n        <trans-unit id=\"METADATA_EXTENSION:ZETR_DDL_E_PUBLIC_IBAN_MAPPING:UI.HEADERINFO.TYPENAME:ENTITY\" maxwidth=\"0\" size-unit=\"char\">\n          <source>eInvoice Public IBAN Mapping</source>\n\t\t  <target>eFatura Kamu IBAN Eşleme</target>\n          <note>UI header information type name of entity ZETR_DDL_P_PUBLIC_IBAN_MAPPING.</note>\n        </trans-unit>\n        <trans-unit id=\"METADATA_EXTENSION:ZETR_DDL_E_PUBLIC_IBAN_MAPPING:UI.HEADERINFO.TYPENAMEPLURAL:ENTITY\" maxwidth=\"0\" size-unit=\"char\">\n          <source>eInvoice Public IBAN Mapping</source>\n\t\t  <target>eFatura Kamu IBAN Eşleme</target>\n          <note>UI header information type name plural of entity ZETR_DDL_P_PUBLIC_IBAN_MAPPING.</note>\n        </trans-unit>\n        <trans-unit id=\"METADATA_EXTENSION:ZETR_DDL_E_PUBLIC_IBAN_MAPPING:UI.FACET$1$.LABEL:FIELD:TAXID\" maxwidth=\"40\" size-unit=\"char\">\n          <source>eInvoice Public IBAN Mapping</source>\n\t\t  <target>eFatura Kamu IBAN Eşleme</target>\n          <note>UI facet label for field TAXID of entity ZETR_DDL_P_PUBLIC_IBAN_MAPPING.</note>\n        </trans-unit>\n      </group>\n      <group datatype=\"x-DATA_ELEMENT\" resname=\"ZETR_E_EIPMC\">\n        <trans-unit id=\"DATA_ELEMENT:ZETR_E_EIPMC:SHORT_DESCRIPTION\" maxwidth=\"60\" size-unit=\"char\">\n          <source>Payment Method</source>\n\t\t  <target>Ödeme Şekli</target>\n          <note>Short description for Data Element ZETR_E_EIPMC.</note>\n        </trans-unit>\n        <trans-unit id=\"DATA_ELEMENT:ZETR_E_EIPMC:SHORT_FIELD_LABEL\" maxwidth=\"10\" size-unit=\"char\">\n          <source>Pay.Met.</source>\n\t\t  <target>Ödm.Şek.</target>\n          <note>Short field label for Data Element ZETR_E_EIPMC.</note>\n        </trans-unit>\n        <trans-unit id=\"DATA_ELEMENT:ZETR_E_EIPMC:MEDIUM_FIELD_LABEL\" maxwidth=\"20\" size-unit=\"char\">\n          <source>Payment Method</source>\n\t\t  <target>Ödeme Şekli</target>\n          <note>Medium field label for Data Element ZETR_E_EIPMC.</note>\n        </trans-unit>\n        <trans-unit id=\"DATA_ELEMENT:ZETR_E_EIPMC:LONG_FIELD_LABEL\" maxwidth=\"40\" size-unit=\"char\">\n          <source>Payment Method</source>\n\t\t  <target>Ödeme Şekli</target>\n          <note>Long field label for Data Element ZETR_E_EIPMC.</note>\n        </trans-unit>\n        <trans-unit id=\"DATA_ELEMENT:ZETR_E_EIPMC:HEADING_FIELD_LABEL\" maxwidth=\"55\" size-unit=\"char\">\n          <source>Payment Method</source>\n\t\t  <target>Ödeme Şekli</target>\n          <note>Heading field label for Data Element ZETR_E_EIPMC.</note>\n        </trans-unit>\n      </group>\n      <group datatype=\"x-DOMAIN\" resname=\"ZETR_D_EIPMC\">\n        <trans-unit id=\"DOMAIN:ZETR_D_EIPMC:FIXED_VALUE_DESCRIPTION:ZZZ\" maxwidth=\"60\" size-unit=\"char\">\n          <source>Other</source>\n\t\t  <target>Diğer</target>\n          <note>Description for fixed value ZZZ of domain ZETR_D_EIPMC.</note>\n        </trans-unit>\n        <trans-unit id=\"DOMAIN:ZETR_D_EIPMC:FIXED_VALUE_DESCRIPTION:20\" maxwidth=\"60\" size-unit=\"char\">\n          <source>Check</source>\n\t\t  <target>Çek</target>\n          <note>Description for fixed value 20 of domain ZETR_D_EIPMC.</note>\n        </trans-unit>\n        <trans-unit id=\"DOMAIN:ZETR_D_EIPMC:FIXED_VALUE_DESCRIPTION:42\" maxwidth=\"60\" size-unit=\"char\">\n          <source>Transfer</source>\n\t\t  <target>Havale</target>\n          <note>Description for fixed value 42 of domain ZETR_D_EIPMC.</note>\n        </trans-unit>\n        <trans-unit id=\"DOMAIN:ZETR_D_EIPMC:FIXED_VALUE_DESCRIPTION:6\" maxwidth=\"60\" size-unit=\"char\">\n          <source>Credit</source>\n\t\t  <target>Kredi</target>\n          <note>Description for fixed value 6 of domain ZETR_D_EIPMC.</note>\n        </trans-unit>\n        <trans-unit id=\"DOMAIN:ZETR_D_EIPMC:FIXED_VALUE_DESCRIPTION:48\" maxwidth=\"60\" size-unit=\"char\">\n          <source>Credit Card</source>\n\t\t  <target>Kredi Kartı</target>\n          <note>Description for fixed value 48 of domain ZETR_D_EIPMC.</note>\n        </trans-unit>\n        <trans-unit id=\"DOMAIN:ZETR_D_EIPMC:FIXED_VALUE_DESCRIPTION:10\" maxwidth=\"60\" size-unit=\"char\">\n          <source>Cash</source>\n\t\t  <target>Nakit</target>\n          <note>Description for fixed value 10 of domain ZETR_D_EIPMC.</note>\n        </trans-unit>\n        <trans-unit id=\"DOMAIN:ZETR_D_EIPMC:FIXED_VALUE_DESCRIPTION:49\" maxwidth=\"60\" size-unit=\"char\">\n          <source>Automatic Payment</source>\n\t\t  <target>Otomatik Ödeme</target>\n          <note>Description for fixed value 49 of domain ZETR_D_EIPMC.</note>\n        </trans-unit>\n        <trans-unit id=\"DOMAIN:ZETR_D_EIPMC:FIXED_VALUE_DESCRIPTION:60\" maxwidth=\"60\" size-unit=\"char\">\n          <source>Bill</source>\n\t\t  <target>Senet</target>\n          <note>Description for fixed value 60 of domain ZETR_D_EIPMC.</note>\n        </trans-unit>\n        <trans-unit id=\"DOMAIN:ZETR_D_EIPMC:FIXED_VALUE_DESCRIPTION:1\" maxwidth=\"60\" size-unit=\"char\">\n          <source>Under the Contract</source>\n\t\t  <target>Sözleşme Kapsamında</target>\n          <note>Description for fixed value 1 of domain ZETR_D_EIPMC.</note>\n        </trans-unit>\n      </group>\n    </body>\n  </file>\n</xliff>"
    }
   ]
  },
