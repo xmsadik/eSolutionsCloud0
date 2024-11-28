@@ -1,6 +1,6 @@
   PROTECTED SECTION.
     DATA mo_delivery_operations TYPE REF TO zCL_ETR_DELIVERY_OPERATIONS .
-    DATA ms_document TYPE zetr_t_OGDLV .
+    DATA ms_document TYPE mty_document .
     DATA ms_company_parameters TYPE zetr_t_edpar .
     DATA mv_preview TYPE abap_boolean .
     DATA mv_company_taxid TYPE zetr_e_taxid .

@@ -225,6 +225,10 @@ CLASS zcl_etr_outgoing_delivery DEFINITION
 
     TYPES mty_delivery_rules_out TYPE STANDARD TABLE OF zetr_s_delivery_rules_out WITH EMPTY KEY.
 
+    TYPES BEGIN OF mty_document.
+    INCLUDE TYPE zetr_t_ogdlv.
+    TYPES END OF mty_document.
+
     CLASS-METHODS factory
       IMPORTING
         !iv_document_uuid TYPE sysuuid_c22
