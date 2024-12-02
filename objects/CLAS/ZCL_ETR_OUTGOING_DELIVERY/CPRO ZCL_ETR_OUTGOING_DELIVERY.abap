@@ -133,3 +133,6 @@
     METHODS build_delivery_data_mkpf_trans
       RAISING
         zcx_etr_regulative_exception .
+    METHODS get_issue_date
+      RETURNING
+        VALUE(rv_date) TYPE datum.

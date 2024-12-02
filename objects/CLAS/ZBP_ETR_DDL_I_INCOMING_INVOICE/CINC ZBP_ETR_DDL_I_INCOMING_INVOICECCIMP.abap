@@ -468,7 +468,8 @@ CLASS lhc_InvoiceList IMPLEMENTATION.
                                                                                         docii = <ls_invoice>-IntegratorUUID
                                                                                         docno = <ls_invoice>-InvoiceID
                                                                                         envui = <ls_invoice>-EnvelopeUUID )
-                                                         iv_application_response = ''
+                                                         iv_application_response = ls_key-%param-ApplicationResponse
+                                                         iv_note             = ls_key-%param-ResponseNote
                                                          iv_receiver_alias   = <ls_invoice>-Aliass
                                                          iv_receiver_taxid   = <ls_invoice>-TaxID ).
           DATA(ls_status) = lo_invoice_service->incoming_invoice_get_status( VALUE #(  docui  = <ls_invoice>-DocumentUUID
