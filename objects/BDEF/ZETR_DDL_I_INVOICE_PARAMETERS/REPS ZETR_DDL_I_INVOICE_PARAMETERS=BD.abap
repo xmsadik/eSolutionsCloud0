@@ -74,6 +74,7 @@ authorization dependent by _eInvoiceParameters
   delete;
   field ( readonly ) CompanyCode;
   field ( readonly : update ) SerialPrefix;
+  validation checkSerials on save { field NumberRangeNumber; create; update; }
   association _eInvoiceParameters;
 }
 

@@ -69,6 +69,7 @@ authorization dependent by _earchiveParameters
   delete;
   field ( readonly ) CompanyCode;
   field ( readonly : update ) SerialPrefix;
+  validation checkSerials on save { field NumberRangeNumber; create; update; }
   association _earchiveParameters;
 }
 
