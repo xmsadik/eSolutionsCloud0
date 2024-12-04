@@ -59,6 +59,14 @@
           ls_bseg_tax            TYPE ty_bseg,
           lv_insrt               TYPE zetr_e_insrt.
 
+    SELECT COUNT(*)
+      FROM zetr_t_oginv
+      WHERE awtyp EQ @iv_awtyp
+        AND bukrs EQ @iv_bukrs
+        AND belnr EQ @iv_belnr
+        AND gjahr EQ @iv_gjahr.
+    CHECK sy-subrc NE 0.
+
     SELECT SINGLE accountingdocument AS belnr,
                   fiscalyear AS gjahr,
                   documentdate AS bldat,
@@ -132,7 +140,7 @@
     ls_document-bldat = ls_bkpf-bldat.
     ls_document-werks = ls_bseg-werks.
 
-    ls_invoice_rule_input-awtyp = iv_awtyp(4).
+    ls_invoice_rule_input-awtyp = 'BKPF'.
     ls_invoice_rule_input-fidty = ls_bkpf-blart.
     ls_invoice_rule_input-partner = ls_document-partner.
     ls_invoice_rule_input-werks = ls_bseg-werks.
@@ -282,7 +290,7 @@
     ENDTRY.
 
     ls_document-docty = ls_bkpf-blart.
-    ls_document-awtyp = iv_awtyp(4).
+    ls_document-awtyp = 'BKPF'.
     ls_document-bukrs = iv_bukrs.
     ls_document-belnr = iv_belnr.
     ls_document-gjahr = iv_gjahr.

@@ -42,6 +42,14 @@
           ls_invoice_rule_output TYPE zetr_s_invoice_rules_out,
           lv_insrt               TYPE zetr_e_insrt.
 
+    SELECT COUNT(*)
+      FROM zetr_t_oginv
+      WHERE awtyp EQ @iv_awtyp
+        AND bukrs EQ @iv_bukrs
+        AND belnr EQ @iv_belnr
+        AND gjahr EQ @iv_gjahr.
+    CHECK sy-subrc NE 0.
+
     SELECT SINGLE invoice~supplierinvoice AS belnr,
                   invoice~fiscalyear AS gjahr,
                   invoice~documentdate AS bldat,

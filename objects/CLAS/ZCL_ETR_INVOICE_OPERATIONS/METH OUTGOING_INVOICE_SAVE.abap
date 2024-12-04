@@ -1,12 +1,4 @@
   METHOD outgoing_invoice_save.
-    SELECT COUNT(*)
-      FROM zetr_t_oginv
-      WHERE awtyp EQ @iv_awtyp(4)
-        AND bukrs EQ @iv_bukrs
-        AND belnr EQ @iv_belnr
-        AND gjahr EQ @iv_gjahr.
-    CHECK sy-subrc NE 0.
-
     CASE iv_awtyp.
       WHEN 'VBRK'.
         rs_document = outgoing_invoice_save_vbrk( iv_awtyp = iv_awtyp
@@ -19,7 +11,7 @@
                                                   iv_belnr = iv_belnr
                                                   iv_gjahr = iv_gjahr ).
       WHEN 'BKPF' OR 'BKPFF' OR 'REACI'.
-        rs_document = outgoing_invoice_save_bkpf( iv_awtyp = iv_awtyp
+        rs_document = outgoing_invoice_save_bkpf( iv_awtyp = 'BKPF'
                                                   iv_bukrs = iv_bukrs
                                                   iv_belnr = iv_belnr
                                                   iv_gjahr = iv_gjahr ).
