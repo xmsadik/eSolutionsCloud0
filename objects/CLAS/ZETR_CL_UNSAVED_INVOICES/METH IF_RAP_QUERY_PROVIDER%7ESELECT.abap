@@ -48,7 +48,7 @@
             WHERE companycode IN @lt_bukrs_range
               AND accountingdocument IN @lt_belnr_range
               AND fiscalyear IN @lt_gjahr_range
-              AND referencedocumenttype IN ('BKPF','BKPFF')
+              AND referencedocumenttype IN ('BKPF','BKPFF','REACI')
               AND accountingdocumenttype IN @lt_fidty_range
               AND accountingdocumentcreationdate IN @lt_erdat_range
               AND accountingdoccreatedbyuser IN @lt_ernam_range
