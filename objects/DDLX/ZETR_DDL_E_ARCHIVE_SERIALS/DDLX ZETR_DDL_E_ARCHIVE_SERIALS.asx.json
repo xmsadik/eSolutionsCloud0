@@ -7,9 +7,9 @@
     "DDLXNAME":"ZETR_DDL_E_ARCHIVE_SERIALS",
     "VERSION":"A",
     "CHANGED_BY":"SAP_CUSTOMER",
-    "CHANGED_ON":"2023-11-07",
-    "CHANGED_AT":"15:40:42",
-    "UUID":"B70B55EC7ED81EDE9FB08035AB845E8D",
+    "CHANGED_ON":"2024-12-11",
+    "CHANGED_AT":"18:53:07",
+    "UUID":"CB92D17136801EEFADFE2517483F82D9",
     "ABAP_LANGUAGE_VERSION":"5"
    }
   ]
@@ -34,7 +34,7 @@
     "DDLXNAME":"ZETR_DDL_E_ARCHIVE_SERIALS",
     "VERSION":"A",
     "UUID":"",
-    "SOURCE":"@Metadata.layer: #CORE\r\n@UI:{\r\nheaderInfo:{\r\n                typeNamePlural: 'Serials',\r\n                typeName: 'Serial',\r\n                title:{ type: #STANDARD, label: 'Serials', value: 'Description' }\r\n           }\r\n}\r\nannotate entity zetr_ddl_p_archive_serials with\r\n{\r\n  @UI.facet: [ { id:            'Serials',\r\n                 purpose:       #STANDARD,\r\n                 type:          #IDENTIFICATION_REFERENCE,\r\n                 label:         'Serials',\r\n                 position:      10 }  ]\r\n  @UI.hidden: true\r\n  CompanyCode;\r\n  @UI: { lineItem: [ { position: 20, importance: #HIGH } ],\r\n         identification: [{ position: 20 }] }\r\n  SerialPrefix;\r\n  @UI: { lineItem: [ { position: 30 } ],\r\n         identification: [{ position: 30 }] }\r\n  Description;\r\n  @UI: { lineItem: [ { position: 40 } ],\r\n         identification: [{ position: 40 }] }\r\n  NextSerial;\r\n  @UI: { lineItem: [ { position: 50 } ],\r\n         identification: [{ position: 50 }] }\r\n  MainSerial;\r\n  @UI: { lineItem: [ { position: 60 } ],\r\n         identification: [{ position: 60 }] }\r\n  NumberRangeNumber;\r\n\r\n}"
+    "SOURCE":"@Metadata.layer: #CORE\r\n@UI:{\r\nheaderInfo:{\r\n                typeNamePlural: 'Serials',\r\n                typeName: 'Serial',\r\n                title:{ type: #STANDARD, label: 'Serials', value: 'Description' }\r\n           }\r\n}\r\nannotate entity zetr_ddl_p_archive_serials with\r\n{\r\n  @UI.facet: [ { id:            'Serials',\r\n                 purpose:       #STANDARD,\r\n                 type:          #IDENTIFICATION_REFERENCE,\r\n                 label:         'Serials',\r\n                 position:      10 },\r\n                { id:              'Status',\r\n                 purpose:         #STANDARD,\r\n                 type:            #LINEITEM_REFERENCE,\r\n                 label:           'Number Statuses',\r\n                 position:        20,\r\n                 targetElement:   '_numberStatus' } ]\r\n  @UI.hidden: true\r\n  CompanyCode;\r\n  @UI: { lineItem: [ { position: 20, importance: #HIGH } ,\r\n                      { type: #FOR_ACTION,\r\n                        dataAction: 'createNumbers',\r\n                        label: 'Create Numbers' } ],\r\n         identification: [{ position: 20 }] }\r\n  SerialPrefix;\r\n  @UI: { lineItem: [ { position: 30 } ],\r\n         identification: [{ position: 30 }] }\r\n  Description;\r\n  @UI: { lineItem: [ { position: 40 } ],\r\n         identification: [{ position: 40 }] }\r\n  NextSerial;\r\n  @UI: { lineItem: [ { position: 50 } ],\r\n         identification: [{ position: 50 }] }\r\n  MainSerial;\r\n  @UI: { lineItem: [ { position: 60 } ],\r\n         identification: [{ position: 60 }] }\r\n  NumberRangeNumber;\r\n\r\n}"
    }
   ]
  },
@@ -111,6 +111,48 @@
     "NAME":"UI.FACET$1$.TYPE",
     "ELEMENT_TYPE":"S",
     "VALUE":"#IDENTIFICATION_REFERENCE"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_ARCHIVE_SERIALS",
+    "ELEMENT":"COMPANYCODE",
+    "NAME":"UI.FACET$2$.ID",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'Status'"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_ARCHIVE_SERIALS",
+    "ELEMENT":"COMPANYCODE",
+    "NAME":"UI.FACET$2$.LABEL",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'Number Statuses'"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_ARCHIVE_SERIALS",
+    "ELEMENT":"COMPANYCODE",
+    "NAME":"UI.FACET$2$.POSITION",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"20"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_ARCHIVE_SERIALS",
+    "ELEMENT":"COMPANYCODE",
+    "NAME":"UI.FACET$2$.PURPOSE",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"#STANDARD"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_ARCHIVE_SERIALS",
+    "ELEMENT":"COMPANYCODE",
+    "NAME":"UI.FACET$2$.TARGETELEMENT",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'_numberStatus'"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_ARCHIVE_SERIALS",
+    "ELEMENT":"COMPANYCODE",
+    "NAME":"UI.FACET$2$.TYPE",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"#LINEITEM_REFERENCE"
    },
    {
     "DDLXNAME":"ZETR_DDL_E_ARCHIVE_SERIALS",
@@ -195,6 +237,27 @@
     "NAME":"UI.LINEITEM$1$.POSITION",
     "ELEMENT_TYPE":"S",
     "VALUE":"20"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_ARCHIVE_SERIALS",
+    "ELEMENT":"SERIALPREFIX",
+    "NAME":"UI.LINEITEM$2$.DATAACTION",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'createNumbers'"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_ARCHIVE_SERIALS",
+    "ELEMENT":"SERIALPREFIX",
+    "NAME":"UI.LINEITEM$2$.LABEL",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'Create Numbers'"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_ARCHIVE_SERIALS",
+    "ELEMENT":"SERIALPREFIX",
+    "NAME":"UI.LINEITEM$2$.TYPE",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"#FOR_ACTION"
    }
   ]
  },
@@ -232,6 +295,20 @@
    },
    {
     "DDLXNAME":"ZETR_DDL_E_ARCHIVE_SERIALS",
+    "DDLANGUAGE":"E",
+    "ELEMENT":"COMPANYCODE",
+    "NAME":"UI.FACET$2$.LABEL",
+    "TEXT":"Number Statuses"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_ARCHIVE_SERIALS",
+    "DDLANGUAGE":"E",
+    "ELEMENT":"SERIALPREFIX",
+    "NAME":"UI.LINEITEM$2$.LABEL",
+    "TEXT":"Create Numbers"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_ARCHIVE_SERIALS",
     "DDLANGUAGE":"T",
     "ELEMENT":"",
     "NAME":"UI.HEADERINFO.TITLE.LABEL",
@@ -257,6 +334,20 @@
     "ELEMENT":"COMPANYCODE",
     "NAME":"UI.FACET$1$.LABEL",
     "TEXT":"Seriler"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_ARCHIVE_SERIALS",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"COMPANYCODE",
+    "NAME":"UI.FACET$2$.LABEL",
+    "TEXT":"Numara Durumları"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_ARCHIVE_SERIALS",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"SERIALPREFIX",
+    "NAME":"UI.LINEITEM$2$.LABEL",
+    "TEXT":"Numara Oluştur"
    }
   ]
  },
@@ -269,8 +360,8 @@
     "EXTENDED_ARTIFACT":"ZETR_DDL_P_ARCHIVE_SERIALS",
     "VARIANT":"",
     "LAYER":1500,
-    "DT_UUID":"B70B55EC7ED81EDE9FB08035AB845E8D",
-    "RT_HASH":"8A9D339A831FEC9AD3190AA5899B69920B425639",
+    "DT_UUID":"CB92D17136801EEFADFE2517483F82D9",
+    "RT_HASH":"507F38B1AC428CEF40097EA755E5017D7EE695DE",
     "GEN_VERSION":"0",
     "TYPE":"0"
    }

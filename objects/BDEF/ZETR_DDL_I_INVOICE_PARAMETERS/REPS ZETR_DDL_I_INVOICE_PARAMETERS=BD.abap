@@ -9,20 +9,21 @@ authorization master ( instance )
 {
   mapping for zetr_t_eipar
     {
-      CompanyCode    = bukrs;
-      ValidFrom      = datab;
-      ValidTo        = datbi;
-      Integrator     = intid;
-      ProfileID      = prfid;
-      WSEndpoint     = wsend;
-      WSEndpointAlt  = wsena;
-      WSUser         = wsusr;
-      WSPassword     = wspwd;
-      GenerateSerial = genid;
-      TaxfreeAgent   = tfagn;
-      Barcode        = barcode;
-      PKAlias        = pk_alias;
-      GBAlias        = gb_alias;
+      CompanyCode       = bukrs;
+      ValidFrom         = datab;
+      ValidTo           = datbi;
+      Integrator        = intid;
+      ProfileID         = prfid;
+      WSEndpoint        = wsend;
+      WSEndpointAlt     = wsena;
+      WSUser            = wsusr;
+      WSPassword        = wspwd;
+      GenerateSerial    = genid;
+      TaxfreeAgent      = tfagn;
+      Barcode           = barcode;
+      PKAlias           = pk_alias;
+      GBAlias           = gb_alias;
+      InternalNumbering = intnum;
     }
   create;
   update;
@@ -75,6 +76,31 @@ authorization dependent by _eInvoiceParameters
   field ( readonly ) CompanyCode;
   field ( readonly : update ) SerialPrefix;
   validation checkSerials on save { field NumberRangeNumber; create; update; }
+  association _eInvoiceParameters;
+  association _numberStatus { create; }
+  action createNumbers parameter ZETR_DDL_I_FISYEAR_SELECTION result [1] $self;
+  side effects { action createNumbers affects entity _numberStatus; }
+}
+
+define behavior for zetr_ddl_i_invoice_numstat //alias <alias_name>
+persistent table zetr_t_edocnum
+lock dependent by _eInvoiceParameters
+authorization dependent by _eInvoiceParameters
+//etag master <field_name>
+{
+  mapping for zetr_t_edocnum
+    {
+      CompanyCode       = bukrs;
+      NumberRangeObject = nrobj;
+      SerialPrefix      = serpr;
+      NumberRangeNumber = numrn;
+      FiscalYear        = gjahr;
+      NumberStatus      = numst;
+    }
+  update;
+  delete;
+  field ( readonly ) CompanyCode, NumberRangeObject, SerialPrefix, NumberRangeNumber, FiscalYear;
+  association _invoiceSerials;
   association _eInvoiceParameters;
 }
 

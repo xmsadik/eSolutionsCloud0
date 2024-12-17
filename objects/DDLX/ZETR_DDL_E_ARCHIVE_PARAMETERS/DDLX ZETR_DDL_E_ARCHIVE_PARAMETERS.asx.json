@@ -7,9 +7,9 @@
     "DDLXNAME":"ZETR_DDL_E_ARCHIVE_PARAMETERS",
     "VERSION":"A",
     "CHANGED_BY":"SAP_CUSTOMER",
-    "CHANGED_ON":"2023-12-08",
-    "CHANGED_AT":"07:26:12",
-    "UUID":"77E41BC4D9AD1EDEA5B361F535739EC6",
+    "CHANGED_ON":"2024-12-11",
+    "CHANGED_AT":"18:15:01",
+    "UUID":"CB92D17136801EEFADFD7AC24B1D22D9",
     "ABAP_LANGUAGE_VERSION":"5"
    }
   ]
@@ -34,7 +34,7 @@
     "DDLXNAME":"ZETR_DDL_E_ARCHIVE_PARAMETERS",
     "VERSION":"A",
     "UUID":"",
-    "SOURCE":"@Metadata.layer: #CORE\r\n@Search.searchable: true\r\n@UI:{\r\nheaderInfo:{\r\n                typeNamePlural: 'eArchive Parameters',\r\n                typeName: 'eArchive Parameter',\r\n                title:{ type: #STANDARD, label: 'eArchive Parameters', value: 'CompanyTitle' }\r\n           }\r\n}\r\nannotate entity zetr_ddl_p_archive_parameters with\r\n{\r\n  @UI.facet: [ { id:              'Parameters',\r\n                 purpose:         #STANDARD,\r\n                 type:            #IDENTIFICATION_REFERENCE,\r\n                 label:           'eArchive Parameters',\r\n                 position:        10 },\r\n               { id:              'Custom',\r\n                 purpose:         #STANDARD,\r\n                 type:            #LINEITEM_REFERENCE,\r\n                 label:           'Custom Parameters',\r\n                 position:        20,\r\n                 targetElement:   '_customParameters' },\r\n               { id:              'Serials',\r\n                 purpose:         #STANDARD,\r\n                 type:            #LINEITEM_REFERENCE,\r\n                 label:           'Serials',\r\n                 position:        30,\r\n                 targetElement:   '_invoiceSerials' },\r\n               { id:              'XSLTTemplates',\r\n                 purpose:         #STANDARD,\r\n                 type:            #LINEITEM_REFERENCE,\r\n                 label:           'XSLT Templates',\r\n                 position:        40,\r\n                 targetElement:   '_xsltTemplates' },\r\n               { id:              'InvoiceRules',\r\n                 purpose:         #STANDARD,\r\n                 type:            #LINEITEM_REFERENCE,\r\n                 label:           'eArchive Rules',\r\n                 position:        50,\r\n                 targetElement:   '_invoiceRules' } ]\r\n  @UI: { lineItem:       [ { position: 10, importance: #HIGH } ],\r\n         selectionField: [ { position: 10 } ],\r\n         identification: [{ position: 10 }] }\r\n  @Search.defaultSearchElement: true\r\n  @Consumption.valueHelpDefinition: [ { entity: { name: 'zetr_ddl_vh_company_codes', element: 'CompanyCode' }}]\r\n  CompanyCode;\r\n  @UI.hidden: true\r\n  CompanyTitle;\r\n  @UI: { lineItem:       [ { position: 20, importance: #HIGH } ],\r\n         identification: [{ position: 20 }] }\r\n  ValidFrom;\r\n  @UI: { lineItem:       [ { position: 30 } ],\r\n         identification: [{ position: 30 }] }\r\n  ValidTo;\r\n  @UI: { lineItem:       [ { position: 40 } ],\r\n         identification: [{ position: 40 }] }\r\n  @Consumption.valueHelpDefinition: [ { entity: { name: 'zetr_ddl_vh_integrator', element: 'Integrator' }}]\r\n  Integrator;\r\n  @UI: { //lineItem:       [ { position: 60 } ],\r\n         identification: [{ position: 60 }] }\r\n  WSEndpoint;\r\n  @UI: { //lineItem:       [ { position: 70 } ],\r\n         identification: [{ position: 70 }] }\r\n  WSEndpointAlt;\r\n  @UI: { //lineItem:       [ { position: 80 } ],\r\n         identification: [{ position: 80 }] }\r\n  WSUser;\r\n  @UI: { //lineItem:       [ { position: 90 } ],\r\n         identification: [{ position: 90 }] }\r\n  WSPassword;\r\n  @UI: { //lineItem:       [ { position: 100 } ],\r\n         identification: [{ position: 100 }] }\r\n  @Consumption.valueHelpDefinition: [ { entity: { name: 'ZETR_DDL_VH_GENERATE_ID', element: 'GenerateID' }}]\r\n  GenerateSerial;\r\n  @UI.hidden: true\r\n  GenerateSerialText;\r\n  @UI: { //lineItem:       [ { position: 120 } ],\r\n         identification: [{ position: 120 }] }\r\n  Barcode;\r\n\r\n}"
+    "SOURCE":"@Metadata.layer: #CORE\r\n@Search.searchable: true\r\n@UI:{\r\nheaderInfo:{\r\n                typeNamePlural: 'eArchive Parameters',\r\n                typeName: 'eArchive Parameter',\r\n                title:{ type: #STANDARD, label: 'eArchive Parameters', value: 'CompanyTitle' }\r\n           }\r\n}\r\nannotate entity zetr_ddl_p_archive_parameters with\r\n{\r\n  @UI.facet: [ { id:              'Parameters',\r\n                 purpose:         #STANDARD,\r\n                 type:            #IDENTIFICATION_REFERENCE,\r\n                 label:           'eArchive Parameters',\r\n                 position:        10 },\r\n               { id:              'Custom',\r\n                 purpose:         #STANDARD,\r\n                 type:            #LINEITEM_REFERENCE,\r\n                 label:           'Custom Parameters',\r\n                 position:        20,\r\n                 targetElement:   '_customParameters' },\r\n               { id:              'Serials',\r\n                 purpose:         #STANDARD,\r\n                 type:            #LINEITEM_REFERENCE,\r\n                 label:           'Serials',\r\n                 position:        30,\r\n                 targetElement:   '_invoiceSerials' },\r\n               { id:              'XSLTTemplates',\r\n                 purpose:         #STANDARD,\r\n                 type:            #LINEITEM_REFERENCE,\r\n                 label:           'XSLT Templates',\r\n                 position:        40,\r\n                 targetElement:   '_xsltTemplates' },\r\n               { id:              'InvoiceRules',\r\n                 purpose:         #STANDARD,\r\n                 type:            #LINEITEM_REFERENCE,\r\n                 label:           'eArchive Rules',\r\n                 position:        50,\r\n                 targetElement:   '_invoiceRules' } ]\r\n  @UI: { lineItem:       [ { position: 10, importance: #HIGH } ],\r\n         selectionField: [ { position: 10 } ],\r\n         identification: [{ position: 10 }] }\r\n  @Search.defaultSearchElement: true\r\n  @Consumption.valueHelpDefinition: [ { entity: { name: 'zetr_ddl_vh_company_codes', element: 'CompanyCode' }}]\r\n  CompanyCode;\r\n  @UI.hidden: true\r\n  CompanyTitle;\r\n  @UI: { lineItem:       [ { position: 20, importance: #HIGH } ],\r\n         identification: [{ position: 20 }] }\r\n  ValidFrom;\r\n  @UI: { lineItem:       [ { position: 30 } ],\r\n         identification: [{ position: 30 }] }\r\n  ValidTo;\r\n  @UI: { lineItem:       [ { position: 40 } ],\r\n         identification: [{ position: 40 }] }\r\n  @Consumption.valueHelpDefinition: [ { entity: { name: 'zetr_ddl_vh_integrator', element: 'Integrator' }}]\r\n  Integrator;\r\n  @UI: { //lineItem:       [ { position: 60 } ],\r\n         identification: [{ position: 60 }] }\r\n  WSEndpoint;\r\n  @UI: { //lineItem:       [ { position: 70 } ],\r\n         identification: [{ position: 70 }] }\r\n  WSEndpointAlt;\r\n  @UI: { //lineItem:       [ { position: 80 } ],\r\n         identification: [{ position: 80 }] }\r\n  WSUser;\r\n  @UI: { //lineItem:       [ { position: 90 } ],\r\n         identification: [{ position: 90 }] }\r\n  WSPassword;\r\n  @UI: { //lineItem:       [ { position: 100 } ],\r\n         identification: [{ position: 100 }] }\r\n  @Consumption.valueHelpDefinition: [ { entity: { name: 'ZETR_DDL_VH_GENERATE_ID', element: 'GenerateID' }}]\r\n  GenerateSerial;\r\n  @UI.hidden: true\r\n  GenerateSerialText;\r\n  @UI: { //lineItem:       [ { position: 120 } ],\r\n         identification: [{ position: 120 }] }\r\n  Barcode;\r\n  @UI: { //lineItem:       [ { position: 120 } ],\r\n         identification: [{ position: 130 }] }\r\n  InternalNumbering;  \r\n\r\n}"
    }
   ]
  },
@@ -408,6 +408,13 @@
    },
    {
     "DDLXNAME":"ZETR_DDL_E_ARCHIVE_PARAMETERS",
+    "ELEMENT":"INTERNALNUMBERING",
+    "NAME":"UI.IDENTIFICATION$1$.POSITION",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"130"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_ARCHIVE_PARAMETERS",
     "ELEMENT":"VALIDFROM",
     "NAME":"UI.IDENTIFICATION$1$.POSITION",
     "ELEMENT_TYPE":"S",
@@ -598,8 +605,8 @@
     "EXTENDED_ARTIFACT":"ZETR_DDL_P_ARCHIVE_PARAMETERS",
     "VARIANT":"",
     "LAYER":1500,
-    "DT_UUID":"77E41BC4D9AD1EDEA5B361F535739EC6",
-    "RT_HASH":"A8A86015BD46C364AF8D7F9959C17A6680765699",
+    "DT_UUID":"CB92D17136801EEFADFD7AC24B1D22D9",
+    "RT_HASH":"10D9B886FB6A873AAC44AE1724174BB44F9460FD",
     "GEN_VERSION":"0",
     "TYPE":"0"
    }

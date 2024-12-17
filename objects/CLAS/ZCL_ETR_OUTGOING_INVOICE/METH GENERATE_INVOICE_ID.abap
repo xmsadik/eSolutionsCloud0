@@ -39,18 +39,28 @@
               AND invno LIKE @lv_invoice_no
             INTO @DATA(lv_max_date).
           IF sy-subrc IS NOT INITIAL OR lv_max_date IS INITIAL OR lv_max_date LE ms_document-bldat.
-            cl_numberrange_runtime=>number_get(
-              EXPORTING
-                nr_range_nr       = ls_serial-numrn
-                object            = lv_number_object
-                quantity          = 1
-                subobject         = CONV #( ms_document-bukrs )
-                toyear            = lv_gjahr
-              IMPORTING
-                number            = lv_number ).
-            ms_document-invno = lv_number+4(*).
-            ms_document-invno(3) = ls_serial-serpr.
-            ms_document-invno+3(4) = lv_gjahr.
+            CASE mv_internal_numbering.
+              WHEN abap_true.
+                lv_number = zcl_etr_regulative_common=>internal_number_get( iv_range_number = ls_serial-numrn
+                                                                            iv_object       = lv_number_object
+                                                                            iv_company      = ms_document-bukrs
+                                                                            iv_year         = lv_gjahr
+                                                                            iv_serial       = ls_serial-serpr ).
+                ms_document-invno = ls_serial-serpr && lv_gjahr && lv_number+11(*).
+              WHEN OTHERS.
+                cl_numberrange_runtime=>number_get(
+                  EXPORTING
+                    nr_range_nr       = ls_serial-numrn
+                    object            = lv_number_object
+                    quantity          = 1
+                    subobject         = CONV #( ms_document-bukrs )
+                    toyear            = lv_gjahr
+                  IMPORTING
+                    number            = lv_number ).
+                ms_document-invno = lv_number+4(*).
+                ms_document-invno(3) = ls_serial-serpr.
+                ms_document-invno+3(4) = lv_gjahr.
+            ENDCASE.
           ELSEIF ls_serial-nxtsp IS INITIAL.
             RAISE EXCEPTION TYPE zcx_etr_regulative_exception
               MESSAGE e031(zetr_common) WITH ms_document-serpr.
@@ -86,39 +96,26 @@
         ENDIF.
         CONCATENATE ls_serial-serpr lv_days_num lv_gjahr INTO lv_invoice_no.
         CONCATENATE ls_serial-numrn lv_days_num INTO ls_serial-numrn.
-*        DO lv_days_num TIMES.
-*          CASE ms_document-prfid.
-*            WHEN 'EARSIV'.
-*              SELECT SINGLE *
-*                FROM zetr_t_easer
-*                WHERE bukrs = @ms_document-bukrs
-*                  AND serpr = @ls_serial-nxtsp
-*                INTO @ls_serial.
-*            WHEN OTHERS.
-*              SELECT SINGLE *
-*                FROM zetr_t_eiser
-*                WHERE bukrs = @ms_document-bukrs
-*                  AND serpr = @ls_serial-nxtsp
-*                INTO @ls_serial.
-*          ENDCASE.
-*          IF sy-subrc IS NOT INITIAL.
-*            RAISE EXCEPTION TYPE zcx_etr_regulative_exception
-*              MESSAGE e031(zetr_common) WITH ms_document-serpr.
-*          ENDIF.
-*        ENDDO.
-        cl_numberrange_runtime=>number_get(
-          EXPORTING
-            nr_range_nr       = ls_serial-numrn
-            object            = lv_number_object
-            quantity          = 1
-            subobject         = CONV #( ms_document-bukrs )
-            toyear            = lv_gjahr
-          IMPORTING
-            number            = lv_number ).
-        ms_document-invno = lv_invoice_no && lv_number+11(*).
-*        ms_document-invno = lv_number+4(*).
-*        ms_document-invno(3) = ls_serial-serpr.
-*        ms_document-invno+3(4) = lv_gjahr.
+        CASE mv_internal_numbering.
+          WHEN abap_true.
+            lv_number = zcl_etr_regulative_common=>internal_number_get( iv_range_number = ls_serial-numrn
+                                                                        iv_object       = lv_number_object
+                                                                        iv_company      = ms_document-bukrs
+                                                                        iv_year         = lv_gjahr
+                                                                        iv_serial       = ls_serial-serpr ).
+            ms_document-invno = ls_serial-serpr && lv_days_num && lv_gjahr && lv_number+11(*).
+          WHEN OTHERS.
+            cl_numberrange_runtime=>number_get(
+              EXPORTING
+                nr_range_nr       = ls_serial-numrn
+                object            = lv_number_object
+                quantity          = 1
+                subobject         = CONV #( ms_document-bukrs )
+                toyear            = lv_gjahr
+              IMPORTING
+                number            = lv_number ).
+            ms_document-invno = lv_invoice_no && lv_number+11(*).
+        ENDCASE.
     ENDCASE.
 
     IF ms_document-invno IS NOT INITIAL.

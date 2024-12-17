@@ -9,10 +9,10 @@
     "AS4USER":"SAP_CUSTOMER",
     "AS4DATE":"0000-00-00",
     "AS4TIME":"00:00:00",
-    "SOURCE":"@AccessControl.authorizationCheck: #NOT_REQUIRED\r\n@EndUserText.label: 'eDelivery Serials'\r\ndefine view entity zetr_ddl_i_delivery_serials\r\n  as select from zetr_t_edser\r\n  association to parent zetr_ddl_i_delivery_parameters as _eDeliveryParameters on $projection.CompanyCode = _eDeliveryParameters.CompanyCode\r\n{\r\n  key bukrs as CompanyCode,\r\n  key serpr as SerialPrefix,\r\n      descr as Description,\r\n      nxtsp as NextSerial,\r\n      maisp as MainSerial,\r\n      numrn as NumberRangeNumber,\r\n      _eDeliveryParameters\r\n}\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[\n\"ZETR_T_EDSER\"\n],\n\"ASSOCIATED\":\n[\n\"ZETR_DDL_I_DELIVERY_PARAMETERS\"\n],\n\"BASE\":\n[],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
+    "SOURCE":"@AccessControl.authorizationCheck: #NOT_REQUIRED\r\n@EndUserText.label: 'eDelivery Serials'\r\ndefine view entity zetr_ddl_i_delivery_serials\r\n  as select from zetr_t_edser\r\n  composition [1..*] of ZETR_DDL_I_DELIVERY_NUMSTAT    as _numberStatus\r\n  association to parent zetr_ddl_i_delivery_parameters as _eDeliveryParameters on $projection.CompanyCode = _eDeliveryParameters.CompanyCode\r\n{\r\n  key bukrs as CompanyCode,\r\n  key serpr as SerialPrefix,\r\n      descr as Description,\r\n      nxtsp as NextSerial,\r\n      maisp as MainSerial,\r\n      numrn as NumberRangeNumber,\r\n      _eDeliveryParameters,\r\n      _numberStatus\r\n}\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[\n\"ZETR_T_EDSER\"\n],\n\"ASSOCIATED\":\n[\n\"ZETR_DDL_I_DELIVERY_NUMSTAT\",\n\"ZETR_DDL_I_DELIVERY_PARAMETERS\"\n],\n\"BASE\":\n[],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
     "PARENTNAME":"",
     "ACTFLAG":"",
-    "CHGFLAG":"",
+    "CHGFLAG":"Z",
     "SOURCE_TYPE":"W",
     "SOURCE_ORIGIN":"0",
     "ABAP_LANGUAGE_VERSION":"5"

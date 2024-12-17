@@ -1,5 +1,6 @@
 projection;
 strict ( 2 );
+use side effects;
 
 define behavior for zetr_ddl_p_invoice_parameters //alias <alias_name>
 {
@@ -26,6 +27,17 @@ define behavior for zetr_ddl_p_invoice_serials //alias <alias_name>
   use update;
   use delete;
 
+  use association _eInvoiceParameters;
+  use association _numberStatus { }
+  use action createNumbers;
+}
+
+define behavior for zetr_ddl_p_invoice_numstat //alias <alias_name>
+{
+  use update;
+  use delete;
+
+  use association _invoiceSerials;
   use association _eInvoiceParameters;
 }
 

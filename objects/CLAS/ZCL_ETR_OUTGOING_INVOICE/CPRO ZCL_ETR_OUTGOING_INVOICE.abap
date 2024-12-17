@@ -10,6 +10,7 @@
     DATA mv_company_taxid TYPE zetr_e_taxid .
     DATA mv_add_signature TYPE zetr_e_value .
     DATA mv_barcode TYPE zetr_e_barcode .
+    DATA mv_internal_numbering TYPE zetr_e_intnum.
     DATA mt_invoice_items TYPE mty_item_collect_t.
     DATA ms_accdoc_data TYPE mty_accdoc_data.
     DATA mt_items_allowance TYPE mty_item_allowance_t .

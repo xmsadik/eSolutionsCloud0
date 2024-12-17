@@ -68,3 +68,31 @@ CLASS zcl_etr_regulative_common DEFINITION
         iv_input_date      TYPE datum
       RETURNING
         VALUE(rv_last_day) TYPE datum.
+    CLASS-METHODS internal_number_get
+      IMPORTING
+        !iv_range_number TYPE zetr_e_nrnum
+        !iv_object       TYPE zetr_e_nrobj
+        !iv_company      TYPE bukrs
+        !iv_year         TYPE gjahr
+        !iv_serial       TYPE zetr_e_serpr
+      RETURNING
+        VALUE(rv_number) TYPE zetr_e_numst
+      RAISING
+        zcx_etr_regulative_exception.
+    CLASS-METHODS generate_unit_codes.
+    CLASS-METHODS generate_unit_matching.
+    CLASS-METHODS generate_transport_codes.
+    CLASS-METHODS generate_transport_matching.
+    CLASS-METHODS generate_status_codes.
+    CLASS-METHODS generate_tax_codes.
+    CLASS-METHODS generate_tax_exemption_codes.
+    CLASS-METHODS generate_tax_matching.
+    CLASS-METHODS generate_essential_partners.
+    CLASS-METHODS generate_company_data
+      IMPORTING
+        !iv_company TYPE bukrs.
+    CLASS-METHODS fill_address_data
+      IMPORTING
+        !iv_address_number TYPE ad_addrnum
+      RETURNING
+        VALUE(rs_data)     TYPE zetr_s_party_info.

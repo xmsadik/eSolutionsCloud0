@@ -1,5 +1,6 @@
 projection;
 strict ( 2 );
+use side effects;
 
 define behavior for zetr_ddl_p_delivery_parameters alias DeliveryParameters
 {
@@ -26,6 +27,17 @@ define behavior for zetr_ddl_p_delivery_serials alias Serials
   use update;
   use delete;
 
+  use association _eDeliveryParameters;
+  use association _numberStatus { }
+  use action createNumbers;
+}
+
+define behavior for zetr_ddl_p_delivery_numstat alias NumberStatus
+{
+  use update;
+  use delete;
+
+  use association _deliverySerials;
   use association _eDeliveryParameters;
 }
 

@@ -7,9 +7,9 @@
     "SRVDNAME":"ZETR_DDL_D_INVOICE_PARAMETERS",
     "VERSION":"A",
     "CHANGED_BY":"SAP_CUSTOMER",
-    "CHANGED_ON":"2023-11-06",
-    "CHANGED_AT":"17:51:33",
-    "DT_UUID":"B70B55EC7ED81EDE9F99A3EBEDA1FE8A",
+    "CHANGED_ON":"2024-12-11",
+    "CHANGED_AT":"14:12:07",
+    "DT_UUID":"CB92D17136801EEFADF93CE36B23E2D9",
     "SOURCE_ORIGIN":"0",
     "SRVD_SOURCE_TYPE":"S",
     "ABAP_LANGUAGE_VERSION":"5"
@@ -35,7 +35,7 @@
    {
     "SRVDNAME":"ZETR_DDL_D_INVOICE_PARAMETERS",
     "VERSION":"A",
-    "SOURCE":"@EndUserText.label: 'eInvoice Parameters'\r\ndefine service Zetr_ddl_d_invoice_parameters {\r\n  expose zetr_ddl_p_invoice_parameters as eInvoiceParameters;\r\n  expose zetr_ddl_p_invoice_custom     as CustomParameters;\r\n  expose zetr_ddl_p_invoice_serials    as Serials;\r\n  expose zetr_ddl_p_invoice_xslttemp   as XSLTTemplates;\r\n  expose zetr_ddl_p_invoice_rules      as InvoiceRules;\r\n}"
+    "SOURCE":"@EndUserText.label: 'eInvoice Parameters'\r\ndefine service Zetr_ddl_d_invoice_parameters {\r\n  expose zetr_ddl_p_invoice_parameters as eInvoiceParameters;\r\n  expose zetr_ddl_p_invoice_custom     as CustomParameters;\r\n  expose zetr_ddl_p_invoice_serials    as Serials;\r\n  expose zetr_ddl_p_invoice_numstat    as NumberStatus;\r\n  expose zetr_ddl_p_invoice_xslttemp   as XSLTTemplates;\r\n  expose zetr_ddl_p_invoice_rules      as InvoiceRules;\r\n}"
    }
   ]
  },
@@ -73,6 +73,15 @@
     "EXPOSED_ARTIFACT_TYPE":"E",
     "EXPOSED_ALIAS":"CUSTOMPARAMETERS",
     "EXPOSED_ALIAS_RAW":"CustomParameters",
+    "INCL_SERVICE":""
+   },
+   {
+    "SRVDNAME":"ZETR_DDL_D_INVOICE_PARAMETERS",
+    "SERVICE":"ZETR_DDL_D_INVOICE_PARAMETERS",
+    "EXPOSED_ARTIFACT":"ZETR_DDL_P_INVOICE_NUMSTAT",
+    "EXPOSED_ARTIFACT_TYPE":"E",
+    "EXPOSED_ALIAS":"NUMBERSTATUS",
+    "EXPOSED_ALIAS_RAW":"NumberStatus",
     "INCL_SERVICE":""
    },
    {
@@ -122,8 +131,8 @@
     "SERVICE":"ZETR_DDL_D_INVOICE_PARAMETERS",
     "SERVICE_RAW":"Zetr_ddl_d_invoice_parameters",
     "SOURCE_TYPE":"S",
-    "DT_UUID":"B70B55EC7ED81EDE9F99A3EBEDA1FE8A",
-    "RT_HASH":"1F1D201C608C3DCCDB2579468908B11591955813",
+    "DT_UUID":"CB92D17136801EEFADF93CE36B23E2D9",
+    "RT_HASH":"3FB17EB04AA553257D242E2F309FEC70592F7BC9",
     "GEN_VERSION":"0"
    }
   ]

@@ -11,12 +11,13 @@
       INTO @mv_company_taxid.
     CASE ms_document-prfid.
       WHEN 'EARSIV'.
-        SELECT SINGLE genid, barcode
+        SELECT SINGLE genid, barcode, intnum
           FROM zetr_t_eapar
           WHERE bukrs = @ms_document-bukrs
           INTO @DATA(ls_earp).
         mv_generate_invoice_id = ls_earp-genid.
         mv_barcode = ls_earp-barcode.
+        mv_internal_numbering = ls_earp-intnum.
         IF mv_company_taxid IS INITIAL.
           SELECT SINGLE value
             FROM zetr_t_eacus
@@ -31,12 +32,13 @@
             AND cuspa = 'ADDSIGN'
           INTO @mv_add_signature.
       WHEN OTHERS.
-        SELECT SINGLE genid, barcode
+        SELECT SINGLE genid, barcode, intnum
           FROM zetr_t_eipar
           WHERE bukrs = @ms_document-bukrs
           INTO @DATA(ls_einp).
         mv_generate_invoice_id = ls_einp-genid.
         mv_barcode = ls_einp-barcode.
+        mv_internal_numbering = ls_einp-intnum.
         IF mv_company_taxid IS INITIAL.
           SELECT SINGLE value
             FROM zetr_t_eicus

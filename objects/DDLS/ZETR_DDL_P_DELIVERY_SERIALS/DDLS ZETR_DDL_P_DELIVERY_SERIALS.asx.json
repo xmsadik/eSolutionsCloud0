@@ -9,10 +9,10 @@
     "AS4USER":"SAP_CUSTOMER",
     "AS4DATE":"0000-00-00",
     "AS4TIME":"00:00:00",
-    "SOURCE":"@EndUserText.label: 'eDelivery Serials'\r\n@AccessControl.authorizationCheck: #NOT_REQUIRED\r\n@Metadata.ignorePropagatedAnnotations: true\r\n@Metadata.allowExtensions: true\r\n@ObjectModel.usageType:{\r\n    serviceQuality: #X,\r\n    sizeCategory: #S,\r\n    dataClass: #MIXED\r\n}\r\ndefine view entity zetr_ddl_p_delivery_serials\r\n  as projection on zetr_ddl_i_delivery_serials\r\n{\r\n  key CompanyCode,\r\n  key SerialPrefix,\r\n      Description,\r\n      NextSerial,\r\n      MainSerial,\r\n      NumberRangeNumber,\r\n      /* Associations */\r\n      _eDeliveryParameters : redirected to parent zetr_ddl_p_delivery_parameters \r\n}\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[\n\"ZETR_DDL_I_DELIVERY_SERIALS\"\n],\n\"ASSOCIATED\":\n[\n\"ZETR_DDL_I_DELIVERY_PARAMETERS\",\n\"ZETR_DDL_P_DELIVERY_PARAMETERS\"\n],\n\"BASE\":\n[\n\"ZETR_DDL_I_DELIVERY_SERIALS\"\n],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
+    "SOURCE":"@EndUserText.label: 'eDelivery Serials'\r\n@AccessControl.authorizationCheck: #NOT_REQUIRED\r\n@Metadata.ignorePropagatedAnnotations: true\r\n@Metadata.allowExtensions: true\r\n@ObjectModel.usageType:{\r\n    serviceQuality: #X,\r\n    sizeCategory: #S,\r\n    dataClass: #MIXED\r\n}\r\ndefine view entity zetr_ddl_p_delivery_serials\r\n  as projection on zetr_ddl_i_delivery_serials\r\n{\r\n  key CompanyCode,\r\n  key SerialPrefix,\r\n      Description,\r\n      NextSerial,\r\n      MainSerial,\r\n      NumberRangeNumber,\r\n      /* Associations */\r\n      _numberStatus        : redirected to composition child zetr_ddl_p_delivery_numstat,\r\n      _eDeliveryParameters : redirected to parent zetr_ddl_p_delivery_parameters\r\n}\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[\n\"ZETR_DDL_I_DELIVERY_SERIALS\"\n],\n\"ASSOCIATED\":\n[\n\"ZETR_DDL_I_DELIVERY_NUMSTAT\",\n\"ZETR_DDL_I_DELIVERY_PARAMETERS\",\n\"ZETR_DDL_P_DELIVERY_NUMSTAT\",\n\"ZETR_DDL_P_DELIVERY_PARAMETERS\"\n],\n\"BASE\":\n[\n\"ZETR_DDL_I_DELIVERY_SERIALS\"\n],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
     "PARENTNAME":"",
     "ACTFLAG":"",
-    "CHGFLAG":"J,W4T2Z",
+    "CHGFLAG":"Z",
     "SOURCE_TYPE":"P",
     "SOURCE_ORIGIN":"0",
     "ABAP_LANGUAGE_VERSION":"5"

@@ -1,17 +1,4 @@
   METHOD fill_common_delivery_data.
-*    DATA: lv_payable_amount  TYPE wrbtr_cs,
-*          lv_currency        TYPE waers,
-*          lv_currency_text   TYPE c LENGTH 5,
-*          lv_cent_text       TYPE c LENGTH 5,
-*          lv_xslt_raw        TYPE string,
-*          lcl_descr_ref      TYPE REF TO cl_abap_typedescr.
-*    FIELD-SYMBOLS: <ls_party_identification> TYPE /itetr/com_party_identificati1,
-*                   <ls_signature>            TYPE /itetr/com_signature,
-*                   <ls_delivery_note>        TYPE /itetr/com_note,
-*                   <ls_document_reference>   TYPE /itetr/com_additional_document,
-*                   <ls_custom_parameter>     TYPE /itetr/com_s_custom_param,
-*                   <ls_payment_means>        TYPE /itetr/com_payment_means.
-
     ms_delivery_ubl-ublversionid-content = '2.1'.
     ms_delivery_ubl-customizationid-content = 'TR1.2.1'.
     ms_delivery_ubl-copyindicator-content = 'false'.

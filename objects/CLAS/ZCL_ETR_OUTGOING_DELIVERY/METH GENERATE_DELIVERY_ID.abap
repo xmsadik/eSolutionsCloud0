@@ -29,18 +29,28 @@
               AND dlvno LIKE @lv_delivery_no
             INTO @DATA(lv_max_date).
           IF sy-subrc IS NOT INITIAL OR lv_max_date IS INITIAL OR lv_max_date LE lv_bldat.
-            cl_numberrange_runtime=>number_get(
-              EXPORTING
-                nr_range_nr       = ls_serial-numrn
-                object            = lv_number_object
-                quantity          = 1
-                subobject         = CONV #( ms_document-bukrs )
-                toyear            = lv_gjahr
-              IMPORTING
-                number            = lv_number ).
-            ms_document-dlvno = lv_number+4(*).
-            ms_document-dlvno(3) = ls_serial-serpr.
-            ms_document-dlvno+3(4) = lv_gjahr.
+            CASE ms_company_parameters-intnum.
+              WHEN abap_true.
+                lv_number = zcl_etr_regulative_common=>internal_number_get( iv_range_number = ls_serial-numrn
+                                                                            iv_object       = lv_number_object
+                                                                            iv_company      = ms_document-bukrs
+                                                                            iv_year         = lv_gjahr
+                                                                            iv_serial       = ls_serial-serpr ).
+                ms_document-dlvno = ls_serial-serpr && lv_gjahr && lv_number+11(*).
+              WHEN OTHERS.
+                cl_numberrange_runtime=>number_get(
+                  EXPORTING
+                    nr_range_nr       = ls_serial-numrn
+                    object            = lv_number_object
+                    quantity          = 1
+                    subobject         = CONV #( ms_document-bukrs )
+                    toyear            = lv_gjahr
+                  IMPORTING
+                    number            = lv_number ).
+                ms_document-dlvno = lv_number+4(*).
+                ms_document-dlvno(3) = ls_serial-serpr.
+                ms_document-dlvno+3(4) = lv_gjahr.
+            ENDCASE.
           ELSEIF ls_serial-nxtsp IS INITIAL.
             RAISE EXCEPTION TYPE zcx_etr_regulative_exception
               MESSAGE e031(zetr_common) WITH ms_document-serpr.
@@ -66,17 +76,26 @@
         ENDIF.
         CONCATENATE ls_serial-serpr lv_days_num lv_gjahr INTO lv_delivery_no.
         CONCATENATE ls_serial-numrn lv_days_num INTO ls_serial-numrn.
-
-        cl_numberrange_runtime=>number_get(
-          EXPORTING
-            nr_range_nr       = ls_serial-numrn
-            object            = lv_number_object
-            quantity          = 1
-            subobject         = CONV #( ms_document-bukrs )
-            toyear            = lv_gjahr
-          IMPORTING
-            number            = lv_number ).
-        ms_document-dlvno = lv_delivery_no && lv_number+7(*).
+        CASE ms_company_parameters-intnum.
+          WHEN abap_true.
+            lv_number = zcl_etr_regulative_common=>internal_number_get( iv_range_number = ls_serial-numrn
+                                                                        iv_object       = lv_number_object
+                                                                        iv_company      = ms_document-bukrs
+                                                                        iv_year         = lv_gjahr
+                                                                        iv_serial       = ls_serial-serpr ).
+            ms_document-dlvno = ls_serial-serpr && lv_days_num && lv_gjahr && lv_number+11(*).
+          WHEN OTHERS.
+            cl_numberrange_runtime=>number_get(
+              EXPORTING
+                nr_range_nr       = ls_serial-numrn
+                object            = lv_number_object
+                quantity          = 1
+                subobject         = CONV #( ms_document-bukrs )
+                toyear            = lv_gjahr
+              IMPORTING
+                number            = lv_number ).
+            ms_document-dlvno = lv_delivery_no && lv_number+7(*).
+        ENDCASE.
     ENDCASE.
 
     IF ms_document-dlvno IS NOT INITIAL.

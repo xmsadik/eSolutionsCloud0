@@ -9,7 +9,7 @@
     "CREATED_BY":"SAP_CUSTOMER",
     "CREATED_ON":"+020241007140627",
     "MODIFIED_BY":"SAP_CUSTOMER",
-    "MODIFIED_ON":"+020241125105953",
+    "MODIFIED_ON":"+020241217110015",
     "BASE_ID":"",
     "MERGE_ID":"",
     "ABAP_LANGUAGE_VERSION":"5"
@@ -49,6 +49,12 @@
     "ID":"PARAMETERS",
     "PARENT_SECTION_ID":"",
     "IDX":2
+   },
+   {
+    "PAGE_ID":"ZETR_LP_CUSTOMIZING_PAGE",
+    "ID":"TECHNICAL",
+    "PARENT_SECTION_ID":"",
+    "IDX":3
    }
   ]
  },
@@ -167,6 +173,13 @@
     "ID":"EINVOICE",
     "TYPE":"AD",
     "IDX":1
+   },
+   {
+    "PAGE_ID":"ZETR_LP_CUSTOMIZING_PAGE",
+    "SECTION_ID":"TECHNICAL",
+    "ID":"MASTER",
+    "TYPE":"AD",
+    "IDX":1
    }
   ]
  },
@@ -214,6 +227,13 @@
     "ID":"INVOICE_CONDITIONS",
     "UIAD_ID":"ZETR_INV_COND_UI5R",
     "TILE_ID":"UI5R_B03C8F9C5FD4817F05752128615D30743626C45F_AL",
+    "TILE_DISPLAY_FORMAT":"TI"
+   },
+   {
+    "PAGE_ID":"ZETR_LP_CUSTOMIZING_PAGE",
+    "ID":"MASTER",
+    "UIAD_ID":"ZETR_CMP_MASTER_UI5R",
+    "TILE_ID":"UI5R_FE8422AD1EAD4FDD5F3A7013CD790F273BD85126_AL",
     "TILE_DISPLAY_FORMAT":"TI"
    },
    {
@@ -305,6 +325,12 @@
     "TITLE":"eSolutions - Parameters"
    },
    {
+    "LANGU":"E",
+    "PAGE_ID":"ZETR_LP_CUSTOMIZING_PAGE",
+    "ID":"TECHNICAL",
+    "TITLE":"Technical"
+   },
+   {
     "LANGU":"T",
     "PAGE_ID":"ZETR_LP_CUSTOMIZING_PAGE",
     "ID":"CUSTOMIZING",
@@ -315,6 +341,12 @@
     "PAGE_ID":"ZETR_LP_CUSTOMIZING_PAGE",
     "ID":"PARAMETERS",
     "TITLE":"eÇözümler - Parametreler"
+   },
+   {
+    "LANGU":"T",
+    "PAGE_ID":"ZETR_LP_CUSTOMIZING_PAGE",
+    "ID":"TECHNICAL",
+    "TITLE":"Teknik"
    }
   ]
  },

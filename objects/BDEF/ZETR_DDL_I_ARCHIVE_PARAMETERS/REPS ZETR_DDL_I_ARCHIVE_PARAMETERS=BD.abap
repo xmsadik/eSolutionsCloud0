@@ -9,16 +9,17 @@ authorization master ( instance )
 {
   mapping for zetr_t_eapar
     {
-      CompanyCode    = bukrs;
-      ValidFrom      = datab;
-      ValidTo        = datbi;
-      Integrator     = intid;
-      WSEndpoint     = wsend;
-      WSEndpointAlt  = wsena;
-      WSUser         = wsusr;
-      WSPassword     = wspwd;
-      GenerateSerial = genid;
-      Barcode        = barcode;
+      CompanyCode       = bukrs;
+      ValidFrom         = datab;
+      ValidTo           = datbi;
+      Integrator        = intid;
+      WSEndpoint        = wsend;
+      WSEndpointAlt     = wsena;
+      WSUser            = wsusr;
+      WSPassword        = wspwd;
+      GenerateSerial    = genid;
+      Barcode           = barcode;
+      InternalNumbering = intnum;
     }
   create;
   update;
@@ -71,6 +72,31 @@ authorization dependent by _earchiveParameters
   field ( readonly : update ) SerialPrefix;
   validation checkSerials on save { field NumberRangeNumber; create; update; }
   association _earchiveParameters;
+  association _numberStatus { create; }
+  action createNumbers parameter ZETR_DDL_I_FISYEAR_SELECTION result [1] $self;
+  side effects { action createNumbers affects entity _numberStatus; }
+}
+
+define behavior for zetr_ddl_i_archive_numstat //alias <alias_name>
+persistent table zetr_t_edocnum
+lock dependent by _eArchiveParameters
+authorization dependent by _eArchiveParameters
+//etag master <field_name>
+{
+  mapping for zetr_t_edocnum
+    {
+      CompanyCode       = bukrs;
+      NumberRangeObject = nrobj;
+      SerialPrefix      = serpr;
+      NumberRangeNumber = numrn;
+      FiscalYear        = gjahr;
+      NumberStatus      = numst;
+    }
+  update;
+  delete;
+  field ( readonly ) CompanyCode, NumberRangeObject, SerialPrefix, NumberRangeNumber, FiscalYear;
+  association _archiveSerials;
+  association _eArchiveParameters;
 }
 
 define behavior for zetr_ddl_i_archive_xslttemp //alias <alias_name>
