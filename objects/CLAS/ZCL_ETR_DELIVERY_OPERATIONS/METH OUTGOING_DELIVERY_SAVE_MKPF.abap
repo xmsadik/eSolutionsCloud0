@@ -78,7 +78,8 @@
 
     SELECT MaterialDocumentItem AS buzei,
            Material AS matnr,
-           MaterialDocumentItemText AS arktx,
+           CASE WHEN Item~MaterialDocumentItemText <> ' ' THEN Item~MaterialDocumentItemText
+                ELSE ProductText~ProductName END AS arktx,
            QuantityInBaseUnit AS menge,
            MaterialBaseUnit AS meins,
            DebitCreditCode AS shkzg,
@@ -95,7 +96,10 @@
            ReversedMaterialDocumentItem AS smblp,
            ReversedMaterialDocumentYear AS sjahr,
            IsAutomaticallyCreated AS xauto
-      FROM I_MaterialDocumentItem_2
+      FROM I_MaterialDocumentItem_2 AS Item
+      LEFT OUTER JOIN I_ProductText AS ProductText
+        ON  ProductText~Language = @sy-langu
+        AND ProductText~Product = Item~material
       WHERE MaterialDocument = @iv_belnr
         AND MaterialDocumentYear = @iv_gjahr
       INTO TABLE @lt_mseg.
