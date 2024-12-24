@@ -95,6 +95,8 @@ authorization master ( global, instance )
   action ( features : instance ) sendInvoices result [1] $self;
   action ( features : instance ) archiveInvoices result [1] $self;
   action ( features : instance ) statusUpdate result [1] $self;
+  action ( features : instance ) sendMailToPartner result [1] $self;
+  action ( features : instance ) sendMailToSelected parameter zetr_ddl_i_mail_selection result [1] $self;
   action ( features : instance ) setAsRejected parameter zetr_ddl_i_reject_selection result [1] $self;
 }
 
@@ -137,7 +139,7 @@ authorization dependent by _outgoingInvoices
   update;
   delete;
   field ( readonly ) DocumentUUID;
-//  field ( suppress ) Filename;
+  //  field ( suppress ) Filename;
   field ( readonly : update ) ContentType, DocumentType;
   association _outgoingInvoices;
 }

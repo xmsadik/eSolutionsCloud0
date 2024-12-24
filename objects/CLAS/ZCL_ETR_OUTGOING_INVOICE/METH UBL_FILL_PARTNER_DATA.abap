@@ -88,7 +88,7 @@
     rs_data-postaladdress-room-content = ls_address-roomnumber.
 
     SELECT SINGLE *
-      FROM I_AddressPhoneNumber_2
+      FROM I_AddressPhoneNumber_2 WITH PRIVILEGED ACCESS
       WHERE addressID = @iv_address_number
       INTO @DATA(ls_adtel).
 
@@ -99,7 +99,7 @@
     ENDIF.
 
     SELECT SINGLE *
-      FROM I_AddressFaxNumber_2
+      FROM I_AddressFaxNumber_2 WITH PRIVILEGED ACCESS
       WHERE addressID = @iv_address_number
       INTO @DATA(ls_adfax).
 
@@ -110,12 +110,12 @@
     ENDIF.
 
     SELECT SINGLE UniformResourceIdentifier
-      FROM I_AddressMainWebsiteURL
+      FROM I_AddressMainWebsiteURL WITH PRIVILEGED ACCESS
       WHERE addressID = @iv_address_number
       INTO @rs_data-websiteuri-content.
 
     SELECT SINGLE EmailAddress
-      FROM I_AddrCurDefaultEmailAddress
+      FROM I_AddrCurDefaultEmailAddress WITH PRIVILEGED ACCESS
       WHERE addressID = @iv_address_number
       INTO @rs_data-contact-electronicmail-content.
 

@@ -11,6 +11,8 @@ define behavior for zetr_ddl_p_outgoing_invoices alias OutgoingInvoices
   use action archiveInvoices;
   use action statusUpdate;
   use action setAsRejected;
+  use action sendMailToPartner;
+  use action sendMailToSelected;
 }
 
 define behavior for zetr_ddl_p_outgoing_invcont alias InvoiceContents
