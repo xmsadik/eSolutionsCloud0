@@ -335,6 +335,15 @@
               AND deflt = @abap_true
             INTO @ls_document-xsltt.
         ENDIF.
+
+        DATA(lt_field_rules) = get_earchive_rules( iv_rule_type   = 'F'
+                                                   is_rule_input  = ls_invoice_rule_input ).
+        LOOP AT lt_field_rules INTO DATA(ls_field_rule).
+          CHECK ls_field_rule-fname IS NOT INITIAL.
+          ASSIGN COMPONENT ls_field_rule-fname OF STRUCTURE ls_document TO FIELD-SYMBOL(<ls_field_value>).
+          CHECK sy-subrc = 0.
+          <ls_field_value> = ls_field_rule-value.
+        ENDLOOP.
       WHEN OTHERS.
         ls_invoice_rule_input-ityin = ls_document-invty.
         ls_invoice_rule_input-pidin = ls_document-prfid.
@@ -374,6 +383,15 @@
               AND deflt = @abap_true
             INTO @ls_document-xsltt.
         ENDIF.
+
+        lt_field_rules = get_einvoice_rules( iv_rule_type   = 'F'
+                                             is_rule_input  = ls_invoice_rule_input ).
+        LOOP AT lt_field_rules INTO ls_field_rule.
+          CHECK ls_field_rule-fname IS NOT INITIAL.
+          ASSIGN COMPONENT ls_field_rule-fname OF STRUCTURE ls_document TO <ls_field_value>.
+          CHECK sy-subrc = 0.
+          <ls_field_value> = ls_field_rule-value.
+        ENDLOOP.
     ENDCASE.
     rs_document = ls_document.
   ENDMETHOD.

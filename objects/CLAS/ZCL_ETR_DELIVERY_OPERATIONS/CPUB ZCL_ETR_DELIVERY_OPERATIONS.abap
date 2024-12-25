@@ -9,8 +9,9 @@ CLASS zcl_etr_delivery_operations DEFINITION
     CONSTANTS mc_itmres_status_unclear TYPE zetr_E_ITMRS VALUE ''.
     CONSTANTS mc_itmres_status_mixed TYPE zetr_E_ITMRS VALUE 'M'.
     TYPES:
-      mty_incoming_list  TYPE STANDARD TABLE OF zetr_t_icdlv WITH DEFAULT KEY,
-      mty_incoming_items TYPE STANDARD TABLE OF zetr_t_icdli WITH DEFAULT KEY,
+      mty_incoming_full_list TYPE STANDARD TABLE OF zetr_ddl_i_incoming_delhead WITH DEFAULT KEY,
+      mty_incoming_list      TYPE STANDARD TABLE OF zetr_t_icdlv WITH DEFAULT KEY,
+      mty_incoming_items     TYPE STANDARD TABLE OF zetr_t_icdli WITH DEFAULT KEY,
       BEGIN OF mty_partner_register_data,
         businesspartner TYPE zetr_e_partner,
         bptaxnumber     TYPE c LENGTH 20,
@@ -43,6 +44,7 @@ CLASS zcl_etr_delivery_operations DEFINITION
     INCLUDE TYPE zetr_t_ogdli.
     TYPES END OF mty_outgoing_delivery_items.
     TYPES mty_outgoing_delivery_items_t TYPE STANDARD TABLE OF mty_outgoing_delivery_items WITH EMPTY KEY.
+    TYPES mty_delivery_rules_out TYPE STANDARD TABLE OF zetr_s_delivery_rules_out WITH EMPTY KEY.
 
     CLASS-METHODS factory
       IMPORTING

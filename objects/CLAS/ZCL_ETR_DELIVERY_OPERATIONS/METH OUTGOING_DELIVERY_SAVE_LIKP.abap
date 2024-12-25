@@ -187,6 +187,16 @@
           AND deflt = @abap_true
         INTO @ls_document-xsltt.
     ENDIF.
+
+    DATA(lt_field_rules) = get_edelivery_rules( iv_rule_type   = 'F'
+                                                is_rule_input  = ls_edrule_input ).
+    LOOP AT lt_field_rules INTO DATA(ls_field_rule).
+      CHECK ls_field_rule-fname IS NOT INITIAL.
+      ASSIGN COMPONENT ls_field_rule-fname OF STRUCTURE ls_document TO FIELD-SYMBOL(<ls_field_value>).
+      CHECK sy-subrc = 0.
+      <ls_field_value> = ls_field_rule-value.
+    ENDLOOP.
+
     es_document = ls_document.
 
     LOOP AT lt_lips INTO ls_lips.

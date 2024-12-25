@@ -93,7 +93,7 @@ authorization master ( instance )
   association _deliveryLogs { create; }
   association _deliveryTransporters { create; }
   association _deliveryTransportHeader { create; }
-  association _deliveryItems { create; }
+  association _deliveryItems { create ( features : instance ); }
 
   action ( features : instance ) sendDeliveries result [1] $self;
   action ( features : instance ) archiveDeliveries result [1] $self;
@@ -219,8 +219,8 @@ lock dependent by _outgoingDeliveries
 authorization dependent by _outgoingDeliveries
 //etag master <field_name>
 {
-  update;
-  delete;
+  update ( features : instance );
+  delete ( features : instance );
 
   field ( readonly ) DocumentUUID;
   field ( readonly : update ) LineNumber;

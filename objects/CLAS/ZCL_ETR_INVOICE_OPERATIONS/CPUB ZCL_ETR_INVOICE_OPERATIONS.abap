@@ -11,7 +11,8 @@ CLASS zcl_etr_invoice_operations DEFINITION
         registerdate    TYPE datum,
         title           TYPE zetr_e_title,
       END OF mty_partner_register_data,
-      mty_incoming_list TYPE STANDARD TABLE OF zetr_t_icinv WITH DEFAULT KEY,
+      mty_incoming_list      TYPE STANDARD TABLE OF zetr_t_icinv WITH DEFAULT KEY,
+      mty_incoming_full_list TYPE STANDARD TABLE OF zetr_ddl_i_incoming_invoices WITH DEFAULT KEY,
       BEGIN OF mty_outgoing_document_status,
         stacd TYPE zetr_e_stacd,
         staex TYPE zetr_e_staex,
@@ -30,6 +31,7 @@ CLASS zcl_etr_invoice_operations DEFINITION
     TYPES BEGIN OF mty_outgoing_invoice.
     INCLUDE TYPE zetr_t_oginv.
     TYPES END OF mty_outgoing_invoice.
+    TYPES mty_invoice_rules_out TYPE STANDARD TABLE OF zetr_s_invoice_rules_out WITH EMPTY KEY.
 
     CLASS-METHODS factory
       IMPORTING
@@ -121,6 +123,20 @@ CLASS zcl_etr_invoice_operations DEFINITION
       RETURNING
         VALUE(rs_rule_output) TYPE zetr_s_invoice_rules_out.
 
+    METHODS get_einvoice_rules
+      IMPORTING
+        !iv_rule_type         TYPE zetr_e_rulet
+        !is_rule_input        TYPE zetr_s_invoice_rules_in
+      RETURNING
+        VALUE(rt_rule_output) TYPE mty_invoice_rules_out.
+
+    METHODS get_earchive_rules
+      IMPORTING
+        !iv_rule_type         TYPE zetr_e_rulet
+        !is_rule_input        TYPE zetr_s_invoice_rules_in
+      RETURNING
+        VALUE(rt_rule_output) TYPE mty_invoice_rules_out.
+
     METHODS outgoing_invoice_save
       IMPORTING
         !iv_awtyp          TYPE zetr_e_awtyp
@@ -148,6 +164,16 @@ CLASS zcl_etr_invoice_operations DEFINITION
         !it_list TYPE mty_incoming_list
       RAISING
         zcx_etr_regulative_exception .
+
+    METHODS mail_incoming_invoices
+      IMPORTING
+        !it_list TYPE mty_incoming_list.
+
+    METHODS convert_incinv_list_to_html
+      IMPORTING
+        !it_list       TYPE mty_incoming_full_list
+      RETURNING
+        VALUE(rv_html) TYPE string.
 
     METHODS incoming_einvoice_download
       IMPORTING

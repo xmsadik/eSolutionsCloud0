@@ -33,7 +33,7 @@
     "REFRESH_INTERVALL":0,
     "DISPLAY_NUMBER_UNIT":"",
     "FLAVOR_ID":"",
-    "CHANGED_AT":"+020240505170218",
+    "CHANGED_AT":"+020241224183855",
     "CHANGED_BY":"SAP_CUSTOMER",
     "MASTERLANG":"",
     "ACH_COMPONENT":"",
@@ -61,7 +61,7 @@
     "TILE_TYPE":"S",
     "CUSTOM_TILE_TYPE":"",
     "DEFAULT_TILE":"X",
-    "TILE_CONFIG_STRING":"",
+    "TILE_CONFIG_STRING":"{\"tileConfiguration\":\"{\\\"display_icon_url\\\":\\\"\\\",\\\"display_info_text\\\":\\\"\\\",\\\"display_title_text\\\":\\\"eSolutions - Company Information\\\",\\\"display_subtitle_text\\\":\\\"\\\",\\\"navigation_use_semantic_object\\\":true,\\\"navigation_target_url\\\":\\\"#zetr_company_information-display\\\",\\\"navigation_semantic_object\\\":\\\"zetr_company_information\\\",\\\"navigation_semantic_action\\\":\\\"display\\\",\\\"navigation_semantic_parameters\\\":\\\"\\\",\\\"display_search_keywords\\\":\\\"\\\",\\\"display_number_unit\\\":\\\"\\\",\\\"service_url\\\":\\\"\\\",\\\"service_refresh_interval\\\":0}\"}",
     "TILE_ICON":"",
     "TILE_PARAMETERS":"",
     "SERVICE_BASE_URL":"",
@@ -90,48 +90,10 @@
     "LANGU":"T",
     "APP_ID":"ZETR_CMP_INFO_UI5R",
     "TILE_ID":"UI5R_85903CCBD92E7D0B92A573646EE80D77801A4C8A_AL",
-    "TILE_TITLE":"eÇözümler - Şirket Verileri",
+    "TILE_TITLE":"eÇözümler - Şirket Bilgileri",
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":""
-   }
-  ]
- },
- {
-  "table":"SUI_TM_MM_APPPB",
-  "data":
-  [
-   {
-    "APP_ID":"ZETR_CMP_INFO_UI5R",
-    "TILE_ID":"UI5R_85903CCBD92E7D0B92A573646EE80D77801A4C8A_AL",
-    "BAG_ID":"                                                                                                  1",
-    "NAME":"display_title_text",
-    "TRANSLATABLE":"",
-    "VALUE":"eSolutions - Company Information"
-   },
-   {
-    "APP_ID":"ZETR_CMP_INFO_UI5R",
-    "TILE_ID":"UI5R_85903CCBD92E7D0B92A573646EE80D77801A4C8A_AL",
-    "BAG_ID":"                                                                                                  2",
-    "NAME":"display_subtitle_text",
-    "TRANSLATABLE":"",
-    "VALUE":""
-   },
-   {
-    "APP_ID":"ZETR_CMP_INFO_UI5R",
-    "TILE_ID":"UI5R_85903CCBD92E7D0B92A573646EE80D77801A4C8A_AL",
-    "BAG_ID":"                                                                                                  3",
-    "NAME":"display_info_text",
-    "TRANSLATABLE":"",
-    "VALUE":""
-   },
-   {
-    "APP_ID":"ZETR_CMP_INFO_UI5R",
-    "TILE_ID":"UI5R_85903CCBD92E7D0B92A573646EE80D77801A4C8A_AL",
-    "BAG_ID":"                                                                                                  4",
-    "NAME":"display_search_keywords",
-    "TRANSLATABLE":"",
-    "VALUE":""
    }
   ]
  },
@@ -151,11 +113,11 @@
    {
     "APP_ID":"ZETR_CMP_INFO_UI5R",
     "LANGU":"T",
-    "TILE_TITLE":"eÇözümler - Şirket Verileri",
+    "TILE_TITLE":"eÇözümler - Şirket Bilgileri",
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Şirket Verileri"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Şirket Bilgileri"
    }
   ]
  },
@@ -183,8 +145,8 @@
     "CRELEASE":"",
     "DELFLAG":"",
     "TRANSLTTXT":"",
-    "CREATED_ON":"2024-05-05",
-    "CHECK_DATE":"2024-05-05",
+    "CREATED_ON":"2024-12-24",
+    "CHECK_DATE":"2024-12-24",
     "CHECK_CFG":""
    }
   ]

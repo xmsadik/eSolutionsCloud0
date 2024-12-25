@@ -23,4 +23,5 @@
     CHECK et_list IS NOT INITIAL.
     save_incoming_deliveries( it_list  = et_list
                               it_items = et_items ).
+    mail_incoming_deliveries( it_list = et_list ).
   ENDMETHOD.

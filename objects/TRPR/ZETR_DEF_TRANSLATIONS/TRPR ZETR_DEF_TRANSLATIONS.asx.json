@@ -11,7 +11,7 @@
     "CREATED_BY":"SAP_CUSTOMER",
     "CREATED_AT":"+20240903080520.5129550",
     "LAST_CHANGED_BY":"SAP_CUSTOMER",
-    "LAST_CHANGED_AT":"+20241224095207.3068540"
+    "LAST_CHANGED_AT":"+20241225123053.0341560"
    }
   ]
  },
@@ -417,6 +417,11 @@
    {
     "PROJECT_ID":"ZETR_DEF_TRANSLATIONS",
     "TYPE":"DATA_ELEM",
+    "NAME":"ZETR_E_EMTIM"
+   },
+   {
+    "PROJECT_ID":"ZETR_DEF_TRANSLATIONS",
+    "TYPE":"DATA_ELEM",
     "NAME":"ZETR_E_FAX_NUMBER"
    },
    {
@@ -558,6 +563,11 @@
     "PROJECT_ID":"ZETR_DEF_TRANSLATIONS",
     "TYPE":"DATA_ELEM",
     "NAME":"ZETR_E_OCBLG"
+   },
+   {
+    "PROJECT_ID":"ZETR_DEF_TRANSLATIONS",
+    "TYPE":"DATA_ELEM",
+    "NAME":"ZETR_E_OGDIC"
    },
    {
     "PROJECT_ID":"ZETR_DEF_TRANSLATIONS",
@@ -757,6 +767,11 @@
    {
     "PROJECT_ID":"ZETR_DEF_TRANSLATIONS",
     "TYPE":"DOMAIN",
+    "NAME":"ZETR_D_EMTIM"
+   },
+   {
+    "PROJECT_ID":"ZETR_DEF_TRANSLATIONS",
+    "TYPE":"DOMAIN",
     "NAME":"ZETR_D_INCLUDE_EXCLUDE"
    },
    {
@@ -788,6 +803,11 @@
     "PROJECT_ID":"ZETR_DEF_TRANSLATIONS",
     "TYPE":"DOMAIN",
     "NAME":"ZETR_D_OPTION"
+   },
+   {
+    "PROJECT_ID":"ZETR_DEF_TRANSLATIONS",
+    "TYPE":"DOMAIN",
+    "NAME":"ZETR_D_RULET"
    },
    {
     "PROJECT_ID":"ZETR_DEF_TRANSLATIONS",
@@ -842,6 +862,11 @@
    {
     "PROJECT_ID":"ZETR_DEF_TRANSLATIONS",
     "TYPE":"MTDT_XTNSN",
+    "NAME":"ZETR_DDL_E_COMPANY_INFORMATION"
+   },
+   {
+    "PROJECT_ID":"ZETR_DEF_TRANSLATIONS",
+    "TYPE":"MTDT_XTNSN",
     "NAME":"ZETR_DDL_E_COMPANY_MASTER_DATA"
    },
    {
@@ -878,6 +903,11 @@
     "PROJECT_ID":"ZETR_DEF_TRANSLATIONS",
     "TYPE":"MTDT_XTNSN",
     "NAME":"ZETR_DDL_E_EDOC_NUMBER_STATUS"
+   },
+   {
+    "PROJECT_ID":"ZETR_DEF_TRANSLATIONS",
+    "TYPE":"MTDT_XTNSN",
+    "NAME":"ZETR_DDL_E_EMAIL_LIST"
    },
    {
     "PROJECT_ID":"ZETR_DEF_TRANSLATIONS",
@@ -991,12 +1021,12 @@
     "TARGET_LANGUAGE":"T",
     "MAINTENANCE_STATUS":"NO_TRANSLA",
     "IMPORT_STATUS":"SUCCESS",
-    "LAST_IMPORTED_AT":"+20241224095207.2782260",
+    "LAST_IMPORTED_AT":"+20241225123053.0060540",
     "LAST_IMPORTED_BY":"SAP_CUSTOMER",
-    "LAST_UPLOADED_AT":"+20241224095200.7738180",
+    "LAST_UPLOADED_AT":"+20241225123046.7475990",
     "LAST_UPLOADED_BY":"SAP_CUSTOMER",
     "FILE_TYPE":"XLIFF",
-    "FILE_CONTENT":"<xliff xmlns=\"urn:oasis:names:tc:xliff:document:1.2\" version=\"1.2\">\n  <file datatype=\"plaintext\" original=\"ZETR_DEF_TRANSLATIONS\" source-language=\"en-US\" target-language=\"tr\">\n    <header>\n      <tool tool-company=\"SAP SE\" tool-id=\"urn:x-sap:maintain-translations-fiori-app\" tool-name=\"Maintain Translations Fiori App\" tool-version=\"1.0.0\"/>\n    </header>\n    <body>\n      <group datatype=\"x-MESSAGE_CLASS\" resname=\"ZETR_COMMON\">\n        <trans-unit id=\"MESSAGE_CLASS:ZETR_COMMON:SHORT_TEXT:219\" maxwidth=\"73\" size-unit=\"char\">\n          <source>Mail sent to recipient \"&amp;1\".</source>\n\t\t  <target>Mail alıcıya gönderilmiştir \"&amp;1\".</target>\n          <note>Short description for message 219 of message class ZETR_COMMON.</note>\n        </trans-unit>\n        <trans-unit id=\"MESSAGE_CLASS:ZETR_COMMON:SHORT_TEXT:220\" maxwidth=\"73\" size-unit=\"char\">\n          <source>E-Mail address can not be found for partner \"&amp;1\".</source>\n\t\t  <target>Muhatap için mail adresi bulunamadı \"&amp;1\".</target>\n          <note>Short description for message 220 of message class ZETR_COMMON.</note>\n        </trans-unit>\n      </group>\n    </body>\n  </file>\n</xliff>"
+    "FILE_CONTENT":"<xliff xmlns=\"urn:oasis:names:tc:xliff:document:1.2\" version=\"1.2\">\n  <file datatype=\"plaintext\" original=\"ZETR_DEF_TRANSLATIONS\" source-language=\"en-US\" target-language=\"tr\">\n    <header>\n      <tool tool-company=\"SAP SE\" tool-id=\"urn:x-sap:maintain-translations-fiori-app\" tool-name=\"Maintain Translations Fiori App\" tool-version=\"1.0.0\"/>\n    </header>\n    <body>\n      <group datatype=\"x-DOMAIN\" resname=\"ZETR_D_EMTIM\">\n        <trans-unit id=\"DOMAIN:ZETR_D_EMTIM:FIXED_VALUE_DESCRIPTION:1\" maxwidth=\"60\" size-unit=\"char\">\n          <source>Get Incoming Invoices</source>\n          <target>Gelen Faturaları İçeri Al</target>\n          <note>Description for fixed value 1 of domain ZETR_D_EMTIM.</note>\n        </trans-unit>\n        <trans-unit id=\"DOMAIN:ZETR_D_EMTIM:FIXED_VALUE_DESCRIPTION:2\" maxwidth=\"60\" size-unit=\"char\">\n          <source>Get Incoming Deliveries</source>\n          <target>Gelen İrsaliyeleri İçeri Al</target>\n          <note>Description for fixed value 2 of domain ZETR_D_EMTIM.</note>\n        </trans-unit>\n      </group>\n    </body>\n  </file>\n</xliff>"
    }
   ]
  },

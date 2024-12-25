@@ -41,6 +41,7 @@ authorization master ( instance )
   association _companyParameters { create; }
   association _referenceClasses { create; }
   association _userAuthorizations { create; }
+  association _eMailList { create; }
 }
 
 define behavior for zetr_ddl_i_company_identify //alias <alias_name>
@@ -121,5 +122,27 @@ authorization dependent by _companyInformation
   delete;
   field ( readonly ) CompanyCode;
   field ( readonly : update ) Username;
+  association _companyInformation;
+}
+
+define behavior for zetr_ddl_i_email_list //alias <alias_name>
+persistent table zetr_t_emlst
+lock dependent by _companyInformation
+authorization dependent by _companyInformation
+//etag master <field_name>
+{
+  mapping for zetr_t_emlst
+    {
+      CompanyCode  = bukrs;
+      ListItem     = buzei;
+      TaxID        = taxid;
+      EMailTime    = emtim;
+      EMailAddress = email;
+    }
+  update;
+  delete;
+  field ( readonly ) CompanyCode;
+  field ( readonly : update ) ListItem;
+  field ( mandatory ) EMailTime, EMailAddress;
   association _companyInformation;
 }

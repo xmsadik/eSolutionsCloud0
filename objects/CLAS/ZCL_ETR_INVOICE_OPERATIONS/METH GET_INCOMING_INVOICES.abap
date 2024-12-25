@@ -18,4 +18,5 @@
     CHECK rt_list IS NOT INITIAL.
 
     save_incoming_invoices( rt_list ).
+    mail_incoming_invoices( rt_list ).
   ENDMETHOD.

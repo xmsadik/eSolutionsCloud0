@@ -20,6 +20,16 @@
       RAISING
         zcx_etr_regulative_exception .
 
+    METHODS mail_incoming_deliveries
+      IMPORTING
+        !it_list TYPE mty_incoming_list.
+
+    METHODS convert_incdlv_list_to_html
+      IMPORTING
+        !it_list       TYPE mty_incoming_full_list
+      RETURNING
+        VALUE(rv_html) TYPE string.
+
     METHODS outgoing_delivery_save_likp
       IMPORTING
         !iv_awtyp   TYPE zetr_e_awtyp
@@ -62,6 +72,13 @@
         !is_rule_input        TYPE zetr_s_delivery_rules_in
       RETURNING
         VALUE(rs_rule_output) TYPE zetr_s_delivery_rules_out .
+
+    METHODS get_edelivery_rules
+      IMPORTING
+        !iv_rule_type         TYPE zetr_E_RULET
+        !is_rule_input        TYPE zetr_s_delivery_rules_in
+      RETURNING
+        VALUE(rt_rule_output) TYPE mty_delivery_rules_out .
 
     METHODS get_partner_register_data
       IMPORTING

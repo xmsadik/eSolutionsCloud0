@@ -303,7 +303,7 @@
 
         CLEAR ls_invoice_rule_output.
         ls_invoice_rule_output = get_earchive_rule( iv_rule_type   = 'X'
-                                              is_rule_input  = ls_invoice_rule_input ).
+                                                    is_rule_input  = ls_invoice_rule_input ).
         IF ls_invoice_rule_output-ruleok IS NOT INITIAL.
           ls_document-xsltt = ls_invoice_rule_output-xsltt.
         ELSE.
@@ -313,6 +313,15 @@
               AND deflt = @abap_true
             INTO @ls_document-xsltt.
         ENDIF.
+
+        DATA(lt_field_rules) = get_earchive_rules( iv_rule_type   = 'F'
+                                                   is_rule_input  = ls_invoice_rule_input ).
+        LOOP AT lt_field_rules INTO DATA(ls_field_rule).
+          CHECK ls_field_rule-fname IS NOT INITIAL.
+          ASSIGN COMPONENT ls_field_rule-fname OF STRUCTURE ls_document TO FIELD-SYMBOL(<ls_field_value>).
+          CHECK sy-subrc = 0.
+          <ls_field_value> = ls_field_rule-value.
+        ENDLOOP.
       WHEN OTHERS.
         ls_invoice_rule_input-ityin = ls_document-invty.
         ls_invoice_rule_input-pidin = ls_document-prfid.
@@ -352,8 +361,17 @@
               AND deflt = @abap_true
             INTO @ls_document-xsltt.
         ENDIF.
+
+        lt_field_rules = get_einvoice_rules( iv_rule_type   = 'F'
+                                             is_rule_input  = ls_invoice_rule_input ).
+        LOOP AT lt_field_rules INTO ls_field_rule.
+          CHECK ls_field_rule-fname IS NOT INITIAL.
+          ASSIGN COMPONENT ls_field_rule-fname OF STRUCTURE ls_document TO <ls_field_value>.
+          CHECK sy-subrc = 0.
+          <ls_field_value> = ls_field_rule-value.
+        ENDLOOP.
     ENDCASE.
-* AS 07.01.2022
+
     IF ls_document-prfid EQ 'IHRACAT' .
       SELECT SINGLE *
         FROM zetr_t_othp

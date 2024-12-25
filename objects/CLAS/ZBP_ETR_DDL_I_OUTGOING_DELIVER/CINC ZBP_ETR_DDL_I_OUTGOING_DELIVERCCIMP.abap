@@ -1,3 +1,59 @@
+CLASS lhc_items DEFINITION INHERITING FROM cl_abap_behavior_handler.
+
+  PRIVATE SECTION.
+
+    METHODS get_instance_features FOR INSTANCE FEATURES
+      IMPORTING keys REQUEST requested_features FOR Items RESULT result.
+
+ENDCLASS.
+
+CLASS lhc_items IMPLEMENTATION.
+
+  METHOD get_instance_features.
+    READ ENTITIES OF zetr_ddl_i_outgoing_deliveries IN LOCAL MODE
+          ENTITY OutgoingDeliveries
+            ALL FIELDS
+            WITH CORRESPONDING #( keys )
+        RESULT DATA(lt_deliveries)
+        FAILED failed.
+    CHECK lt_deliveries IS NOT INITIAL.
+
+    READ ENTITIES OF zetr_ddl_i_outgoing_deliveries IN LOCAL MODE
+          ENTITY Items
+            ALL FIELDS
+            WITH CORRESPONDING #( keys )
+        RESULT DATA(lt_items)
+        FAILED failed.
+
+    SELECT *
+      FROM zetr_t_usaut
+      FOR ALL ENTRIES IN @lt_deliveries
+      WHERE bukrs = @lt_deliveries-CompanyCode
+      INTO TABLE @DATA(lt_authorizations).
+    LOOP AT lt_items INTO DATA(ls_item).
+      READ TABLE lt_deliveries INTO DATA(ls_delivery) WITH KEY DocumentUUID = ls_item-DocumentUUID.
+      CHECK sy-subrc = 0.
+      APPEND VALUE #( %tky = ls_item-%tky
+                        %features-%update = COND #( WHEN ls_delivery-statuscode <> '' AND
+                                                         ls_delivery-statuscode <> '2'
+                                                         THEN if_abap_behv=>fc-o-disabled
+                                                   WHEN ls_delivery-DocumentType <> 'MANU' AND
+                                                        NOT line_exists( lt_authorizations[ bukrs = ls_delivery-CompanyCode ogdic = abap_true ] )
+                                                        THEN if_abap_behv=>fc-o-disabled
+                                                   ELSE if_abap_behv=>fc-o-enabled  )
+                        %features-%delete = COND #( WHEN ls_delivery-statuscode <> '' AND
+                                                         ls_delivery-statuscode <> '2'
+                                                         THEN if_abap_behv=>fc-o-disabled
+                                                   WHEN ls_delivery-DocumentType <> 'MANU' AND
+                                                        NOT line_exists( lt_authorizations[ bukrs = ls_delivery-CompanyCode ogdic = abap_true ] )
+                                                        THEN if_abap_behv=>fc-o-disabled
+                                                   ELSE if_abap_behv=>fc-o-enabled  )
+                      ) TO result.
+    ENDLOOP.
+  ENDMETHOD.
+
+ENDCLASS.
+
 CLASS lhc_transporters DEFINITION INHERITING FROM cl_abap_behavior_handler.
 
   PRIVATE SECTION.
@@ -144,6 +200,13 @@ CLASS lhc_zetr_ddl_i_outgoing_delive IMPLEMENTATION.
                                                    THEN if_abap_behv=>fc-o-disabled ELSE if_abap_behv=>fc-o-enabled  )
                         %features-%delete = COND #( WHEN ls_delivery-statuscode <> '' AND ls_delivery-statuscode <> '2'
                                                    THEN if_abap_behv=>fc-o-disabled ELSE if_abap_behv=>fc-o-enabled  )
+                        %assoc-_deliveryItems = COND #( WHEN ls_delivery-statuscode <> '' AND
+                                                         ls_delivery-statuscode <> '2'
+                                                         THEN if_abap_behv=>fc-o-disabled
+                                                   WHEN ls_delivery-DocumentType <> 'MANU' AND
+                                                        NOT line_exists( lt_authorizations[ bukrs = ls_delivery-CompanyCode ogdic = abap_true ] )
+                                                        THEN if_abap_behv=>fc-o-disabled
+                                                   ELSE if_abap_behv=>fc-o-enabled  )
                         %field-PartnerNumber = COND #( WHEN ls_delivery-statuscode <> '' AND ls_delivery-statuscode <> '2' AND ls_delivery-DocumentType <> 'MANU'
                                                      THEN if_abap_behv=>fc-f-read_only
                                                    ELSE if_abap_behv=>fc-f-unrestricted  )

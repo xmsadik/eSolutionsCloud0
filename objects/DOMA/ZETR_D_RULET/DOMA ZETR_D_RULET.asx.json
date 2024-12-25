@@ -89,6 +89,15 @@
     "DOMVALUE_L":"N",
     "DOMVALUE_H":"",
     "APPVAL":""
+   },
+   {
+    "DOMNAME":"ZETR_D_RULET",
+    "AS4LOCAL":"N",
+    "VALPOS":5,
+    "AS4VERS":0,
+    "DOMVALUE_L":"F",
+    "DOMVALUE_H":"",
+    "APPVAL":""
    }
   ]
  },
@@ -142,6 +151,17 @@
    },
    {
     "DOMNAME":"ZETR_D_RULET",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "VALPOS":5,
+    "AS4VERS":0,
+    "DDTEXT":"Field",
+    "DOMVAL_LD":"",
+    "DOMVAL_HD":"",
+    "DOMVALUE_L":"F"
+   },
+   {
+    "DOMNAME":"ZETR_D_RULET",
     "DDLANGUAGE":"T",
     "AS4LOCAL":"N",
     "VALPOS":1,
@@ -183,6 +203,17 @@
     "DOMVAL_LD":"",
     "DOMVAL_HD":"",
     "DOMVALUE_L":"N"
+   },
+   {
+    "DOMNAME":"ZETR_D_RULET",
+    "DDLANGUAGE":"T",
+    "AS4LOCAL":"N",
+    "VALPOS":5,
+    "AS4VERS":0,
+    "DDTEXT":"Alan Değişikliği",
+    "DOMVAL_LD":"",
+    "DOMVAL_HD":"",
+    "DOMVALUE_L":"F"
    }
   ]
  },

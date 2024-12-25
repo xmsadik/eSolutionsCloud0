@@ -21,6 +21,7 @@ CLASS lhc_zetr_ddl_i_outgoing_invoic DEFINITION INHERITING FROM cl_abap_behavior
 
     METHODS statusupdate FOR MODIFY
       IMPORTING keys FOR ACTION outgoinginvoices~statusupdate RESULT result.
+
     METHODS sendmailtopartner FOR MODIFY
       IMPORTING keys FOR ACTION outgoinginvoices~sendmailtopartner RESULT result.
 
@@ -838,6 +839,11 @@ CLASS lhc_zetr_ddl_i_outgoing_invoic IMPLEMENTATION.
     IF sy-subrc <> 0 OR ls_key-%param-email IS INITIAL.
       APPEND VALUE #( %msg = new_message( id       = 'ZETR_COMMON'
                                           number   = '202'
+                                          severity = if_abap_behv_message=>severity-error ) ) TO reported-outgoinginvoices.
+      RETURN.
+    ELSEIF zcl_etr_regulative_common=>validate_email_adress( ls_key-%param-email ) = ''.
+      APPEND VALUE #( %msg = new_message( id       = 'ZETR_COMMON'
+                                          number   = '035'
                                           severity = if_abap_behv_message=>severity-error ) ) TO reported-outgoinginvoices.
       RETURN.
     ENDIF.

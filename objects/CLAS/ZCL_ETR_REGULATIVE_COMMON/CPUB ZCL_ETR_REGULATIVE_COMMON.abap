@@ -96,3 +96,8 @@ CLASS zcl_etr_regulative_common DEFINITION
         !iv_address_number TYPE ad_addrnum
       RETURNING
         VALUE(rs_data)     TYPE zetr_s_party_info.
+    CLASS-METHODS validate_email_adress
+      IMPORTING
+        !iv_email    TYPE zetr_e_email
+      RETURNING
+        VALUE(rv_ok) TYPE abap_boolean .
