@@ -96,6 +96,7 @@ authorization master ( global, instance )
   action ( features : instance ) archiveInvoices result [1] $self;
   action ( features : instance ) statusUpdate result [1] $self;
   action ( features : instance ) sendMailToPartner result [1] $self;
+  action ( features : instance ) showSummary result [1] $self;
   action ( features : instance ) sendMailToSelected parameter zetr_ddl_i_mail_selection result [1] $self;
   action ( features : instance ) setAsRejected parameter zetr_ddl_i_reject_selection result [1] $self;
 }

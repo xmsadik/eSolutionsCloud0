@@ -28,6 +28,9 @@ CLASS lhc_zetr_ddl_i_outgoing_invoic DEFINITION INHERITING FROM cl_abap_behavior
     METHODS sendmailtoselected FOR MODIFY
       IMPORTING keys FOR ACTION outgoinginvoices~sendmailtoselected RESULT result.
 
+    METHODS showsummary FOR MODIFY
+      IMPORTING keys FOR ACTION outgoinginvoices~showsummary RESULT result.
+
 
 ENDCLASS.
 
@@ -906,6 +909,84 @@ CLASS lhc_zetr_ddl_i_outgoing_invoic IMPLEMENTATION.
                                             v3 = lv_error+100(50)
                                             v4 = lv_error+150(*) ) ) TO reported-outgoinginvoices.
     ENDTRY.
+
+    READ ENTITIES OF zetr_ddl_i_outgoing_invoices IN LOCAL MODE
+      ENTITY OutgoingInvoices
+      ALL FIELDS WITH
+      CORRESPONDING #( keys )
+      RESULT Invoices.
+    result = VALUE #( FOR invoice IN invoices
+                 ( %tky   = invoice-%tky
+                   %param = invoice ) ).
+  ENDMETHOD.
+
+  METHOD showSummary.
+    READ ENTITIES OF zetr_ddl_i_outgoing_invoices IN LOCAL MODE
+      ENTITY OutgoingInvoices
+      ALL FIELDS WITH
+      CORRESPONDING #( keys )
+      RESULT DATA(invoices).
+
+    TYPES BEGIN OF ty_summary1.
+    TYPES ProfileID TYPE zetr_e_inprf.
+    TYPES Count TYPE i.
+    TYPES END OF ty_summary1.
+
+    TYPES BEGIN OF ty_summary2.
+    TYPES ProfileID TYPE zetr_e_inprf.
+    TYPES Amount TYPE wrbtr_cs.
+    TYPES TaxAmount TYPE fwste_cs.
+    TYPES Currency TYPE waers.
+    TYPES END OF ty_summary2.
+
+    TYPES BEGIN OF ty_summary3.
+    TYPES ProfileID TYPE zetr_e_inprf.
+    TYPES OverallStatus TYPE zetr_e_staex.
+    TYPES Count TYPE i.
+    TYPES END OF ty_summary3.
+
+    DATA: lt_summary1 TYPE STANDARD TABLE OF ty_summary1 WITH NON-UNIQUE SORTED KEY by_profile COMPONENTS ProfileID,
+          ls_sumamry1 TYPE ty_summary1,
+          lt_summary2 TYPE STANDARD TABLE OF ty_summary2 WITH NON-UNIQUE SORTED KEY by_profile COMPONENTS ProfileID,
+          ls_sumamry2 TYPE ty_summary2,
+          lt_summary3 TYPE STANDARD TABLE OF ty_summary3 WITH NON-UNIQUE SORTED KEY by_profile COMPONENTS ProfileID,
+          ls_sumamry3 TYPE ty_summary3.
+
+    LOOP AT invoices INTO DATA(ls_invoice).
+      CLEAR ls_sumamry1.
+      ls_sumamry1-profileid = ls_invoice-ProfileID.
+      ls_sumamry1-count = 1.
+      COLLECT ls_sumamry1 INTO lt_summary1.
+
+      CLEAR ls_sumamry2.
+      ls_sumamry2 = CORRESPONDING #( ls_invoice ).
+      COLLECT ls_sumamry2 INTO lt_summary2.
+
+      CLEAR ls_sumamry3.
+      ls_sumamry3 = CORRESPONDING #( ls_invoice ).
+      ls_sumamry3-count = 1.
+      COLLECT ls_sumamry3 INTO lt_summary3.
+    ENDLOOP.
+
+    LOOP AT lt_summary1 INTO ls_sumamry1.
+      APPEND VALUE #( %msg = new_message_with_text( severity = if_abap_behv_message=>severity-information
+                                                    text = |- - - - - { zcl_etr_invoice_operations=>conversion_profile_id_output( CONV #( ls_sumamry1-profileid ) ) } - - - - -| ) ) TO reported-OutgoingInvoices.
+
+      LOOP AT lt_summary3 INTO ls_sumamry3 USING KEY by_profile WHERE profileid = ls_sumamry1-profileid.
+        APPEND VALUE #( %msg = new_message_with_text( severity = if_abap_behv_message=>severity-information
+                                                      text = |{ ls_sumamry3-overallstatus } : { ls_sumamry3-count NUMBER = USER }| ) ) TO reported-OutgoingInvoices.
+      ENDLOOP.
+
+      LOOP AT lt_summary2 INTO ls_sumamry2 USING KEY by_profile WHERE profileid = ls_sumamry1-profileid.
+        APPEND VALUE #( %msg = new_message_with_text( severity = if_abap_behv_message=>severity-information
+                                                      text = |Toplam Vergi Tutarı : { ls_sumamry2-taxamount CURRENCY = ls_sumamry2-Currency NUMBER = USER } { ls_sumamry2-Currency }| ) ) TO reported-OutgoingInvoices.
+        APPEND VALUE #( %msg = new_message_with_text( severity = if_abap_behv_message=>severity-information
+                                                      text = |Toplam Belge Tutarı : { ls_sumamry2-amount CURRENCY = ls_sumamry2-Currency NUMBER = USER } { ls_sumamry2-Currency }| ) ) TO reported-OutgoingInvoices.
+      ENDLOOP.
+
+      APPEND VALUE #( %msg = new_message_with_text( severity = if_abap_behv_message=>severity-information
+                                                    text = |Toplam Fatura Sayısı : { ls_sumamry1-count NUMBER = USER }| ) ) TO reported-OutgoingInvoices.
+    ENDLOOP.
 
     READ ENTITIES OF zetr_ddl_i_outgoing_invoices IN LOCAL MODE
       ENTITY OutgoingInvoices

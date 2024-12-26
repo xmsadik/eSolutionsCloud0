@@ -13,6 +13,7 @@ define behavior for zetr_ddl_p_outgoing_invoices alias OutgoingInvoices
   use action setAsRejected;
   use action sendMailToPartner;
   use action sendMailToSelected;
+  use action showSummary;
 }
 
 define behavior for zetr_ddl_p_outgoing_invcont alias InvoiceContents
