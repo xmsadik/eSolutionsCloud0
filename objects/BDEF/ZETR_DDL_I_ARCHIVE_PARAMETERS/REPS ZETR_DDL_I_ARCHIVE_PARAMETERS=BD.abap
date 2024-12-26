@@ -149,6 +149,8 @@ authorization dependent by _earchiveParameters
       SerialPrefix           = serpr;
       XSLTTemplate           = xsltt;
       Note                   = note;
+      FieldName              = fname;
+      FieldValue             = value;
     }
   update;
   delete;

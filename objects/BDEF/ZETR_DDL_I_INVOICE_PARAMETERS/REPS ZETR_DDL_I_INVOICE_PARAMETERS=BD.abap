@@ -156,6 +156,8 @@ authorization dependent by _eInvoiceParameters
       SerialPrefix           = serpr;
       XSLTTemplate           = xsltt;
       Note                   = note;
+      FieldName              = fname;
+      FieldValue             = value;
     }
   update;
   delete;

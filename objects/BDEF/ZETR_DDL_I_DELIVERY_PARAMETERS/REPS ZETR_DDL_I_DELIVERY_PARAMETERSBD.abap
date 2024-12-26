@@ -157,6 +157,8 @@ authorization dependent by _eDeliveryParameters
       SerialPrefix             = serpr;
       XSLTTemplate             = xsltt;
       Note                     = note;
+      FieldName                = fname;
+      FieldValue               = value;
     }
   update;
   delete;
