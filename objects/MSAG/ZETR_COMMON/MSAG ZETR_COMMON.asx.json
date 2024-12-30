@@ -2162,6 +2162,42 @@
     "DOKLRELES":"",
     "DOKLDATE":"0000-00-00",
     "DOKLTIME":"00:00:00"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"ZETR_COMMON221",
+    "LANGU":"D",
+    "TYP":"E",
+    "DOKVERSION":1,
+    "DOKSTATE":"N",
+    "DOKFORM":"S_DOCU_SHOW",
+    "DOKSTYLE":"S_DOCUS1",
+    "DOKFUSER":"SAP_CUSTOMER",
+    "DOKFRELES":"",
+    "DOKFDATE":"0000-00-00",
+    "DOKFTIME":"00:00:00",
+    "DOKLUSER":"SAP_CUSTOMER",
+    "DOKLRELES":"",
+    "DOKLDATE":"0000-00-00",
+    "DOKLTIME":"00:00:00"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"ZETR_COMMON222",
+    "LANGU":"D",
+    "TYP":"E",
+    "DOKVERSION":1,
+    "DOKSTATE":"N",
+    "DOKFORM":"S_DOCU_SHOW",
+    "DOKSTYLE":"S_DOCUS1",
+    "DOKFUSER":"SAP_CUSTOMER",
+    "DOKFRELES":"",
+    "DOKFDATE":"0000-00-00",
+    "DOKFTIME":"00:00:00",
+    "DOKLUSER":"SAP_CUSTOMER",
+    "DOKLRELES":"",
+    "DOKLDATE":"0000-00-00",
+    "DOKLTIME":"00:00:00"
    }
   ]
  },
@@ -3488,6 +3524,28 @@
     "TXTLINES":0,
     "DOKSTATE":"N",
     "SELFDEF":"3"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"ZETR_COMMON221",
+    "LANGU":"D",
+    "TYP":"E",
+    "VERSION":1,
+    "MASTERLANG":"X",
+    "TXTLINES":0,
+    "DOKSTATE":"N",
+    "SELFDEF":"3"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"ZETR_COMMON222",
+    "LANGU":"D",
+    "TYP":"E",
+    "VERSION":1,
+    "MASTERLANG":"X",
+    "TXTLINES":0,
+    "DOKSTATE":"N",
+    "SELFDEF":"3"
    }
   ]
  },
@@ -4216,6 +4274,18 @@
     "TEXT":"E-Mail address can not be found for partner \"&1\"."
    },
    {
+    "SPRSL":"E",
+    "ARBGB":"ZETR_COMMON",
+    "MSGNR":"221",
+    "TEXT":"Tax code(&1-&2) not found in the system."
+   },
+   {
+    "SPRSL":"E",
+    "ARBGB":"ZETR_COMMON",
+    "MSGNR":"222",
+    "TEXT":"Tax code(&1-&2) must be output tax."
+   },
+   {
     "SPRSL":"T",
     "ARBGB":"ZETR_COMMON",
     "MSGNR":"000",
@@ -4934,6 +5004,18 @@
     "ARBGB":"ZETR_COMMON",
     "MSGNR":"220",
     "TEXT":"Muhatap için mail adresi bulunamadı \"&1\"."
+   },
+   {
+    "SPRSL":"T",
+    "ARBGB":"ZETR_COMMON",
+    "MSGNR":"221",
+    "TEXT":"Vergi kodu(&1-&2) sistemde bulunamdı."
+   },
+   {
+    "SPRSL":"T",
+    "ARBGB":"ZETR_COMMON",
+    "MSGNR":"222",
+    "TEXT":"Vergi türü(&1-&2) hesaplanan KDV olmalıdır."
    }
   ]
  },
@@ -5807,6 +5889,20 @@
     "NAME":"SAP_CUSTOMER",
     "DATUM":"2024-12-30",
     "SELFDEF":"3"
+   },
+   {
+    "ARBGB":"ZETR_COMMON",
+    "MSGNR":"221",
+    "NAME":"SAP_CUSTOMER",
+    "DATUM":"2024-12-30",
+    "SELFDEF":"3"
+   },
+   {
+    "ARBGB":"ZETR_COMMON",
+    "MSGNR":"222",
+    "NAME":"SAP_CUSTOMER",
+    "DATUM":"2024-12-30",
+    "SELFDEF":"3"
    }
   ]
  },
@@ -5834,8 +5930,8 @@
     "CRELEASE":"",
     "DELFLAG":"",
     "TRANSLTTXT":"",
-    "CREATED_ON":"2024-12-24",
-    "CHECK_DATE":"2024-12-24",
+    "CREATED_ON":"2024-12-30",
+    "CHECK_DATE":"2024-12-30",
     "CHECK_CFG":""
    }
   ]

@@ -19,6 +19,7 @@ authorization master ( instance )
       ParentTaxRate = txrtp;
     }
   field ( readonly : update ) TaxProcedure, TaxCode;
+  validation checkTaxCode on save { field TaxProcedure, TaxCode; create; update; }
   create;
   update;
   delete;
