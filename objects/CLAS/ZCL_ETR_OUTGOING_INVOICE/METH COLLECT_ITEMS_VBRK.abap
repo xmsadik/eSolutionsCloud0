@@ -41,14 +41,17 @@
                                                                      AND koaid = 'A'
                                                                      AND kinak = space.
         READ TABLE ms_billing_data-conditions
-          WITH TABLE KEY primary_key
+          INTO DATA(ls_condition)
+*          WITH TABLE KEY primary_key
 *          WITH TABLE KEY by_kschl
-          COMPONENTS kschl = ls_konv-kschl
-*                     cndty = 'D'
-          TRANSPORTING NO FIELDS.
+          WITH KEY kschl = ls_konv-kschl
+*          COMPONENTS kschl = ls_konv-kschl
+                     cndty = 'D'.
+*          TRANSPORTING NO FIELDS.
         CHECK sy-subrc EQ 0.
         CLEAR ls_item_allowance.
         ls_item_allowance-posnr = ls_vbrp-posnr.
+        ls_item_allowance-descr = ls_condition-descr.
         IF ls_konv-kwert LT 0.
           ls_konv-kwert = abs( ls_konv-kwert ).
           ls_items-distr += ls_konv-kwert.
@@ -58,18 +61,20 @@
           ls_item_allowance-surtr = ls_konv-kwert.
         ENDIF.
         IF ls_konv-kbetr LT 0 .
-          DATA(lv_kbetr) =  CONV wrbtr_cs( abs( ls_konv-kbetr )   / 1000 ).
-          ls_items-disrt += lv_kbetr.
+          DATA(lv_kbetr) =  CONV wrbtr_cs( abs( ls_konv-kbetr )  ). "  / 1000 ).
+*          ls_items-disrt += lv_kbetr.
           ls_item_allowance-disrt = lv_kbetr.
         ELSEIF ls_konv-kbetr GT 0.
-          lv_kbetr =  ls_konv-kbetr   / 1000 .
-          ls_items-surrt += lv_kbetr.
+          lv_kbetr =  ls_konv-kbetr."   / 1000 .
+*          ls_items-surrt += lv_kbetr.
           ls_item_allowance-surrt = lv_kbetr.
         ENDIF.
         IF ms_document-itmcl = abap_false.
           APPEND ls_item_allowance TO mt_items_allowance.
         ENDIF.
       ENDLOOP.
+      ls_items-netwr += ls_items-distr.
+      ls_items-netwr += ls_items-surtr.
 
       LOOP AT ms_billing_data-conditions INTO ls_conditions USING KEY by_cndty WHERE cndty = 'V'.
         READ TABLE ms_billing_data-konv

@@ -12,6 +12,7 @@ authorization master ( instance )
       ConditionType     = kschl;
       ConditionCategory = cndty;
       TaxType           = taxty;
+      Description       = descr;
     }
   field ( readonly : update ) ConditionType;
   create;

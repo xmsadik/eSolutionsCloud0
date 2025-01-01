@@ -315,6 +315,7 @@ CLASS zcl_etr_outgoing_invoice DEFINITION
     TYPES distr TYPE wrbtr_cs.
     TYPES surrt TYPE c LENGTH 20.
     TYPES surtr TYPE wrbtr_cs.
+    TYPES descr TYPE zetr_e_descr.
     TYPES END OF mty_item_allowance .
     TYPES mty_item_allowance_t TYPE TABLE OF mty_item_allowance .
 
