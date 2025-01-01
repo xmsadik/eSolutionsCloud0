@@ -215,7 +215,10 @@ CLASS zcl_etr_outgoing_delivery DEFINITION
     TYPES netwa TYPE waers.
     TYPES END OF mty_item_collect .
     TYPES mty_item_collect_t TYPE TABLE OF mty_item_collect .
-    TYPES mty_delivery_items TYPE TABLE OF zetr_t_ogdli WITH EMPTY KEY.
+    TYPES BEGIN OF mty_delivery_item.
+    INCLUDE TYPE zetr_t_ogdli.
+    TYPES END OF mty_delivery_item.
+    TYPES mty_delivery_items TYPE TABLE OF mty_delivery_item WITH EMPTY KEY.
 
     TYPES BEGIN OF mty_custom_parameters.
     TYPES cuspa TYPE zetr_e_cuspa.
