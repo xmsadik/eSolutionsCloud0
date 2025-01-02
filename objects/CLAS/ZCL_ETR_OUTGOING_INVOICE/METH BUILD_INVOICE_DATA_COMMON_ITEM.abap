@@ -70,7 +70,7 @@
         IF ms_document-itmcl = abap_false.
           LOOP AT mt_items_allowance INTO DATA(ls_item_allowance) WHERE posnr EQ ls_invoice_items-posnr AND ( distr IS NOT INITIAL OR disrt IS NOT INITIAL ).
             APPEND INITIAL LINE TO <ls_invoice_line>-allowancecharge ASSIGNING FIELD-SYMBOL(<ls_allowance_charge>).
-            <ls_allowance_charge>-chargeindicator-content = abap_false.
+            <ls_allowance_charge>-chargeindicator-content = ''.
             <ls_allowance_charge>-allowancechargereason-content = ls_item_allowance-descr.
             IF ls_item_allowance-distr IS NOT INITIAL.
               <ls_allowance_charge>-amount-content = ls_item_allowance-distr.
@@ -82,7 +82,7 @@
           ENDLOOP.
         ELSE.
           APPEND INITIAL LINE TO <ls_invoice_line>-allowancecharge ASSIGNING <ls_allowance_charge>.
-          <ls_allowance_charge>-chargeindicator-content = abap_false.
+          <ls_allowance_charge>-chargeindicator-content = ''.
           <ls_allowance_charge>-allowancechargereason-content = ls_item_allowance-descr.
           IF ls_invoice_items-distr IS NOT INITIAL.
             <ls_allowance_charge>-amount-content = ls_invoice_items-distr.
@@ -98,7 +98,7 @@
         IF ms_document-itmcl = abap_false.
           LOOP AT mt_items_allowance INTO ls_item_allowance WHERE posnr EQ ls_invoice_items-posnr AND ( surtr IS NOT INITIAL OR surrt IS NOT INITIAL ).
             APPEND INITIAL LINE TO <ls_invoice_line>-allowancecharge ASSIGNING <ls_allowance_charge>.
-            <ls_allowance_charge>-chargeindicator-content = abap_true.
+            <ls_allowance_charge>-chargeindicator-content = 'true'.
             <ls_allowance_charge>-allowancechargereason-content = ls_item_allowance-descr.
             IF ls_item_allowance-surtr IS NOT INITIAL.
               <ls_allowance_charge>-amount-content = ls_item_allowance-surtr.
@@ -110,7 +110,7 @@
           ENDLOOP.
         ELSE.
           APPEND INITIAL LINE TO <ls_invoice_line>-allowancecharge ASSIGNING <ls_allowance_charge>.
-          <ls_allowance_charge>-chargeindicator-content = abap_true.
+          <ls_allowance_charge>-chargeindicator-content = 'true'.
           <ls_allowance_charge>-allowancechargereason-content = ls_item_allowance-descr.
           IF ls_invoice_items-surtr IS NOT INITIAL.
             <ls_allowance_charge>-amount-content = ls_invoice_items-surtr.
