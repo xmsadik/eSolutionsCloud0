@@ -202,10 +202,10 @@
         INTO @ls_company_data.
       CHECK sy-subrc = 0 AND ls_document-bldat BETWEEN ls_company_data-datab AND ls_company_data-datbi.
 
-      ls_document-prfid = 'EARSIV'.
       ls_invoice_rule_output = get_earchive_rule( iv_rule_type   = 'P'
                                                   is_rule_input  = ls_invoice_rule_input ).
       IF ls_invoice_rule_output-ruleok IS NOT INITIAL AND ls_invoice_rule_output-excld = abap_true.
+        ls_document-prfid = 'EARSIV'.
         ls_document-invty = ls_invoice_rule_output-ityou.
         ls_document-taxex = ls_invoice_rule_output-taxex.
       ENDIF.
