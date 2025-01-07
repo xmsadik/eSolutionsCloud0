@@ -91,8 +91,8 @@
 
     SELECT *
     FROM zetr_t_hespl
-*   WHERE bukrs = gv_bukrs_tmp                "YiğitcanÖ. 1307023 Closed.
-*     AND ktopl = gs_t001-ktopl.
+*   WHERE bukrs = @gv_bukrs_tmp                "YiğitcanÖ. 1307023 Closed.
+*     AND ktopl = @gs_t001-ktopl.
       WHERE ktopl = @gs_t001-ktopl
       INTO TABLE @gt_hspplan.
 

@@ -27,11 +27,56 @@ CLASS zcl_etr_invoice_operations DEFINITION
         invno TYPE zetr_e_docno,
         invii TYPE zetr_e_docii,
         rprid TYPE zetr_e_rprid,
-      END OF mty_outgoing_document_status.
+      END OF mty_outgoing_document_status,
+      BEGIN OF mty_invoice_list,
+        DocumentUUID   TYPE zetr_ddl_i_outgoing_invoices-DocumentUUID,
+        overallstatus  TYPE zetr_ddl_i_outgoing_invoices-overallstatus,
+        companycode    TYPE zetr_ddl_i_outgoing_invoices-companycode,
+        companytitle   TYPE zetr_ddl_i_outgoing_invoices-companytitle,
+        documentnumber TYPE zetr_ddl_i_outgoing_invoices-documentnumber,
+        fiscalyear     TYPE zetr_ddl_i_outgoing_invoices-fiscalyear,
+        partnernumber  TYPE zetr_ddl_i_outgoing_invoices-partnernumber,
+        partnername    TYPE zetr_ddl_i_outgoing_invoices-partnername,
+        taxid          TYPE zetr_ddl_i_outgoing_invoices-taxid,
+        taxpayertitle  TYPE zetr_ddl_i_incoming_invoices-taxpayertitle,
+        documentdate   TYPE zetr_ddl_i_outgoing_invoices-documentdate,
+        amount         TYPE zetr_ddl_i_outgoing_invoices-amount,
+        taxamount      TYPE zetr_ddl_i_outgoing_invoices-taxamount,
+        currency       TYPE zetr_ddl_i_outgoing_invoices-currency,
+        profileid      TYPE zetr_ddl_i_outgoing_invoices-profileid,
+        invoicetype    TYPE zetr_ddl_i_outgoing_invoices-invoicetype,
+        statuscode     TYPE zetr_ddl_i_outgoing_invoices-statuscode,
+        statuscodetext TYPE zetr_ddl_i_outgoing_invoices-statuscodetext,
+        response       TYPE zetr_ddl_i_outgoing_invoices-response,
+        responsetext   TYPE zetr_ddl_i_outgoing_invoices-responsetext,
+        envelopeuuid   TYPE zetr_ddl_i_outgoing_invoices-envelopeuuid,
+        invoiceuuid    TYPE zetr_ddl_i_outgoing_invoices-invoiceuuid,
+        invoiceid      TYPE zetr_ddl_i_outgoing_invoices-invoiceid,
+        archived       TYPE zetr_ddl_i_outgoing_invoices-archived,
+      END OF mty_invoice_list,
+      mty_invoice_list_t TYPE STANDARD TABLE OF mty_invoice_list WITH EMPTY KEY,
+      BEGIN OF mty_summary1,
+        Type  TYPE string,
+        Count TYPE i,
+      END OF mty_summary1,
+      BEGIN OF mty_summary2,
+        Type      TYPE string,
+        Amount    TYPE wrbtr_cs,
+        TaxAmount TYPE fwste_cs,
+        Currency  TYPE waers,
+      END OF mty_summary2,
+      BEGIN OF mty_summary3,
+        Type   TYPE string,
+        Status TYPE zetr_e_staex,
+        Count  TYPE i,
+      END OF mty_summary3.
+
     TYPES BEGIN OF mty_outgoing_invoice.
     INCLUDE TYPE zetr_t_oginv.
     TYPES END OF mty_outgoing_invoice.
     TYPES mty_invoice_rules_out TYPE STANDARD TABLE OF zetr_s_invoice_rules_out WITH EMPTY KEY.
+
+
 
     CLASS-METHODS factory
       IMPORTING
@@ -211,3 +256,15 @@ CLASS zcl_etr_invoice_operations DEFINITION
         VALUE(rs_status) TYPE mty_outgoing_document_status
       RAISING
         zcx_etr_regulative_exception .
+
+    METHODS outgoing_invoice_summary
+      IMPORTING
+        it_documents     TYPE mty_invoice_list_t
+      RETURNING
+        VALUE(rt_return) TYPE bapirettab.
+
+    METHODS incoming_invoice_summary
+      IMPORTING
+        it_documents     TYPE mty_invoice_list_t
+      RETURNING
+        VALUE(rt_return) TYPE bapirettab.

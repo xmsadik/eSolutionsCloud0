@@ -31,6 +31,9 @@ CLASS lhc_InvoiceList DEFINITION INHERITING FROM cl_abap_behavior_handler.
     METHODS changeAccountingStatus FOR MODIFY
       IMPORTING keys FOR ACTION InvoiceList~changeAccountingStatus RESULT result.
 
+    METHODS showSummary FOR MODIFY
+      IMPORTING keys FOR ACTION InvoiceList~showSummary RESULT result.
+
 ENDCLASS.
 
 CLASS lhc_InvoiceList IMPLEMENTATION.
@@ -595,6 +598,54 @@ CLASS lhc_InvoiceList IMPLEMENTATION.
     APPEND VALUE #( %msg = new_message( id       = 'ZETR_COMMON'
                                         number   = '082'
                                         severity = if_abap_behv_message=>severity-success ) ) TO reported-invoicelist.
+  ENDMETHOD.
+
+  METHOD showSummary.
+    READ ENTITIES OF zetr_ddl_i_incoming_invoices IN LOCAL MODE
+      ENTITY InvoiceList
+      ALL FIELDS WITH
+      CORRESPONDING #( keys )
+      RESULT DATA(invoices).
+
+    TYPES BEGIN OF ty_company.
+    TYPES companycode TYPE zetr_ddl_i_incoming_invoices-companycode.
+    TYPES companytitle TYPE zetr_ddl_i_incoming_invoices-companytitle.
+    TYPES END OF ty_company.
+    DATA lt_companies TYPE STANDARD TABLE OF ty_company.
+
+    lt_companies = CORRESPONDING #( invoices ).
+    SORT lt_companies BY companycode.
+    DELETE ADJACENT DUPLICATES FROM lt_companies COMPARING companycode.
+
+    LOOP AT lt_companies INTO DATA(ls_company).
+      APPEND VALUE #( %msg = new_message( id       = 'ZETR_COMMON'
+                                          number   = '226'
+                                          severity = if_abap_behv_message=>severity-none
+                                          v1 = ls_company-companycode
+                                          v2 = ls_company-companytitle ) ) TO reported-invoicelist.
+
+      TRY.
+          DATA(lo_invoice_operations) = zcl_etr_invoice_operations=>factory( ls_company-companycode ).
+          DATA(lt_return) = lo_invoice_operations->incoming_invoice_summary( VALUE #( FOR invoice IN invoices
+                                                                                          WHERE ( companycode = ls_company-companycode )
+                                                                                          ( CORRESPONDING #( invoice MAPPING response = ResponseStatus responsetext = ResponseStatusText ) ) ) ).
+          LOOP AT lt_return INTO DATA(ls_return).
+            APPEND VALUE #( %msg = new_message( id       = ls_return-id
+                                                number   = ls_return-number
+                                                severity = if_abap_behv_message=>severity-none
+*                                                severity = CONV #( ls_return-type )
+                                                v1 = ls_return-message_v1
+                                                v2 = ls_return-message_v2
+                                                v3 = ls_return-message_v3
+                                                v4 = ls_return-message_v4 ) ) TO reported-invoicelist.
+          ENDLOOP.
+        CATCH zcx_etr_regulative_exception.
+      ENDTRY.
+    ENDLOOP.
+
+    result = VALUE #( FOR invoice IN invoices
+                 ( %tky   = invoice-%tky
+                   %param = invoice ) ).
   ENDMETHOD.
 
 ENDCLASS.
