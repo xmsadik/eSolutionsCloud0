@@ -8,19 +8,19 @@
     CLEAR rt_return.
     LOOP AT it_documents INTO DATA(ls_document).
       CLEAR ls_sumamry1.
-      ls_sumamry1-type = ls_document-ProfileID.
+      ls_sumamry1-type = zcl_etr_invoice_operations=>conversion_profile_id_output( CONV #( ls_document-ProfileID ) ).
       ls_sumamry1-count = 1.
       COLLECT ls_sumamry1 INTO lt_summary1.
 
       CLEAR ls_sumamry2.
-      ls_sumamry2-type = ls_document-profileid.
+      ls_sumamry2-type = zcl_etr_invoice_operations=>conversion_profile_id_output( CONV #( ls_document-ProfileID ) ).
       ls_sumamry2-amount = ls_document-amount.
       ls_sumamry2-taxamount = ls_document-taxamount.
       ls_sumamry2-currency = ls_document-currency.
       COLLECT ls_sumamry2 INTO lt_summary2.
 
       CLEAR ls_sumamry3.
-      ls_sumamry3-type = ls_document-profileid.
+      ls_sumamry3-type = zcl_etr_invoice_operations=>conversion_profile_id_output( CONV #( ls_document-ProfileID ) ).
       ls_sumamry3-status = ls_document-overallstatus.
       ls_sumamry3-count = 1.
       COLLECT ls_sumamry3 INTO lt_summary3.
