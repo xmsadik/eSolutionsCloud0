@@ -193,7 +193,7 @@
             ENDIF.
           ENDIF.
 
-          IF ls_taxpayer-txpty EQ 'KAMU'.
+          IF ls_taxpayer-txpty EQ 'KAMU' AND ls_document-prfid IS NOT INITIAL.
             ls_document-prfid = 'KAMU'.
           ENDIF.
 
@@ -207,7 +207,7 @@
       ENDIF.
     ENDIF.
 
-    IF lt_taxpayer IS INITIAL AND ls_document-prfid NE 'IHRACAT' AND ls_document-prfid NE 'YOLCU'.
+    IF lt_taxpayer IS INITIAL AND ls_document-prfid NE 'IHRACAT' AND ls_document-prfid NE 'YOLCU' AND ls_document-prfid NE 'KAMU' .
       SELECT SINGLE datab, datbi, genid
         FROM zetr_t_eapar
         WHERE bukrs = @iv_bukrs
