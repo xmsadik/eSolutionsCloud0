@@ -44,6 +44,7 @@ CLASS zcl_etr_outgoing_invoice DEFINITION
     TYPES bldat TYPE datum.
     TYPES blart TYPE blart.
     TYPES kursf TYPE zetr_e_kursf.
+    TYPES bktxt TYPE zetr_e_descr.
     TYPES END OF mty_bkpf.
 
     TYPES BEGIN OF mty_bseg.

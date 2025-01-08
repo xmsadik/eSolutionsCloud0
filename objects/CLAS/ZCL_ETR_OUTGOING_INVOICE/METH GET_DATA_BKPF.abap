@@ -6,7 +6,8 @@
                   transactioncurrency AS waers,
                   documentdate AS bldat,
                   accountingdocumenttype AS blart,
-                  absoluteexchangerate AS kursf
+                  absoluteexchangerate AS kursf,
+                  AccountingDocumentHeaderText AS bktxt
        FROM i_journalentry
        WHERE companycode = @ms_document-bukrs
          AND accountingdocument = @ms_document-belnr
