@@ -35,7 +35,8 @@
     ms_invoice_ubl-legalmonetarytotal-lineextensionamount-currencyid = ms_accdoc_data-bkpf-waers.
     ms_invoice_ubl-legalmonetarytotal-taxexclusiveamount-content = lv_base_amount.
     ms_invoice_ubl-legalmonetarytotal-taxexclusiveamount-currencyid = ms_accdoc_data-bkpf-waers.
-    ms_invoice_ubl-legalmonetarytotal-taxinclusiveamount-content = ms_invoice_ubl-legalmonetarytotal-taxinclusiveamount-content + ms_accdoc_data-bseg_partner-wrbtr.
+    ms_invoice_ubl-legalmonetarytotal-taxinclusiveamount-content = ms_invoice_ubl-legalmonetarytotal-taxinclusiveamount-content +
+                                                                   ms_invoice_ubl-legalmonetarytotal-lineextensionamount-content.
     ms_invoice_ubl-legalmonetarytotal-taxinclusiveamount-currencyid = ms_accdoc_data-bkpf-waers.
     ms_invoice_ubl-legalmonetarytotal-payableamount-content = ms_accdoc_data-bseg_partner-wrbtr.
     ms_invoice_ubl-legalmonetarytotal-payableamount-currencyid = ms_accdoc_data-bkpf-waers.

@@ -10,7 +10,8 @@
     ms_invoice_ubl-legalmonetarytotal-taxexclusiveamount-content = ms_invoice_ubl-legalmonetarytotal-lineextensionamount-content.
     ms_invoice_ubl-legalmonetarytotal-taxexclusiveamount-currencyid = ms_invrec_data-headerdata-currency.
     lv_amount = ms_invrec_data-headerdata-gross_amnt.
-    ms_invoice_ubl-legalmonetarytotal-taxinclusiveamount-content = lv_amount.
+    ms_invoice_ubl-legalmonetarytotal-taxinclusiveamount-content = ms_invoice_ubl-legalmonetarytotal-taxinclusiveamount-content +
+                                                                   ms_invoice_ubl-legalmonetarytotal-lineextensionamount-content.
     ms_invoice_ubl-legalmonetarytotal-taxinclusiveamount-currencyid = ms_invrec_data-headerdata-currency.
     ms_invoice_ubl-legalmonetarytotal-payableamount-content = lv_amount.
     ms_invoice_ubl-legalmonetarytotal-payableamount-currencyid = ms_invrec_data-headerdata-currency.
