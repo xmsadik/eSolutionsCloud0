@@ -69,14 +69,18 @@ CLASS zcl_etr_invoice_operations DEFINITION
         Type   TYPE string,
         Status TYPE zetr_e_staex,
         Count  TYPE i,
-      END OF mty_summary3.
+      END OF mty_summary3,
+      BEGIN OF mty_company_data,
+        datab TYPE datum,
+        datbi TYPE datum,
+        genid TYPE zetr_e_genid,
+        prfid TYPE zetr_e_inprf,
+      END OF mty_company_data.
 
     TYPES BEGIN OF mty_outgoing_invoice.
     INCLUDE TYPE zetr_t_oginv.
     TYPES END OF mty_outgoing_invoice.
     TYPES mty_invoice_rules_out TYPE STANDARD TABLE OF zetr_s_invoice_rules_out WITH EMPTY KEY.
-
-
 
     CLASS-METHODS factory
       IMPORTING

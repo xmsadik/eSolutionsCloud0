@@ -1,63 +1,48 @@
   METHOD outgoing_invoice_save_bkpf.
-    TYPES: BEGIN OF ty_taxpayer,
-             aliass TYPE zetr_e_alias,
-             regdt  TYPE budat,
-             defal  TYPE abap_boolean,
-             txpty  TYPE zetr_e_txpty,
-           END OF ty_taxpayer,
-           BEGIN OF ty_company,
-             datab TYPE datum,
-             datbi TYPE datum,
-             genid TYPE zetr_e_genid,
-             prfid TYPE zetr_e_inprf,
-           END OF ty_company,
-           BEGIN OF ty_tax_data,
-             invty TYPE zetr_e_invty,
-             taxex TYPE zetr_e_taxex,
-             taxty TYPE zetr_e_taxty,
-             taxrt TYPE zetr_e_taxrt,
-           END OF ty_tax_data,
-           BEGIN OF ty_bkpf,
-             belnr TYPE belnr_d,
-             gjahr TYPE gjahr,
-             bldat TYPE bldat,
-             erdat TYPE datum,
-             erzet TYPE uzeit,
-             waers TYPE waers,
-             hwaer TYPE waers,
-             kursf TYPE zetr_e_kursf,
-             blart TYPE blart,
-             usnam TYPE usnam,
-           END OF ty_bkpf,
-           BEGIN OF ty_bseg,
-             buzei TYPE buzei,
-             shkzg TYPE shkzg,
-             hkont TYPE hkont,
-             lokkt TYPE hkont,
-             koart TYPE koart,
-             kunnr TYPE lifnr,
-             lifnr TYPE lifnr,
-             wrbtr TYPE wrbtr_cs,
-             dmbtr TYPE wrbtr_cs,
-             mwskz TYPE mwskz,
-             gsber TYPE gsber,
-             werks TYPE werks_d,
-           END OF ty_bseg.
-    DATA: lt_bseg                TYPE STANDARD TABLE OF ty_bseg,
-          ls_bseg_partner        TYPE ty_bseg,
-          ls_bseg                TYPE ty_bseg,
-          ls_bkpf                TYPE ty_bkpf,
-          ls_tax_data            TYPE ty_tax_data,
-          ls_company_data        TYPE ty_company,
-          lt_taxpayer            TYPE STANDARD TABLE OF ty_taxpayer,
-          ls_taxpayer            TYPE ty_taxpayer,
-          ls_document            TYPE zetr_t_oginv,
-          ls_invoice_rule_input  TYPE zetr_s_invoice_rules_in,
-          ls_invoice_rule_output TYPE zetr_s_invoice_rules_out,
-          ls_bsec                TYPE i_journalentryitemonetimedata,
-          lt_tax_acc             TYPE STANDARD TABLE OF zetr_t_fiacc,
-          ls_bseg_tax            TYPE ty_bseg,
-          lv_insrt               TYPE zetr_e_insrt.
+    TYPES:
+      BEGIN OF ty_bkpf,
+        belnr TYPE belnr_d,
+        gjahr TYPE gjahr,
+        bldat TYPE bldat,
+        erdat TYPE datum,
+        erzet TYPE uzeit,
+        waers TYPE waers,
+        hwaer TYPE waers,
+        kursf TYPE zetr_e_kursf,
+        blart TYPE blart,
+        usnam TYPE usnam,
+      END OF ty_bkpf,
+      BEGIN OF ty_bseg,
+        buzei TYPE buzei,
+        shkzg TYPE shkzg,
+        hkont TYPE hkont,
+        lokkt TYPE hkont,
+        koart TYPE koart,
+        kunnr TYPE lifnr,
+        lifnr TYPE lifnr,
+        wrbtr TYPE wrbtr_cs,
+        dmbtr TYPE wrbtr_cs,
+        mwskz TYPE mwskz,
+        gsber TYPE gsber,
+        werks TYPE werks_d,
+      END OF ty_bseg,
+      BEGIN OF ty_tax_data,
+        invty TYPE zetr_e_invty,
+        taxex TYPE zetr_e_taxex,
+        taxty TYPE zetr_e_taxty,
+        taxrt TYPE zetr_e_taxrt,
+      END OF ty_tax_data.
+    DATA: lt_bseg               TYPE STANDARD TABLE OF ty_bseg,
+          ls_bseg_partner       TYPE ty_bseg,
+          ls_bseg               TYPE ty_bseg,
+          ls_bkpf               TYPE ty_bkpf,
+          ls_tax_data           TYPE ty_tax_data,
+          ls_company_data       TYPE mty_company_data,
+          ls_document           TYPE zetr_t_oginv,
+          ls_invoice_rule_input TYPE zetr_s_invoice_rules_in,
+          ls_bsec               TYPE i_journalentryitemonetimedata,
+          lt_tax_acc            TYPE STANDARD TABLE OF zetr_t_fiacc,
+          ls_bseg_tax           TYPE ty_bseg.
 
     SELECT COUNT(*)
       FROM zetr_t_oginv
@@ -135,83 +120,46 @@
       ls_partner_data = get_partner_register_data( iv_supplier = ls_bseg_partner-lifnr ).
     ENDIF.
 
+    TRY .
+        ls_document-docui = cl_system_uuid=>create_uuid_c22_static( ).
+        ls_document-invui = cl_system_uuid=>create_uuid_c36_static( ).
+      CATCH cx_uuid_error.
+        RETURN.
+    ENDTRY.
     ls_document-taxid = ls_partner_data-bptaxnumber.
     ls_document-partner = ls_partner_data-businesspartner.
     ls_document-bldat = ls_bkpf-bldat.
     ls_document-werks = ls_bseg-werks.
+    ls_document-docty = ls_bkpf-blart.
+    ls_document-awtyp = 'BKPF'.
+    ls_document-bukrs = iv_bukrs.
+    ls_document-belnr = iv_belnr.
+    ls_document-gjahr = iv_gjahr.
+    ls_document-ernam = ls_bkpf-usnam.
+    ls_document-erzet = ls_bkpf-erzet.
+    ls_document-erdat = ls_bkpf-erdat.
+    IF ls_document-kursf IS INITIAL.
+      IF ls_bkpf-kursf IS NOT INITIAL.
+        ls_document-kursf = ls_bkpf-kursf.
+      ELSEIF ls_bkpf-waers = ls_bkpf-hwaer.
+        ls_document-kursf = 1.
+      ENDIF.
+    ENDIF.
 
     ls_invoice_rule_input-awtyp = 'BKPF'.
     ls_invoice_rule_input-fidty = ls_bkpf-blart.
     ls_invoice_rule_input-partner = ls_document-partner.
     ls_invoice_rule_input-werks = ls_bseg-werks.
 
-    SELECT SINGLE datab, datbi, genid, prfid
-      FROM zetr_t_eipar
-      WHERE bukrs = @iv_bukrs
-      INTO @ls_company_data.
-    IF sy-subrc = 0 AND ls_document-bldat BETWEEN ls_company_data-datab AND ls_company_data-datbi.
-      ls_invoice_rule_output = get_einvoice_rule( iv_rule_type   = 'P'
-                                                  is_rule_input  = ls_invoice_rule_input ).
-      IF ls_invoice_rule_output-ruleok IS NOT INITIAL AND ls_invoice_rule_output-excld = abap_false.
-        ls_document-prfid = ls_invoice_rule_output-pidou.
-        ls_document-invty = ls_invoice_rule_output-ityou.
-        ls_document-taxex = ls_invoice_rule_output-taxex.
-        IF ls_document-prfid IS INITIAL.
-          ls_document-prfid = ls_company_data-prfid.
-        ENDIF.
-      ENDIF.
-    ENDIF.
-
-    IF ls_document-taxid IS NOT INITIAL.
-      " check if partner is registered
-      SELECT aliass, regdt, defal, txpty
-        FROM zetr_t_inv_ruser
-        WHERE taxid = @ls_document-taxid
-          AND regdt <= @ls_document-bldat
-          INTO TABLE @lt_taxpayer.
-      IF sy-subrc = 0.
-        SORT lt_taxpayer BY defal.
-        READ TABLE lt_taxpayer INTO ls_taxpayer WITH KEY defal = abap_true BINARY SEARCH.
-        IF sy-subrc = 0.
-          ls_document-aliass = ls_taxpayer-aliass.
-        ELSE.
-          SORT lt_taxpayer DESCENDING BY regdt.
-          READ TABLE lt_taxpayer INTO ls_taxpayer INDEX 1.
-          IF sy-subrc EQ 0.
-            ls_document-aliass = ls_taxpayer-aliass.
-          ENDIF.
-        ENDIF.
-
-        IF ls_taxpayer-txpty EQ 'KAMU' AND ls_document-prfid IS NOT INITIAL.
-          ls_document-prfid = 'KAMU'.
-        ENDIF.
-
-*        IF ls_document-prfid IS INITIAL.
-*          IF ls_company_data-prfid IS INITIAL.
-*            ls_company_data-prfid = 'TEMEL'.
-*          ENDIF.
-*          ls_document-prfid = ls_company_data-prfid.
-*        ENDIF.
-      ENDIF.
-    ENDIF.
-
-    IF lt_taxpayer IS INITIAL AND ls_document-prfid NE 'IHRACAT' AND ls_document-prfid NE 'YOLCU'  AND ls_document-prfid NE 'KAMU' .
-      SELECT SINGLE datab, datbi, genid
-        FROM zetr_t_eapar
-        WHERE bukrs = @iv_bukrs
-        INTO @ls_company_data.
-      CHECK sy-subrc = 0 AND ls_document-bldat BETWEEN ls_company_data-datab AND ls_company_data-datbi.
-
-      ls_invoice_rule_output = get_earchive_rule( iv_rule_type   = 'P'
-                                                  is_rule_input  = ls_invoice_rule_input ).
-      IF ls_invoice_rule_output-ruleok IS NOT INITIAL AND ls_invoice_rule_output-excld = abap_false.
-        ls_document-prfid = 'EARSIV'.
-        ls_document-invty = ls_invoice_rule_output-ityou.
-        ls_document-taxex = ls_invoice_rule_output-taxex.
-      ENDIF.
-    ENDIF.
-
+    determine_invoice_scenario(
+      EXPORTING
+        is_invoice_rule_input = ls_invoice_rule_input
+      CHANGING
+        cs_company_data       = ls_company_data
+        cs_document           = ls_document ).
     CHECK ls_document-prfid IS NOT INITIAL.
+    ls_invoice_rule_input-ityin = ls_document-invty.
+    ls_invoice_rule_input-pidin = ls_document-prfid.
 
     SELECT *
       FROM zetr_t_fiacc
@@ -229,7 +177,6 @@
     DATA lv_hkont TYPE hkont .
     LOOP AT lt_bseg INTO ls_bseg_tax.
       CLEAR ls_tax_data.
-      "-- Lokkt kontrolü STASKAN 24.12.2021
       lv_hkont = ls_bseg_tax-lokkt .
       IF  lv_hkont IS INITIAL .
         lv_hkont = ls_bseg_tax-hkont .
@@ -263,9 +210,6 @@
       IF ls_document-taxex IS INITIAL AND ls_bseg_tax-mwskz IS NOT INITIAL AND ls_tax_data IS NOT INITIAL.
         ls_document-taxex = ls_tax_data-taxex.
       ENDIF.
-*      IF ls_document-taxty IS INITIAL.
-*        ls_document-taxty = ls_tax_data-taxty. " AS 30.12.2021
-*      ENDIF.
     ENDLOOP.
     IF ls_document-fwste IS INITIAL.
       ls_document-texex = abap_true.
@@ -282,116 +226,23 @@
       ENDIF.
     ENDIF.
 
-    TRY .
-        ls_document-docui = cl_system_uuid=>create_uuid_c22_static( ).
-        ls_document-invui = cl_system_uuid=>create_uuid_c36_static( ).
-      CATCH cx_uuid_error.
-        RETURN.
-    ENDTRY.
+    determine_invoice_prefix(
+      EXPORTING
+        is_invoice_rule_input = ls_invoice_rule_input
+      CHANGING
+        cs_document           = ls_document ).
 
-    ls_document-docty = ls_bkpf-blart.
-    ls_document-awtyp = 'BKPF'.
-    ls_document-bukrs = iv_bukrs.
-    ls_document-belnr = iv_belnr.
-    ls_document-gjahr = iv_gjahr.
-    ls_document-ernam = ls_bkpf-usnam.
-    ls_document-erzet = ls_bkpf-erzet.
-    ls_document-erdat = ls_bkpf-erdat.
-    IF ls_document-kursf IS INITIAL.
-      IF ls_bkpf-kursf IS NOT INITIAL.
-        ls_document-kursf = ls_bkpf-kursf.
-      ELSEIF ls_bkpf-waers = ls_bkpf-hwaer.
-        ls_document-kursf = 1.
-      ENDIF.
-    ENDIF.
+    determine_invoice_xslt(
+      EXPORTING
+        is_invoice_rule_input = ls_invoice_rule_input
+      CHANGING
+        cs_document           = ls_document ).
 
-    CASE ls_document-prfid.
-      WHEN 'EARSIV'.
-        ls_invoice_rule_input-ityin = ls_document-invty.
-        IF ls_company_data-genid IS NOT INITIAL.
-          CLEAR ls_invoice_rule_output.
-          ls_invoice_rule_output = get_earchive_rule( iv_rule_type   = 'S'
-                                                      is_rule_input  = ls_invoice_rule_input ).
-          IF ls_invoice_rule_output-ruleok IS NOT INITIAL.
-            ls_document-serpr = ls_invoice_rule_output-serpr.
-          ELSE.
-            SELECT SINGLE serpr
-              FROM zetr_t_easer
-              WHERE bukrs = @iv_bukrs
-                AND maisp = @abap_true
-              INTO @ls_document-serpr.
-          ENDIF.
-        ENDIF.
+    change_invoice_fields(
+      EXPORTING
+        is_invoice_rule_input = ls_invoice_rule_input
+      CHANGING
+        cs_document           = ls_document ).
 
-        CLEAR ls_invoice_rule_output.
-        ls_invoice_rule_output = get_earchive_rule( iv_rule_type   = 'X'
-                                              is_rule_input  = ls_invoice_rule_input ).
-        IF ls_invoice_rule_output-ruleok IS NOT INITIAL.
-          ls_document-xsltt = ls_invoice_rule_output-xsltt.
-        ELSE.
-          SELECT SINGLE xsltt
-            FROM zetr_t_eaxslt
-            WHERE bukrs = @iv_bukrs
-              AND deflt = @abap_true
-            INTO @ls_document-xsltt.
-        ENDIF.
-
-        DATA(lt_field_rules) = get_earchive_rules( iv_rule_type   = 'F'
-                                                   is_rule_input  = ls_invoice_rule_input ).
-        LOOP AT lt_field_rules INTO DATA(ls_field_rule).
-          CHECK ls_field_rule-fname IS NOT INITIAL.
-          ASSIGN COMPONENT ls_field_rule-fname OF STRUCTURE ls_document TO FIELD-SYMBOL(<ls_field_value>).
-          CHECK sy-subrc = 0.
-          <ls_field_value> = ls_field_rule-value.
-        ENDLOOP.
-      WHEN OTHERS.
-        ls_invoice_rule_input-ityin = ls_document-invty.
-        ls_invoice_rule_input-pidin = ls_document-prfid.
-        IF ls_company_data-genid IS NOT INITIAL.
-          CLEAR ls_invoice_rule_output.
-          ls_invoice_rule_output = get_einvoice_rule( iv_rule_type   = 'S'
-                                                      is_rule_input  = ls_invoice_rule_input ).
-          IF ls_invoice_rule_output-ruleok IS NOT INITIAL.
-            ls_document-serpr = ls_invoice_rule_output-serpr.
-          ELSE.
-            CASE ls_document-prfid.
-              WHEN 'IHRACAT'.
-                lv_insrt = 'IHRACAT'.
-              WHEN 'YOLCU'.
-                lv_insrt = 'YOLCU'.
-              WHEN OTHERS.
-                lv_insrt = 'YURTICI'.
-            ENDCASE.
-            SELECT SINGLE serpr
-              FROM zetr_t_eiser
-              WHERE bukrs = @iv_bukrs
-                AND maisp = @abap_true
-                AND insrt = @lv_insrt
-              INTO @ls_document-serpr.
-          ENDIF.
-        ENDIF.
-
-        CLEAR ls_invoice_rule_output.
-        ls_invoice_rule_output = get_einvoice_rule( iv_rule_type   = 'X'
-                                                    is_rule_input  = ls_invoice_rule_input ).
-        IF ls_invoice_rule_output-ruleok IS NOT INITIAL.
-          ls_document-xsltt = ls_invoice_rule_output-xsltt.
-        ELSE.
-          SELECT SINGLE xsltt
-            FROM zetr_t_eixslt
-            WHERE bukrs = @iv_bukrs
-              AND deflt = @abap_true
-            INTO @ls_document-xsltt.
-        ENDIF.
-
-        lt_field_rules = get_einvoice_rules( iv_rule_type   = 'F'
-                                             is_rule_input  = ls_invoice_rule_input ).
-        LOOP AT lt_field_rules INTO ls_field_rule.
-          CHECK ls_field_rule-fname IS NOT INITIAL.
-          ASSIGN COMPONENT ls_field_rule-fname OF STRUCTURE ls_document TO <ls_field_value>.
-          CHECK sy-subrc = 0.
-          <ls_field_value> = ls_field_rule-value.
-        ENDLOOP.
-    ENDCASE.
     rs_document = ls_document.
   ENDMETHOD.

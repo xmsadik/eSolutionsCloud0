@@ -44,3 +44,34 @@
         VALUE(rs_document) TYPE mty_outgoing_invoice
       RAISING
         zcx_etr_regulative_exception.
+
+    METHODS determine_invoice_scenario
+      IMPORTING
+        is_invoice_rule_input TYPE zetr_s_invoice_rules_in
+      CHANGING
+        cs_company_data       TYPE mty_company_data
+        cs_document           TYPE zetr_t_oginv.
+
+    METHODS determine_invoice_prefix
+      IMPORTING
+        is_invoice_rule_input TYPE zetr_s_invoice_rules_in
+      CHANGING
+        cs_document           TYPE zetr_t_oginv.
+
+    METHODS determine_invoice_xslt
+      IMPORTING
+        is_invoice_rule_input TYPE zetr_s_invoice_rules_in
+      CHANGING
+        cs_document           TYPE zetr_t_oginv.
+
+    METHODS change_invoice_fields
+      IMPORTING
+        is_invoice_rule_input TYPE zetr_s_invoice_rules_in
+      CHANGING
+        cs_document           TYPE zetr_t_oginv.
+
+    METHODS determine_invoice_tax_type
+      IMPORTING
+        iv_tax_code TYPE mwskz
+      CHANGING
+        cs_document TYPE zetr_t_oginv.
