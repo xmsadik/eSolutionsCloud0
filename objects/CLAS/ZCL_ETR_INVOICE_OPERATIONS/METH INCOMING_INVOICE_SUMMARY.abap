@@ -27,6 +27,13 @@
     ENDLOOP.
 
     LOOP AT lt_summary1 INTO ls_sumamry1.
+      APPEND VALUE #( type = if_abap_behv_message=>severity-information
+                      id = 'ZETR_COMMON'
+                      number = '000'
+                      message_v1 = '* * * * * * * *'
+                      message_v2 = '* * * * * * * *'
+                      message_v3 = '* * * * * * * *'
+                      message_v4 = '* * * * * * * *' ) TO rt_return.
       LOOP AT lt_summary3 INTO ls_sumamry3 USING KEY by_type WHERE type = ls_sumamry1-type.
         APPEND VALUE #( type = if_abap_behv_message=>severity-information
                         id = 'ZETR_COMMON'

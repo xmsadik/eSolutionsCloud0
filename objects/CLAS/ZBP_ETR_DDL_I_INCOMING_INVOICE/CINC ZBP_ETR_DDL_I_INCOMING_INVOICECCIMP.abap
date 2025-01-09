@@ -618,27 +618,32 @@ CLASS lhc_InvoiceList IMPLEMENTATION.
     DELETE ADJACENT DUPLICATES FROM lt_companies COMPARING companycode.
 
     LOOP AT lt_companies INTO DATA(ls_company).
-      APPEND VALUE #( %msg = new_message( id       = 'ZETR_COMMON'
-                                          number   = '226'
-                                          severity = if_abap_behv_message=>severity-none
-                                          v1 = ls_company-companycode
-                                          v2 = ls_company-companytitle ) ) TO reported-invoicelist.
-
       TRY.
           DATA(lo_invoice_operations) = zcl_etr_invoice_operations=>factory( ls_company-companycode ).
           DATA(lt_return) = lo_invoice_operations->incoming_invoice_summary( VALUE #( FOR invoice IN invoices
                                                                                           WHERE ( companycode = ls_company-companycode )
                                                                                           ( CORRESPONDING #( invoice MAPPING response = ResponseStatus responsetext = ResponseStatusText ) ) ) ).
           LOOP AT lt_return INTO DATA(ls_return).
-            APPEND VALUE #( %msg = new_message( id       = ls_return-id
+            MESSAGE ID ls_return-id TYPE ls_return-type NUMBER ls_return-number
+              WITH ls_return-message_v1 ls_return-message_v2 ls_return-message_v3 ls_return-message_v4
+              INTO ls_return-message.
+            APPEND VALUE #( %global = if_abap_behv=>mk-on
+                            %action-showsummary = if_abap_behv=>mk-on
+                            %msg = new_message( id       = ls_return-id
                                                 number   = ls_return-number
                                                 severity = if_abap_behv_message=>severity-none
-*                                                severity = CONV #( ls_return-type )
                                                 v1 = ls_return-message_v1
                                                 v2 = ls_return-message_v2
                                                 v3 = ls_return-message_v3
                                                 v4 = ls_return-message_v4 ) ) TO reported-invoicelist.
           ENDLOOP.
+          APPEND VALUE #( %global = if_abap_behv=>mk-on
+                          %action-showsummary = if_abap_behv=>mk-on
+                          %msg = new_message( id       = 'ZETR_COMMON'
+                                              number   = '226'
+                                              severity = if_abap_behv_message=>severity-none
+                                              v1 = ls_company-companycode
+                                              v2 = ls_company-companytitle ) ) TO reported-invoicelist.
         CATCH zcx_etr_regulative_exception.
       ENDTRY.
     ENDLOOP.

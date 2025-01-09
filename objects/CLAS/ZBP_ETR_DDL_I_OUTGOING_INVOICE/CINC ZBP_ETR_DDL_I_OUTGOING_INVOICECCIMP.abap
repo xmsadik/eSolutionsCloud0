@@ -938,27 +938,29 @@ CLASS lhc_zetr_ddl_i_outgoing_invoic IMPLEMENTATION.
     DELETE ADJACENT DUPLICATES FROM lt_companies COMPARING companycode.
 
     LOOP AT lt_companies INTO DATA(ls_company).
-      APPEND VALUE #( %msg = new_message( id       = 'ZETR_COMMON'
-                                          number   = '226'
-                                          severity = if_abap_behv_message=>severity-none
-                                          v1 = ls_company-companycode
-                                          v2 = ls_company-companytitle ) ) TO reported-outgoinginvoices.
-
       TRY.
           DATA(lo_invoice_operations) = zcl_etr_invoice_operations=>factory( ls_company-companycode ).
           DATA(lt_return) = lo_invoice_operations->outgoing_invoice_summary( VALUE #( FOR invoice IN invoices
                                                                                           WHERE ( companycode = ls_company-companycode )
                                                                                           ( CORRESPONDING #( invoice ) ) ) ).
           LOOP AT lt_return INTO DATA(ls_return).
-            APPEND VALUE #( %msg = new_message( id       = ls_return-id
+            APPEND VALUE #( %global = if_abap_behv=>mk-on
+                            %action-showsummary = if_abap_behv=>mk-on
+                            %msg = new_message( id       = ls_return-id
                                                 number   = ls_return-number
                                                 severity = if_abap_behv_message=>severity-none
-*                                                severity = CONV #( ls_return-type )
                                                 v1 = ls_return-message_v1
                                                 v2 = ls_return-message_v2
                                                 v3 = ls_return-message_v3
                                                 v4 = ls_return-message_v4 ) ) TO reported-outgoinginvoices.
           ENDLOOP.
+          APPEND VALUE #( %global = if_abap_behv=>mk-on
+                          %action-showsummary = if_abap_behv=>mk-on
+                          %msg = new_message( id       = 'ZETR_COMMON'
+                                              number   = '226'
+                                              severity = if_abap_behv_message=>severity-none
+                                              v1 = ls_company-companycode
+                                              v2 = ls_company-companytitle ) ) TO reported-outgoinginvoices.
         CATCH zcx_etr_regulative_exception.
       ENDTRY.
     ENDLOOP.
