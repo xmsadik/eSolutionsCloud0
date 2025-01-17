@@ -11,7 +11,7 @@
     "CREATED_BY":"SAP_CUSTOMER",
     "CREATED_AT":"+20241226153239.3796380",
     "LAST_CHANGED_BY":"SAP_CUSTOMER",
-    "LAST_CHANGED_AT":"+20250107184804.7879360"
+    "LAST_CHANGED_AT":"+20250117120406.8405930"
    }
   ]
  },
@@ -19,6 +19,11 @@
   "table":"SMTR_TEXT_SOURCE",
   "data":
   [
+   {
+    "PROJECT_ID":"ZETR_TRANSLATIONS_202501",
+    "TYPE":"DATA_ELEM",
+    "NAME":"ZETR_E_AUTOMAIL"
+   },
    {
     "PROJECT_ID":"ZETR_TRANSLATIONS_202501",
     "TYPE":"MESSAGE_CL",
@@ -46,12 +51,12 @@
     "TARGET_LANGUAGE":"T",
     "MAINTENANCE_STATUS":"NO_TRANSLA",
     "IMPORT_STATUS":"SUCCESS",
-    "LAST_IMPORTED_AT":"+20250107184804.7636520",
+    "LAST_IMPORTED_AT":"+20250117120406.8040170",
     "LAST_IMPORTED_BY":"SAP_CUSTOMER",
-    "LAST_UPLOADED_AT":"+20250107184758.3931210",
+    "LAST_UPLOADED_AT":"+20250117120359.3705580",
     "LAST_UPLOADED_BY":"SAP_CUSTOMER",
     "FILE_TYPE":"XLIFF",
-    "FILE_CONTENT":"<xliff xmlns=\"urn:oasis:names:tc:xliff:document:1.2\" version=\"1.2\">\n  <file datatype=\"plaintext\" original=\"ZETR_TRANSLATIONS_202501\" source-language=\"en-US\" target-language=\"tr\">\n    <header>\n      <tool tool-company=\"SAP SE\" tool-id=\"urn:x-sap:maintain-translations-fiori-app\" tool-name=\"Maintain Translations Fiori App\" tool-version=\"1.0.0\"/>\n    </header>\n    <body>\n      <group datatype=\"x-MESSAGE_CLASS\" resname=\"ZETR_COMMON\">\n        <trans-unit id=\"MESSAGE_CLASS:ZETR_COMMON:SHORT_TEXT:229\" maxwidth=\"73\" size-unit=\"char\">\n          <source>- - - - Total base amount : &amp;1 &amp;2</source>\n\t\t  <target>- - - - Toplam matrah tutarı : &amp;1 &amp;2</target>\n          <note>Short description for message 229 of message class ZETR_COMMON.</note>\n        </trans-unit>\n      </group>\n    </body>\n  </file>\n</xliff>"
+    "FILE_CONTENT":"<xliff xmlns=\"urn:oasis:names:tc:xliff:document:1.2\" version=\"1.2\">\n  <file datatype=\"plaintext\" original=\"ZETR_TRANSLATIONS_202501\" source-language=\"en-US\" target-language=\"tr\">\n    <header>\n      <tool tool-company=\"SAP SE\" tool-id=\"urn:x-sap:maintain-translations-fiori-app\" tool-name=\"Maintain Translations Fiori App\" tool-version=\"1.0.0\"/>\n    </header>\n    <body>\n      <group datatype=\"x-DATA_ELEMENT\" resname=\"ZETR_E_AUTOMAIL\">\n        <trans-unit id=\"DATA_ELEMENT:ZETR_E_AUTOMAIL:SHORT_DESCRIPTION\" maxwidth=\"60\" size-unit=\"char\">\n          <source>Send Mail</source>\n\t\t  <target>Mail Gönder</target>\n          <note>Short description for Data Element ZETR_E_AUTOMAIL.</note>\n        </trans-unit>\n        <trans-unit id=\"DATA_ELEMENT:ZETR_E_AUTOMAIL:SHORT_FIELD_LABEL\" maxwidth=\"10\" size-unit=\"char\">\n          <source>Send Mail</source>\n\t\t  <target>Mail Gön.</target>\n          <note>Short field label for Data Element ZETR_E_AUTOMAIL.</note>\n        </trans-unit>\n        <trans-unit id=\"DATA_ELEMENT:ZETR_E_AUTOMAIL:MEDIUM_FIELD_LABEL\" maxwidth=\"20\" size-unit=\"char\">\n          <source>Send Mail</source>\n\t\t  <target>Mail Gönder</target>\n          <note>Medium field label for Data Element ZETR_E_AUTOMAIL.</note>\n        </trans-unit>\n        <trans-unit id=\"DATA_ELEMENT:ZETR_E_AUTOMAIL:LONG_FIELD_LABEL\" maxwidth=\"40\" size-unit=\"char\">\n          <source>Send Mail</source>\n\t\t  <target>Mail Gönder</target>\n          <note>Long field label for Data Element ZETR_E_AUTOMAIL.</note>\n        </trans-unit>\n        <trans-unit id=\"DATA_ELEMENT:ZETR_E_AUTOMAIL:HEADING_FIELD_LABEL\" maxwidth=\"55\" size-unit=\"char\">\n          <source>Send Mail</source>\n\t\t  <target>Mail Gönder</target>\n          <note>Heading field label for Data Element ZETR_E_AUTOMAIL.</note>\n        </trans-unit>\n      </group>\n    </body>\n  </file>\n</xliff>"
    }
   ]
  },

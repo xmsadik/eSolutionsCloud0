@@ -20,6 +20,7 @@ authorization master ( instance )
       GenerateSerial    = genid;
       Barcode           = barcode;
       InternalNumbering = intnum;
+      AutoSendMail      = automail;
     }
   create;
   update;

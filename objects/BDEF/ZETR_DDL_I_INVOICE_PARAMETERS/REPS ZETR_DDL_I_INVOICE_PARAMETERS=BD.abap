@@ -24,6 +24,7 @@ authorization master ( instance )
       PKAlias           = pk_alias;
       GBAlias           = gb_alias;
       InternalNumbering = intnum;
+      AutoSendMail      = automail;
     }
   create;
   update;
