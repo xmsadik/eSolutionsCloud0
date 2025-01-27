@@ -135,30 +135,31 @@ authorization dependent by _eInvoiceParameters
 {
   mapping for zetr_t_eirules
     {
-      CompanyCode            = bukrs;
-      RuleType               = rulet;
-      RuleItemNumber         = rulen;
-      RuleDescription        = descr;
-      ReferenceDocumentType  = awtyp;
-      ProfileIDInput         = pidin;
-      InvoiceTypeInput       = ityin;
-      SalesOrganization      = vkorg;
-      DistributionChannel    = vtweg;
-      Plant                  = werks;
-      BillingDocumentType    = sddty;
-      InvoiceReceiptType     = mmdty;
-      AccountingDocumentType = fidty;
-      Partner                = partner;
-      SalesDocument          = vbeln;
-      Exclude                = excld;
-      ProfileID              = pidou;
-      InvoiceType            = ityou;
-      TaxExemption           = taxex;
-      SerialPrefix           = serpr;
-      XSLTTemplate           = xsltt;
-      Note                   = note;
-      FieldName              = fname;
-      FieldValue             = value;
+      CompanyCode               = bukrs;
+      RuleType                  = rulet;
+      RuleItemNumber            = rulen;
+      RuleDescription           = descr;
+      ReferenceDocumentType     = awtyp;
+      ProfileIDInput            = pidin;
+      InvoiceTypeInput          = ityin;
+      SalesOrganization         = vkorg;
+      DistributionChannel       = vtweg;
+      Plant                     = werks;
+      SalesDocumentItemCategory = pstyv;
+      BillingDocumentType       = sddty;
+      InvoiceReceiptType        = mmdty;
+      AccountingDocumentType    = fidty;
+      Partner                   = partner;
+      SalesDocument             = vbeln;
+      Exclude                   = excld;
+      ProfileID                 = pidou;
+      InvoiceType               = ityou;
+      TaxExemption              = taxex;
+      SerialPrefix              = serpr;
+      XSLTTemplate              = xsltt;
+      Note                      = note;
+      FieldName                 = fname;
+      FieldValue                = value;
     }
   update;
   delete;

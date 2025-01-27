@@ -130,28 +130,29 @@ authorization dependent by _earchiveParameters
 {
   mapping for zetr_t_earules
     {
-      CompanyCode            = bukrs;
-      RuleType               = rulet;
-      RuleItemNumber         = rulen;
-      RuleDescription        = descr;
-      ReferenceDocumentType  = awtyp;
-      InvoiceTypeInput       = ityin;
-      SalesOrganization      = vkorg;
-      DistributionChannel    = vtweg;
-      Plant                  = werks;
-      BillingDocumentType    = sddty;
-      InvoiceReceiptType     = mmdty;
-      AccountingDocumentType = fidty;
-      Partner                = partner;
-      SalesDocument          = vbeln;
-      InvoiceType            = ityou;
-      TaxExemption           = taxex;
-      Exclude                = excld;
-      SerialPrefix           = serpr;
-      XSLTTemplate           = xsltt;
-      Note                   = note;
-      FieldName              = fname;
-      FieldValue             = value;
+      CompanyCode               = bukrs;
+      RuleType                  = rulet;
+      RuleItemNumber            = rulen;
+      RuleDescription           = descr;
+      ReferenceDocumentType     = awtyp;
+      InvoiceTypeInput          = ityin;
+      SalesOrganization         = vkorg;
+      DistributionChannel       = vtweg;
+      Plant                     = werks;
+      SalesDocumentItemCategory = pstyv;
+      BillingDocumentType       = sddty;
+      InvoiceReceiptType        = mmdty;
+      AccountingDocumentType    = fidty;
+      Partner                   = partner;
+      SalesDocument             = vbeln;
+      InvoiceType               = ityou;
+      TaxExemption              = taxex;
+      Exclude                   = excld;
+      SerialPrefix              = serpr;
+      XSLTTemplate              = xsltt;
+      Note                      = note;
+      FieldName                 = fname;
+      FieldValue                = value;
     }
   update;
   delete;

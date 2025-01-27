@@ -21,6 +21,7 @@
         netwr TYPE p LENGTH 15 DECIMALS 2,
         mwsbp TYPE wrbtr_cs,
         mwskz TYPE mwskz,
+        pstyv TYPE pstyv,
       END OF ty_vbrp,
       BEGIN OF ty_vbpa,
         parvw TYPE c LENGTH 2,
@@ -95,7 +96,8 @@
            billingquantity AS fkimg,
            netamount AS netwr,
            taxamount AS mwsbp,
-           taxcode AS mwskz
+           taxcode AS mwskz,
+           SalesDocumentItemCategory AS pstyv
       FROM i_billingdocumentitem
       WHERE billingdocument = @iv_belnr
       INTO TABLE @lt_vbrp.
@@ -150,8 +152,15 @@
     ls_invoice_rule_input-partner = ls_document-partner.
     ls_invoice_rule_input-vkorg = ls_vbrk-vkorg.
     ls_invoice_rule_input-vtweg = ls_vbrk-vtweg.
-    ls_invoice_rule_input-werks = ls_vbrp-werks.
     ls_invoice_rule_input-vbeln = ls_vbrk-vbeln.
+
+    DATA(lt_vbrp_temp) = lt_vbrp.
+    SORT lt_vbrp_temp BY werks pstyv.
+    DELETE ADJACENT DUPLICATES FROM lt_vbrp_temp COMPARING werks pstyv.
+    IF lines( lt_vbrp_temp ) = 1.
+      ls_invoice_rule_input-werks = lt_vbrp_temp[ 1 ]-werks.
+      ls_invoice_rule_input-pstyv = lt_vbrp_temp[ 1 ]-pstyv.
+    ENDIF.
 
     determine_invoice_scenario(
       EXPORTING
