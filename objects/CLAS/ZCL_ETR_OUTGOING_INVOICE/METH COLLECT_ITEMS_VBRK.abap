@@ -61,11 +61,11 @@
           ls_item_allowance-surtr = ls_konv-kwert.
         ENDIF.
         IF ls_konv-kbetr LT 0 .
-          DATA(lv_kbetr) =  CONV wrbtr_cs( abs( ls_konv-kbetr )  ). "  / 1000 ).
+          DATA(lv_kbetr) =  CONV wrbtr_cs( abs( ls_konv-kbetr ) / 100 ).
 *          ls_items-disrt += lv_kbetr.
           ls_item_allowance-disrt = lv_kbetr.
         ELSEIF ls_konv-kbetr GT 0.
-          lv_kbetr =  ls_konv-kbetr."   / 1000 .
+          lv_kbetr =  ls_konv-kbetr / 100 .
 *          ls_items-surrt += lv_kbetr.
           ls_item_allowance-surrt = lv_kbetr.
         ENDIF.
