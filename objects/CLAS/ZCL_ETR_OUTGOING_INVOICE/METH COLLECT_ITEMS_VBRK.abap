@@ -1,6 +1,7 @@
   METHOD collect_items_vbrk.
     DATA: ls_items          TYPE mty_item_collect,
-          ls_item_allowance TYPE mty_item_allowance.
+          ls_item_allowance TYPE mty_item_allowance,
+          lv_kbetr          TYPE p DECIMALS 5.
 
     LOOP AT ms_billing_data-vbrp INTO DATA(ls_vbrp).
       CHECK ls_vbrp-fkimg IS NOT INITIAL.
@@ -61,7 +62,7 @@
           ls_item_allowance-surtr = ls_konv-kwert.
         ENDIF.
         IF ls_konv-kbetr LT 0 .
-          DATA(lv_kbetr) =  CONV wrbtr_cs( abs( ls_konv-kbetr ) / 100 ).
+          lv_kbetr =  abs( ls_konv-kbetr ) / 100.
 *          ls_items-disrt += lv_kbetr.
           ls_item_allowance-disrt = lv_kbetr.
         ELSEIF ls_konv-kbetr GT 0.
