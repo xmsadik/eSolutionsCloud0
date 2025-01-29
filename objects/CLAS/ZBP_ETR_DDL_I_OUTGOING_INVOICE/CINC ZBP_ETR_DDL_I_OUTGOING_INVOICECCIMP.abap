@@ -818,7 +818,7 @@ CLASS lhc_zetr_ddl_i_outgoing_invoic IMPLEMENTATION.
         lo_mail->set_subject( COND #( WHEN lines( lt_documents ) = 1
                                            THEN <ls_document>-invoiceid && ` nolu Fatura Hk.`
                                            ELSE 'Faturalar Hk.' ) ).
-        lo_mail->set_main( cl_bcs_mail_textpart=>create_instance( iv_content      = '<p>Tarafınıza iletilen faturalarınız ektedir</p>'
+        lo_mail->set_main( cl_bcs_mail_textpart=>create_instance( iv_content      = '<p>Tarafınıza iletilen faturalarınız ektedir</p><br/><p>The invoices submitted to you are attached</p>'
                                                                   iv_content_type = 'text/html' ) ).
         lo_mail->send( ).
         APPEND VALUE #( %msg = new_message( id       = 'ZETR_COMMON'
@@ -1011,7 +1011,7 @@ CLASS lhc_zetr_ddl_i_outgoing_invoic IMPLEMENTATION.
           lo_mail->set_subject( COND #( WHEN lv_count = 1
                                              THEN <ls_document>-invoiceid && ` nolu Fatura Hk.`
                                              ELSE 'Faturalar Hk.' ) ).
-          lo_mail->set_main( cl_bcs_mail_textpart=>create_instance( iv_content      = '<p>Tarafınıza iletilen faturalarınız ektedir</p>'
+          lo_mail->set_main( cl_bcs_mail_textpart=>create_instance( iv_content      = '<p>Tarafınıza iletilen faturalarınız ektedir</p><br/><p>The invoices submitted to you are attached</p>'
                                                                     iv_content_type = 'text/html' ) ).
           lo_mail->send( ).
           APPEND VALUE #( id       = 'ZETR_COMMON'
