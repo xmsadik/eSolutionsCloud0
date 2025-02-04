@@ -16,7 +16,7 @@
     LOOP AT ms_invoice_ubl-invoiceline INTO DATA(ls_invoice_line).
       ms_invoice_ubl-legalmonetarytotal-lineextensionamount-content += ls_invoice_line-lineextensionamount-content.
       LOOP AT ls_invoice_line-allowancecharge INTO DATA(ls_allowance_charge).
-        IF ls_allowance_charge-chargeindicator-content = abap_false.
+        IF ls_allowance_charge-chargeindicator-content = 'false'.
           ms_invoice_ubl-legalmonetarytotal-allowancetotalamount-content += ls_allowance_charge-amount-content.
 *          ms_invoice_ubl-legalmonetarytotal-lineextensionamount-content += ls_allowance_charge-amount-content.
         ELSE.
