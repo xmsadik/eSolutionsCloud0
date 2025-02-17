@@ -6,7 +6,8 @@
                   DocumentCurrency AS Currency,
                   ExchangeRate AS exch_rate,
                   InvoiceGrossAmount AS gross_amnt,
-                  InvoicingParty AS diff_inv
+                  InvoicingParty AS diff_inv,
+                  DocumentHeaderText AS head_txt
       FROM I_SupplierInvoiceAPI01
       WHERE SupplierInvoice = @ms_document-belnr
         AND FiscalYear = @ms_document-gjahr

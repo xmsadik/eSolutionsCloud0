@@ -107,6 +107,7 @@ CLASS zcl_etr_outgoing_invoice DEFINITION
     TYPES exch_rate TYPE zetr_e_kursf.
     TYPES gross_amnt TYPE wrbtr_cs.
     TYPES diff_inv TYPE lifnr.
+    TYPES head_txt TYPE bktxt.
     TYPES END OF mty_invrec_headerdata.
 
     TYPES BEGIN OF mty_invrec_itemdata.
