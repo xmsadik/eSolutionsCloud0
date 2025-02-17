@@ -33,60 +33,6 @@
   ]
  },
  {
-  "table":"DDDDLSRC03NT",
-  "data":
-  [
-   {
-    "DDLNAME":"ZETR_DDL_I_INCINV_CONTENT",
-    "STRUCOBJN":"ZETR_DDL_I_INCINV_CONTENT",
-    "NODENAME":".NODE1",
-    "DDLANGUAGE":"E",
-    "AS4LOCAL":"N",
-    "FIELDNAME":"CONTENTTYPE",
-    "DEPTH":0,
-    "DDTEXT":"Document content type",
-    "FIELDLABEL":"",
-    "QUICKINFO":""
-   },
-   {
-    "DDLNAME":"ZETR_DDL_I_INCINV_CONTENT",
-    "STRUCOBJN":"ZETR_DDL_I_INCINV_CONTENT",
-    "NODENAME":".NODE1",
-    "DDLANGUAGE":"E",
-    "AS4LOCAL":"N",
-    "FIELDNAME":"DOCUMENTUUID",
-    "DEPTH":0,
-    "DDTEXT":"16 Byte UUID in 22 Characters (Usually Base64 Encoded)",
-    "FIELDLABEL":"",
-    "QUICKINFO":""
-   },
-   {
-    "DDLNAME":"ZETR_DDL_I_INCINV_CONTENT",
-    "STRUCOBJN":"ZETR_DDL_I_INCINV_CONTENT",
-    "NODENAME":".NODE1",
-    "DDLANGUAGE":"E",
-    "AS4LOCAL":"N",
-    "FIELDNAME":"FILENAME",
-    "DEPTH":0,
-    "DDTEXT":"Filename",
-    "FIELDLABEL":"",
-    "QUICKINFO":""
-   },
-   {
-    "DDLNAME":"ZETR_DDL_I_INCINV_CONTENT",
-    "STRUCOBJN":"ZETR_DDL_I_INCINV_CONTENT",
-    "NODENAME":".NODE1",
-    "DDLANGUAGE":"E",
-    "AS4LOCAL":"N",
-    "FIELDNAME":"MIMETYPE",
-    "DEPTH":0,
-    "DDTEXT":"Mime type",
-    "FIELDLABEL":"",
-    "QUICKINFO":""
-   }
-  ]
- },
- {
   "table":"DDDDLSRCT",
   "data":
   [

@@ -163,6 +163,13 @@
     "TYPE":"C",
     "LENGTH":4,
     "DECIMALS":-1
+   },
+   {
+    "NAME":"ALTERNATIVE_SHLP_TYPE",
+    "KEY":"",
+    "TYPE":"C",
+    "LENGTH":1,
+    "DECIMALS":-1
    }
   ],
   "properties":

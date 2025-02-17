@@ -164,7 +164,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_REGULATIVE_ARCHIVE",
@@ -222,7 +223,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":251,
-    "TYPESRC":"BEGIN OF mc_content_types.\r\n    CONSTANTS pdf  TYPE zetr_e_dctyp VALUE 'PDF' ##NO_TEXT.\r\n    CONSTANTS ubl  TYPE zetr_e_dctyp VALUE 'UBL' ##NO_TEXT.\r\n    CONSTANTS html TYPE zetr_e_dctyp VALUE 'HTML' ##NO_TEXT.\r\n    CONSTANTS END OF mc_content_types\r\n"
+    "TYPESRC":"BEGIN OF mc_content_types.\r\n    CONSTANTS pdf  TYPE zetr_e_dctyp VALUE 'PDF' ##NO_TEXT.\r\n    CONSTANTS ubl  TYPE zetr_e_dctyp VALUE 'UBL' ##NO_TEXT.\r\n    CONSTANTS html TYPE zetr_e_dctyp VALUE 'HTML' ##NO_TEXT.\r\n    CONSTANTS END OF mc_content_types\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_REGULATIVE_ARCHIVE",
@@ -280,7 +282,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":76,
-    "TYPESRC":"mty_archives TYPE STANDARD TABLE OF zetr_s_document_archive WITH EMPTY KEY\r\n"
+    "TYPESRC":"mty_archives TYPE STANDARD TABLE OF zetr_s_document_archive WITH EMPTY KEY\r\n",
+    "MTDSQLSERVICE":""
    }
   ]
  },

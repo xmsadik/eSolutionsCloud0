@@ -242,6 +242,22 @@
   ]
  },
  {
+  "table":"DDLX_RT_REFS",
+  "data":
+  [
+   {
+    "DDLXNAME":"ZETR_DDL_E_REFERENCE_CLASSES",
+    "ELEMENT":"",
+    "NAME":"UI.HEADERINFO.TITLE.VALUE",
+    "PATH":"PARENTCLASSNAME",
+    "REF_OBJECT_TYPE":"STOB",
+    "REF_OBJECT_SUBTYPE":"DOF",
+    "REF_OBJECT_NAME":"ZETR_DDL_P_REFERENCE_CLASSES",
+    "REF_OBJECT_ELEMENT":"PARENTCLASSNAME"
+   }
+  ]
+ },
+ {
   "table":"TADIR",
   "data":
   [

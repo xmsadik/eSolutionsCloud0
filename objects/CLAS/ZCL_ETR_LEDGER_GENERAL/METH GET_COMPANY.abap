@@ -13,33 +13,33 @@
       gs_bukrs-maxcr = 5000.
     ENDIF.
 
-*  IF gv_bcode IS NOT INITIAL.
-*    SELECT SINGLE *
-*      FROM /itetr/edf_sbblg
-*      INTO gs_bcode
-*     WHERE bukrs = gv_bukrs
-*       AND bcode = gv_bcode.
-*
-*    IF ( gs_bcode-sub_bukrs IS NOT INITIAL AND
-*         gs_bcode-sub_gsber IS INITIAL ) OR
-*       gs_bcode-btype EQ 'BUKRS'.
-*
-*      gv_bukrs     = gs_bcode-sub_bukrs.
-*      gv_bukrs_tmp = gs_bcode-bukrs.
-*
-*      gs_bukrs-adress1     = gs_bcode-adress1.
-*      gs_bukrs-adress2     = gs_bcode-adress2.
-*      gs_bukrs-house_num   = gs_bcode-house_num.
-*      gs_bukrs-postal_code = gs_bcode-postal_code.
-*      gs_bukrs-city        = gs_bcode-city.
-*      gs_bukrs-country_u   = gs_bcode-country.
-*      gs_bukrs-tel_number  = gs_bcode-tel_number.
-*      gs_bukrs-fax_number  = gs_bcode-fax_number.
-*      gs_bukrs-email       = gs_bcode-email.
-*      gs_bukrs-creator     = gs_bcode-creator.
-*      gs_bukrs-days45      = gs_bcode-days45.
-*    ENDIF.
-*  ENDIF.
+    IF gv_bcode IS NOT INITIAL.
+      SELECT SINGLE *
+        FROM zetr_t_sbblg
+       WHERE bukrs = @gv_bukrs
+         AND bcode = @gv_bcode
+       INTO @gs_bcode.
+
+      IF ( gs_bcode-sub_bukrs IS NOT INITIAL AND
+           gs_bcode-sub_gsber IS INITIAL ) OR
+         gs_bcode-btype EQ 'BUKRS'.
+
+        gv_bukrs     = gs_bcode-sub_bukrs.
+        gv_bukrs_tmp = gs_bcode-bukrs.
+
+        gs_bukrs-adress1     = gs_bcode-adress1.
+        gs_bukrs-adress2     = gs_bcode-adress2.
+        gs_bukrs-house_num   = gs_bcode-house_num.
+        gs_bukrs-postal_code = gs_bcode-postal_code.
+        gs_bukrs-city        = gs_bcode-city.
+        gs_bukrs-country_u   = gs_bcode-country.
+        gs_bukrs-tel_number  = gs_bcode-tel_number.
+        gs_bukrs-fax_number  = gs_bcode-fax_number.
+        gs_bukrs-email       = gs_bcode-email.
+        gs_bukrs-creator     = gs_bcode-creator.
+        gs_bukrs-days45      = gs_bcode-days45.
+      ENDIF.
+    ENDIF.
 
     IF gs_bukrs-creator IS INITIAL.
       SELECT SINGLE PersonFullName
@@ -75,10 +75,10 @@
       gs_bukrs-maxit = 20000.
     ENDIF.
 
-*    SELECT *
-*      FROM /itetr/edf_symmb
-*      INTO TABLE gt_smm
-*     WHERE bukrs = gv_bukrs_tmp.
+    SELECT *
+      FROM zetr_t_symmb
+     WHERE bukrs = @gv_bukrs_tmp
+     INTO TABLE @gt_smm.
 
     SELECT SINGLE waers
       FROM zetr_t_dopvr
@@ -91,8 +91,6 @@
 
     SELECT *
     FROM zetr_t_hespl
-*   WHERE bukrs = @gv_bukrs_tmp                "YiğitcanÖ. 1307023 Closed.
-*     AND ktopl = @gs_t001-ktopl.
       WHERE ktopl = @gs_t001-ktopl
       INTO TABLE @gt_hspplan.
 
@@ -105,10 +103,9 @@
         FROM I_GLAccountText AS skat
        INNER JOIN i_companycode AS t001 ON t001~ChartOfAccounts = skat~ChartOfAccounts
        WHERE companycode = @gs_t001-bukrs
+         AND skat~Language = 'T'
        INTO CORRESPONDING FIELDS OF TABLE @gt_skat.
     ENDIF.
-
-*    DELETE gt_skat WHERE spras NE 'T'.
 
     IF gs_bukrs-ablart IS NOT INITIAL.
       gr_ablart = VALUE #( ( sign = 'I' option = 'EQ' low = gs_bukrs-ablart ) ).

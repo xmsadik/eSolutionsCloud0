@@ -367,7 +367,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS_EFINANS",
@@ -425,7 +426,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS_EFINANS",
@@ -483,7 +485,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS_EFINANS",
@@ -541,7 +544,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS_EFINANS",
@@ -599,7 +603,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":737,
-    "TYPESRC":"BEGIN OF mty_document_status,\r\n        aciklama                  TYPE string,\r\n        alimtarihi                TYPE string,\r\n        belgeno                   TYPE string,\r\n        ettn                      TYPE string,\r\n        yanitdetayi               TYPE string,\r\n        yanitdurumu               TYPE string,\r\n        yanitgonderimcevabidetayi TYPE string,\r\n        yanitgonderimcevabikodu   TYPE string,\r\n        yanitgonderimdurumu       TYPE string,\r\n        yanitgonderimtarihi       TYPE string,\r\n        sirano                    TYPE string,\r\n        yereleaktarimdurumu       TYPE string,\r\n        kepdurum                  TYPE string,\r\n        gibiptaldurum             TYPE string,\r\n      END OF mty_document_status\r\n"
+    "TYPESRC":"BEGIN OF mty_document_status,\r\n        aciklama                  TYPE string,\r\n        alimtarihi                TYPE string,\r\n        belgeno                   TYPE string,\r\n        ettn                      TYPE string,\r\n        yanitdetayi               TYPE string,\r\n        yanitdurumu               TYPE string,\r\n        yanitgonderimcevabidetayi TYPE string,\r\n        yanitgonderimcevabikodu   TYPE string,\r\n        yanitgonderimdurumu       TYPE string,\r\n        yanitgonderimtarihi       TYPE string,\r\n        sirano                    TYPE string,\r\n        yereleaktarimdurumu       TYPE string,\r\n        kepdurum                  TYPE string,\r\n        gibiptaldurum             TYPE string,\r\n      END OF mty_document_status\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS_EFINANS",
@@ -657,7 +662,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":895,
-    "TYPESRC":"BEGIN OF mty_fat1_alicisatici,\r\n        musteri_no    TYPE string,\r\n        vergi_no      TYPE string,\r\n        vergi_dairesi TYPE string,\r\n        unvan         TYPE string,\r\n        ulke          TYPE string,\r\n        sehir         TYPE string,\r\n        ilce          TYPE string,\r\n        cadde_sokak   TYPE string,\r\n        kasaba_koy    TYPE string,\r\n        bina_adi      TYPE string,\r\n        bina_no       TYPE string,\r\n        kapi_no       TYPE string,\r\n        posta_kodu    TYPE string,\r\n        tel           TYPE string,\r\n        fax           TYPE string,\r\n        web_sitesi    TYPE string,\r\n        eposta        TYPE string,\r\n        sube_kodu     TYPE string,\r\n        sube_adi      TYPE string,\r\n        tapdk_no      TYPE string,\r\n        adi           TYPE string,\r\n        soyadi        TYPE string,\r\n        etiket        TYPE string,\r\n      END OF mty_fat1_alicisatici\r\n"
+    "TYPESRC":"BEGIN OF mty_fat1_alicisatici,\r\n        musteri_no    TYPE string,\r\n        vergi_no      TYPE string,\r\n        vergi_dairesi TYPE string,\r\n        unvan         TYPE string,\r\n        ulke          TYPE string,\r\n        sehir         TYPE string,\r\n        ilce          TYPE string,\r\n        cadde_sokak   TYPE string,\r\n        kasaba_koy    TYPE string,\r\n        bina_adi      TYPE string,\r\n        bina_no       TYPE string,\r\n        kapi_no       TYPE string,\r\n        posta_kodu    TYPE string,\r\n        tel           TYPE string,\r\n        fax           TYPE string,\r\n        web_sitesi    TYPE string,\r\n        eposta        TYPE string,\r\n        sube_kodu     TYPE string,\r\n        sube_adi      TYPE string,\r\n        tapdk_no      TYPE string,\r\n        adi           TYPE string,\r\n        soyadi        TYPE string,\r\n        etiket        TYPE string,\r\n      END OF mty_fat1_alicisatici\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS_EFINANS",
@@ -715,7 +721,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":1592,
-    "TYPESRC":"BEGIN OF mty_fat1_belge,\r\n        fatura_id                      TYPE string,\r\n        fatura_no                      TYPE string,\r\n        fatura_tarihi                  TYPE string,\r\n        fatura_zamani                  TYPE string,\r\n        fatura_tipi                    TYPE string,\r\n        fatura_turu                    TYPE string,\r\n        siparis_bilgisi                TYPE mty_fat1_siparis,\r\n        irsaliye_bilgisi               TYPE mty_fat1_irsaliye_t,\r\n        mal_kabul_bilgisi              TYPE mty_fat1_malkabul_t,\r\n        son_odeme_tarihi               TYPE string,\r\n        para_birimi                    TYPE string,\r\n        alici                          TYPE mty_fat1_alicisatici,\r\n        satici                         TYPE mty_fat1_alicisatici,\r\n        fatura_satir                   TYPE mty_fat1_satir_t,\r\n        toplam_mal_hizmet_miktari      TYPE string,\r\n        toplam_iskonto_tutari          TYPE string,\r\n        toplam_artirim_tutari          TYPE string,\r\n        vergi_haric_toplam             TYPE string,\r\n        vergi_dahil_tutar              TYPE string,\r\n        yuvarlama_tutari               TYPE string,\r\n        odenecek_tutar                 TYPE string,\r\n        vergiler                       TYPE mty_fat1_vergiler_t,\r\n        fatura_not                     TYPE STANDARD TABLE OF string WITH DEFAULT KEY,\r\n        iadeye_konu_olan_fatura_bilgil TYPE mty_fat1_iadeyekonu_t,\r\n        ekler                          TYPE mty_fat1_ekler_t,\r\n        ek_bilgiler                    TYPE mty_fat1_ekbilgi_t,\r\n      END OF mty_fat1_belge\r\n"
+    "TYPESRC":"BEGIN OF mty_fat1_belge,\r\n        fatura_id                      TYPE string,\r\n        fatura_no                      TYPE string,\r\n        fatura_tarihi                  TYPE string,\r\n        fatura_zamani                  TYPE string,\r\n        fatura_tipi                    TYPE string,\r\n        fatura_turu                    TYPE string,\r\n        siparis_bilgisi                TYPE mty_fat1_siparis,\r\n        irsaliye_bilgisi               TYPE mty_fat1_irsaliye_t,\r\n        mal_kabul_bilgisi              TYPE mty_fat1_malkabul_t,\r\n        son_odeme_tarihi               TYPE string,\r\n        para_birimi                    TYPE string,\r\n        alici                          TYPE mty_fat1_alicisatici,\r\n        satici                         TYPE mty_fat1_alicisatici,\r\n        fatura_satir                   TYPE mty_fat1_satir_t,\r\n        toplam_mal_hizmet_miktari      TYPE string,\r\n        toplam_iskonto_tutari          TYPE string,\r\n        toplam_artirim_tutari          TYPE string,\r\n        vergi_haric_toplam             TYPE string,\r\n        vergi_dahil_tutar              TYPE string,\r\n        yuvarlama_tutari               TYPE string,\r\n        odenecek_tutar                 TYPE string,\r\n        vergiler                       TYPE mty_fat1_vergiler_t,\r\n        fatura_not                     TYPE STANDARD TABLE OF string WITH DEFAULT KEY,\r\n        iadeye_konu_olan_fatura_bilgil TYPE mty_fat1_iadeyekonu_t,\r\n        ekler                          TYPE mty_fat1_ekler_t,\r\n        ek_bilgiler                    TYPE mty_fat1_ekbilgi_t,\r\n      END OF mty_fat1_belge\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS_EFINANS",
@@ -773,7 +780,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":119,
-    "TYPESRC":"BEGIN OF mty_fat1_ekbilgi,\r\n        anahtar TYPE string,\r\n        deger   TYPE string,\r\n      END OF mty_fat1_ekbilgi\r\n"
+    "TYPESRC":"BEGIN OF mty_fat1_ekbilgi,\r\n        anahtar TYPE string,\r\n        deger   TYPE string,\r\n      END OF mty_fat1_ekbilgi\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS_EFINANS",
@@ -831,7 +839,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":77,
-    "TYPESRC":"mty_fat1_ekbilgi_t TYPE STANDARD TABLE OF mty_fat1_ekbilgi WITH DEFAULT KEY\r\n"
+    "TYPESRC":"mty_fat1_ekbilgi_t TYPE STANDARD TABLE OF mty_fat1_ekbilgi WITH DEFAULT KEY\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS_EFINANS",
@@ -889,7 +898,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":230,
-    "TYPESRC":"BEGIN OF mty_fat1_ekler,\r\n        dosya_adi    TYPE string,\r\n        mime_type    TYPE string,\r\n        icerik       TYPE string,\r\n        belge_turu   TYPE string,\r\n        belge_tarihi TYPE string,\r\n      END OF mty_fat1_ekler\r\n"
+    "TYPESRC":"BEGIN OF mty_fat1_ekler,\r\n        dosya_adi    TYPE string,\r\n        mime_type    TYPE string,\r\n        icerik       TYPE string,\r\n        belge_turu   TYPE string,\r\n        belge_tarihi TYPE string,\r\n      END OF mty_fat1_ekler\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS_EFINANS",
@@ -947,7 +957,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":73,
-    "TYPESRC":"mty_fat1_ekler_t TYPE STANDARD TABLE OF mty_fat1_ekler WITH DEFAULT KEY\r\n"
+    "TYPESRC":"mty_fat1_ekler_t TYPE STANDARD TABLE OF mty_fat1_ekler WITH DEFAULT KEY\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS_EFINANS",
@@ -1005,7 +1016,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":137,
-    "TYPESRC":"BEGIN OF mty_fat1_iadeyekonu,\r\n        fatura_no     TYPE string,\r\n        fatura_tarihi TYPE string,\r\n      END OF mty_fat1_iadeyekonu\r\n"
+    "TYPESRC":"BEGIN OF mty_fat1_iadeyekonu,\r\n        fatura_no     TYPE string,\r\n        fatura_tarihi TYPE string,\r\n      END OF mty_fat1_iadeyekonu\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS_EFINANS",
@@ -1063,7 +1075,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":83,
-    "TYPESRC":"mty_fat1_iadeyekonu_t TYPE STANDARD TABLE OF mty_fat1_iadeyekonu WITH DEFAULT KEY\r\n"
+    "TYPESRC":"mty_fat1_iadeyekonu_t TYPE STANDARD TABLE OF mty_fat1_iadeyekonu WITH DEFAULT KEY\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS_EFINANS",
@@ -1121,7 +1134,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":137,
-    "TYPESRC":"BEGIN OF mty_fat1_irsaliye,\r\n        irsaliye_no     TYPE string,\r\n        irsaliye_tarihi TYPE string,\r\n      END OF mty_fat1_irsaliye\r\n"
+    "TYPESRC":"BEGIN OF mty_fat1_irsaliye,\r\n        irsaliye_no     TYPE string,\r\n        irsaliye_tarihi TYPE string,\r\n      END OF mty_fat1_irsaliye\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS_EFINANS",
@@ -1179,7 +1193,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":79,
-    "TYPESRC":"mty_fat1_irsaliye_t TYPE STANDARD TABLE OF mty_fat1_irsaliye WITH DEFAULT KEY\r\n"
+    "TYPESRC":"mty_fat1_irsaliye_t TYPE STANDARD TABLE OF mty_fat1_irsaliye WITH DEFAULT KEY\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS_EFINANS",
@@ -1237,7 +1252,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":139,
-    "TYPESRC":"BEGIN OF mty_fat1_malkabul,\r\n        mal_kabul_no     TYPE string,\r\n        mal_kabul_tarihi TYPE string,\r\n      END OF mty_fat1_malkabul\r\n"
+    "TYPESRC":"BEGIN OF mty_fat1_malkabul,\r\n        mal_kabul_no     TYPE string,\r\n        mal_kabul_tarihi TYPE string,\r\n      END OF mty_fat1_malkabul\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS_EFINANS",
@@ -1295,7 +1311,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":79,
-    "TYPESRC":"mty_fat1_malkabul_t TYPE STANDARD TABLE OF mty_fat1_malkabul WITH DEFAULT KEY\r\n"
+    "TYPESRC":"mty_fat1_malkabul_t TYPE STANDARD TABLE OF mty_fat1_malkabul WITH DEFAULT KEY\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS_EFINANS",
@@ -1353,7 +1370,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":786,
-    "TYPESRC":"BEGIN OF mty_fat1_satir,\r\n        sira_no                TYPE string,\r\n        alici_urun_kodu        TYPE string,\r\n        satici_urun_kodu       TYPE string,\r\n        uretici_urun_kodu      TYPE string,\r\n        marka_adi              TYPE string,\r\n        model_adi              TYPE string,\r\n        urun_adi               TYPE string,\r\n        tanim                  TYPE string,\r\n        birim_kodu             TYPE string,\r\n        birim_fiyat            TYPE string,\r\n        miktar                 TYPE string,\r\n        mal_hizmet_miktari     TYPE string,\r\n        iskonto_artirim_nedeni TYPE string,\r\n        iskonto_orani          TYPE string,\r\n        iskonto_tutari         TYPE string,\r\n        vergiler               TYPE mty_fat1_vergiler,\r\n      END OF mty_fat1_satir\r\n"
+    "TYPESRC":"BEGIN OF mty_fat1_satir,\r\n        sira_no                TYPE string,\r\n        alici_urun_kodu        TYPE string,\r\n        satici_urun_kodu       TYPE string,\r\n        uretici_urun_kodu      TYPE string,\r\n        marka_adi              TYPE string,\r\n        model_adi              TYPE string,\r\n        urun_adi               TYPE string,\r\n        tanim                  TYPE string,\r\n        birim_kodu             TYPE string,\r\n        birim_fiyat            TYPE string,\r\n        miktar                 TYPE string,\r\n        mal_hizmet_miktari     TYPE string,\r\n        iskonto_artirim_nedeni TYPE string,\r\n        iskonto_orani          TYPE string,\r\n        iskonto_tutari         TYPE string,\r\n        vergiler               TYPE mty_fat1_vergiler,\r\n      END OF mty_fat1_satir\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS_EFINANS",
@@ -1411,7 +1429,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":73,
-    "TYPESRC":"mty_fat1_satir_t TYPE STANDARD TABLE OF mty_fat1_satir WITH DEFAULT KEY\r\n"
+    "TYPESRC":"mty_fat1_satir_t TYPE STANDARD TABLE OF mty_fat1_satir WITH DEFAULT KEY\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS_EFINANS",
@@ -1469,7 +1488,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":133,
-    "TYPESRC":"BEGIN OF mty_fat1_siparis,\r\n        siparis_no     TYPE string,\r\n        siparis_tarihi TYPE string,\r\n      END OF mty_fat1_siparis\r\n"
+    "TYPESRC":"BEGIN OF mty_fat1_siparis,\r\n        siparis_no     TYPE string,\r\n        siparis_tarihi TYPE string,\r\n      END OF mty_fat1_siparis\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS_EFINANS",
@@ -1527,7 +1547,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":283,
-    "TYPESRC":"BEGIN OF mty_fat1_vergi,\r\n        ad              TYPE string,\r\n        kod             TYPE string,\r\n        matrah          TYPE string,\r\n        oran            TYPE string,\r\n        vergi_tutari    TYPE string,\r\n        muafiyet_sebebi TYPE string,\r\n      END OF mty_fat1_vergi\r\n"
+    "TYPESRC":"BEGIN OF mty_fat1_vergi,\r\n        ad              TYPE string,\r\n        kod             TYPE string,\r\n        matrah          TYPE string,\r\n        oran            TYPE string,\r\n        vergi_tutari    TYPE string,\r\n        muafiyet_sebebi TYPE string,\r\n      END OF mty_fat1_vergi\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS_EFINANS",
@@ -1585,7 +1606,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":155,
-    "TYPESRC":"BEGIN OF mty_fat1_vergiler,\r\n        toplam_vergi_tutari TYPE string,\r\n        vergi               TYPE mty_fat1_vergi_t,\r\n      END OF mty_fat1_vergiler\r\n"
+    "TYPESRC":"BEGIN OF mty_fat1_vergiler,\r\n        toplam_vergi_tutari TYPE string,\r\n        vergi               TYPE mty_fat1_vergi_t,\r\n      END OF mty_fat1_vergiler\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS_EFINANS",
@@ -1643,7 +1665,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":79,
-    "TYPESRC":"mty_fat1_vergiler_t TYPE STANDARD TABLE OF mty_fat1_vergiler WITH DEFAULT KEY\r\n"
+    "TYPESRC":"mty_fat1_vergiler_t TYPE STANDARD TABLE OF mty_fat1_vergiler WITH DEFAULT KEY\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS_EFINANS",
@@ -1701,7 +1724,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":73,
-    "TYPESRC":"mty_fat1_vergi_t TYPE STANDARD TABLE OF mty_fat1_vergi WITH DEFAULT KEY\r\n"
+    "TYPESRC":"mty_fat1_vergi_t TYPE STANDARD TABLE OF mty_fat1_vergi WITH DEFAULT KEY\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS_EFINANS",
@@ -1759,7 +1783,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":467,
-    "TYPESRC":"BEGIN OF mty_incoming_document,\r\n        belgeno         TYPE string,\r\n        belgesirano     TYPE string,\r\n        belgetarihi     TYPE string,\r\n        ettn            TYPE string,\r\n        zarfid          TYPE string,\r\n        gonderenetiket  TYPE string,\r\n        gonderenvkntckn TYPE string,\r\n        belgexmlzipped  TYPE string,\r\n*        odenecektutar           TYPE string,\r\n*        odenecektutardovizcinsi TYPE string,\r\n      END OF mty_incoming_document\r\n"
+    "TYPESRC":"BEGIN OF mty_incoming_document,\r\n        belgeno         TYPE string,\r\n        belgesirano     TYPE string,\r\n        belgetarihi     TYPE string,\r\n        ettn            TYPE string,\r\n        zarfid          TYPE string,\r\n        gonderenetiket  TYPE string,\r\n        gonderenvkntckn TYPE string,\r\n        belgexmlzipped  TYPE string,\r\n*        odenecektutar           TYPE string,\r\n*        odenecektutardovizcinsi TYPE string,\r\n      END OF mty_incoming_document\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS_EFINANS",
@@ -1817,7 +1842,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":86,
-    "TYPESRC":"mty_incoming_documents TYPE STANDARD TABLE OF mty_incoming_document WITH DEFAULT KEY\r\n"
+    "TYPESRC":"mty_incoming_documents TYPE STANDARD TABLE OF mty_incoming_document WITH DEFAULT KEY\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS_EFINANS",
@@ -1875,7 +1901,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":259,
-    "TYPESRC":"BEGIN OF mty_users,\r\n        tip         TYPE string,\r\n        kayitzamani TYPE string,\r\n        unvan       TYPE string,\r\n        vkntckn     TYPE string,\r\n        hesaptipi   TYPE string,\r\n        aktifetiket TYPE mty_user_alias_t,\r\n      END OF mty_users\r\n"
+    "TYPESRC":"BEGIN OF mty_users,\r\n        tip         TYPE string,\r\n        kayitzamani TYPE string,\r\n        unvan       TYPE string,\r\n        vkntckn     TYPE string,\r\n        hesaptipi   TYPE string,\r\n        aktifetiket TYPE mty_user_alias_t,\r\n      END OF mty_users\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS_EFINANS",
@@ -1933,7 +1960,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":63,
-    "TYPESRC":"mty_users_t TYPE STANDARD TABLE OF mty_users WITH DEFAULT KEY\r\n"
+    "TYPESRC":"mty_users_t TYPE STANDARD TABLE OF mty_users WITH DEFAULT KEY\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS_EFINANS",
@@ -1991,7 +2019,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":147,
-    "TYPESRC":"BEGIN OF mty_user_alias,\r\n        etiket                  TYPE string,\r\n        etiketolusturulmazamani TYPE string,\r\n      END OF mty_user_alias\r\n"
+    "TYPESRC":"BEGIN OF mty_user_alias,\r\n        etiket                  TYPE string,\r\n        etiketolusturulmazamani TYPE string,\r\n      END OF mty_user_alias\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS_EFINANS",
@@ -2049,7 +2078,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":73,
-    "TYPESRC":"mty_user_alias_t TYPE STANDARD TABLE OF mty_user_alias WITH DEFAULT KEY\r\n"
+    "TYPESRC":"mty_user_alias_t TYPE STANDARD TABLE OF mty_user_alias WITH DEFAULT KEY\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS_EFINANS",
@@ -2107,7 +2137,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":104,
-    "TYPESRC":"BEGIN OF mty_user_list,\r\n        efaturakayitlikullanici TYPE mty_users_t,\r\n      END OF mty_user_list\r\n"
+    "TYPESRC":"BEGIN OF mty_user_list,\r\n        efaturakayitlikullanici TYPE mty_users_t,\r\n      END OF mty_user_list\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS_EFINANS",
@@ -2165,7 +2196,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    }
   ]
  },

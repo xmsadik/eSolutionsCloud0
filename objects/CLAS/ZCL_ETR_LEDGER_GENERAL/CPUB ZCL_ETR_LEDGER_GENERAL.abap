@@ -39,6 +39,7 @@ CLASS zcl_etr_ledger_general DEFINITION
       gv_bukrs       TYPE bukrs,
       gv_bukrs_tmp   TYPE bukrs,
       gv_bcode       TYPE zetr_e_bcode,
+      gs_bcode       TYPE zetr_t_sbblg,
       gv_gjahr       TYPE gjahr,
       gv_gjahr_buk   TYPE gjahr,
       gv_monat       TYPE monat,
@@ -46,6 +47,7 @@ CLASS zcl_etr_ledger_general DEFINITION
       gv_error       TYPE c LENGTH 1,
       gt_return      TYPE TABLE OF bapiret2,
       gs_bukrs       TYPE zetr_t_srkdb,
+      gt_smm         TYPE TABLE OF zetr_t_symmb,
       gv_waers       TYPE waers,
       gv_alternative TYPE c LENGTH 1,
       gs_params      TYPE zetr_t_dopvr,
@@ -53,11 +55,12 @@ CLASS zcl_etr_ledger_general DEFINITION
       gv_tsfy_durum  TYPE c LENGTH 1,
       gt_skb1        TYPE SORTED TABLE OF ty_skb1 WITH UNIQUE KEY saknr,
       gt_blart       TYPE SORTED TABLE OF ty_blart WITH UNIQUE KEY blart,
+      gt_check_ref   TYPE SORTED TABLE OF zetr_t_rbzgb WITH UNIQUE KEY gbtur,
       gv_f51_blart   TYPE blart,
       gv_f51_tcode   TYPE tcode,
       gv_datbi       TYPE datbi,
       gv_datab       TYPE datab,
-*      gs_defter      TYPE /itetr/edf_s_edefter_json,
+      gs_defter      TYPE zetr_s_ledger_json,
       gt_ledger_part TYPE TABLE OF zetr_t_defky,
       gv_partn_n     TYPE n LENGTH 6,
       gv_initpart    TYPE c LENGTH 1,
@@ -71,7 +74,7 @@ CLASS zcl_etr_ledger_general DEFINITION
       gt_skat        TYPE SORTED TABLE OF ty_skat WITH NON-UNIQUE KEY saknr,
       gv_partial     TYPE c LENGTH 1,
       gv_month_last  TYPE datum,
-*      gt_username    TYPE SORTED TABLE OF v_usr_name WITH NON-UNIQUE KEY bname WITH HEADER LINE,
+      gt_username    TYPE SORTED TABLE OF I_BusinessUserBasic WITH NON-UNIQUE KEY UserID,
       gv_ledger      TYPE c LENGTH 1,
       gt_ledger      TYPE TABLE OF zetr_t_defky,
       gv_conts       TYPE c LENGTH 1,
@@ -121,7 +124,7 @@ CLASS zcl_etr_ledger_general DEFINITION
       generate_ledger_data
         IMPORTING
           i_bukrs   TYPE bukrs
-          i_bcode   TYPE zetr_e_BCODE
+          i_bcode   TYPE zetr_e_bcode
           i_tsfyd   TYPE zetr_e_edf_ledger_in_purge
           i_ledger  TYPE abap_boolean
           tr_budat  TYPE ty_datum_range

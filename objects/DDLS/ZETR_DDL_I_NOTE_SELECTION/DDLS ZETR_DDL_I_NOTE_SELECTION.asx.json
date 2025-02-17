@@ -33,24 +33,6 @@
   ]
  },
  {
-  "table":"DDDDLSRC03NT",
-  "data":
-  [
-   {
-    "DDLNAME":"ZETR_DDL_I_NOTE_SELECTION",
-    "STRUCOBJN":"ZETR_DDL_I_NOTE_SELECTION",
-    "NODENAME":".NODE1",
-    "DDLANGUAGE":"E",
-    "AS4LOCAL":"N",
-    "FIELDNAME":"NOTE",
-    "DEPTH":0,
-    "DDTEXT":"Note",
-    "FIELDLABEL":"",
-    "QUICKINFO":""
-   }
-  ]
- },
- {
   "table":"DDDDLSRCT",
   "data":
   [

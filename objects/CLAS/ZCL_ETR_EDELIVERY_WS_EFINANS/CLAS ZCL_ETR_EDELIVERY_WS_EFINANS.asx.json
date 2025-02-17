@@ -220,7 +220,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS_EFINANS",
@@ -278,7 +279,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS_EFINANS",
@@ -336,7 +338,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":785,
-    "TYPESRC":"BEGIN OF mty_document_status,\r\n        aciklama                  TYPE string,\r\n        alimtarihi                TYPE string,\r\n        belgeno                   TYPE string,\r\n        ettn                      TYPE string,\r\n        yanitdetayi               TYPE string,\r\n        yanitdurumu               TYPE string,\r\n        yanitgonderimcevabidetayi TYPE string,\r\n        yanitgonderimcevabikodu   TYPE string,\r\n        yanitgonderimdurumu       TYPE string,\r\n        yanitgonderimtarihi       TYPE string,\r\n        sirano                    TYPE string,\r\n        yereleaktarimdurumu       TYPE string,\r\n        kepdurum                  TYPE string,\r\n        gibiptaldurum             TYPE string,\r\n        yanitettn                 TYPE string,\r\n      END OF mty_document_status\r\n"
+    "TYPESRC":"BEGIN OF mty_document_status,\r\n        aciklama                  TYPE string,\r\n        alimtarihi                TYPE string,\r\n        belgeno                   TYPE string,\r\n        ettn                      TYPE string,\r\n        yanitdetayi               TYPE string,\r\n        yanitdurumu               TYPE string,\r\n        yanitgonderimcevabidetayi TYPE string,\r\n        yanitgonderimcevabikodu   TYPE string,\r\n        yanitgonderimdurumu       TYPE string,\r\n        yanitgonderimtarihi       TYPE string,\r\n        sirano                    TYPE string,\r\n        yereleaktarimdurumu       TYPE string,\r\n        kepdurum                  TYPE string,\r\n        gibiptaldurum             TYPE string,\r\n        yanitettn                 TYPE string,\r\n      END OF mty_document_status\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS_EFINANS",
@@ -394,7 +397,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":373,
-    "TYPESRC":"BEGIN OF mty_incoming_document,\r\n        belgeno         TYPE string,\r\n        belgesirano     TYPE string,\r\n        belgetarihi     TYPE string,\r\n        ettn            TYPE string,\r\n        zarfid          TYPE string,\r\n        gonderenetiket  TYPE string,\r\n        gonderenvkntckn TYPE string,\r\n        belgexmlzipped  TYPE string,\r\n      END OF mty_incoming_document\r\n"
+    "TYPESRC":"BEGIN OF mty_incoming_document,\r\n        belgeno         TYPE string,\r\n        belgesirano     TYPE string,\r\n        belgetarihi     TYPE string,\r\n        ettn            TYPE string,\r\n        zarfid          TYPE string,\r\n        gonderenetiket  TYPE string,\r\n        gonderenvkntckn TYPE string,\r\n        belgexmlzipped  TYPE string,\r\n      END OF mty_incoming_document\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS_EFINANS",
@@ -452,7 +456,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":86,
-    "TYPESRC":"mty_incoming_documents TYPE STANDARD TABLE OF mty_incoming_document WITH DEFAULT KEY\r\n"
+    "TYPESRC":"mty_incoming_documents TYPE STANDARD TABLE OF mty_incoming_document WITH DEFAULT KEY\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS_EFINANS",
@@ -510,7 +515,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":259,
-    "TYPESRC":"BEGIN OF mty_users,\r\n        tip         TYPE string,\r\n        kayitzamani TYPE string,\r\n        unvan       TYPE string,\r\n        vkntckn     TYPE string,\r\n        hesaptipi   TYPE string,\r\n        aktifetiket TYPE mty_user_alias_t,\r\n      END OF mty_users\r\n"
+    "TYPESRC":"BEGIN OF mty_users,\r\n        tip         TYPE string,\r\n        kayitzamani TYPE string,\r\n        unvan       TYPE string,\r\n        vkntckn     TYPE string,\r\n        hesaptipi   TYPE string,\r\n        aktifetiket TYPE mty_user_alias_t,\r\n      END OF mty_users\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS_EFINANS",
@@ -568,7 +574,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":63,
-    "TYPESRC":"mty_users_t TYPE STANDARD TABLE OF mty_users WITH DEFAULT KEY\r\n"
+    "TYPESRC":"mty_users_t TYPE STANDARD TABLE OF mty_users WITH DEFAULT KEY\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS_EFINANS",
@@ -626,7 +633,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":147,
-    "TYPESRC":"BEGIN OF mty_user_alias,\r\n        etiket                  TYPE String,\r\n        etiketolusturulmazamani TYPE string,\r\n      END OF mty_user_alias\r\n"
+    "TYPESRC":"BEGIN OF mty_user_alias,\r\n        etiket                  TYPE String,\r\n        etiketolusturulmazamani TYPE string,\r\n      END OF mty_user_alias\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS_EFINANS",
@@ -684,7 +692,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":73,
-    "TYPESRC":"mty_user_alias_t TYPE STANDARD TABLE OF mty_user_alias WITH DEFAULT KEY\r\n"
+    "TYPESRC":"mty_user_alias_t TYPE STANDARD TABLE OF mty_user_alias WITH DEFAULT KEY\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS_EFINANS",
@@ -742,7 +751,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":104,
-    "TYPESRC":"BEGIN OF mty_user_list,\r\n        efaturakayitlikullanici TYPE mty_users_t,\r\n      END OF mty_user_list\r\n"
+    "TYPESRC":"BEGIN OF mty_user_list,\r\n        efaturakayitlikullanici TYPE mty_users_t,\r\n      END OF mty_user_list\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS_EFINANS",
@@ -800,7 +810,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    }
   ]
  },

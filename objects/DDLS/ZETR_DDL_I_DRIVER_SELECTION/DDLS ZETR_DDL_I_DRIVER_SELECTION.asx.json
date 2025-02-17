@@ -33,60 +33,6 @@
   ]
  },
  {
-  "table":"DDDDLSRC03NT",
-  "data":
-  [
-   {
-    "DDLNAME":"ZETR_DDL_I_DRIVER_SELECTION",
-    "STRUCOBJN":"ZETR_DDL_I_DRIVER_SELECTION",
-    "NODENAME":".NODE1",
-    "DDLANGUAGE":"E",
-    "AS4LOCAL":"N",
-    "FIELDNAME":"NAMEF",
-    "DEPTH":0,
-    "DDTEXT":"First name",
-    "FIELDLABEL":"",
-    "QUICKINFO":""
-   },
-   {
-    "DDLNAME":"ZETR_DDL_I_DRIVER_SELECTION",
-    "STRUCOBJN":"ZETR_DDL_I_DRIVER_SELECTION",
-    "NODENAME":".NODE1",
-    "DDLANGUAGE":"E",
-    "AS4LOCAL":"N",
-    "FIELDNAME":"NAMEL",
-    "DEPTH":0,
-    "DDTEXT":"Last name",
-    "FIELDLABEL":"",
-    "QUICKINFO":""
-   },
-   {
-    "DDLNAME":"ZETR_DDL_I_DRIVER_SELECTION",
-    "STRUCOBJN":"ZETR_DDL_I_DRIVER_SELECTION",
-    "NODENAME":".NODE1",
-    "DDLANGUAGE":"E",
-    "AS4LOCAL":"N",
-    "FIELDNAME":"TAXID",
-    "DEPTH":0,
-    "DDTEXT":"Tax ID",
-    "FIELDLABEL":"",
-    "QUICKINFO":""
-   },
-   {
-    "DDLNAME":"ZETR_DDL_I_DRIVER_SELECTION",
-    "STRUCOBJN":"ZETR_DDL_I_DRIVER_SELECTION",
-    "NODENAME":".NODE1",
-    "DDLANGUAGE":"E",
-    "AS4LOCAL":"N",
-    "FIELDNAME":"TITLE",
-    "DEPTH":0,
-    "DDTEXT":"Title",
-    "FIELDLABEL":"",
-    "QUICKINFO":""
-   }
-  ]
- },
- {
   "table":"DDDDLSRCT",
   "data":
   [

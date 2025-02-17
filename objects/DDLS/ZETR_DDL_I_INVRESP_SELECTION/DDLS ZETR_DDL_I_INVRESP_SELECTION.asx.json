@@ -33,36 +33,6 @@
   ]
  },
  {
-  "table":"DDDDLSRC03NT",
-  "data":
-  [
-   {
-    "DDLNAME":"ZETR_DDL_I_INVRESP_SELECTION",
-    "STRUCOBJN":"ZETR_DDL_I_INVRESP_SELECTION",
-    "NODENAME":".NODE1",
-    "DDLANGUAGE":"E",
-    "AS4LOCAL":"N",
-    "FIELDNAME":"REJECTNOTE",
-    "DEPTH":0,
-    "DDTEXT":"Note",
-    "FIELDLABEL":"",
-    "QUICKINFO":""
-   },
-   {
-    "DDLNAME":"ZETR_DDL_I_INVRESP_SELECTION",
-    "STRUCOBJN":"ZETR_DDL_I_INVRESP_SELECTION",
-    "NODENAME":".NODE1",
-    "DDLANGUAGE":"E",
-    "AS4LOCAL":"N",
-    "FIELDNAME":"REJECTTYPE",
-    "DEPTH":0,
-    "DDTEXT":"Reject type",
-    "FIELDLABEL":"",
-    "QUICKINFO":""
-   }
-  ]
- },
- {
   "table":"DDDDLSRCT",
   "data":
   [

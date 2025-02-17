@@ -375,6 +375,22 @@
   ]
  },
  {
+  "table":"DDLX_RT_REFS",
+  "data":
+  [
+   {
+    "DDLXNAME":"ZETR_DDL_E_SERV_USER",
+    "ELEMENT":"",
+    "NAME":"UI.HEADERINFO.TITLE.VALUE",
+    "PATH":"USERNAME",
+    "REF_OBJECT_TYPE":"STOB",
+    "REF_OBJECT_SUBTYPE":"DOF",
+    "REF_OBJECT_NAME":"ZETR_DDL_P_SERVICE_USERS",
+    "REF_OBJECT_ELEMENT":"USERNAME"
+   }
+  ]
+ },
+ {
   "table":"TADIR",
   "data":
   [

@@ -60,6 +60,17 @@
     "SCRTEXT_S":"Cont.no",
     "SCRTEXT_M":"Contract no",
     "SCRTEXT_L":"Contract no"
+   },
+   {
+    "ROLLNAME":"ZETR_E_CONTRNO",
+    "DDLANGUAGE":"T",
+    "AS4LOCAL":"N",
+    "AS4VERS":0,
+    "DDTEXT":"Kontrat no",
+    "REPTEXT":"Kontrat no",
+    "SCRTEXT_S":"Kontrat no",
+    "SCRTEXT_M":"Kontrat no",
+    "SCRTEXT_L":"Kontrat no"
    }
   ]
  },

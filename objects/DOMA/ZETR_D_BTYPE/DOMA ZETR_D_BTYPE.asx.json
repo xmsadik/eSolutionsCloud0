@@ -99,6 +99,28 @@
     "DOMVAL_LD":"",
     "DOMVAL_HD":"",
     "DOMVALUE_L":"GSBER"
+   },
+   {
+    "DOMNAME":"ZETR_D_BTYPE",
+    "DDLANGUAGE":"T",
+    "AS4LOCAL":"N",
+    "VALPOS":1,
+    "AS4VERS":0,
+    "DDTEXT":"Şirket Kodu",
+    "DOMVAL_LD":"",
+    "DOMVAL_HD":"",
+    "DOMVALUE_L":"BUKRS"
+   },
+   {
+    "DOMNAME":"ZETR_D_BTYPE",
+    "DDLANGUAGE":"T",
+    "AS4LOCAL":"N",
+    "VALPOS":2,
+    "AS4VERS":0,
+    "DDTEXT":"İş Alanı",
+    "DOMVAL_LD":"",
+    "DOMVAL_HD":"",
+    "DOMVALUE_L":"GSBER"
    }
   ]
  },

@@ -33,24 +33,6 @@
   ]
  },
  {
-  "table":"DDDDLSRC03NT",
-  "data":
-  [
-   {
-    "DDLNAME":"ZETR_DDL_I_COMPANY_SELECTION",
-    "STRUCOBJN":"ZETR_DDL_I_COMPANY_SELECTION",
-    "NODENAME":".NODE1",
-    "DDLANGUAGE":"E",
-    "AS4LOCAL":"N",
-    "FIELDNAME":"COMPANYCODE",
-    "DEPTH":0,
-    "DDTEXT":"Company Code",
-    "FIELDLABEL":"",
-    "QUICKINFO":""
-   }
-  ]
- },
- {
   "table":"DDDDLSRCT",
   "data":
   [

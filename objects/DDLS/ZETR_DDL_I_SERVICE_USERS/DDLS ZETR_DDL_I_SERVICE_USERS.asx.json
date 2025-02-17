@@ -12,7 +12,7 @@
     "SOURCE":"@AccessControl.authorizationCheck: #NOT_REQUIRED\r\n@EndUserText.label: 'Web Servis Kullanıcı Bilgileri'\r\n@Metadata.ignorePropagatedAnnotations: true\r\ndefine root view entity zetr_ddl_i_service_users\r\n  as select from zetr_t_serv_user\r\n{\r\n\r\n  key service_id  as ServiceId,\r\n      service_url as ServiceUrl,\r\n      username    as Username,\r\n      password    as Password\r\n}\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[\n\"ZETR_T_SERV_USER\"\n],\n\"ASSOCIATED\":\n[],\n\"BASE\":\n[],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
     "PARENTNAME":"",
     "ACTFLAG":"",
-    "CHGFLAG":"21",
+    "CHGFLAG":"J,W4T2",
     "SOURCE_TYPE":"W",
     "SOURCE_ORIGIN":"0",
     "ABAP_LANGUAGE_VERSION":"5"

@@ -235,6 +235,22 @@
   ]
  },
  {
+  "table":"DDLX_RT_REFS",
+  "data":
+  [
+   {
+    "DDLXNAME":"ZETR_DDL_E_DELIVERY_NUMSTAT",
+    "ELEMENT":"",
+    "NAME":"UI.HEADERINFO.TITLE.VALUE",
+    "PATH":"NUMBERSTATUS",
+    "REF_OBJECT_TYPE":"STOB",
+    "REF_OBJECT_SUBTYPE":"DOF",
+    "REF_OBJECT_NAME":"ZETR_DDL_P_DELIVERY_NUMSTAT",
+    "REF_OBJECT_ELEMENT":"NUMBERSTATUS"
+   }
+  ]
+ },
+ {
   "table":"TADIR",
   "data":
   [

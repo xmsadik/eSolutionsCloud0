@@ -304,7 +304,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS",
@@ -362,7 +363,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS",
@@ -420,7 +422,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS",
@@ -478,7 +481,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS",
@@ -536,7 +540,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS",
@@ -594,7 +599,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS",
@@ -652,7 +658,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS",
@@ -710,7 +717,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS",
@@ -768,7 +776,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS",
@@ -826,7 +835,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":221,
-    "TYPESRC":"BEGIN OF mty_incoming_invoice_status,\r\n        apres TYPE zetr_e_apres,\r\n        resst TYPE zetr_e_resst,\r\n        radsc TYPE zetr_e_radsc,\r\n        staex TYPE zetr_e_staex,\r\n      END     OF mty_incoming_invoice_status\r\n"
+    "TYPESRC":"BEGIN OF mty_incoming_invoice_status,\r\n        apres TYPE zetr_e_apres,\r\n        resst TYPE zetr_e_resst,\r\n        radsc TYPE zetr_e_radsc,\r\n        staex TYPE zetr_e_staex,\r\n      END     OF mty_incoming_invoice_status\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS",
@@ -884,7 +894,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":73,
-    "TYPESRC":"mty_incoming_list  TYPE STANDARD TABLE OF zetr_t_icinv WITH DEFAULT KEY\r\n"
+    "TYPESRC":"mty_incoming_list  TYPE STANDARD TABLE OF zetr_t_icinv WITH DEFAULT KEY\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS",
@@ -942,7 +953,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":525,
-    "TYPESRC":"BEGIN OF mty_outgoing_document_status,\r\n        stacd TYPE zetr_e_stacd,\r\n        staex TYPE zetr_e_staex,\r\n        resst TYPE zetr_e_resst,\r\n        radsc TYPE zetr_e_radsc,\r\n        rsend TYPE zetr_e_rsend,\r\n        raded TYPE zetr_e_raded,\r\n        cedrn TYPE zetr_e_cedrn,\r\n        radrn TYPE zetr_e_radrn,\r\n        envui TYPE zetr_e_envui,\r\n        invui TYPE zetr_e_duich,\r\n        invno TYPE zetr_e_docno,\r\n        invqi TYPE zetr_e_docqi,\r\n        invii TYPE zetr_e_docii,\r\n      END OF mty_outgoing_document_status\r\n"
+    "TYPESRC":"BEGIN OF mty_outgoing_document_status,\r\n        stacd TYPE zetr_e_stacd,\r\n        staex TYPE zetr_e_staex,\r\n        resst TYPE zetr_e_resst,\r\n        radsc TYPE zetr_e_radsc,\r\n        rsend TYPE zetr_e_rsend,\r\n        raded TYPE zetr_e_raded,\r\n        cedrn TYPE zetr_e_cedrn,\r\n        radrn TYPE zetr_e_radrn,\r\n        envui TYPE zetr_e_envui,\r\n        invui TYPE zetr_e_duich,\r\n        invno TYPE zetr_e_docno,\r\n        invqi TYPE zetr_e_docqi,\r\n        invii TYPE zetr_e_docii,\r\n      END OF mty_outgoing_document_status\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS",
@@ -1000,7 +1012,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":119,
-    "TYPESRC":"BEGIN OF mty_service_header,\r\n        name  TYPE string,\r\n        value TYPE string,\r\n      END OF mty_service_header\r\n"
+    "TYPESRC":"BEGIN OF mty_service_header,\r\n        name  TYPE string,\r\n        value TYPE string,\r\n      END OF mty_service_header\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS",
@@ -1058,7 +1071,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":74,
-    "TYPESRC":"mty_service_header_tab TYPE TABLE OF mty_service_header WITH DEFAULT KEY\r\n"
+    "TYPESRC":"mty_service_header_tab TYPE TABLE OF mty_service_header WITH DEFAULT KEY\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS",
@@ -1116,7 +1130,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":77,
-    "TYPESRC":"mty_taxpayers_list TYPE STANDARD TABLE OF zetr_t_inv_ruser WITH DEFAULT KEY\r\n"
+    "TYPESRC":"mty_taxpayers_list TYPE STANDARD TABLE OF zetr_t_inv_ruser WITH DEFAULT KEY\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS",
@@ -1174,7 +1189,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":141,
-    "TYPESRC":"mt_custom_parameters  TYPE STANDARD TABLE OF zetr_t_eicus\r\n                            WITH NON-UNIQUE SORTED KEY by_cuspa COMPONENTS cuspa\r\n"
+    "TYPESRC":"mt_custom_parameters  TYPE STANDARD TABLE OF zetr_t_eicus\r\n                            WITH NON-UNIQUE SORTED KEY by_cuspa COMPONENTS cuspa\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS",
@@ -1232,7 +1248,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS",
@@ -1290,7 +1307,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS",
@@ -1348,7 +1366,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS",
@@ -1406,7 +1425,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS",
@@ -1464,7 +1484,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS",
@@ -1522,7 +1543,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EINVOICE_WS",
@@ -1580,7 +1602,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    }
   ]
  },

@@ -745,7 +745,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":599,
-    "TYPESRC":"BEGIN OF AddressType,\r\n      Id                  TYPE IdentifierType,\r\n      Postbox             TYPE TextType,\r\n      Room                TYPE TextType,\r\n      StreetName          TYPE TextType,\r\n      BlockName           TYPE TextType,\r\n      BuildingName        TYPE TextType,\r\n      BuildingNumber      TYPE TextType,\r\n      CitySubdivisionName TYPE TextType,\r\n      CityName            TYPE TextType,\r\n      PostalZone          TYPE TextType,\r\n      Region              TYPE TextType,\r\n      District            TYPE TextType,\r\n      Country             TYPE TextType,\r\n    END OF AddressType\r\n"
+    "TYPESRC":"BEGIN OF AddressType,\r\n      Id                  TYPE IdentifierType,\r\n      Postbox             TYPE TextType,\r\n      Room                TYPE TextType,\r\n      StreetName          TYPE TextType,\r\n      BlockName           TYPE TextType,\r\n      BuildingName        TYPE TextType,\r\n      BuildingNumber      TYPE TextType,\r\n      CitySubdivisionName TYPE TextType,\r\n      CityName            TYPE TextType,\r\n      PostalZone          TYPE TextType,\r\n      Region              TYPE TextType,\r\n      District            TYPE TextType,\r\n      Country             TYPE TextType,\r\n    END OF AddressType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -803,7 +804,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":96,
-    "TYPESRC":"BEGIN OF AirTransportType,\r\n      AircraftID TYPE IdentifierType,\r\n    END OF AirTransportType\r\n"
+    "TYPESRC":"BEGIN OF AirTransportType,\r\n      AircraftID TYPE IdentifierType,\r\n    END OF AirTransportType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -861,7 +863,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":402,
-    "TYPESRC":"BEGIN OF AllowanceChargeType,\r\n      ChargeIndicator         TYPE IndicatorType,\r\n      AllowanceChargeReason   TYPE TextType,\r\n      MultiplierFactorNumeric TYPE NumericType,\r\n      SequenceNumeric         TYPE NumericType,\r\n      Amount                  TYPE AmountType,\r\n      BaseAmount              TYPE AmountType,\r\n      PerUnitAmount           TYPE AmountType,\r\n    END OF AllowanceChargeType\r\n"
+    "TYPESRC":"BEGIN OF AllowanceChargeType,\r\n      ChargeIndicator         TYPE IndicatorType,\r\n      AllowanceChargeReason   TYPE TextType,\r\n      MultiplierFactorNumeric TYPE NumericType,\r\n      SequenceNumeric         TYPE NumericType,\r\n      Amount                  TYPE AmountType,\r\n      BaseAmount              TYPE AmountType,\r\n      PerUnitAmount           TYPE AmountType,\r\n    END OF AllowanceChargeType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -919,7 +922,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":183,
-    "TYPESRC":"BEGIN OF AmountType,\r\n      currencyID                TYPE string,\r\n      currencyCodeListVersionID TYPE string,\r\n      content                   TYPE string,\r\n    END OF AmountType\r\n"
+    "TYPESRC":"BEGIN OF AmountType,\r\n      currencyID                TYPE string,\r\n      currencyCodeListVersionID TYPE string,\r\n      content                   TYPE string,\r\n    END OF AmountType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -977,7 +981,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":176,
-    "TYPESRC":"BEGIN OF AttachmentType,\r\n      EmbeddedDocumentBinaryObject TYPE BinaryObjectType,\r\n      ExternalReference            TYPE ExternalReferenceType,\r\n    END OF AttachmentType\r\n"
+    "TYPESRC":"BEGIN OF AttachmentType,\r\n      EmbeddedDocumentBinaryObject TYPE BinaryObjectType,\r\n      ExternalReference            TYPE ExternalReferenceType,\r\n    END OF AttachmentType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -1035,7 +1040,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":239,
-    "TYPESRC":"BEGIN OF BillingReferenceLineType,\r\n      Id              TYPE IdentifierType,\r\n      Amount          TYPE AmountType,\r\n      AllowanceCharge TYPE STANDARD TABLE OF AllowanceChargeType WITH EMPTY KEY,\r\n    END OF BillingReferenceLineType\r\n"
+    "TYPESRC":"BEGIN OF BillingReferenceLineType,\r\n      Id              TYPE IdentifierType,\r\n      Amount          TYPE AmountType,\r\n      AllowanceCharge TYPE STANDARD TABLE OF AllowanceChargeType WITH EMPTY KEY,\r\n    END OF BillingReferenceLineType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -1093,7 +1099,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":629,
-    "TYPESRC":"BEGIN OF BillingReferenceType,\r\n      InvoiceDocumentReference       TYPE DocumentReferenceType,\r\n      SelfBilledInvoiceDocumentRefer TYPE DocumentReferenceType,\r\n      CreditNoteDocumentReference    TYPE DocumentReferenceType,\r\n      SelfBilledCreditNoteDocumentRe TYPE DocumentReferenceType,\r\n      DebitNoteDocumentReference     TYPE DocumentReferenceType,\r\n      ReminderDocumentReference      TYPE DocumentReferenceType,\r\n      AdditionalDocumentReference    TYPE DocumentReferenceType,\r\n      BillingReferenceLine           TYPE STANDARD TABLE OF BillingReferenceLineType WITH EMPTY KEY,\r\n    END OF BillingReferenceType\r\n"
+    "TYPESRC":"BEGIN OF BillingReferenceType,\r\n      InvoiceDocumentReference       TYPE DocumentReferenceType,\r\n      SelfBilledInvoiceDocumentRefer TYPE DocumentReferenceType,\r\n      CreditNoteDocumentReference    TYPE DocumentReferenceType,\r\n      SelfBilledCreditNoteDocumentRe TYPE DocumentReferenceType,\r\n      DebitNoteDocumentReference     TYPE DocumentReferenceType,\r\n      ReminderDocumentReference      TYPE DocumentReferenceType,\r\n      AdditionalDocumentReference    TYPE DocumentReferenceType,\r\n      BillingReferenceLine           TYPE STANDARD TABLE OF BillingReferenceLineType WITH EMPTY KEY,\r\n    END OF BillingReferenceType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -1151,7 +1158,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":316,
-    "TYPESRC":"BEGIN OF BinaryObjectType,\r\n      format           TYPE string,\r\n      mimeCode         TYPE string,\r\n      encodingCode     TYPE string,\r\n      characterSetCode TYPE string,\r\n      uri              TYPE string,\r\n      filename         TYPE string,\r\n      content          TYPE string,\r\n    END OF BinaryObjectType\r\n"
+    "TYPESRC":"BEGIN OF BinaryObjectType,\r\n      format           TYPE string,\r\n      mimeCode         TYPE string,\r\n      encodingCode     TYPE string,\r\n      characterSetCode TYPE string,\r\n      uri              TYPE string,\r\n      filename         TYPE string,\r\n      content          TYPE string,\r\n    END OF BinaryObjectType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -1209,7 +1217,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":147,
-    "TYPESRC":"BEGIN OF BranchType,\r\n      Name                 TYPE TextType,\r\n      FinancialInstitution TYPE FinancialInstitutionType,\r\n    END OF BranchType\r\n"
+    "TYPESRC":"BEGIN OF BranchType,\r\n      Name                 TYPE TextType,\r\n      FinancialInstitution TYPE FinancialInstitutionType,\r\n    END OF BranchType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -1267,7 +1276,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":391,
-    "TYPESRC":"BEGIN OF CodeType,\r\n      listID         TYPE string,\r\n      listAgencyID   TYPE string,\r\n      listAgencyName TYPE string,\r\n      listName       TYPE string,\r\n      listVersionID  TYPE string,\r\n      name           TYPE string,\r\n      languageID     TYPE string,\r\n      listURI        TYPE string,\r\n      listSchemeURI  TYPE string,\r\n      content        TYPE string,\r\n    END OF CodeType\r\n"
+    "TYPESRC":"BEGIN OF CodeType,\r\n      listID         TYPE string,\r\n      listAgencyID   TYPE string,\r\n      listAgencyName TYPE string,\r\n      listName       TYPE string,\r\n      listVersionID  TYPE string,\r\n      name           TYPE string,\r\n      languageID     TYPE string,\r\n      listURI        TYPE string,\r\n      listSchemeURI  TYPE string,\r\n      content        TYPE string,\r\n    END OF CodeType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -1325,7 +1335,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":124,
-    "TYPESRC":"BEGIN OF CommodityClassificationType,\r\n      ItemClassificationCode TYPE CodeType,\r\n    END OF CommodityClassificationType\r\n"
+    "TYPESRC":"BEGIN OF CommodityClassificationType,\r\n      ItemClassificationCode TYPE CodeType,\r\n    END OF CommodityClassificationType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -1383,7 +1394,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":161,
-    "TYPESRC":"BEGIN OF CommunicationType,\r\n      ChannelCode TYPE CodeType,\r\n      Channel     TYPE TextType,\r\n      Value       TYPE TextType,\r\n    END OF CommunicationType\r\n"
+    "TYPESRC":"BEGIN OF CommunicationType,\r\n      ChannelCode TYPE CodeType,\r\n      Channel     TYPE TextType,\r\n      Value       TYPE TextType,\r\n    END OF CommunicationType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -1441,7 +1453,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":382,
-    "TYPESRC":"BEGIN OF ContactType,\r\n      Id                 TYPE IdentifierType,\r\n      Name               TYPE TextType,\r\n      Telephone          TYPE TextType,\r\n      Telefax            TYPE TextType,\r\n      ElectronicMail     TYPE TextType,\r\n      Note               TYPE TextType,\r\n      OtherCommunication TYPE STANDARD TABLE OF CommunicationType WITH EMPTY KEY,\r\n    END OF ContactType\r\n"
+    "TYPESRC":"BEGIN OF ContactType,\r\n      Id                 TYPE IdentifierType,\r\n      Name               TYPE TextType,\r\n      Telephone          TYPE TextType,\r\n      Telefax            TYPE TextType,\r\n      ElectronicMail     TYPE TextType,\r\n      Note               TYPE TextType,\r\n      OtherCommunication TYPE STANDARD TABLE OF CommunicationType WITH EMPTY KEY,\r\n    END OF ContactType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -1499,7 +1512,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":335,
-    "TYPESRC":"BEGIN OF CorporateRegistrationSchemeTyp,\r\n      Id                            TYPE IdentifierType,\r\n      Name                          TYPE TextType,\r\n      CorporateRegistrationTypeCode TYPE CodeType,\r\n      JurisdictionRegionAddress     TYPE STANDARD TABLE OF AddressType WITH EMPTY KEY,\r\n    END OF CorporateRegistrationSchemeTyp\r\n"
+    "TYPESRC":"BEGIN OF CorporateRegistrationSchemeTyp,\r\n      Id                            TYPE IdentifierType,\r\n      Name                          TYPE TextType,\r\n      CorporateRegistrationTypeCode TYPE CodeType,\r\n      JurisdictionRegionAddress     TYPE STANDARD TABLE OF AddressType WITH EMPTY KEY,\r\n    END OF CorporateRegistrationSchemeTyp\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -1557,7 +1571,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":129,
-    "TYPESRC":"BEGIN OF CountryType,\r\n      IdentificationCode TYPE CodeType,\r\n      Name               TYPE TextType,\r\n    END OF CountryType\r\n"
+    "TYPESRC":"BEGIN OF CountryType,\r\n      IdentificationCode TYPE CodeType,\r\n      Name               TYPE TextType,\r\n    END OF CountryType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -1615,7 +1630,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":139,
-    "TYPESRC":"BEGIN OF CustomerPartyType,\r\n      Party           TYPE PartyType,\r\n      DeliveryContact TYPE ContactType,\r\n    END OF CustomerPartyType\r\n"
+    "TYPESRC":"BEGIN OF CustomerPartyType,\r\n      Party           TYPE PartyType,\r\n      DeliveryContact TYPE ContactType,\r\n    END OF CustomerPartyType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -1673,7 +1689,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":144,
-    "TYPESRC":"BEGIN OF CustomsDeclarationType,\r\n      Id          TYPE IdentifierType,\r\n      IssuerParty TYPE PartyType,\r\n    END OF CustomsDeclarationType\r\n"
+    "TYPESRC":"BEGIN OF CustomsDeclarationType,\r\n      Id          TYPE IdentifierType,\r\n      IssuerParty TYPE PartyType,\r\n    END OF CustomsDeclarationType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -1731,7 +1748,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":105,
-    "TYPESRC":"BEGIN OF DateTimeType,\r\n      format  TYPE string,\r\n      content TYPE string,\r\n    END OF DateTimeType\r\n"
+    "TYPESRC":"BEGIN OF DateTimeType,\r\n      format  TYPE string,\r\n      content TYPE string,\r\n    END OF DateTimeType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -1789,7 +1807,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":69,
-    "TYPESRC":"BEGIN OF DateType,\r\n      content TYPE string,\r\n    END OF DateType\r\n"
+    "TYPESRC":"BEGIN OF DateType,\r\n      content TYPE string,\r\n    END OF DateType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -1847,7 +1866,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":172,
-    "TYPESRC":"BEGIN OF DeliveryTermsType,\r\n      Id           TYPE IdentifierType,\r\n      SpecialTerms TYPE TextType,\r\n      Amount       TYPE AmountType,\r\n    END OF DeliveryTermsType\r\n"
+    "TYPESRC":"BEGIN OF DeliveryTermsType,\r\n      Id           TYPE IdentifierType,\r\n      SpecialTerms TYPE TextType,\r\n      Amount       TYPE AmountType,\r\n    END OF DeliveryTermsType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -1905,7 +1925,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":886,
-    "TYPESRC":"BEGIN OF DeliveryType,\r\n      Id                          TYPE IdentifierType,\r\n      Quantity                    TYPE QuantityType,\r\n      ActualDeliveryDate          TYPE DateType,\r\n      ActualDeliveryTime          TYPE TimeType,\r\n      LatestDeliveryDate          TYPE DateType,\r\n      LatestDeliveryTime          TYPE TimeType,\r\n      TrackingID                  TYPE IdentifierType,\r\n      DeliveryAddress             TYPE AddressType,\r\n      AlternativeDeliveryLocation TYPE LocationType,\r\n      EstimatedDeliveryPeriod     TYPE PeriodType,\r\n      CarrierParty                TYPE PartyType,\r\n      DeliveryParty               TYPE PartyType,\r\n      Despatch                    TYPE DespatchType,\r\n      DeliveryTerms               TYPE STANDARD TABLE OF DeliveryTermsType WITH EMPTY KEY,\r\n      Shipment                    TYPE zShipmentType, \"Revised\r\n    END OF DeliveryType\r\n"
+    "TYPESRC":"BEGIN OF DeliveryType,\r\n      Id                          TYPE IdentifierType,\r\n      Quantity                    TYPE QuantityType,\r\n      ActualDeliveryDate          TYPE DateType,\r\n      ActualDeliveryTime          TYPE TimeType,\r\n      LatestDeliveryDate          TYPE DateType,\r\n      LatestDeliveryTime          TYPE TimeType,\r\n      TrackingID                  TYPE IdentifierType,\r\n      DeliveryAddress             TYPE AddressType,\r\n      AlternativeDeliveryLocation TYPE LocationType,\r\n      EstimatedDeliveryPeriod     TYPE PeriodType,\r\n      CarrierParty                TYPE PartyType,\r\n      DeliveryParty               TYPE PartyType,\r\n      Despatch                    TYPE DespatchType,\r\n      DeliveryTerms               TYPE STANDARD TABLE OF DeliveryTermsType WITH EMPTY KEY,\r\n      Shipment                    TYPE zShipmentType, \"Revised\r\n    END OF DeliveryType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -1963,7 +1984,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":658,
-    "TYPESRC":"BEGIN OF DespatchLineType,\r\n      Id                  TYPE IdentifierType,\r\n      Note                TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      DeliveredQuantity   TYPE QuantityType,\r\n      OutstandingQuantity TYPE QuantityType,\r\n      OutstandingReason   TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      OversupplyQuantity  TYPE QuantityType,\r\n      OrderLineReference  TYPE OrderLineReferenceType,\r\n      DocumentReference   TYPE STANDARD TABLE OF DocumentReferenceType WITH EMPTY KEY,\r\n      Item                TYPE ItemType,\r\n      Shipment            TYPE STANDARD TABLE OF ShipmentType WITH EMPTY KEY,\r\n    END OF DespatchLineType\r\n"
+    "TYPESRC":"BEGIN OF DespatchLineType,\r\n      Id                  TYPE IdentifierType,\r\n      Note                TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      DeliveredQuantity   TYPE QuantityType,\r\n      OutstandingQuantity TYPE QuantityType,\r\n      OutstandingReason   TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      OversupplyQuantity  TYPE QuantityType,\r\n      OrderLineReference  TYPE OrderLineReferenceType,\r\n      DocumentReference   TYPE STANDARD TABLE OF DocumentReferenceType WITH EMPTY KEY,\r\n      Item                TYPE ItemType,\r\n      Shipment            TYPE STANDARD TABLE OF ShipmentType WITH EMPTY KEY,\r\n    END OF DespatchLineType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -2021,7 +2043,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":432,
-    "TYPESRC":"BEGIN OF DespatchType,\r\n      Id                      TYPE IdentifierType,\r\n      ActualDespatchDate      TYPE DateType,\r\n      ActualDespatchTime      TYPE TimeType,\r\n      Instructions            TYPE TextType,\r\n      DespatchAddress         TYPE AddressType,\r\n      DespatchParty           TYPE PartyType,\r\n      Contact                 TYPE ContactType,\r\n      EstimatedDespatchPeriod TYPE PeriodType,\r\n    END OF DespatchType\r\n"
+    "TYPESRC":"BEGIN OF DespatchType,\r\n      Id                      TYPE IdentifierType,\r\n      ActualDespatchDate      TYPE DateType,\r\n      ActualDespatchTime      TYPE TimeType,\r\n      Instructions            TYPE TextType,\r\n      DespatchAddress         TYPE AddressType,\r\n      DespatchParty           TYPE PartyType,\r\n      Contact                 TYPE ContactType,\r\n      EstimatedDespatchPeriod TYPE PeriodType,\r\n    END OF DespatchType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -2079,7 +2102,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":251,
-    "TYPESRC":"BEGIN OF DimensionType,\r\n      AttributeID    TYPE IdentifierType,\r\n      Measure        TYPE MeasureType,\r\n      Description    TYPE TextType,\r\n      MinimumMeasure TYPE MeasureType,\r\n      MaximumMeasure TYPE MeasureType,\r\n    END OF DimensionType\r\n"
+    "TYPESRC":"BEGIN OF DimensionType,\r\n      AttributeID    TYPE IdentifierType,\r\n      Measure        TYPE MeasureType,\r\n      Description    TYPE TextType,\r\n      MinimumMeasure TYPE MeasureType,\r\n      MaximumMeasure TYPE MeasureType,\r\n    END OF DimensionType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -2137,7 +2161,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":457,
-    "TYPESRC":"BEGIN OF DocumentReferenceType,\r\n      Id                  TYPE IdentifierType,\r\n      IssueDate           TYPE DateType,\r\n      DocumentTypeCode    TYPE CodeType,\r\n      DocumentType        TYPE TextType,\r\n      DocumentDescription TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      Attachment          TYPE AttachmentType,\r\n      ValidityPeriod      TYPE PeriodType,\r\n      IssuerParty         TYPE xsdany, \"Revised\r\n    END OF DocumentReferenceType\r\n"
+    "TYPESRC":"BEGIN OF DocumentReferenceType,\r\n      Id                  TYPE IdentifierType,\r\n      IssueDate           TYPE DateType,\r\n      DocumentTypeCode    TYPE CodeType,\r\n      DocumentType        TYPE TextType,\r\n      DocumentDescription TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      Attachment          TYPE AttachmentType,\r\n      ValidityPeriod      TYPE PeriodType,\r\n      IssuerParty         TYPE xsdany, \"Revised\r\n    END OF DocumentReferenceType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -2195,7 +2220,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":243,
-    "TYPESRC":"BEGIN OF DocumentResponseType,\r\n      Response          TYPE ResponseType,\r\n      DocumentReference TYPE DocumentReferenceType,\r\n      LineResponse      TYPE STANDARD TABLE OF LineResponseType WITH EMPTY KEY,\r\n    END OF DocumentResponseType\r\n"
+    "TYPESRC":"BEGIN OF DocumentResponseType,\r\n      Response          TYPE ResponseType,\r\n      DocumentReference TYPE DocumentReferenceType,\r\n      LineResponse      TYPE STANDARD TABLE OF LineResponseType WITH EMPTY KEY,\r\n    END OF DocumentResponseType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -2253,7 +2279,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":224,
-    "TYPESRC":"BEGIN OF ExchangeRateType,\r\n      SourceCurrencyCode TYPE CodeType,\r\n      TargetCurrencyCode TYPE CodeType,\r\n      CalculationRate    TYPE NumericType,\r\n      Date               TYPE DateType,\r\n    END OF ExchangeRateType\r\n"
+    "TYPESRC":"BEGIN OF ExchangeRateType,\r\n      SourceCurrencyCode TYPE CodeType,\r\n      TargetCurrencyCode TYPE CodeType,\r\n      CalculationRate    TYPE NumericType,\r\n      Date               TYPE DateType,\r\n    END OF ExchangeRateType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -2311,7 +2338,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":89,
-    "TYPESRC":"BEGIN OF ExtensionContentType,\r\n      any TYPE xsdany,\r\n    END OF ExtensionContentType\r\n"
+    "TYPESRC":"BEGIN OF ExtensionContentType,\r\n      any TYPE xsdany,\r\n    END OF ExtensionContentType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -2369,7 +2397,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":99,
-    "TYPESRC":"BEGIN OF ExternalReferenceType,\r\n      uri TYPE IdentifierType,\r\n    END OF ExternalReferenceType\r\n"
+    "TYPESRC":"BEGIN OF ExternalReferenceType,\r\n      uri TYPE IdentifierType,\r\n    END OF ExternalReferenceType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -2427,7 +2456,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":269,
-    "TYPESRC":"BEGIN OF FinancialAccountType,\r\n      Id                         TYPE IdentifierType,\r\n      CurrencyCode               TYPE CodeType,\r\n      PaymentNote                TYPE TextType,\r\n      FinancialInstitutionBranch TYPE BranchType,\r\n    END OF FinancialAccountType\r\n"
+    "TYPESRC":"BEGIN OF FinancialAccountType,\r\n      Id                         TYPE IdentifierType,\r\n      CurrencyCode               TYPE CodeType,\r\n      PaymentNote                TYPE TextType,\r\n      FinancialInstitutionBranch TYPE BranchType,\r\n    END OF FinancialAccountType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -2485,7 +2515,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":100,
-    "TYPESRC":"BEGIN OF FinancialInstitutionType,\r\n      Name TYPE TextType,\r\n    END OF FinancialInstitutionType\r\n"
+    "TYPESRC":"BEGIN OF FinancialInstitutionType,\r\n      Name TYPE TextType,\r\n    END OF FinancialInstitutionType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -2543,7 +2574,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":1838,
-    "TYPESRC":"BEGIN OF GoodsItemType,\r\n      Id                             TYPE IdentifierType,\r\n      Description                    TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      HazardousRiskIndicator         TYPE IndicatorType,\r\n      DeclaredCustomsValueAmount     TYPE AmountType,\r\n      DeclaredForCarriageValueAmount TYPE AmountType,\r\n      DeclaredStatisticsValueAmount  TYPE AmountType,\r\n      FreeOnBoardValueAmount         TYPE AmountType,\r\n      InsuranceValueAmount           TYPE AmountType,\r\n      ValueAmount                    TYPE AmountType,\r\n      GrossWeightMeasure             TYPE MeasureType,\r\n      NetWeightMeasure               TYPE MeasureType,\r\n      ChargeableWeightMeasure        TYPE MeasureType,\r\n      GrossVolumeMeasure             TYPE MeasureType,\r\n      NetVolumeMeasure               TYPE MeasureType,\r\n      Quantity                       TYPE QuantityType,\r\n      RequiredCustomsID              TYPE IdentifierType,\r\n      CustomsStatusCode              TYPE CodeType,\r\n      CustomsTariffQuantity          TYPE QuantityType,\r\n      CustomsImportClassifiedIndicat TYPE IndicatorType,\r\n      ChargeableQuantity             TYPE QuantityType,\r\n      ReturnableQuantity             TYPE QuantityType,\r\n      TraceID                        TYPE IdentifierType,\r\n      Item                           TYPE STANDARD TABLE OF ItemType WITH EMPTY KEY,\r\n      FreightAllowanceCharge         TYPE STANDARD TABLE OF AllowanceChargeType WITH EMPTY KEY,\r\n      InvoiceLine                    TYPE STANDARD TABLE OF zInvoiceLineType WITH EMPTY KEY,\r\n      Temperature                    TYPE STANDARD TABLE OF TemperatureType WITH EMPTY KEY,\r\n      OriginAddress                  TYPE AddressType,\r\n      MeasurementDimension           TYPE STANDARD TABLE OF DimensionType WITH EMPTY KEY,\r\n    END OF GoodsItemType\r\n"
+    "TYPESRC":"BEGIN OF GoodsItemType,\r\n      Id                             TYPE IdentifierType,\r\n      Description                    TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      HazardousRiskIndicator         TYPE IndicatorType,\r\n      DeclaredCustomsValueAmount     TYPE AmountType,\r\n      DeclaredForCarriageValueAmount TYPE AmountType,\r\n      DeclaredStatisticsValueAmount  TYPE AmountType,\r\n      FreeOnBoardValueAmount         TYPE AmountType,\r\n      InsuranceValueAmount           TYPE AmountType,\r\n      ValueAmount                    TYPE AmountType,\r\n      GrossWeightMeasure             TYPE MeasureType,\r\n      NetWeightMeasure               TYPE MeasureType,\r\n      ChargeableWeightMeasure        TYPE MeasureType,\r\n      GrossVolumeMeasure             TYPE MeasureType,\r\n      NetVolumeMeasure               TYPE MeasureType,\r\n      Quantity                       TYPE QuantityType,\r\n      RequiredCustomsID              TYPE IdentifierType,\r\n      CustomsStatusCode              TYPE CodeType,\r\n      CustomsTariffQuantity          TYPE QuantityType,\r\n      CustomsImportClassifiedIndicat TYPE IndicatorType,\r\n      ChargeableQuantity             TYPE QuantityType,\r\n      ReturnableQuantity             TYPE QuantityType,\r\n      TraceID                        TYPE IdentifierType,\r\n      Item                           TYPE STANDARD TABLE OF ItemType WITH EMPTY KEY,\r\n      FreightAllowanceCharge         TYPE STANDARD TABLE OF AllowanceChargeType WITH EMPTY KEY,\r\n      InvoiceLine                    TYPE STANDARD TABLE OF zInvoiceLineType WITH EMPTY KEY,\r\n      Temperature                    TYPE STANDARD TABLE OF TemperatureType WITH EMPTY KEY,\r\n      OriginAddress                  TYPE AddressType,\r\n      MeasurementDimension           TYPE STANDARD TABLE OF DimensionType WITH EMPTY KEY,\r\n    END OF GoodsItemType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -2601,7 +2633,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":432,
-    "TYPESRC":"BEGIN OF HazardousGoodsTransitType,\r\n      TransportEmergencyCardCode TYPE CodeType,\r\n      PackingCriteriaCode        TYPE CodeType,\r\n      HazardousRegulationCode    TYPE CodeType,\r\n      InhalationToxicityZoneCode TYPE CodeType,\r\n      TransportAuthorizationCode TYPE CodeType,\r\n      MaximumTemperature         TYPE TemperatureType,\r\n      MinimumTemperature         TYPE TemperatureType,\r\n    END OF HazardousGoodsTransitType\r\n"
+    "TYPESRC":"BEGIN OF HazardousGoodsTransitType,\r\n      TransportEmergencyCardCode TYPE CodeType,\r\n      PackingCriteriaCode        TYPE CodeType,\r\n      HazardousRegulationCode    TYPE CodeType,\r\n      InhalationToxicityZoneCode TYPE CodeType,\r\n      TransportAuthorizationCode TYPE CodeType,\r\n      MaximumTemperature         TYPE TemperatureType,\r\n      MinimumTemperature         TYPE TemperatureType,\r\n    END OF HazardousGoodsTransitType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -2659,7 +2692,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":349,
-    "TYPESRC":"BEGIN OF IdentifierType,\r\n      schemeID         TYPE string,\r\n      schemeName       TYPE string,\r\n      schemeAgencyID   TYPE string,\r\n      schemeAgencyName TYPE string,\r\n      schemeVersionID  TYPE string,\r\n      schemeDataURI    TYPE string,\r\n      schemeURI        TYPE string,\r\n      content          TYPE string,\r\n    END OF IdentifierType\r\n"
+    "TYPESRC":"BEGIN OF IdentifierType,\r\n      schemeID         TYPE string,\r\n      schemeName       TYPE string,\r\n      schemeAgencyID   TYPE string,\r\n      schemeAgencyName TYPE string,\r\n      schemeVersionID  TYPE string,\r\n      schemeDataURI    TYPE string,\r\n      schemeURI        TYPE string,\r\n      content          TYPE string,\r\n    END OF IdentifierType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -2717,7 +2751,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":79,
-    "TYPESRC":"BEGIN OF IndicatorType,\r\n      content TYPE string,\r\n    END OF IndicatorType\r\n"
+    "TYPESRC":"BEGIN OF IndicatorType,\r\n      content TYPE string,\r\n    END OF IndicatorType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -2775,7 +2810,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":1020,
-    "TYPESRC":"BEGIN OF InvoiceLineType,\r\n      Id                    TYPE IdentifierType,\r\n      Note                  TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      InvoicedQuantity      TYPE QuantityType,\r\n      LineExtensionAmount   TYPE AmountType,\r\n      OrderLineReference    TYPE STANDARD TABLE OF OrderLineReferenceType WITH EMPTY KEY,\r\n      DespatchLineReference TYPE STANDARD TABLE OF LineReferenceType WITH EMPTY KEY,\r\n      ReceiptLineReference  TYPE STANDARD TABLE OF LineReferenceType WITH EMPTY KEY,\r\n      Delivery              TYPE STANDARD TABLE OF DeliveryType WITH EMPTY KEY,\r\n      AllowanceCharge       TYPE STANDARD TABLE OF AllowanceChargeType WITH EMPTY KEY,\r\n      TaxTotal              TYPE TaxTotalType,\r\n      WithholdingTaxTotal   TYPE STANDARD TABLE OF TaxTotalType WITH EMPTY KEY,\r\n      Item                  TYPE ItemType,\r\n      Price                 TYPE PriceType,\r\n      SubInvoiceLine        TYPE STANDARD TABLE OF zInvoiceLineType WITH EMPTY KEY, \"Revised\r\n    END OF InvoiceLineType\r\n"
+    "TYPESRC":"BEGIN OF InvoiceLineType,\r\n      Id                    TYPE IdentifierType,\r\n      Note                  TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      InvoicedQuantity      TYPE QuantityType,\r\n      LineExtensionAmount   TYPE AmountType,\r\n      OrderLineReference    TYPE STANDARD TABLE OF OrderLineReferenceType WITH EMPTY KEY,\r\n      DespatchLineReference TYPE STANDARD TABLE OF LineReferenceType WITH EMPTY KEY,\r\n      ReceiptLineReference  TYPE STANDARD TABLE OF LineReferenceType WITH EMPTY KEY,\r\n      Delivery              TYPE STANDARD TABLE OF DeliveryType WITH EMPTY KEY,\r\n      AllowanceCharge       TYPE STANDARD TABLE OF AllowanceChargeType WITH EMPTY KEY,\r\n      TaxTotal              TYPE TaxTotalType,\r\n      WithholdingTaxTotal   TYPE STANDARD TABLE OF TaxTotalType WITH EMPTY KEY,\r\n      Item                  TYPE ItemType,\r\n      Price                 TYPE PriceType,\r\n      SubInvoiceLine        TYPE STANDARD TABLE OF zInvoiceLineType WITH EMPTY KEY, \"Revised\r\n    END OF InvoiceLineType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -2833,7 +2869,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":100,
-    "TYPESRC":"BEGIN OF ItemIdentificationType,\r\n      Id TYPE IdentifierType,\r\n    END OF ItemIdentificationType\r\n"
+    "TYPESRC":"BEGIN OF ItemIdentificationType,\r\n      Id TYPE IdentifierType,\r\n    END OF ItemIdentificationType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -2891,7 +2928,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":489,
-    "TYPESRC":"BEGIN OF ItemInstanceType,\r\n      ProductTraceID         TYPE IdentifierType,\r\n      ManufactureDate        TYPE DateType,\r\n      ManufactureTime        TYPE TimeType,\r\n      BestBeforeDate         TYPE DateType,\r\n      RegistrationID         TYPE IdentifierType,\r\n      SerialID               TYPE IdentifierType,\r\n      AdditionalItemProperty TYPE STANDARD TABLE OF ItemPropertyType WITH EMPTY KEY,\r\n      LotIdentification      TYPE LotIdentificationType,\r\n    END OF ItemInstanceType\r\n"
+    "TYPESRC":"BEGIN OF ItemInstanceType,\r\n      ProductTraceID         TYPE IdentifierType,\r\n      ManufactureDate        TYPE DateType,\r\n      ManufactureTime        TYPE TimeType,\r\n      BestBeforeDate         TYPE DateType,\r\n      RegistrationID         TYPE IdentifierType,\r\n      SerialID               TYPE IdentifierType,\r\n      AdditionalItemProperty TYPE STANDARD TABLE OF ItemPropertyType WITH EMPTY KEY,\r\n      LotIdentification      TYPE LotIdentificationType,\r\n    END OF ItemInstanceType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -2949,7 +2987,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":184,
-    "TYPESRC":"BEGIN OF ItemPropertyGroupType,\r\n      Id             TYPE IdentifierType,\r\n      Name           TYPE TextType,\r\n      ImportanceCode TYPE CodeType,\r\n    END OF ItemPropertyGroupType\r\n"
+    "TYPESRC":"BEGIN OF ItemPropertyGroupType,\r\n      Id             TYPE IdentifierType,\r\n      Name           TYPE TextType,\r\n      ImportanceCode TYPE CodeType,\r\n    END OF ItemPropertyGroupType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -3007,7 +3046,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":137,
-    "TYPESRC":"BEGIN OF ItemPropertyRangeType,\r\n      MinimumValue TYPE TextType,\r\n      MaximumValue TYPE TextType,\r\n    END OF ItemPropertyRangeType\r\n"
+    "TYPESRC":"BEGIN OF ItemPropertyRangeType,\r\n      MinimumValue TYPE TextType,\r\n      MaximumValue TYPE TextType,\r\n    END OF ItemPropertyRangeType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -3065,7 +3105,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":752,
-    "TYPESRC":"BEGIN OF ItemPropertyType,\r\n      Id                TYPE IdentifierType,\r\n      Name              TYPE TextType,\r\n      NameCode          TYPE CodeType,\r\n      TestMethod        TYPE TextType,\r\n      Value             TYPE TextType,\r\n      ValueQuantity     TYPE QuantityType,\r\n      ValueQualifier    TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      ImportanceCode    TYPE CodeType,\r\n      ListValue         TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      UsabilityPeriod   TYPE PeriodType,\r\n      ItemPropertyGroup TYPE STANDARD TABLE OF ItemPropertyGroupType WITH EMPTY KEY,\r\n      RangeDimension    TYPE DimensionType,\r\n      ItemPropertyRange TYPE STANDARD TABLE OF ItemPropertyRangeType WITH EMPTY KEY,\r\n    END OF ItemPropertyType\r\n"
+    "TYPESRC":"BEGIN OF ItemPropertyType,\r\n      Id                TYPE IdentifierType,\r\n      Name              TYPE TextType,\r\n      NameCode          TYPE CodeType,\r\n      TestMethod        TYPE TextType,\r\n      Value             TYPE TextType,\r\n      ValueQuantity     TYPE QuantityType,\r\n      ValueQualifier    TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      ImportanceCode    TYPE CodeType,\r\n      ListValue         TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      UsabilityPeriod   TYPE PeriodType,\r\n      ItemPropertyGroup TYPE STANDARD TABLE OF ItemPropertyGroupType WITH EMPTY KEY,\r\n      RangeDimension    TYPE DimensionType,\r\n      ItemPropertyRange TYPE STANDARD TABLE OF ItemPropertyRangeType WITH EMPTY KEY,\r\n    END OF ItemPropertyType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -3123,7 +3164,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":829,
-    "TYPESRC":"BEGIN OF ItemType,\r\n      Description                    TYPE TextType,\r\n      Name                           TYPE TextType,\r\n      Keyword                        TYPE TextType,\r\n      BrandName                      TYPE TextType,\r\n      ModelName                      TYPE TextType,\r\n      BuyersItemIdentification       TYPE ItemIdentificationType,\r\n      SellersItemIdentification      TYPE ItemIdentificationType,\r\n      ManufacturersItemIdentificatio TYPE ItemIdentificationType,\r\n      AdditionalItemIdentification   TYPE STANDARD TABLE OF ItemIdentificationType WITH EMPTY KEY,\r\n      OriginCountry                  TYPE CountryType,\r\n      CommodityClassification        TYPE CommodityClassificationType,\r\n      ItemInstance                   TYPE STANDARD TABLE OF ItemInstanceType WITH EMPTY KEY,\r\n    END OF ItemType\r\n"
+    "TYPESRC":"BEGIN OF ItemType,\r\n      Description                    TYPE TextType,\r\n      Name                           TYPE TextType,\r\n      Keyword                        TYPE TextType,\r\n      BrandName                      TYPE TextType,\r\n      ModelName                      TYPE TextType,\r\n      BuyersItemIdentification       TYPE ItemIdentificationType,\r\n      SellersItemIdentification      TYPE ItemIdentificationType,\r\n      ManufacturersItemIdentificatio TYPE ItemIdentificationType,\r\n      AdditionalItemIdentification   TYPE STANDARD TABLE OF ItemIdentificationType WITH EMPTY KEY,\r\n      OriginCountry                  TYPE CountryType,\r\n      CommodityClassification        TYPE CommodityClassificationType,\r\n      ItemInstance                   TYPE STANDARD TABLE OF ItemInstanceType WITH EMPTY KEY,\r\n    END OF ItemType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -3181,7 +3223,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":198,
-    "TYPESRC":"BEGIN OF LineReferenceType,\r\n      LineID            TYPE IdentifierType,\r\n      LineStatusCode    TYPE CodeType,\r\n      DocumentReference TYPE DocumentReferenceType,\r\n    END OF LineReferenceType\r\n"
+    "TYPESRC":"BEGIN OF LineReferenceType,\r\n      LineID            TYPE IdentifierType,\r\n      LineStatusCode    TYPE CodeType,\r\n      DocumentReference TYPE DocumentReferenceType,\r\n    END OF LineReferenceType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -3239,7 +3282,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":175,
-    "TYPESRC":"BEGIN OF LineResponseType,\r\n      LineReference TYPE LineReferenceType,\r\n      Response      TYPE STANDARD TABLE OF ResponseType WITH EMPTY KEY,\r\n    END OF LineResponseType\r\n"
+    "TYPESRC":"BEGIN OF LineResponseType,\r\n      LineReference TYPE LineReferenceType,\r\n      Response      TYPE STANDARD TABLE OF ResponseType WITH EMPTY KEY,\r\n    END OF LineResponseType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -3297,7 +3341,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":118,
-    "TYPESRC":"BEGIN OF LocationType,\r\n      Id      TYPE IdentifierType,\r\n      Address TYPE AddressType,\r\n    END OF LocationType\r\n"
+    "TYPESRC":"BEGIN OF LocationType,\r\n      Id      TYPE IdentifierType,\r\n      Address TYPE AddressType,\r\n    END OF LocationType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -3355,7 +3400,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":249,
-    "TYPESRC":"BEGIN OF LotIdentificationType,\r\n      LotNumberID            TYPE IdentifierType,\r\n      ExpiryDate             TYPE DateType,\r\n      AdditionalItemProperty TYPE STANDARD TABLE OF ItemPropertyType WITH EMPTY KEY,\r\n    END OF LotIdentificationType\r\n"
+    "TYPESRC":"BEGIN OF LotIdentificationType,\r\n      LotNumberID            TYPE IdentifierType,\r\n      ExpiryDate             TYPE DateType,\r\n      AdditionalItemProperty TYPE STANDARD TABLE OF ItemPropertyType WITH EMPTY KEY,\r\n    END OF LotIdentificationType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -3413,7 +3459,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":551,
-    "TYPESRC":"BEGIN OF MaritimeTransport,\r\n      VesselID                       TYPE IdentifierType,\r\n      VesselName                     TYPE TextType,\r\n      RadioCallSignID                TYPE IdentifierType,\r\n      ShipsRequirements              TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      GrossTonnageMeasure            TYPE MeasureType,\r\n      NetTonnageMeasure              TYPE MeasureType,\r\n      RegistryCertificateDocumentRef TYPE DocumentReferenceType,\r\n      RegistryPortLocation           TYPE LocationType,\r\n    END OF MaritimeTransport\r\n"
+    "TYPESRC":"BEGIN OF MaritimeTransport,\r\n      VesselID                       TYPE IdentifierType,\r\n      VesselName                     TYPE TextType,\r\n      RadioCallSignID                TYPE IdentifierType,\r\n      ShipsRequirements              TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      GrossTonnageMeasure            TYPE MeasureType,\r\n      NetTonnageMeasure              TYPE MeasureType,\r\n      RegistryCertificateDocumentRef TYPE DocumentReferenceType,\r\n      RegistryPortLocation           TYPE LocationType,\r\n    END OF MaritimeTransport\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -3471,7 +3518,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":173,
-    "TYPESRC":"BEGIN OF MeasureType,\r\n      unitCode              TYPE string,\r\n      unitCodeListVersionID TYPE string,\r\n      content               TYPE string,\r\n    END OF MeasureType\r\n"
+    "TYPESRC":"BEGIN OF MeasureType,\r\n      unitCode              TYPE string,\r\n      unitCodeListVersionID TYPE string,\r\n      content               TYPE string,\r\n    END OF MeasureType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -3529,7 +3577,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":381,
-    "TYPESRC":"BEGIN OF MonetaryTotalType,\r\n      LineExtensionAmount   TYPE AmountType,\r\n      TaxExclusiveAmount    TYPE AmountType,\r\n      TaxInclusiveAmount    TYPE AmountType,\r\n      AllowanceTotalAmount  TYPE AmountType,\r\n      ChargeTotalAmount     TYPE AmountType,\r\n      PayableRoundingAmount TYPE AmountType,\r\n      PayableAmount         TYPE AmountType,\r\n    END OF MonetaryTotalType\r\n"
+    "TYPESRC":"BEGIN OF MonetaryTotalType,\r\n      LineExtensionAmount   TYPE AmountType,\r\n      TaxExclusiveAmount    TYPE AmountType,\r\n      TaxInclusiveAmount    TYPE AmountType,\r\n      AllowanceTotalAmount  TYPE AmountType,\r\n      ChargeTotalAmount     TYPE AmountType,\r\n      PayableRoundingAmount TYPE AmountType,\r\n      PayableAmount         TYPE AmountType,\r\n    END OF MonetaryTotalType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -3587,7 +3636,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":103,
-    "TYPESRC":"BEGIN OF NumericType,\r\n      format  TYPE string,\r\n      content TYPE string,\r\n    END OF NumericType\r\n"
+    "TYPESRC":"BEGIN OF NumericType,\r\n      format  TYPE string,\r\n      content TYPE string,\r\n    END OF NumericType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -3645,7 +3695,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":292,
-    "TYPESRC":"BEGIN OF OrderLineReferenceType,\r\n      LineID           TYPE IdentifierType,\r\n      SalesOrderLineID TYPE IdentifierType,\r\n      UUId             TYPE IdentifierType,\r\n      LineStatusCode   TYPE CodeType,\r\n      OrderReference   TYPE OrderReferenceType,\r\n    END OF OrderLineReferenceType\r\n"
+    "TYPESRC":"BEGIN OF OrderLineReferenceType,\r\n      LineID           TYPE IdentifierType,\r\n      SalesOrderLineID TYPE IdentifierType,\r\n      UUId             TYPE IdentifierType,\r\n      LineStatusCode   TYPE CodeType,\r\n      OrderReference   TYPE OrderReferenceType,\r\n    END OF OrderLineReferenceType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -3703,7 +3754,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":286,
-    "TYPESRC":"BEGIN OF OrderReferenceType,\r\n      Id                TYPE IdentifierType,\r\n      SalesOrderID      TYPE IdentifierType,\r\n      IssueDate         TYPE DateType,\r\n      OrderTypeCode     TYPE CodeType,\r\n      DocumentReference TYPE DocumentReferenceType,\r\n    END OF OrderReferenceType\r\n"
+    "TYPESRC":"BEGIN OF OrderReferenceType,\r\n      Id                TYPE IdentifierType,\r\n      SalesOrderID      TYPE IdentifierType,\r\n      IssueDate         TYPE DateType,\r\n      OrderTypeCode     TYPE CodeType,\r\n      DocumentReference TYPE DocumentReferenceType,\r\n    END OF OrderReferenceType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -3761,7 +3813,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":628,
-    "TYPESRC":"BEGIN OF PackageType,\r\n      Id                          TYPE IdentifierType,\r\n      Quantity                    TYPE QuantityType,\r\n      ReturnableMaterialIndicator TYPE IndicatorType,\r\n      PackageLevelCode            TYPE CodeType,\r\n      PackagingTypeCode           TYPE CodeType,\r\n      PackingMaterial             TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      ContainedPackage            TYPE xsdany, \"Revised\r\n      GoodsItem                   TYPE STANDARD TABLE OF GoodsItemType WITH EMPTY KEY,\r\n      MeasurementDimension        TYPE STANDARD TABLE OF DimensionType WITH EMPTY KEY,\r\n    END OF PackageType\r\n"
+    "TYPESRC":"BEGIN OF PackageType,\r\n      Id                          TYPE IdentifierType,\r\n      Quantity                    TYPE QuantityType,\r\n      ReturnableMaterialIndicator TYPE IndicatorType,\r\n      PackageLevelCode            TYPE CodeType,\r\n      PackagingTypeCode           TYPE CodeType,\r\n      PackingMaterial             TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      ContainedPackage            TYPE xsdany, \"Revised\r\n      GoodsItem                   TYPE STANDARD TABLE OF GoodsItemType WITH EMPTY KEY,\r\n      MeasurementDimension        TYPE STANDARD TABLE OF DimensionType WITH EMPTY KEY,\r\n    END OF PackageType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -3819,7 +3872,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":516,
-    "TYPESRC":"BEGIN OF PartyLegalEntityType,\r\n      RegistrationName            TYPE TextType,\r\n      CompanyID                   TYPE IdentifierType,\r\n      RegistrationDate            TYPE DateType,\r\n      SoleProprietorshipIndicator TYPE IndicatorType,\r\n      CorporateStockAmount        TYPE AmountType,\r\n      FullyPaidSharesIndicator    TYPE IndicatorType,\r\n      CorporateRegistrationScheme TYPE CorporateRegistrationSchemeTyp,\r\n      HeadOfficeParty             TYPE zPartyType, \"Revised\r\n    END OF PartyLegalEntityType\r\n"
+    "TYPESRC":"BEGIN OF PartyLegalEntityType,\r\n      RegistrationName            TYPE TextType,\r\n      CompanyID                   TYPE IdentifierType,\r\n      RegistrationDate            TYPE DateType,\r\n      SoleProprietorshipIndicator TYPE IndicatorType,\r\n      CorporateStockAmount        TYPE AmountType,\r\n      FullyPaidSharesIndicator    TYPE IndicatorType,\r\n      CorporateRegistrationScheme TYPE CorporateRegistrationSchemeTyp,\r\n      HeadOfficeParty             TYPE zPartyType, \"Revised\r\n    END OF PartyLegalEntityType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -3877,7 +3931,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":189,
-    "TYPESRC":"BEGIN OF PartyTaxSchemeType,\r\n      RegistrationName TYPE TextType,\r\n      CompanyID        TYPE IdentifierType,\r\n      TaxScheme        TYPE TaxSchemeType,\r\n    END OF PartyTaxSchemeType\r\n"
+    "TYPESRC":"BEGIN OF PartyTaxSchemeType,\r\n      RegistrationName TYPE TextType,\r\n      CompanyID        TYPE IdentifierType,\r\n      TaxScheme        TYPE TaxSchemeType,\r\n    END OF PartyTaxSchemeType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -3935,7 +3990,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":760,
-    "TYPESRC":"BEGIN OF PartyType,\r\n      WebsiteURI                 TYPE IdentifierType,\r\n      EndpointID                 TYPE IdentifierType,\r\n      IndustryClassificationCode TYPE CodeType,\r\n      PartyIdentification        TYPE STANDARD TABLE OF IdentifierType WITH EMPTY KEY,\r\n      PartyName                  TYPE TextType,\r\n      PostalAddress              TYPE AddressType,\r\n      PhysicalLocation           TYPE LocationType,\r\n      PartyTaxScheme             TYPE PartyTaxSchemeType,\r\n      PartyLegalEntity           TYPE STANDARD TABLE OF PartyLegalEntityType WITH EMPTY KEY,\r\n      Contact                    TYPE ContactType,\r\n      Person                     TYPE PersonType,\r\n      AgentParty                 TYPE zPartyType, \"Revised\r\n    END OF PartyType\r\n"
+    "TYPESRC":"BEGIN OF PartyType,\r\n      WebsiteURI                 TYPE IdentifierType,\r\n      EndpointID                 TYPE IdentifierType,\r\n      IndustryClassificationCode TYPE CodeType,\r\n      PartyIdentification        TYPE STANDARD TABLE OF IdentifierType WITH EMPTY KEY,\r\n      PartyName                  TYPE TextType,\r\n      PostalAddress              TYPE AddressType,\r\n      PhysicalLocation           TYPE LocationType,\r\n      PartyTaxScheme             TYPE PartyTaxSchemeType,\r\n      PartyLegalEntity           TYPE STANDARD TABLE OF PartyLegalEntityType WITH EMPTY KEY,\r\n      Contact                    TYPE ContactType,\r\n      Person                     TYPE PersonType,\r\n      AgentParty                 TYPE zPartyType, \"Revised\r\n    END OF PartyType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -3993,7 +4049,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":345,
-    "TYPESRC":"BEGIN OF PaymentMeansType,\r\n      PaymentMeansCode      TYPE CodeType,\r\n      PaymentDueDate        TYPE DateType,\r\n      PaymentChannelCode    TYPE CodeType,\r\n      InstructionNote       TYPE TextType,\r\n      PayerFinancialAccount TYPE FinancialAccounTType,\r\n      PayeeFinancialAccount TYPE FinancialAccounTType,\r\n    END OF PaymentMeansType\r\n"
+    "TYPESRC":"BEGIN OF PaymentMeansType,\r\n      PaymentMeansCode      TYPE CodeType,\r\n      PaymentDueDate        TYPE DateType,\r\n      PaymentChannelCode    TYPE CodeType,\r\n      InstructionNote       TYPE TextType,\r\n      PayerFinancialAccount TYPE FinancialAccounTType,\r\n      PayeeFinancialAccount TYPE FinancialAccounTType,\r\n    END OF PaymentMeansType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -4051,7 +4108,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":342,
-    "TYPESRC":"BEGIN OF PaymentTermsType,\r\n      Note                    TYPE TextType,\r\n      PenaltySurchargePercent TYPE NumericType,\r\n      Amount                  TYPE AmountType,\r\n      PenaltyAmount           TYPE AmountType,\r\n      PaymentDueDate          TYPE DateType,\r\n      SettlementPeriod        TYPE PeriodType,\r\n    END OF PaymentTermsType\r\n"
+    "TYPESRC":"BEGIN OF PaymentTermsType,\r\n      Note                    TYPE TextType,\r\n      PenaltySurchargePercent TYPE NumericType,\r\n      Amount                  TYPE AmountType,\r\n      PenaltyAmount           TYPE AmountType,\r\n      PaymentDueDate          TYPE DateType,\r\n      SettlementPeriod        TYPE PeriodType,\r\n    END OF PaymentTermsType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -4109,7 +4167,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":276,
-    "TYPESRC":"BEGIN OF PeriodType,\r\n      StartDate       TYPE DateType,\r\n      StartTime       TYPE TimeType,\r\n      EndDate         TYPE DateType,\r\n      EndTime         TYPE TimeType,\r\n      DurationMeasure TYPE MeasureType,\r\n      Description     TYPE TextType,\r\n    END OF PeriodType\r\n"
+    "TYPESRC":"BEGIN OF PeriodType,\r\n      StartDate       TYPE DateType,\r\n      StartTime       TYPE TimeType,\r\n      EndDate         TYPE DateType,\r\n      EndTime         TYPE TimeType,\r\n      DurationMeasure TYPE MeasureType,\r\n      Description     TYPE TextType,\r\n    END OF PeriodType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -4167,7 +4226,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":460,
-    "TYPESRC":"BEGIN OF PersonType,\r\n      FirstName                 TYPE TextType,\r\n      FamilyName                TYPE TextType,\r\n      Title                     TYPE TextType,\r\n      MiddleName                TYPE TextType,\r\n      NameSuffix                TYPE TextType,\r\n      NationalityID             TYPE IdentifierType,\r\n      FinancialAccount          TYPE FinancialAccountType,\r\n      IdentityDocumentReference TYPE DocumentReferenceType,\r\n    END OF PersonType\r\n"
+    "TYPESRC":"BEGIN OF PersonType,\r\n      FirstName                 TYPE TextType,\r\n      FamilyName                TYPE TextType,\r\n      Title                     TYPE TextType,\r\n      MiddleName                TYPE TextType,\r\n      NameSuffix                TYPE TextType,\r\n      NationalityID             TYPE IdentifierType,\r\n      FinancialAccount          TYPE FinancialAccountType,\r\n      IdentityDocumentReference TYPE DocumentReferenceType,\r\n    END OF PersonType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -4225,7 +4285,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":79,
-    "TYPESRC":"BEGIN OF PriceType,\r\n      PriceAmount TYPE AmountType,\r\n    END OF PriceType\r\n"
+    "TYPESRC":"BEGIN OF PriceType,\r\n      PriceAmount TYPE AmountType,\r\n    END OF PriceType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -4283,7 +4344,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":264,
-    "TYPESRC":"BEGIN OF QuantityType,\r\n      unitCode               TYPE string,\r\n      unitCodeListID         TYPE string,\r\n      unitCodeListAgencyID   TYPE string,\r\n      unitCodeListAgencyName TYPE string,\r\n      content                TYPE string,\r\n    END OF QuantityType\r\n"
+    "TYPESRC":"BEGIN OF QuantityType,\r\n      unitCode               TYPE string,\r\n      unitCodeListID         TYPE string,\r\n      unitCodeListAgencyID   TYPE string,\r\n      unitCodeListAgencyName TYPE string,\r\n      content                TYPE string,\r\n    END OF QuantityType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -4341,7 +4403,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":135,
-    "TYPESRC":"BEGIN OF RailTransportType,\r\n      TrainID   TYPE IdentifierType,\r\n      RailCarID TYPE IdentifierType,\r\n    END OF RailTransportType\r\n"
+    "TYPESRC":"BEGIN OF RailTransportType,\r\n      TrainID   TYPE IdentifierType,\r\n      RailCarID TYPE IdentifierType,\r\n    END OF RailTransportType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -4399,7 +4462,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":953,
-    "TYPESRC":"BEGIN OF ReceiptLineType,\r\n      Id                    TYPE IdentifierType,\r\n      Note                  TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      ReceivedQuantity      TYPE QuantityType,\r\n      ShortQuantity         TYPE QuantityType,\r\n      RejectedQuantity      TYPE QuantityType,\r\n      RejectReasonCode      TYPE CodeType,\r\n      RejectReason          TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      OversupplyQuantity    TYPE QuantityType,\r\n      ReceivedDate          TYPE DateType,\r\n      TimingComplaintCode   TYPE CodeType,\r\n      TimingComplaint       TYPE TextType,\r\n      OrderLineReference    TYPE OrderLineReferenceType,\r\n      DespatchLineReference TYPE LineReferenceType,\r\n      DocumentReference     TYPE STANDARD TABLE OF DocumentReferenceType WITH EMPTY KEY,\r\n      Item                  TYPE ItemType,\r\n      Shipment              TYPE STANDARD TABLE OF ShipmentType WITH EMPTY KEY,\r\n    END OF ReceiptLineType\r\n"
+    "TYPESRC":"BEGIN OF ReceiptLineType,\r\n      Id                    TYPE IdentifierType,\r\n      Note                  TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      ReceivedQuantity      TYPE QuantityType,\r\n      ShortQuantity         TYPE QuantityType,\r\n      RejectedQuantity      TYPE QuantityType,\r\n      RejectReasonCode      TYPE CodeType,\r\n      RejectReason          TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      OversupplyQuantity    TYPE QuantityType,\r\n      ReceivedDate          TYPE DateType,\r\n      TimingComplaintCode   TYPE CodeType,\r\n      TimingComplaint       TYPE TextType,\r\n      OrderLineReference    TYPE OrderLineReferenceType,\r\n      DespatchLineReference TYPE LineReferenceType,\r\n      DocumentReference     TYPE STANDARD TABLE OF DocumentReferenceType WITH EMPTY KEY,\r\n      Item                  TYPE ItemType,\r\n      Shipment              TYPE STANDARD TABLE OF ShipmentType WITH EMPTY KEY,\r\n    END OF ReceiptLineType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -4457,7 +4521,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":193,
-    "TYPESRC":"BEGIN OF ResponseType,\r\n      ReferenceID  TYPE IdentifierType,\r\n      ResponseCode TYPE CodeType,\r\n      Description  TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n    END OF ResponseType\r\n"
+    "TYPESRC":"BEGIN OF ResponseType,\r\n      ReferenceID  TYPE IdentifierType,\r\n      ResponseCode TYPE CodeType,\r\n      Description  TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n    END OF ResponseType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -4515,7 +4580,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":102,
-    "TYPESRC":"BEGIN OF RoadTransportType,\r\n      LicensePlateID TYPE IdentifierType,\r\n    END OF RoadTransportType\r\n"
+    "TYPESRC":"BEGIN OF RoadTransportType,\r\n      LicensePlateID TYPE IdentifierType,\r\n    END OF RoadTransportType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -4573,7 +4639,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":505,
-    "TYPESRC":"BEGIN OF ShipmentStageType,\r\n      Id                     TYPE IdentifierType,\r\n      TransportModeCode      TYPE CodeType,\r\n      TransportMeansTypeCode TYPE CodeType,\r\n      TransitDirectionCode   TYPE CodeType,\r\n      Instructions           TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      TransitPeriod          TYPE PeriodType,\r\n      TransportMeans         TYPE TransportMeansType,\r\n      DriverPerson           TYPE STANDARD TABLE OF PersonType WITH EMPTY KEY,\r\n    END OF ShipmentStageType\r\n"
+    "TYPESRC":"BEGIN OF ShipmentStageType,\r\n      Id                     TYPE IdentifierType,\r\n      TransportModeCode      TYPE CodeType,\r\n      TransportMeansTypeCode TYPE CodeType,\r\n      TransitDirectionCode   TYPE CodeType,\r\n      Instructions           TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      TransitPeriod          TYPE PeriodType,\r\n      TransportMeans         TYPE TransportMeansType,\r\n      DriverPerson           TYPE STANDARD TABLE OF PersonType WITH EMPTY KEY,\r\n    END OF ShipmentStageType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -4631,7 +4698,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":1462,
-    "TYPESRC":"BEGIN OF ShipmentType,\r\n      Id                             TYPE IdentifierType,\r\n      HandlingCode                   TYPE CodeType,\r\n      HandlingInstructions           TYPE TextType,\r\n      GrossWeightMeasure             TYPE MeasureType,\r\n      NetWeightMeasure               TYPE MeasureType,\r\n      GrossVolumeMeasure             TYPE MeasureType,\r\n      NetVolumeMeasure               TYPE MeasureType,\r\n      TotalGoodsItemQuantity         TYPE QuantityType,\r\n      TotalTransportHandlingUnitQuan TYPE QuantityType,\r\n      InsuranceValueAmount           TYPE AmountType,\r\n      DeclaredCustomsValueAmount     TYPE AmountType,\r\n      DeclaredForCarriageValueAmount TYPE AmountType,\r\n      DeclaredStatisticsValueAmount  TYPE AmountType,\r\n      FreeOnBoardValueAmount         TYPE AmountType,\r\n      SpecialInstructions            TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      GoodsItem                      TYPE STANDARD TABLE OF GoodsItemType WITH EMPTY KEY,\r\n      ShipmentStage                  TYPE STANDARD TABLE OF ShipmentStageType WITH EMPTY KEY,\r\n      Delivery                       TYPE STANDARD TABLE OF DeliveryType WITH EMPTY KEY,\r\n      TransportHandlingUnit          TYPE STANDARD TABLE OF TransportHandlingUnitType WITH EMPTY KEY,\r\n      ReturnAddress                  TYPE AddressType,\r\n      FirstArrivalPortLocation       TYPE LocationType,\r\n      LastExitPortLocation           TYPE LocationType,\r\n    END OF ShipmentType\r\n"
+    "TYPESRC":"BEGIN OF ShipmentType,\r\n      Id                             TYPE IdentifierType,\r\n      HandlingCode                   TYPE CodeType,\r\n      HandlingInstructions           TYPE TextType,\r\n      GrossWeightMeasure             TYPE MeasureType,\r\n      NetWeightMeasure               TYPE MeasureType,\r\n      GrossVolumeMeasure             TYPE MeasureType,\r\n      NetVolumeMeasure               TYPE MeasureType,\r\n      TotalGoodsItemQuantity         TYPE QuantityType,\r\n      TotalTransportHandlingUnitQuan TYPE QuantityType,\r\n      InsuranceValueAmount           TYPE AmountType,\r\n      DeclaredCustomsValueAmount     TYPE AmountType,\r\n      DeclaredForCarriageValueAmount TYPE AmountType,\r\n      DeclaredStatisticsValueAmount  TYPE AmountType,\r\n      FreeOnBoardValueAmount         TYPE AmountType,\r\n      SpecialInstructions            TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      GoodsItem                      TYPE STANDARD TABLE OF GoodsItemType WITH EMPTY KEY,\r\n      ShipmentStage                  TYPE STANDARD TABLE OF ShipmentStageType WITH EMPTY KEY,\r\n      Delivery                       TYPE STANDARD TABLE OF DeliveryType WITH EMPTY KEY,\r\n      TransportHandlingUnit          TYPE STANDARD TABLE OF TransportHandlingUnitType WITH EMPTY KEY,\r\n      ReturnAddress                  TYPE AddressType,\r\n      FirstArrivalPortLocation       TYPE LocationType,\r\n      LastExitPortLocation           TYPE LocationType,\r\n    END OF ShipmentType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -4689,7 +4757,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":211,
-    "TYPESRC":"BEGIN OF SignatureType,\r\n      Id                         TYPE IdentifierType,\r\n      SignatoryParty             TYPE PartyType,\r\n      DigitalSignatureAttachment TYPE AttachmentType,\r\n    END OF SignatureType\r\n"
+    "TYPESRC":"BEGIN OF SignatureType,\r\n      Id                         TYPE IdentifierType,\r\n      SignatoryParty             TYPE PartyType,\r\n      DigitalSignatureAttachment TYPE AttachmentType,\r\n    END OF SignatureType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -4747,7 +4816,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":187,
-    "TYPESRC":"BEGIN OF StowageType,\r\n      LocationID           TYPE IdentifierType,\r\n      Location             TYPE TextType,\r\n      MeasurementDimension TYPE DimensionType,\r\n    END OF StowageType\r\n"
+    "TYPESRC":"BEGIN OF StowageType,\r\n      LocationID           TYPE IdentifierType,\r\n      Location             TYPE TextType,\r\n      MeasurementDimension TYPE DimensionType,\r\n    END OF StowageType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -4805,7 +4875,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":139,
-    "TYPESRC":"BEGIN OF SupplierPartyType,\r\n      Party           TYPE PartyType,\r\n      DespatchContact TYPE ContactType,\r\n    END OF SupplierPartyType\r\n"
+    "TYPESRC":"BEGIN OF SupplierPartyType,\r\n      Party           TYPE PartyType,\r\n      DespatchContact TYPE ContactType,\r\n    END OF SupplierPartyType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -4863,7 +4934,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":240,
-    "TYPESRC":"BEGIN OF TaxCategoryType,\r\n      Name                   TYPE TextType,\r\n      TaxExemptionReasonCode TYPE CodeType,\r\n      TaxExemptionReason     TYPE TextType,\r\n      TaxScheme              TYPE TaxSchemeType,\r\n    END OF TaxCategoryType\r\n"
+    "TYPESRC":"BEGIN OF TaxCategoryType,\r\n      Name                   TYPE TextType,\r\n      TaxExemptionReasonCode TYPE CodeType,\r\n      TaxExemptionReason     TYPE TextType,\r\n      TaxScheme              TYPE TaxSchemeType,\r\n    END OF TaxCategoryType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -4921,7 +4993,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":159,
-    "TYPESRC":"BEGIN OF TaxSchemeType,\r\n      Id          TYPE IdentifierType,\r\n      Name        TYPE TextType,\r\n      TaxTypeCode TYPE CodeType,\r\n    END OF TaxSchemeType\r\n"
+    "TYPESRC":"BEGIN OF TaxSchemeType,\r\n      Id          TYPE IdentifierType,\r\n      Name        TYPE TextType,\r\n      TaxTypeCode TYPE CodeType,\r\n    END OF TaxSchemeType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -4979,7 +5052,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":487,
-    "TYPESRC":"BEGIN OF TaxSubtotalType,\r\n      TaxableAmount                TYPE AmountType,\r\n      TaxAmount                    TYPE AmountType,\r\n      CalculationSequenceNumeric   TYPE NumericType,\r\n      TransactionCurrencyTaxAmount TYPE AmountType,\r\n      Percent                      TYPE NumericType,\r\n      BaseUnitMeasure              TYPE MeasureType,\r\n      PerUnitAmount                TYPE AmountType,\r\n      TaxCategory                  TYPE TaxCategoryType,\r\n    END OF TaxSubtotalType\r\n"
+    "TYPESRC":"BEGIN OF TaxSubtotalType,\r\n      TaxableAmount                TYPE AmountType,\r\n      TaxAmount                    TYPE AmountType,\r\n      CalculationSequenceNumeric   TYPE NumericType,\r\n      TransactionCurrencyTaxAmount TYPE AmountType,\r\n      Percent                      TYPE NumericType,\r\n      BaseUnitMeasure              TYPE MeasureType,\r\n      PerUnitAmount                TYPE AmountType,\r\n      TaxCategory                  TYPE TaxCategoryType,\r\n    END OF TaxSubtotalType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -5037,7 +5111,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":159,
-    "TYPESRC":"BEGIN OF TaxTotalType,\r\n      TaxAmount   TYPE AmountType,\r\n      TaxSubtotal TYPE STANDARD TABLE OF TaxSubtotalType WITH EMPTY KEY,\r\n    END OF TaxTotalType\r\n"
+    "TYPESRC":"BEGIN OF TaxTotalType,\r\n      TaxAmount   TYPE AmountType,\r\n      TaxSubtotal TYPE STANDARD TABLE OF TaxSubtotalType WITH EMPTY KEY,\r\n    END OF TaxTotalType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -5095,7 +5170,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":166,
-    "TYPESRC":"BEGIN OF TemperatureType,\r\n      AttributeID TYPE IdentifierType,\r\n      Measure     TYPE MeasureType,\r\n      Description TYPE TextType,\r\n    END OF TemperatureType\r\n"
+    "TYPESRC":"BEGIN OF TemperatureType,\r\n      AttributeID TYPE IdentifierType,\r\n      Measure     TYPE MeasureType,\r\n      Description TYPE TextType,\r\n    END OF TemperatureType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -5153,7 +5229,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":152,
-    "TYPESRC":"BEGIN OF TextType,\r\n      languageID       TYPE string,\r\n      languageLocaleID TYPE string,\r\n      content          TYPE string,\r\n    END OF TextType\r\n"
+    "TYPESRC":"BEGIN OF TextType,\r\n      languageID       TYPE string,\r\n      languageLocaleID TYPE string,\r\n      content          TYPE string,\r\n    END OF TextType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -5211,7 +5288,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":69,
-    "TYPESRC":"BEGIN OF TimeType,\r\n      content TYPE string,\r\n    END OF TimeType\r\n"
+    "TYPESRC":"BEGIN OF TimeType,\r\n      content TYPE string,\r\n    END OF TimeType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -5269,7 +5347,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":222,
-    "TYPESRC":"BEGIN OF TransportEquipmentType,\r\n      Id                         TYPE IdentifierType,\r\n      TransportEquipmentTypeCode TYPE CodeType,\r\n      Description                TYPE TextType,\r\n    END OF TransportEquipmentType\r\n"
+    "TYPESRC":"BEGIN OF TransportEquipmentType,\r\n      Id                         TYPE IdentifierType,\r\n      TransportEquipmentTypeCode TYPE CodeType,\r\n      Description                TYPE TextType,\r\n    END OF TransportEquipmentType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -5327,7 +5406,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":1522,
-    "TYPESRC":"BEGIN OF TransportHandlingUnitType,\r\n      Id                             TYPE IdentifierType,\r\n      TransportHandlingUnitTypeCode  TYPE CodeType,\r\n      HandlingCode                   TYPE CodeType,\r\n      HandlingInstructions           TYPE TextType,\r\n      HazardousRiskIndicator         TYPE IndicatorType,\r\n      TotalGoodsItemQuantity         TYPE QuantityType,\r\n      TotalPackageQuantity           TYPE QuantityType,\r\n      DamageRemarks                  TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      TraceID                        TYPE IdentifierType,\r\n      ActualPackage                  TYPE STANDARD TABLE OF PackageType WITH EMPTY KEY,\r\n      TransportEquipment             TYPE STANDARD TABLE OF TransportEquipmentType WITH EMPTY KEY,\r\n      TransportMeans                 TYPE STANDARD TABLE OF TransportMeansType WITH EMPTY KEY,\r\n      HazardousGoodsTransit          TYPE STANDARD TABLE OF HazardousGoodsTransitType WITH EMPTY KEY,\r\n      MeasurementDimension           TYPE STANDARD TABLE OF MeasureType WITH EMPTY KEY,\r\n      MinimumTemperature             TYPE TemperatureType,\r\n      MaximumTemperature             TYPE TemperatureType,\r\n      FloorSpaceMeasurementDimension TYPE DimensionType,\r\n      PalletSpaceMeasurementDimensio TYPE DimensionType,\r\n      ShipmentDocumentReference      TYPE STANDARD TABLE OF DocumentReferenceType WITH EMPTY KEY,\r\n      CustomsDeclaration             TYPE STANDARD TABLE OF CustomsDeclarationType WITH EMPTY KEY,\r\n    END OF TransportHandlingUnitType\r\n"
+    "TYPESRC":"BEGIN OF TransportHandlingUnitType,\r\n      Id                             TYPE IdentifierType,\r\n      TransportHandlingUnitTypeCode  TYPE CodeType,\r\n      HandlingCode                   TYPE CodeType,\r\n      HandlingInstructions           TYPE TextType,\r\n      HazardousRiskIndicator         TYPE IndicatorType,\r\n      TotalGoodsItemQuantity         TYPE QuantityType,\r\n      TotalPackageQuantity           TYPE QuantityType,\r\n      DamageRemarks                  TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      TraceID                        TYPE IdentifierType,\r\n      ActualPackage                  TYPE STANDARD TABLE OF PackageType WITH EMPTY KEY,\r\n      TransportEquipment             TYPE STANDARD TABLE OF TransportEquipmentType WITH EMPTY KEY,\r\n      TransportMeans                 TYPE STANDARD TABLE OF TransportMeansType WITH EMPTY KEY,\r\n      HazardousGoodsTransit          TYPE STANDARD TABLE OF HazardousGoodsTransitType WITH EMPTY KEY,\r\n      MeasurementDimension           TYPE STANDARD TABLE OF MeasureType WITH EMPTY KEY,\r\n      MinimumTemperature             TYPE TemperatureType,\r\n      MaximumTemperature             TYPE TemperatureType,\r\n      FloorSpaceMeasurementDimension TYPE DimensionType,\r\n      PalletSpaceMeasurementDimensio TYPE DimensionType,\r\n      ShipmentDocumentReference      TYPE STANDARD TABLE OF DocumentReferenceType WITH EMPTY KEY,\r\n      CustomsDeclaration             TYPE STANDARD TABLE OF CustomsDeclarationType WITH EMPTY KEY,\r\n    END OF TransportHandlingUnitType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -5385,7 +5465,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":805,
-    "TYPESRC":"BEGIN OF TransportMeansType,\r\n      JourneyID                 TYPE IdentifierType,\r\n      RegistrationNationalityID TYPE IdentifierType,\r\n      RegistrationNationality   TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      DirectionCode             TYPE CodeType,\r\n      TransportMeansTypeCode    TYPE CodeType,\r\n      TradeServiceCode          TYPE CodeType,\r\n      Stowage                   TYPE StowageType,\r\n      AirTransport              TYPE AirTransportType,\r\n      RoadTransport             TYPE RoadTransportType,\r\n      RailTransport             TYPE RailTransportType,\r\n      MaritimeTransport         TYPE MaritimeTransport,\r\n      OwnerParty                TYPE PartyType,\r\n      MeasurementDimension      TYPE STANDARD TABLE OF StowageType WITH EMPTY KEY,\r\n    END OF TransportMeansType\r\n"
+    "TYPESRC":"BEGIN OF TransportMeansType,\r\n      JourneyID                 TYPE IdentifierType,\r\n      RegistrationNationalityID TYPE IdentifierType,\r\n      RegistrationNationality   TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      DirectionCode             TYPE CodeType,\r\n      TransportMeansTypeCode    TYPE CodeType,\r\n      TradeServiceCode          TYPE CodeType,\r\n      Stowage                   TYPE StowageType,\r\n      AirTransport              TYPE AirTransportType,\r\n      RoadTransport             TYPE RoadTransportType,\r\n      RailTransport             TYPE RailTransportType,\r\n      MaritimeTransport         TYPE MaritimeTransport,\r\n      OwnerParty                TYPE PartyType,\r\n      MeasurementDimension      TYPE STANDARD TABLE OF StowageType WITH EMPTY KEY,\r\n    END OF TransportMeansType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -5443,7 +5524,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":135,
-    "TYPESRC":"BEGIN OF UBLExtensionsType,\r\n      UBLExtension TYPE STANDARD TABLE OF UBLExtensionType WITH EMPTY KEY,\r\n    END OF UBLExtensionsType\r\n"
+    "TYPESRC":"BEGIN OF UBLExtensionsType,\r\n      UBLExtension TYPE STANDARD TABLE OF UBLExtensionType WITH EMPTY KEY,\r\n    END OF UBLExtensionsType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -5501,7 +5583,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":108,
-    "TYPESRC":"BEGIN OF UBLExtensionType,\r\n      ExtensionContent TYPE ExtensionContentType,\r\n    END OF UBLExtensionType\r\n"
+    "TYPESRC":"BEGIN OF UBLExtensionType,\r\n      ExtensionContent TYPE ExtensionContentType,\r\n    END OF UBLExtensionType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -5559,7 +5642,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":949,
-    "TYPESRC":"BEGIN OF zInvoiceLineType,\r\n      Id                    TYPE IdentifierType,\r\n      Note                  TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      InvoicedQuantity      TYPE QuantityType,\r\n      LineExtensionAmount   TYPE AmountType,\r\n      OrderLineReference    TYPE STANDARD TABLE OF OrderLineReferenceType WITH EMPTY KEY,\r\n      DespatchLineReference TYPE STANDARD TABLE OF LineReferenceType WITH EMPTY KEY,\r\n      ReceiptLineReference  TYPE STANDARD TABLE OF LineReferenceType WITH EMPTY KEY,\r\n      Delivery              TYPE xsdany, \"Revised\r\n      AllowanceCharge       TYPE STANDARD TABLE OF AllowanceChargeType WITH EMPTY KEY,\r\n      TaxTotal              TYPE TaxTotalType,\r\n      WithholdingTaxTotal   TYPE STANDARD TABLE OF TaxTotalType WITH EMPTY KEY,\r\n      Item                  TYPE ItemType,\r\n      Price                 TYPE PriceType,\r\n      SubInvoiceLine        TYPE xsdany, \"Revised\r\n    END OF zInvoiceLineType\r\n"
+    "TYPESRC":"BEGIN OF zInvoiceLineType,\r\n      Id                    TYPE IdentifierType,\r\n      Note                  TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      InvoicedQuantity      TYPE QuantityType,\r\n      LineExtensionAmount   TYPE AmountType,\r\n      OrderLineReference    TYPE STANDARD TABLE OF OrderLineReferenceType WITH EMPTY KEY,\r\n      DespatchLineReference TYPE STANDARD TABLE OF LineReferenceType WITH EMPTY KEY,\r\n      ReceiptLineReference  TYPE STANDARD TABLE OF LineReferenceType WITH EMPTY KEY,\r\n      Delivery              TYPE xsdany, \"Revised\r\n      AllowanceCharge       TYPE STANDARD TABLE OF AllowanceChargeType WITH EMPTY KEY,\r\n      TaxTotal              TYPE TaxTotalType,\r\n      WithholdingTaxTotal   TYPE STANDARD TABLE OF TaxTotalType WITH EMPTY KEY,\r\n      Item                  TYPE ItemType,\r\n      Price                 TYPE PriceType,\r\n      SubInvoiceLine        TYPE xsdany, \"Revised\r\n    END OF zInvoiceLineType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -5617,7 +5701,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":720,
-    "TYPESRC":"BEGIN OF zPartyType,\r\n      WebsiteURI                 TYPE IdentifierType,\r\n      EndpointID                 TYPE IdentifierType,\r\n      IndustryClassificationCode TYPE CodeType,\r\n      PartyIdentification        TYPE STANDARD TABLE OF IdentifierType WITH EMPTY KEY,\r\n      PartyName                  TYPE TextType,\r\n      PostalAddress              TYPE AddressType,\r\n      PhysicalLocation           TYPE LocationType,\r\n      PartyTaxScheme             TYPE PartyTaxSchemeType,\r\n      PartyLegalEntity           TYPE xsdany, \"Revised\r\n      Contact                    TYPE ContactType,\r\n      Person                     TYPE PersonType,\r\n      AgentParty                 TYPE xsdany, \"Revised\r\n    END OF zPartyType\r\n"
+    "TYPESRC":"BEGIN OF zPartyType,\r\n      WebsiteURI                 TYPE IdentifierType,\r\n      EndpointID                 TYPE IdentifierType,\r\n      IndustryClassificationCode TYPE CodeType,\r\n      PartyIdentification        TYPE STANDARD TABLE OF IdentifierType WITH EMPTY KEY,\r\n      PartyName                  TYPE TextType,\r\n      PostalAddress              TYPE AddressType,\r\n      PhysicalLocation           TYPE LocationType,\r\n      PartyTaxScheme             TYPE PartyTaxSchemeType,\r\n      PartyLegalEntity           TYPE xsdany, \"Revised\r\n      Contact                    TYPE ContactType,\r\n      Person                     TYPE PersonType,\r\n      AgentParty                 TYPE xsdany, \"Revised\r\n    END OF zPartyType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_COMMON_UBL21",
@@ -5675,7 +5760,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":1434,
-    "TYPESRC":"BEGIN OF zShipmentType,\r\n      Id                             TYPE IdentifierType,\r\n      HandlingCode                   TYPE CodeType,\r\n      HandlingInstructions           TYPE TextType,\r\n      GrossWeightMeasure             TYPE MeasureType,\r\n      NetWeightMeasure               TYPE MeasureType,\r\n      GrossVolumeMeasure             TYPE MeasureType,\r\n      NetVolumeMeasure               TYPE MeasureType,\r\n      TotalGoodsItemQuantity         TYPE QuantityType,\r\n      TotalTransportHandlingUnitQuan TYPE QuantityType,\r\n      InsuranceValueAmount           TYPE AmountType,\r\n      DeclaredCustomsValueAmount     TYPE AmountType,\r\n      DeclaredForCarriageValueAmount TYPE AmountType,\r\n      DeclaredStatisticsValueAmount  TYPE AmountType,\r\n      FreeOnBoardValueAmount         TYPE AmountType,\r\n      SpecialInstructions            TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      GoodsItem                      TYPE STANDARD TABLE OF GoodsItemType WITH EMPTY KEY,\r\n      ShipmentStage                  TYPE STANDARD TABLE OF ShipmentStageType WITH EMPTY KEY,\r\n      Delivery                       TYPE xsdany, \"Revised\r\n      TransportHandlingUnit          TYPE STANDARD TABLE OF TransportHandlingUnitType WITH EMPTY KEY,\r\n      ReturnAddress                  TYPE AddressType,\r\n      FirstArrivalPortLocation       TYPE LocationType,\r\n      LastExitPortLocation           TYPE LocationType,\r\n    END OF zShipmentType\r\n"
+    "TYPESRC":"BEGIN OF zShipmentType,\r\n      Id                             TYPE IdentifierType,\r\n      HandlingCode                   TYPE CodeType,\r\n      HandlingInstructions           TYPE TextType,\r\n      GrossWeightMeasure             TYPE MeasureType,\r\n      NetWeightMeasure               TYPE MeasureType,\r\n      GrossVolumeMeasure             TYPE MeasureType,\r\n      NetVolumeMeasure               TYPE MeasureType,\r\n      TotalGoodsItemQuantity         TYPE QuantityType,\r\n      TotalTransportHandlingUnitQuan TYPE QuantityType,\r\n      InsuranceValueAmount           TYPE AmountType,\r\n      DeclaredCustomsValueAmount     TYPE AmountType,\r\n      DeclaredForCarriageValueAmount TYPE AmountType,\r\n      DeclaredStatisticsValueAmount  TYPE AmountType,\r\n      FreeOnBoardValueAmount         TYPE AmountType,\r\n      SpecialInstructions            TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      GoodsItem                      TYPE STANDARD TABLE OF GoodsItemType WITH EMPTY KEY,\r\n      ShipmentStage                  TYPE STANDARD TABLE OF ShipmentStageType WITH EMPTY KEY,\r\n      Delivery                       TYPE xsdany, \"Revised\r\n      TransportHandlingUnit          TYPE STANDARD TABLE OF TransportHandlingUnitType WITH EMPTY KEY,\r\n      ReturnAddress                  TYPE AddressType,\r\n      FirstArrivalPortLocation       TYPE LocationType,\r\n      LastExitPortLocation           TYPE LocationType,\r\n    END OF zShipmentType\r\n",
+    "MTDSQLSERVICE":""
    }
   ]
  },

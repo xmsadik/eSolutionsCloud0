@@ -12,7 +12,7 @@
     "SOURCE":"@AccessControl.authorizationCheck: #NOT_REQUIRED\r\n@EndUserText.label: 'Doc.types to be written for reference'\r\n@Metadata.ignorePropagatedAnnotations: true\r\ndefine root view entity zetr_ddl_i_ledger_docty_ref\r\n  as select from    zetr_t_blryb                 as Main\r\n    left outer join I_AccountingDocumentTypeText as AccDocType on  AccDocType.Language               = $session.system_language\r\n                                                               and AccDocType.AccountingDocumentType = Main.blart\r\n\r\n  //composition of target_data_source_name as _association_name\r\n{\r\n  key Main.bukrs                            as CompanyCode,\r\n  key Main.blart                            as DocType,\r\n      AccDocType.AccountingDocumentTypeName as DocTypeText\r\n      //    _association_name // Make association public\r\n}\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[\n\"I_ACCOUNTINGDOCUMENTTYPETEXT\",\n\"ZETR_T_BLRYB\"\n],\n\"ASSOCIATED\":\n[],\n\"BASE\":\n[],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
     "PARENTNAME":"",
     "ACTFLAG":"",
-    "CHGFLAG":"",
+    "CHGFLAG":"J,WT42",
     "SOURCE_TYPE":"W",
     "SOURCE_ORIGIN":"0",
     "ABAP_LANGUAGE_VERSION":"5"

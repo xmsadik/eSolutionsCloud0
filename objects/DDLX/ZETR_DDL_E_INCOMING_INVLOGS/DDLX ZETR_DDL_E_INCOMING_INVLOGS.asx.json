@@ -291,6 +291,22 @@
   ]
  },
  {
+  "table":"DDLX_RT_REFS",
+  "data":
+  [
+   {
+    "DDLXNAME":"ZETR_DDL_E_INCOMING_INVLOGS",
+    "ELEMENT":"",
+    "NAME":"UI.HEADERINFO.TITLE.VALUE",
+    "PATH":"LOGCODEDESCRIPTION",
+    "REF_OBJECT_TYPE":"STOB",
+    "REF_OBJECT_SUBTYPE":"DOF",
+    "REF_OBJECT_NAME":"ZETR_DDL_P_INCOMING_INVLOGS",
+    "REF_OBJECT_ELEMENT":"LOGCODEDESCRIPTION"
+   }
+  ]
+ },
+ {
   "table":"TADIR",
   "data":
   [

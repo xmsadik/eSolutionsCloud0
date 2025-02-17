@@ -75,6 +75,22 @@
   ]
  },
  {
+  "table":"DDLX_RT_REFS",
+  "data":
+  [
+   {
+    "DDLXNAME":"ZETR_DDL_E_COMPANY_SELECTION",
+    "ELEMENT":"COMPANYCODE",
+    "NAME":"CONSUMPTION.VALUEHELPDEFINITION$1$.ENTITY.NAME",
+    "PATH":"I_COMPANYCODEVH",
+    "REF_OBJECT_TYPE":"STOB",
+    "REF_OBJECT_SUBTYPE":"DO",
+    "REF_OBJECT_NAME":"I_COMPANYCODEVH",
+    "REF_OBJECT_ELEMENT":""
+   }
+  ]
+ },
+ {
   "table":"TADIR",
   "data":
   [

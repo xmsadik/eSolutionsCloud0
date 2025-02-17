@@ -12,7 +12,7 @@
     "SOURCE":"@AccessControl.authorizationCheck: #NOT_REQUIRED\r\n@EndUserText.label: 'Purchase Group Authorizations'\r\ndefine root view entity zetr_ddL_i_purch_group_auth\r\n  as select from    zetr_t_pgaut        as Main\r\n    left outer join I_BusinessUserBasic as User            on User.UserID = Main.uname\r\n    left outer join I_PurchasingGroup   as PurchasingGroup on PurchasingGroup.PurchasingGroup = Main.ekgrp\r\n\r\n{\r\n  key Main.uname          as Username,\r\n  key Main.ekgrp          as PurchaseGroup,\r\n      Main.icivw          as IncomingInvoiceView,\r\n      User.PersonFullName as UserFullName,\r\n      PurchasingGroup.PurchasingGroupName\r\n}\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[\n\"I_BUSINESSUSERBASIC\",\n\"I_PURCHASINGGROUP\",\n\"ZETR_T_PGAUT\"\n],\n\"ASSOCIATED\":\n[],\n\"BASE\":\n[],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
     "PARENTNAME":"",
     "ACTFLAG":"",
-    "CHGFLAG":"42",
+    "CHGFLAG":"J,W4T2",
     "SOURCE_TYPE":"W",
     "SOURCE_ORIGIN":"0",
     "ABAP_LANGUAGE_VERSION":"5"

@@ -318,7 +318,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_INVOICE_UBL21",
@@ -376,7 +377,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_INVOICE_UBL21",
@@ -434,7 +436,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_INVOICE_UBL21",
@@ -492,7 +495,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_INVOICE_UBL21",
@@ -550,7 +554,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_INVOICE_UBL21",
@@ -608,7 +613,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_INVOICE_UBL21",
@@ -666,7 +672,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_INVOICE_UBL21",
@@ -724,7 +731,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_INVOICE_UBL21",
@@ -782,7 +790,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_INVOICE_UBL21",
@@ -840,7 +849,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_INVOICE_UBL21",
@@ -898,7 +908,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_INVOICE_UBL21",
@@ -956,7 +967,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":3106,
-    "TYPESRC":"BEGIN OF InvoiceType,\r\n      UBLExtensions                  TYPE UBLExtensionsType,\r\n      UBLVersionID                   TYPE IdentifierType,\r\n      CustomizationID                TYPE IdentifierType,\r\n      ProfileID                      TYPE IdentifierType,\r\n      Id                             TYPE IdentifierType,\r\n      CopyIndicator                  TYPE IndicatorType,\r\n      UUId                           TYPE IdentifierType,\r\n      IssueDate                      TYPE DateType,\r\n      IssueTime                      TYPE TimeType,\r\n      InvoiceTypeCode                TYPE CodeType,\r\n      Note                           TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      DocumentCurrencyCode           TYPE CodeType,\r\n      TaxCurrencyCode                TYPE CodeType,\r\n      PricingCurrencyCode            TYPE CodeType,\r\n      PaymentCurrencyCode            TYPE CodeType,\r\n      PaymentAlternativeCurrencyCode TYPE CodeType,\r\n      AccountingCost                 TYPE TextType,\r\n      LineCountNumeric               TYPE NumericType,\r\n      InvoicePeriod                  TYPE PeriodType,\r\n      OrderReference                 TYPE OrderReferenceType,\r\n      BillingReference               TYPE STANDARD TABLE OF BillingReferenceType WITH EMPTY KEY,\r\n      DespatchDocumentReference      TYPE STANDARD TABLE OF DocumentReferenceType WITH EMPTY KEY,\r\n      ReceiptDocumentReference       TYPE STANDARD TABLE OF DocumentReferenceType WITH EMPTY KEY,\r\n      OriginatorDocumentReference    TYPE STANDARD TABLE OF DocumentReferenceType WITH EMPTY KEY,\r\n      ContractDocumentReference      TYPE STANDARD TABLE OF DocumentReferenceType WITH EMPTY KEY,\r\n      AdditionalDocumentReference    TYPE STANDARD TABLE OF DocumentReferenceType WITH EMPTY KEY,\r\n      Signature                      TYPE STANDARD TABLE OF SignatureType WITH EMPTY KEY,\r\n      AccountingSupplierParty        TYPE SupplierPartyType,\r\n      AccountingCustomerParty        TYPE CustomerPartyType,\r\n      BuyerCustomerParty             TYPE CustomerPartyType,\r\n      SellerSupplierParty            TYPE SupplierPartyType,\r\n      TaxRepresentativeParty         TYPE PartyType,\r\n      Delivery                       TYPE STANDARD TABLE OF DeliveryType WITH EMPTY KEY,\r\n      PaymentMeans                   TYPE STANDARD TABLE OF PaymentMeansType WITH EMPTY KEY,\r\n      PaymentTerms                   TYPE PaymentTermsType,\r\n      AllowanceCharge                TYPE STANDARD TABLE OF AllowanceChargeType WITH EMPTY KEY,\r\n      TaxExchangeRate                TYPE ExchangeRateType,\r\n      PricingExchangeRate            TYPE ExchangeRateType,\r\n      PaymentExchangeRate            TYPE ExchangeRateType,\r\n      PaymentAlternativeExchangeRate TYPE ExchangeRateType,\r\n      TaxTotal                       TYPE STANDARD TABLE OF TaxTotalType WITH EMPTY KEY,\r\n      WithholdingTaxTotal            TYPE STANDARD TABLE OF TaxTotalType WITH EMPTY KEY,\r\n      LegalMonetaryTotal             TYPE MonetaryTotalType,\r\n      InvoiceLine                    TYPE STANDARD TABLE OF InvoiceLineType WITH EMPTY KEY,\r\n    END OF InvoiceType\r\n"
+    "TYPESRC":"BEGIN OF InvoiceType,\r\n      UBLExtensions                  TYPE UBLExtensionsType,\r\n      UBLVersionID                   TYPE IdentifierType,\r\n      CustomizationID                TYPE IdentifierType,\r\n      ProfileID                      TYPE IdentifierType,\r\n      Id                             TYPE IdentifierType,\r\n      CopyIndicator                  TYPE IndicatorType,\r\n      UUId                           TYPE IdentifierType,\r\n      IssueDate                      TYPE DateType,\r\n      IssueTime                      TYPE TimeType,\r\n      InvoiceTypeCode                TYPE CodeType,\r\n      Note                           TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      DocumentCurrencyCode           TYPE CodeType,\r\n      TaxCurrencyCode                TYPE CodeType,\r\n      PricingCurrencyCode            TYPE CodeType,\r\n      PaymentCurrencyCode            TYPE CodeType,\r\n      PaymentAlternativeCurrencyCode TYPE CodeType,\r\n      AccountingCost                 TYPE TextType,\r\n      LineCountNumeric               TYPE NumericType,\r\n      InvoicePeriod                  TYPE PeriodType,\r\n      OrderReference                 TYPE OrderReferenceType,\r\n      BillingReference               TYPE STANDARD TABLE OF BillingReferenceType WITH EMPTY KEY,\r\n      DespatchDocumentReference      TYPE STANDARD TABLE OF DocumentReferenceType WITH EMPTY KEY,\r\n      ReceiptDocumentReference       TYPE STANDARD TABLE OF DocumentReferenceType WITH EMPTY KEY,\r\n      OriginatorDocumentReference    TYPE STANDARD TABLE OF DocumentReferenceType WITH EMPTY KEY,\r\n      ContractDocumentReference      TYPE STANDARD TABLE OF DocumentReferenceType WITH EMPTY KEY,\r\n      AdditionalDocumentReference    TYPE STANDARD TABLE OF DocumentReferenceType WITH EMPTY KEY,\r\n      Signature                      TYPE STANDARD TABLE OF SignatureType WITH EMPTY KEY,\r\n      AccountingSupplierParty        TYPE SupplierPartyType,\r\n      AccountingCustomerParty        TYPE CustomerPartyType,\r\n      BuyerCustomerParty             TYPE CustomerPartyType,\r\n      SellerSupplierParty            TYPE SupplierPartyType,\r\n      TaxRepresentativeParty         TYPE PartyType,\r\n      Delivery                       TYPE STANDARD TABLE OF DeliveryType WITH EMPTY KEY,\r\n      PaymentMeans                   TYPE STANDARD TABLE OF PaymentMeansType WITH EMPTY KEY,\r\n      PaymentTerms                   TYPE PaymentTermsType,\r\n      AllowanceCharge                TYPE STANDARD TABLE OF AllowanceChargeType WITH EMPTY KEY,\r\n      TaxExchangeRate                TYPE ExchangeRateType,\r\n      PricingExchangeRate            TYPE ExchangeRateType,\r\n      PaymentExchangeRate            TYPE ExchangeRateType,\r\n      PaymentAlternativeExchangeRate TYPE ExchangeRateType,\r\n      TaxTotal                       TYPE STANDARD TABLE OF TaxTotalType WITH EMPTY KEY,\r\n      WithholdingTaxTotal            TYPE STANDARD TABLE OF TaxTotalType WITH EMPTY KEY,\r\n      LegalMonetaryTotal             TYPE MonetaryTotalType,\r\n      InvoiceLine                    TYPE STANDARD TABLE OF InvoiceLineType WITH EMPTY KEY,\r\n    END OF InvoiceType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_INVOICE_UBL21",
@@ -1014,7 +1026,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_INVOICE_UBL21",
@@ -1072,7 +1085,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_INVOICE_UBL21",
@@ -1130,7 +1144,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_INVOICE_UBL21",
@@ -1188,7 +1203,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_INVOICE_UBL21",
@@ -1246,7 +1262,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_INVOICE_UBL21",
@@ -1304,7 +1321,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_INVOICE_UBL21",
@@ -1362,7 +1380,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_INVOICE_UBL21",
@@ -1420,7 +1439,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_INVOICE_UBL21",
@@ -1478,7 +1498,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_INVOICE_UBL21",
@@ -1536,7 +1557,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_INVOICE_UBL21",
@@ -1594,7 +1616,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_INVOICE_UBL21",
@@ -1652,7 +1675,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_INVOICE_UBL21",
@@ -1710,7 +1734,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    }
   ]
  },

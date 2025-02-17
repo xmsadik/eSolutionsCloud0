@@ -445,6 +445,22 @@
   ]
  },
  {
+  "table":"DDLX_RT_REFS",
+  "data":
+  [
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER_PART",
+    "ELEMENT":"",
+    "NAME":"UI.HEADERINFO.TITLE.VALUE",
+    "PATH":"PARTN",
+    "REF_OBJECT_TYPE":"STOB",
+    "REF_OBJECT_SUBTYPE":"DOF",
+    "REF_OBJECT_NAME":"ZETR_DDL_P_CREATED_LEDGER_PART",
+    "REF_OBJECT_ELEMENT":"PARTN"
+   }
+  ]
+ },
+ {
   "table":"TADIR",
   "data":
   [

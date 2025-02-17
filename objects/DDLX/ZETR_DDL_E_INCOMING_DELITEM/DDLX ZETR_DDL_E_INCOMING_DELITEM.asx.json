@@ -361,6 +361,22 @@
   ]
  },
  {
+  "table":"DDLX_RT_REFS",
+  "data":
+  [
+   {
+    "DDLXNAME":"ZETR_DDL_E_INCOMING_DELITEM",
+    "ELEMENT":"",
+    "NAME":"UI.HEADERINFO.TITLE.VALUE",
+    "PATH":"ITEMNO",
+    "REF_OBJECT_TYPE":"STOB",
+    "REF_OBJECT_SUBTYPE":"DOF",
+    "REF_OBJECT_NAME":"ZETR_DDL_P_INCOMING_DELITEM",
+    "REF_OBJECT_ELEMENT":"ITEMNO"
+   }
+  ]
+ },
+ {
   "table":"TADIR",
   "data":
   [

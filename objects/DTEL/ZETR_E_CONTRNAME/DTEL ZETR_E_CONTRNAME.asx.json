@@ -60,6 +60,17 @@
     "SCRTEXT_S":"Con.name",
     "SCRTEXT_M":"Contract name",
     "SCRTEXT_L":"Contract name"
+   },
+   {
+    "ROLLNAME":"ZETR_E_CONTRNAME",
+    "DDLANGUAGE":"T",
+    "AS4LOCAL":"N",
+    "AS4VERS":0,
+    "DDTEXT":"Kontrat adı",
+    "REPTEXT":"Kontrat adı",
+    "SCRTEXT_S":"Kont.adı",
+    "SCRTEXT_M":"Kontrat adı",
+    "SCRTEXT_L":"Kontrat adı"
    }
   ]
  },

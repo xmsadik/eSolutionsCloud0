@@ -3,6 +3,7 @@ CLASS lhc_zetr_ddl_i_outgoing_invoic DEFINITION INHERITING FROM cl_abap_behavior
     TYPES mty_invoice_list TYPE TABLE OF zetr_ddl_i_outgoing_invoices WITH EMPTY KEY.
     TYPES BEGIN OF mty_document_return.
     TYPES DocumentUUID TYPE sysuuid_c22.
+    TYPES EMailSent TYPE zetr_e_emsnd.
     INCLUDE TYPE bapiret2.
     TYPES END OF mty_document_return.
     TYPES mty_document_return_t TYPE STANDARD TABLE OF mty_document_return WITH EMPTY KEY.
@@ -132,6 +133,16 @@ CLASS lhc_zetr_ddl_i_outgoing_invoic IMPLEMENTATION.
                         %field-earchivetype = COND #( WHEN ls_invoice-statuscode <> '' AND ls_invoice-statuscode <> '2'
                                                      THEN if_abap_behv=>fc-f-read_only
                                                    WHEN ls_invoice-profileid = 'EARSIV'
+                                                     THEN if_abap_behv=>fc-f-unrestricted
+                                                   ELSE if_abap_behv=>fc-f-read_only  )
+                        %field-ReturnedDocumentNumbers = COND #( WHEN ls_invoice-statuscode <> '' AND ls_invoice-statuscode <> '2'
+                                                     THEN if_abap_behv=>fc-f-read_only
+                                                   WHEN ls_invoice-InvoiceType = 'TEVIADE' OR ls_invoice-InvoiceType = 'IADE'
+                                                     THEN if_abap_behv=>fc-f-unrestricted
+                                                   ELSE if_abap_behv=>fc-f-read_only  )
+                        %field-ReturnedDocumentDates = COND #( WHEN ls_invoice-statuscode <> '' AND ls_invoice-statuscode <> '2'
+                                                     THEN if_abap_behv=>fc-f-read_only
+                                                   WHEN ls_invoice-InvoiceType = 'TEVIADE' OR ls_invoice-InvoiceType = 'IADE'
                                                      THEN if_abap_behv=>fc-f-unrestricted
                                                    ELSE if_abap_behv=>fc-f-read_only  )
                         %field-aliass = COND #( WHEN ls_invoice-statuscode <> '' AND ls_invoice-statuscode <> '2'
@@ -472,8 +483,12 @@ CLASS lhc_zetr_ddl_i_outgoing_invoic IMPLEMENTATION.
       CORRESPONDING #( keys )
       RESULT InvoiceList.
     IF lt_auto_mail IS NOT INITIAL.
-      DATA lt_mail_list TYPE mty_invoice_list.
+*      DATA lt_mail_list TYPE mty_invoice_list.
+      DATA lt_parameters TYPE cl_apj_rt_api=>tt_job_parameter_value.
       LOOP AT InvoiceList INTO DATA(InvoiceLine).
+        CHECK invoiceline-StatusCode <> '' AND
+              invoiceline-StatusCode <> '1' AND
+              invoiceline-StatusCode <> '2'.
         CASE InvoiceLine-ProfileID.
           WHEN 'EARSIV'.
             CHECK line_exists( lt_auto_mail[ bukrs = InvoiceLine-CompanyCode prfid = 'EARSIV' ] ).
@@ -481,9 +496,16 @@ CLASS lhc_zetr_ddl_i_outgoing_invoic IMPLEMENTATION.
             CHECK line_exists( lt_auto_mail[ bukrs = InvoiceLine-CompanyCode prfid = 'EFATURA' ] ).
         ENDCASE.
 
-        APPEND CORRESPONDING #( InvoiceLine ) TO lt_mail_list.
+*        APPEND CORRESPONDING #( InvoiceLine ) TO lt_mail_list.
       ENDLOOP.
-      send_mail_to_partner( lt_mail_list ).
+      TRY.
+          cl_apj_rt_api=>schedule_job( iv_job_template_name   = 'ZETR_AJT_INVOICE_SEND_MAIL'
+                                       iv_job_text            = 'Send Mail'
+                                       is_start_info          = VALUE #( start_immediately = abap_true )
+                                       it_job_parameter_value = lt_parameters ).
+        CATCH cx_apj_rt.
+      ENDTRY.
+*      send_mail_to_partner( lt_mail_list ).
     ENDIF.
 
     result = VALUE #( FOR Invoice IN InvoiceList ( %tky   = invoice-%tky
@@ -747,6 +769,7 @@ CLASS lhc_zetr_ddl_i_outgoing_invoic IMPLEMENTATION.
 
     DATA(lt_return) = send_mail_to_partner( CORRESPONDING #( invoices ) ).
     LOOP AT lt_return INTO DATA(ls_return).
+      CHECK ls_return-id IS NOT INITIAL.
       APPEND VALUE #( DocumentUUID = ls_return-DocumentUUID
                       %msg = new_message( id       = ls_return-id
                                           number   = ls_return-number
@@ -756,6 +779,33 @@ CLASS lhc_zetr_ddl_i_outgoing_invoic IMPLEMENTATION.
                                           v3 = ls_return-message_v3
                                           v4 = ls_return-message_v4 ) ) TO reported-outgoinginvoices.
     ENDLOOP.
+
+    TRY.
+        MODIFY ENTITIES OF zetr_ddl_i_outgoing_invoices IN LOCAL MODE
+          ENTITY outgoinginvoices
+             UPDATE FIELDS ( EMailSent )
+             WITH VALUE #( FOR return IN lt_return WHERE ( emailsent = abap_true )
+                                                   ( documentuuid = return-DocumentUUID
+                                                     EMailSent = abap_true
+                                                     %control-EMailSent = if_abap_behv=>mk-on ) )
+             ENTITY outgoinginvoices
+                CREATE BY \_invoicelogs
+                FIELDS ( loguuid documentuuid createdby creationdate creationtime logcode lognote )
+                AUTO FILL CID
+                WITH VALUE #( FOR invoice IN invoices
+                                 ( DocumentUUID = invoice-DocumentUUID
+                                   %target = VALUE #( ( LogUUID = cl_system_uuid=>create_uuid_c22_static( )
+                                                        DocumentUUID = invoice-DocumentUUID
+                                                        CreatedBy = sy-uname
+                                                        CreationDate = cl_abap_context_info=>get_system_date( )
+                                                        CreationTime = cl_abap_context_info=>get_system_time( )
+                                                        LogCode = zcl_etr_regulative_log=>mc_log_codes-mail ) ) )  )
+             FAILED failed
+             REPORTED reported.
+
+      CATCH cx_uuid_error.
+        "handle exception
+    ENDTRY.
 
     READ ENTITIES OF zetr_ddl_i_outgoing_invoices IN LOCAL MODE
       ENTITY OutgoingInvoices
@@ -936,7 +986,7 @@ CLASS lhc_zetr_ddl_i_outgoing_invoic IMPLEMENTATION.
       INTO TABLE @DATA(lt_company).
 
     LOOP AT invoices ASSIGNING FIELD-SYMBOL(<ls_invoice>).
-      IF <ls_invoice>-StatusCode = '' OR <ls_invoice>-StatusCode = '2'.
+      IF <ls_invoice>-StatusCode = '' OR <ls_invoice>-StatusCode = '1' OR <ls_invoice>-StatusCode = '2'.
         APPEND VALUE #( DocumentUUID = <ls_invoice>-DocumentUUID
                         id = 'ZETR_COMMON'
                         number = '032'
@@ -1018,6 +1068,14 @@ CLASS lhc_zetr_ddl_i_outgoing_invoic IMPLEMENTATION.
                           number   = '219'
                           type = if_abap_behv_message=>severity-success
                           message_v1 = ls_partner-email ) TO rt_return.
+
+          LOOP AT lt_documents ASSIGNING <ls_document> USING KEY by_partner WHERE companycode = ls_partner-companycode
+                                                                              AND partnernumber = ls_partner-partnernumber.
+            CHECK <ls_document>-content IS NOT INITIAL.
+            APPEND VALUE #( DocumentUUID = <ls_invoice>-DocumentUUID
+                            EmailSent = abap_true ) TO rt_return.
+          ENDLOOP.
+
         CATCH cx_bcs_mail INTO DATA(lx_mail).
           lv_error = lx_mail->get_text( ).
           APPEND VALUE #( id       = 'ZETR_COMMON'
@@ -1156,6 +1214,12 @@ CLASS lsc_zetr_ddl_i_outgoing_invoic IMPLEMENTATION.
         ENDIF.
         IF ls_update-%control-ReportID = if_abap_behv=>mk-on.
           <ls_invoice>-rprid = ls_update-ReportID.
+        ENDIF.
+        IF ls_update-%control-ReturnedDocumentNumbers = if_abap_behv=>mk-on.
+          <ls_invoice>-retdn = ls_update-ReturnedDocumentNumbers.
+        ENDIF.
+        IF ls_update-%control-ReturnedDocumentDates = if_abap_behv=>mk-on.
+          <ls_invoice>-retdd = ls_update-ReturnedDocumentDates.
         ENDIF.
         APPEND INITIAL LINE TO lt_logs ASSIGNING FIELD-SYMBOL(<ls_log>).
         <ls_log>-docui = ls_update-documentuuid.

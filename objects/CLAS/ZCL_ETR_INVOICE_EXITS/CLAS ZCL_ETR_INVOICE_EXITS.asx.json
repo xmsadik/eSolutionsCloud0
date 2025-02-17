@@ -192,7 +192,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_INVOICE_EXITS",
@@ -250,7 +251,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_INVOICE_EXITS",
@@ -308,7 +310,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":1895,
-    "TYPESRC":"BEGIN OF mty_accdoc_header,\r\n             companycode                    TYPE bukrs,\r\n             accountingdocument             TYPE belnr_d,\r\n             fiscalyear                     TYPE gjahr,\r\n             transactioncode                TYPE tcode,\r\n             accountingdocumenttype         TYPE blart,\r\n             documentdate                   TYPE bldat,\r\n             fiscalperiod                   TYPE monat,\r\n             accountingdocumentcreationdate TYPE datum,\r\n             creationtime                   TYPE uzeit,\r\n             lastchangedate                 TYPE datum,\r\n             accountingdoccreatedbyuser     TYPE usnam,\r\n             reversedocument                TYPE belnr_d,\r\n             reversedocumentfiscalyear      TYPE gjahr,\r\n             exchangerate                   TYPE zetr_e_kursf,\r\n             accountingdocumentcategory     TYPE c LENGTH 1,\r\n             companycodecurrency            TYPE waers,\r\n             transactioncurrency            TYPE waers,\r\n             ledgergroup                    TYPE c LENGTH 4,\r\n             reversalreason                 TYPE stgrd,\r\n             accountingdocumentclass        TYPE c LENGTH 6,\r\n             exchangeratetype               TYPE kurst,\r\n             isreversaldocument             TYPE abap_boolean,\r\n             postingdate                    TYPE budat,\r\n             exchangeratedate               TYPE wwert_d,\r\n             referencedocumenttype          TYPE fis_awtyp,\r\n             referencedocumentlogicalsystem TYPE logsystem,\r\n             originalreferencedocument      TYPE c LENGTH 20,\r\n             accountingdocexternalreference TYPE xblnr1,\r\n             accountingdocumentheadertext   TYPE bktxt,\r\n             reference1indocumentheader     TYPE c LENGTH 20,\r\n             reference2indocumentheader     TYPE c LENGTH 20,\r\n           END OF mty_accdoc_header\r\n"
+    "TYPESRC":"BEGIN OF mty_accdoc_header,\r\n             companycode                    TYPE bukrs,\r\n             accountingdocument             TYPE belnr_d,\r\n             fiscalyear                     TYPE gjahr,\r\n             transactioncode                TYPE tcode,\r\n             accountingdocumenttype         TYPE blart,\r\n             documentdate                   TYPE bldat,\r\n             fiscalperiod                   TYPE monat,\r\n             accountingdocumentcreationdate TYPE datum,\r\n             creationtime                   TYPE uzeit,\r\n             lastchangedate                 TYPE datum,\r\n             accountingdoccreatedbyuser     TYPE usnam,\r\n             reversedocument                TYPE belnr_d,\r\n             reversedocumentfiscalyear      TYPE gjahr,\r\n             exchangerate                   TYPE zetr_e_kursf,\r\n             accountingdocumentcategory     TYPE c LENGTH 1,\r\n             companycodecurrency            TYPE waers,\r\n             transactioncurrency            TYPE waers,\r\n             ledgergroup                    TYPE c LENGTH 4,\r\n             reversalreason                 TYPE stgrd,\r\n             accountingdocumentclass        TYPE c LENGTH 6,\r\n             exchangeratetype               TYPE kurst,\r\n             isreversaldocument             TYPE abap_boolean,\r\n             postingdate                    TYPE budat,\r\n             exchangeratedate               TYPE wwert_d,\r\n             referencedocumenttype          TYPE fis_awtyp,\r\n             referencedocumentlogicalsystem TYPE logsystem,\r\n             originalreferencedocument      TYPE c LENGTH 20,\r\n             accountingdocexternalreference TYPE xblnr1,\r\n             accountingdocumentheadertext   TYPE bktxt,\r\n             reference1indocumentheader     TYPE c LENGTH 20,\r\n             reference2indocumentheader     TYPE c LENGTH 20,\r\n           END OF mty_accdoc_header\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_INVOICE_EXITS",
@@ -366,7 +369,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":2678,
-    "TYPESRC":"BEGIN OF mty_accdoc_item,\r\n             accountingdocumentitem       TYPE buzei,\r\n             postingkey                   TYPE bschl,\r\n             financialaccounttype         TYPE koart,\r\n             specialglcode                TYPE c LENGTH 1,\r\n             debitcreditcode              TYPE shkzg,\r\n             businessarea                 TYPE gsber,\r\n             taxcode                      TYPE mwskz,\r\n             withholdingtaxcode           TYPE c LENGTH 2,\r\n             balancetransactioncurrency   TYPE waers,\r\n             companycodecurrency          TYPE waers,\r\n             paymentcurrency              TYPE waers,\r\n             transactioncurrency          TYPE waers,\r\n             amountinbalancetransaccrcy   TYPE fins_vwcur12,\r\n             amountincompanycodecurrency  TYPE fins_vwcur12,\r\n             amountintransactioncurrency  TYPE fins_vwcur12,\r\n             amountinpaymentcurrency      TYPE fins_vwcur12,\r\n             taxamountincocodecrcy        TYPE fins_vwcur12,\r\n             taxamountintranscrcy         TYPE fins_vwcur12,\r\n             taxbaseamountincocodecrcy    TYPE fins_vwcur12,\r\n             taxbaseamountintranscrcy     TYPE fins_vwcur12,\r\n             taxtype                      TYPE c LENGTH 1,\r\n             transactiontypedetermination TYPE c LENGTH 3,\r\n             withholdingtaxbaseamount     TYPE fins_vwcur12,\r\n             costcenter                   TYPE kostl,\r\n             billingdocument              TYPE sd_sls_document,\r\n             salesdocument                TYPE sd_sls_document,\r\n             salesdocumentitem            TYPE sd_sls_document_item,\r\n             isautomaticallycreated       TYPE abap_boolean,\r\n             alternativeglaccount         TYPE hkont,\r\n             glaccount                    TYPE hkont,\r\n             customer                     TYPE lifnr,\r\n             supplier                     TYPE lifnr,\r\n             duecalculationbasedate       TYPE dzfbdt,\r\n             paymentterms                 TYPE dzterm,\r\n             cashdiscount1days            TYPE dzbd1t,\r\n             cashdiscount2days            TYPE dzbd2t,\r\n             netpaymentdays               TYPE dzbd3t,\r\n             withholdingtaxamount         TYPE fins_vwcur12,\r\n             withholdingtaxexemptionamt   TYPE fins_vwcur12,\r\n             material                     TYPE matnr,\r\n             plant                        TYPE werks_d,\r\n             quantity                     TYPE menge_d,\r\n             baseunit                     TYPE meins,\r\n             netduedate                   TYPE datum.\r\n             INCLUDE TYPE mty_accdoc_item_out.\r\n    TYPES: END OF mty_accdoc_item\r\n"
+    "TYPESRC":"BEGIN OF mty_accdoc_item,\r\n             accountingdocumentitem       TYPE buzei,\r\n             postingkey                   TYPE bschl,\r\n             financialaccounttype         TYPE koart,\r\n             specialglcode                TYPE c LENGTH 1,\r\n             debitcreditcode              TYPE shkzg,\r\n             businessarea                 TYPE gsber,\r\n             taxcode                      TYPE mwskz,\r\n             withholdingtaxcode           TYPE c LENGTH 2,\r\n             balancetransactioncurrency   TYPE waers,\r\n             companycodecurrency          TYPE waers,\r\n             paymentcurrency              TYPE waers,\r\n             transactioncurrency          TYPE waers,\r\n             amountinbalancetransaccrcy   TYPE fins_vwcur12,\r\n             amountincompanycodecurrency  TYPE fins_vwcur12,\r\n             amountintransactioncurrency  TYPE fins_vwcur12,\r\n             amountinpaymentcurrency      TYPE fins_vwcur12,\r\n             taxamountincocodecrcy        TYPE fins_vwcur12,\r\n             taxamountintranscrcy         TYPE fins_vwcur12,\r\n             taxbaseamountincocodecrcy    TYPE fins_vwcur12,\r\n             taxbaseamountintranscrcy     TYPE fins_vwcur12,\r\n             taxtype                      TYPE c LENGTH 1,\r\n             transactiontypedetermination TYPE c LENGTH 3,\r\n             withholdingtaxbaseamount     TYPE fins_vwcur12,\r\n             costcenter                   TYPE kostl,\r\n             billingdocument              TYPE sd_sls_document,\r\n             salesdocument                TYPE sd_sls_document,\r\n             salesdocumentitem            TYPE sd_sls_document_item,\r\n             isautomaticallycreated       TYPE abap_boolean,\r\n             alternativeglaccount         TYPE hkont,\r\n             glaccount                    TYPE hkont,\r\n             customer                     TYPE lifnr,\r\n             supplier                     TYPE lifnr,\r\n             duecalculationbasedate       TYPE dzfbdt,\r\n             paymentterms                 TYPE dzterm,\r\n             cashdiscount1days            TYPE dzbd1t,\r\n             cashdiscount2days            TYPE dzbd2t,\r\n             netpaymentdays               TYPE dzbd3t,\r\n             withholdingtaxamount         TYPE fins_vwcur12,\r\n             withholdingtaxexemptionamt   TYPE fins_vwcur12,\r\n             material                     TYPE matnr,\r\n             plant                        TYPE werks_d,\r\n             quantity                     TYPE menge_d,\r\n             baseunit                     TYPE meins,\r\n             netduedate                   TYPE datum.\r\n             INCLUDE TYPE mty_accdoc_item_out.\r\n    TYPES: END OF mty_accdoc_item\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_INVOICE_EXITS",
@@ -424,7 +428,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":72,
-    "TYPESRC":"mty_accdoc_items TYPE STANDARD TABLE OF mty_accdoc_item WITH EMPTY KEY\r\n"
+    "TYPESRC":"mty_accdoc_items TYPE STANDARD TABLE OF mty_accdoc_item WITH EMPTY KEY\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_INVOICE_EXITS",
@@ -482,7 +487,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":80,
-    "TYPESRC":"mty_accdoc_items_out TYPE STANDARD TABLE OF mty_accdoc_item_out WITH EMPTY KEY\r\n"
+    "TYPESRC":"mty_accdoc_items_out TYPE STANDARD TABLE OF mty_accdoc_item_out WITH EMPTY KEY\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_INVOICE_EXITS",
@@ -540,7 +546,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":483,
-    "TYPESRC":"BEGIN OF mty_accdoc_item_out,\r\n             rowindex                      TYPE i,\r\n             documentitemtext              TYPE sgtxt,\r\n             reference1idbybusinesspartner TYPE c LENGTH 12,\r\n             reference2idbybusinesspartner TYPE c LENGTH 12,\r\n             reference3idbybusinesspartner TYPE c LENGTH 20,\r\n             assignmentreference           TYPE dzuonr,\r\n             einvoiceuuid                  TYPE sysuuid_c22,\r\n           END OF mty_accdoc_item_out\r\n"
+    "TYPESRC":"BEGIN OF mty_accdoc_item_out,\r\n             rowindex                      TYPE i,\r\n             documentitemtext              TYPE sgtxt,\r\n             reference1idbybusinesspartner TYPE c LENGTH 12,\r\n             reference2idbybusinesspartner TYPE c LENGTH 12,\r\n             reference3idbybusinesspartner TYPE c LENGTH 20,\r\n             assignmentreference           TYPE dzuonr,\r\n             einvoiceuuid                  TYPE sysuuid_c22,\r\n           END OF mty_accdoc_item_out\r\n",
+    "MTDSQLSERVICE":""
    }
   ]
  },

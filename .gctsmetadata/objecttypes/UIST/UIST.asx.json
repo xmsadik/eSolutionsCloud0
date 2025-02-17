@@ -33,6 +33,22 @@
   ]
  },
  {
+  "table":"OBJM",
+  "data":
+  [
+   {
+    "OBJECTNAME":"UIST",
+    "OBJECTTYPE":"L",
+    "METHOD":"AFTER_IMP",
+    "METHODNAME":"/UI2/UIST_AFTER_IMPORT",
+    "UPGRADE":"X",
+    "MULTI_OBJ":"X",
+    "LANG_OBJ":"X",
+    "SHADOW_SYS":""
+   }
+  ]
+ },
+ {
   "table":"OBJS",
   "data":
   [

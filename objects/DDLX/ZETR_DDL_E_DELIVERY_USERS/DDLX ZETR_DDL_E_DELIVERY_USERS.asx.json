@@ -389,6 +389,22 @@
   ]
  },
  {
+  "table":"DDLX_RT_REFS",
+  "data":
+  [
+   {
+    "DDLXNAME":"ZETR_DDL_E_DELIVERY_USERS",
+    "ELEMENT":"",
+    "NAME":"UI.HEADERINFO.TITLE.VALUE",
+    "PATH":"TITLE",
+    "REF_OBJECT_TYPE":"STOB",
+    "REF_OBJECT_SUBTYPE":"DOF",
+    "REF_OBJECT_NAME":"ZETR_DDL_P_DELIVERY_USERS",
+    "REF_OBJECT_ELEMENT":"TITLE"
+   }
+  ]
+ },
+ {
   "table":"TADIR",
   "data":
   [

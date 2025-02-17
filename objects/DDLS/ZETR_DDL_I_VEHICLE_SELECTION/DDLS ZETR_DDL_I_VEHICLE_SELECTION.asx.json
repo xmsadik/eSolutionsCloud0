@@ -33,24 +33,6 @@
   ]
  },
  {
-  "table":"DDDDLSRC03NT",
-  "data":
-  [
-   {
-    "DDLNAME":"ZETR_DDL_I_VEHICLE_SELECTION",
-    "STRUCOBJN":"ZETR_DDL_I_VEHICLE_SELECTION",
-    "NODENAME":".NODE1",
-    "DDLANGUAGE":"E",
-    "AS4LOCAL":"N",
-    "FIELDNAME":"VHCLL",
-    "DEPTH":0,
-    "DDTEXT":"Vehicle plate",
-    "FIELDLABEL":"",
-    "QUICKINFO":""
-   }
-  ]
- },
- {
   "table":"DDDDLSRCT",
   "data":
   [

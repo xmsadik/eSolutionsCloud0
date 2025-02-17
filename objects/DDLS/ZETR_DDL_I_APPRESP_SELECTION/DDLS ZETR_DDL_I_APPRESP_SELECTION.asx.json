@@ -33,36 +33,6 @@
   ]
  },
  {
-  "table":"DDDDLSRC03NT",
-  "data":
-  [
-   {
-    "DDLNAME":"ZETR_DDL_I_APPRESP_SELECTION",
-    "STRUCOBJN":"ZETR_DDL_I_APPRESP_SELECTION",
-    "NODENAME":".NODE1",
-    "DDLANGUAGE":"E",
-    "AS4LOCAL":"N",
-    "FIELDNAME":"APPLICATIONRESPONSE",
-    "DEPTH":0,
-    "DDTEXT":"Application response",
-    "FIELDLABEL":"",
-    "QUICKINFO":""
-   },
-   {
-    "DDLNAME":"ZETR_DDL_I_APPRESP_SELECTION",
-    "STRUCOBJN":"ZETR_DDL_I_APPRESP_SELECTION",
-    "NODENAME":".NODE1",
-    "DDLANGUAGE":"E",
-    "AS4LOCAL":"N",
-    "FIELDNAME":"RESPONSENOTE",
-    "DEPTH":0,
-    "DDTEXT":"Note",
-    "FIELDLABEL":"",
-    "QUICKINFO":""
-   }
-  ]
- },
- {
   "table":"DDDDLSRCT",
   "data":
   [

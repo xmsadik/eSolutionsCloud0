@@ -235,6 +235,22 @@
   ]
  },
  {
+  "table":"DDLX_RT_REFS",
+  "data":
+  [
+   {
+    "DDLXNAME":"ZETR_DDL_E_LEDGER_DOC_TYPE_DES",
+    "ELEMENT":"",
+    "NAME":"UI.HEADERINFO.TITLE.VALUE",
+    "PATH":"GIBDOCTYPEDESC",
+    "REF_OBJECT_TYPE":"STOB",
+    "REF_OBJECT_SUBTYPE":"DOF",
+    "REF_OBJECT_NAME":"ZETR_DDL_P_LEDGER_DOC_TYPE_DES",
+    "REF_OBJECT_ELEMENT":"GIBDOCTYPEDESC"
+   }
+  ]
+ },
+ {
   "table":"TADIR",
   "data":
   [

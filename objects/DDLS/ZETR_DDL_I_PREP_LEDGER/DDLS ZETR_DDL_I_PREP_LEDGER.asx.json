@@ -12,7 +12,7 @@
     "SOURCE":"@EndUserText.label: 'Prepare Ledger'\r\n@ObjectModel.query.implementedBy:'ABAP:ZCL_ETR_PREP_LEDGER'\r\n//@Search.searchable: true\r\n@UI:{\r\n\r\nheaderInfo:{\r\n                typeNamePlural: 'Prepare Ledger',\r\n                typeName: 'Prepare Ledger',\r\n                title:{ type: #STANDARD, label: 'Prepare Ledger', value: 'bukrs' }\r\n           }\r\n}\r\ndefine root custom entity zetr_ddl_i_prep_ledger\r\n  // with parameters parameter_name : parameter_type\r\n{\r\n      @UI.facet         : [ { id:              'Ledger',\r\n                               purpose:         #STANDARD,\r\n                               type:            #IDENTIFICATION_REFERENCE,\r\n                               label:           'Ledger Details',\r\n                               position:        10 },\r\n                               \r\n                             { id:              'LedgerDetail',\r\n                               purpose:         #STANDARD,\r\n                               type:            #IDENTIFICATION_REFERENCE,\r\n                               label:           'Prepare Ledger Details',\r\n                               position:        20,\r\n                               targetElement:   '_PrepLedgerDetail' } ,\r\n                               \r\n                             { id:              'SetPartLedger',\r\n                               purpose:         #STANDARD,\r\n                               type:            #IDENTIFICATION_REFERENCE,\r\n                               label:           'Set Partial Ledger',\r\n                               position:        30,\r\n                               targetElement:   '_SetPartLedger' }  ]\r\n\r\n\r\n\r\n      @UI               : { lineItem:       [ { position: 1, importance: #HIGH } ],\r\n                            selectionField: [ { position: 1 } ] }\r\n      //                             identification: [ { position: 1 } ] }\r\n      @Consumption.filter:{  mandatory: true }\r\n      @Consumption.valueHelpDefinition: [ { entity: { name: 'I_CompanyCodeVH', element: 'CompanyCode' }}]\r\n  key bukrs             : bukrs;\r\n\r\n      @UI               : { lineItem:       [ { position: 2, importance: #HIGH  } ],\r\n                            selectionField: [ { position: 2 } ] }\r\n      //                             identification: [ { position: 2 } ]  }\r\n      @Consumption.filter:{  mandatory: true }\r\n  key gjahr             : gjahr;\r\n\r\n      @UI               : { lineItem:       [ { position: 3, importance: #HIGH  } ],\r\n                            selectionField: [ { position: 3 } ] }\r\n      //                             identification: [ { position: 3 } ] }\r\n  key monat             : monat;\r\n\r\n\r\n      _PrepLedgerDetail : composition [1..1] of zetr_ddl_i_prep_ledger_detail;\r\n      _SetPartLedger    : composition [1..*] of ZETR_DDL_I_setpart_ledger;\r\n\r\n\r\n\r\n\r\n}\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[],\n\"ASSOCIATED\":\n[\n\"ZETR_DDL_I_PREP_LEDGER_DETAIL\",\n\"ZETR_DDL_I_SETPART_LEDGER\"\n],\n\"BASE\":\n[],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
     "PARENTNAME":"",
     "ACTFLAG":"",
-    "CHGFLAG":"",
+    "CHGFLAG":",WT4Z",
     "SOURCE_TYPE":"Q",
     "SOURCE_ORIGIN":"0",
     "ABAP_LANGUAGE_VERSION":"5"
@@ -29,48 +29,6 @@
     "DDLANGUAGE":"E",
     "AS4LOCAL":"N",
     "DDTEXT":"Prepare Ledger"
-   }
-  ]
- },
- {
-  "table":"DDDDLSRC03NT",
-  "data":
-  [
-   {
-    "DDLNAME":"ZETR_DDL_I_PREP_LEDGER",
-    "STRUCOBJN":"ZETR_DDL_I_PREP_LEDGER",
-    "NODENAME":".NODE1",
-    "DDLANGUAGE":"E",
-    "AS4LOCAL":"N",
-    "FIELDNAME":"BUKRS",
-    "DEPTH":0,
-    "DDTEXT":"Company Code",
-    "FIELDLABEL":"",
-    "QUICKINFO":""
-   },
-   {
-    "DDLNAME":"ZETR_DDL_I_PREP_LEDGER",
-    "STRUCOBJN":"ZETR_DDL_I_PREP_LEDGER",
-    "NODENAME":".NODE1",
-    "DDLANGUAGE":"E",
-    "AS4LOCAL":"N",
-    "FIELDNAME":"GJAHR",
-    "DEPTH":0,
-    "DDTEXT":"Fiscal Year",
-    "FIELDLABEL":"",
-    "QUICKINFO":""
-   },
-   {
-    "DDLNAME":"ZETR_DDL_I_PREP_LEDGER",
-    "STRUCOBJN":"ZETR_DDL_I_PREP_LEDGER",
-    "NODENAME":".NODE1",
-    "DDLANGUAGE":"E",
-    "AS4LOCAL":"N",
-    "FIELDNAME":"MONAT",
-    "DEPTH":0,
-    "DDTEXT":"Fiscal Period",
-    "FIELDLABEL":"",
-    "QUICKINFO":""
    }
   ]
  },

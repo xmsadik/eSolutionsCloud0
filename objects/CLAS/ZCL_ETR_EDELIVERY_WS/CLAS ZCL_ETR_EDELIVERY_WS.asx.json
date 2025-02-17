@@ -346,7 +346,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS",
@@ -404,7 +405,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS",
@@ -462,7 +464,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS",
@@ -520,7 +523,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS",
@@ -578,7 +582,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS",
@@ -636,7 +641,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS",
@@ -694,7 +700,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS",
@@ -752,7 +759,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS",
@@ -810,7 +818,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS",
@@ -868,7 +877,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS",
@@ -926,7 +936,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS",
@@ -984,7 +995,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS",
@@ -1042,7 +1054,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS",
@@ -1100,7 +1113,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":32,
-    "TYPESRC":"mty_hash_code TYPE c LENGTH 32\r\n"
+    "TYPESRC":"mty_hash_code TYPE c LENGTH 32\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS",
@@ -1158,7 +1172,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":78,
-    "TYPESRC":"mty_incoming_deliveries TYPE STANDARD TABLE OF zetr_t_icdlv WITH DEFAULT KEY\r\n"
+    "TYPESRC":"mty_incoming_deliveries TYPE STANDARD TABLE OF zetr_t_icdlv WITH DEFAULT KEY\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS",
@@ -1216,7 +1231,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":82,
-    "TYPESRC":"mty_incoming_delivery_items TYPE STANDARD TABLE OF zetr_t_icdli WITH DEFAULT KEY\r\n"
+    "TYPESRC":"mty_incoming_delivery_items TYPE STANDARD TABLE OF zetr_t_icdli WITH DEFAULT KEY\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS",
@@ -1274,7 +1290,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":267,
-    "TYPESRC":"BEGIN OF mty_incoming_delivery_status.\r\n    TYPES staex TYPE zetr_e_staex.\r\n    TYPES resst TYPE zetr_e_resst.\r\n    TYPES radsc TYPE zetr_e_radsc.\r\n    TYPES ruuid TYPE zetr_e_ruuid.\r\n    TYPES itmrs TYPE zetr_e_itmrs.\r\n    TYPES END OF mty_incoming_delivery_status\r\n"
+    "TYPESRC":"BEGIN OF mty_incoming_delivery_status.\r\n    TYPES staex TYPE zetr_e_staex.\r\n    TYPES resst TYPE zetr_e_resst.\r\n    TYPES radsc TYPE zetr_e_radsc.\r\n    TYPES ruuid TYPE zetr_e_ruuid.\r\n    TYPES itmrs TYPE zetr_e_itmrs.\r\n    TYPES END OF mty_incoming_delivery_status\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS",
@@ -1332,7 +1349,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":519,
-    "TYPESRC":"BEGIN OF mty_outgoing_document_status.\r\n    TYPES stacd TYPE zetr_e_stacd.\r\n    TYPES staex TYPE zetr_e_staex.\r\n    TYPES resst TYPE zetr_e_resst.\r\n    TYPES radsc TYPE zetr_e_radsc.\r\n    TYPES rsend TYPE zetr_e_rsend.\r\n    TYPES envui TYPE zetr_e_envui.\r\n    TYPES dlvii TYPE zetr_e_docii.\r\n    TYPES dlvui TYPE zetr_e_duich.\r\n    TYPES dlvno TYPE zetr_e_docno.\r\n    TYPES dlvqi TYPE zetr_e_docqi.\r\n    TYPES ruuid TYPE zetr_e_ruuid.\r\n    TYPES itmrs TYPE zetr_e_itmrs.\r\n    TYPES END OF mty_outgoing_document_status\r\n"
+    "TYPESRC":"BEGIN OF mty_outgoing_document_status.\r\n    TYPES stacd TYPE zetr_e_stacd.\r\n    TYPES staex TYPE zetr_e_staex.\r\n    TYPES resst TYPE zetr_e_resst.\r\n    TYPES radsc TYPE zetr_e_radsc.\r\n    TYPES rsend TYPE zetr_e_rsend.\r\n    TYPES envui TYPE zetr_e_envui.\r\n    TYPES dlvii TYPE zetr_e_docii.\r\n    TYPES dlvui TYPE zetr_e_duich.\r\n    TYPES dlvno TYPE zetr_e_docno.\r\n    TYPES dlvqi TYPE zetr_e_docqi.\r\n    TYPES ruuid TYPE zetr_e_ruuid.\r\n    TYPES itmrs TYPE zetr_e_itmrs.\r\n    TYPES END OF mty_outgoing_document_status\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS",
@@ -1390,7 +1408,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":126,
-    "TYPESRC":"BEGIN OF mty_service_header.\r\n    TYPES name TYPE string.\r\n    TYPES value TYPE string.\r\n    TYPES END OF mty_service_header\r\n"
+    "TYPESRC":"BEGIN OF mty_service_header.\r\n    TYPES name TYPE string.\r\n    TYPES value TYPE string.\r\n    TYPES END OF mty_service_header\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS",
@@ -1448,7 +1467,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":74,
-    "TYPESRC":"mty_service_header_tab TYPE TABLE OF mty_service_header WITH DEFAULT KEY\r\n"
+    "TYPESRC":"mty_service_header_tab TYPE TABLE OF mty_service_header WITH DEFAULT KEY\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS",
@@ -1506,7 +1526,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":77,
-    "TYPESRC":"mty_taxpayers_list TYPE STANDARD TABLE OF zetr_t_dlv_ruser WITH DEFAULT KEY\r\n"
+    "TYPESRC":"mty_taxpayers_list TYPE STANDARD TABLE OF zetr_t_dlv_ruser WITH DEFAULT KEY\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS",
@@ -1564,7 +1585,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":141,
-    "TYPESRC":"mt_custom_parameters  TYPE STANDARD TABLE OF zetr_t_edcus\r\n                            WITH NON-UNIQUE SORTED KEY by_cuspa COMPONENTS cuspa\r\n"
+    "TYPESRC":"mt_custom_parameters  TYPE STANDARD TABLE OF zetr_t_edcus\r\n                            WITH NON-UNIQUE SORTED KEY by_cuspa COMPONENTS cuspa\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS",
@@ -1622,7 +1644,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS",
@@ -1680,7 +1703,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS",
@@ -1738,7 +1762,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS",
@@ -1796,7 +1821,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS",
@@ -1854,7 +1880,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS",
@@ -1912,7 +1939,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EDELIVERY_WS",
@@ -1970,7 +1998,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    }
   ]
  },

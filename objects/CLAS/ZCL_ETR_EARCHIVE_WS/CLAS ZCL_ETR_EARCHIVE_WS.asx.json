@@ -248,7 +248,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EARCHIVE_WS",
@@ -306,7 +307,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EARCHIVE_WS",
@@ -364,7 +366,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EARCHIVE_WS",
@@ -422,7 +425,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":303,
-    "TYPESRC":"BEGIN OF mty_outgoing_document_status.\r\n    TYPES stacd TYPE zetr_e_stacd.\r\n    TYPES staex TYPE zetr_e_staex.\r\n    TYPES rprid TYPE zetr_e_rprid.\r\n    TYPES envui TYPE zetr_e_envui.\r\n    TYPES invui TYPE zetr_e_duich.\r\n    TYPES invno TYPE zetr_e_docno.\r\n    TYPES END OF mty_outgoing_document_status\r\n"
+    "TYPESRC":"BEGIN OF mty_outgoing_document_status.\r\n    TYPES stacd TYPE zetr_e_stacd.\r\n    TYPES staex TYPE zetr_e_staex.\r\n    TYPES rprid TYPE zetr_e_rprid.\r\n    TYPES envui TYPE zetr_e_envui.\r\n    TYPES invui TYPE zetr_e_duich.\r\n    TYPES invno TYPE zetr_e_docno.\r\n    TYPES END OF mty_outgoing_document_status\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EARCHIVE_WS",
@@ -480,7 +484,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":126,
-    "TYPESRC":"BEGIN OF mty_service_header.\r\n    TYPES name TYPE string.\r\n    TYPES value TYPE string.\r\n    TYPES END OF mty_service_header\r\n"
+    "TYPESRC":"BEGIN OF mty_service_header.\r\n    TYPES name TYPE string.\r\n    TYPES value TYPE string.\r\n    TYPES END OF mty_service_header\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EARCHIVE_WS",
@@ -538,7 +543,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":74,
-    "TYPESRC":"mty_service_header_tab TYPE TABLE OF mty_service_header WITH DEFAULT KEY\r\n"
+    "TYPESRC":"mty_service_header_tab TYPE TABLE OF mty_service_header WITH DEFAULT KEY\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EARCHIVE_WS",
@@ -596,7 +602,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":77,
-    "TYPESRC":"mty_taxpayers_list TYPE STANDARD TABLE OF zetr_t_inv_ruser WITH DEFAULT KEY\r\n"
+    "TYPESRC":"mty_taxpayers_list TYPE STANDARD TABLE OF zetr_t_inv_ruser WITH DEFAULT KEY\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EARCHIVE_WS",
@@ -654,7 +661,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":141,
-    "TYPESRC":"mt_custom_parameters  TYPE STANDARD TABLE OF zetr_t_eicus\r\n                            WITH NON-UNIQUE SORTED KEY by_cuspa COMPONENTS cuspa\r\n"
+    "TYPESRC":"mt_custom_parameters  TYPE STANDARD TABLE OF zetr_t_eicus\r\n                            WITH NON-UNIQUE SORTED KEY by_cuspa COMPONENTS cuspa\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EARCHIVE_WS",
@@ -712,7 +720,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EARCHIVE_WS",
@@ -770,7 +779,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EARCHIVE_WS",
@@ -828,7 +838,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EARCHIVE_WS",
@@ -886,7 +897,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EARCHIVE_WS",
@@ -944,7 +956,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EARCHIVE_WS",
@@ -1002,7 +1015,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_ETR_EARCHIVE_WS",
@@ -1060,7 +1074,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    }
   ]
  },

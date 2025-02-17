@@ -29,6 +29,8 @@ authorization master ( global, instance )
   StatusDetail,
   Response,
   TransportType,
+  ReturnedDocumentNumbers,
+  ReturnedDocumentDates,
   TRAStatusCode;
 
   //  mapping for zetr_t_oginv

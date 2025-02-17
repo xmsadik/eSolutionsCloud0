@@ -256,6 +256,22 @@
   ]
  },
  {
+  "table":"DDLX_RT_REFS",
+  "data":
+  [
+   {
+    "DDLXNAME":"ZETR_DDL_E_ARCHIVE_XSLTTEMP",
+    "ELEMENT":"",
+    "NAME":"UI.HEADERINFO.TITLE.VALUE",
+    "PATH":"XSLTTEMPLATE",
+    "REF_OBJECT_TYPE":"STOB",
+    "REF_OBJECT_SUBTYPE":"DOF",
+    "REF_OBJECT_NAME":"ZETR_DDL_P_ARCHIVE_XSLTTEMP",
+    "REF_OBJECT_ELEMENT":"XSLTTEMPLATE"
+   }
+  ]
+ },
+ {
   "table":"TADIR",
   "data":
   [

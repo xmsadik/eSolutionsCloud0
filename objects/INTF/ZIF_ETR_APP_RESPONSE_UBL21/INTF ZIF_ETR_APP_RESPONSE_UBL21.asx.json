@@ -220,7 +220,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":735,
-    "TYPESRC":"BEGIN OF ApplicationResponseType,\r\n      UBLExtensions    TYPE UBLExtensionsType,\r\n      UBLVersionID     TYPE IdentifierType,\r\n      CustomizationID  TYPE IdentifierType,\r\n      ProfileID        TYPE IdentifierType,\r\n      Id               TYPE IdentifierType,\r\n      UUId             TYPE IdentifierType,\r\n      IssueDate        TYPE DateType,\r\n      IssueTime        TYPE TimeType,\r\n      Note             TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      Signature        TYPE STANDARD TABLE OF SignatureType WITH EMPTY KEY,\r\n      SenderParty      TYPE PartyType,\r\n      ReceiverParty    TYPE PartyType,\r\n      DocumentResponse TYPE STANDARD TABLE OF DocumentResponseType WITH EMPTY KEY,\r\n    END OF ApplicationResponseType\r\n"
+    "TYPESRC":"BEGIN OF ApplicationResponseType,\r\n      UBLExtensions    TYPE UBLExtensionsType,\r\n      UBLVersionID     TYPE IdentifierType,\r\n      CustomizationID  TYPE IdentifierType,\r\n      ProfileID        TYPE IdentifierType,\r\n      Id               TYPE IdentifierType,\r\n      UUId             TYPE IdentifierType,\r\n      IssueDate        TYPE DateType,\r\n      IssueTime        TYPE TimeType,\r\n      Note             TYPE STANDARD TABLE OF TextType WITH EMPTY KEY,\r\n      Signature        TYPE STANDARD TABLE OF SignatureType WITH EMPTY KEY,\r\n      SenderParty      TYPE PartyType,\r\n      ReceiverParty    TYPE PartyType,\r\n      DocumentResponse TYPE STANDARD TABLE OF DocumentResponseType WITH EMPTY KEY,\r\n    END OF ApplicationResponseType\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_APP_RESPONSE_UBL21",
@@ -278,7 +279,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_APP_RESPONSE_UBL21",
@@ -336,7 +338,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_APP_RESPONSE_UBL21",
@@ -394,7 +397,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_APP_RESPONSE_UBL21",
@@ -452,7 +456,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_APP_RESPONSE_UBL21",
@@ -510,7 +515,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_APP_RESPONSE_UBL21",
@@ -568,7 +574,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_APP_RESPONSE_UBL21",
@@ -626,7 +633,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_APP_RESPONSE_UBL21",
@@ -684,7 +692,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_APP_RESPONSE_UBL21",
@@ -742,7 +751,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZIF_ETR_APP_RESPONSE_UBL21",
@@ -800,7 +810,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    }
   ]
  },

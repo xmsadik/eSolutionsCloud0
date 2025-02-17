@@ -33,60 +33,6 @@
   ]
  },
  {
-  "table":"DDDDLSRC03NT",
-  "data":
-  [
-   {
-    "DDLNAME":"ZETR_DDL_I_REFDOC_SELECTION",
-    "STRUCOBJN":"ZETR_DDL_I_REFDOC_SELECTION",
-    "NODENAME":".NODE1",
-    "DDLANGUAGE":"E",
-    "AS4LOCAL":"N",
-    "FIELDNAME":"BELNR",
-    "DEPTH":0,
-    "DDTEXT":"Document Number of an Accounting Document",
-    "FIELDLABEL":"",
-    "QUICKINFO":""
-   },
-   {
-    "DDLNAME":"ZETR_DDL_I_REFDOC_SELECTION",
-    "STRUCOBJN":"ZETR_DDL_I_REFDOC_SELECTION",
-    "NODENAME":".NODE1",
-    "DDLANGUAGE":"E",
-    "AS4LOCAL":"N",
-    "FIELDNAME":"BUKRS",
-    "DEPTH":0,
-    "DDTEXT":"Company Code",
-    "FIELDLABEL":"",
-    "QUICKINFO":""
-   },
-   {
-    "DDLNAME":"ZETR_DDL_I_REFDOC_SELECTION",
-    "STRUCOBJN":"ZETR_DDL_I_REFDOC_SELECTION",
-    "NODENAME":".NODE1",
-    "DDLANGUAGE":"E",
-    "AS4LOCAL":"N",
-    "FIELDNAME":"GJAHR",
-    "DEPTH":0,
-    "DDTEXT":"Fiscal Year",
-    "FIELDLABEL":"",
-    "QUICKINFO":""
-   },
-   {
-    "DDLNAME":"ZETR_DDL_I_REFDOC_SELECTION",
-    "STRUCOBJN":"ZETR_DDL_I_REFDOC_SELECTION",
-    "NODENAME":".NODE1",
-    "DDLANGUAGE":"E",
-    "AS4LOCAL":"N",
-    "FIELDNAME":"OBJTYPE",
-    "DEPTH":0,
-    "DDTEXT":"Reference document type",
-    "FIELDLABEL":"",
-    "QUICKINFO":""
-   }
-  ]
- },
- {
   "table":"DDDDLSRCT",
   "data":
   [

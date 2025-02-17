@@ -60,6 +60,17 @@
     "SCRTEXT_S":"Con.date",
     "SCRTEXT_M":"Contract date",
     "SCRTEXT_L":"Contract date"
+   },
+   {
+    "ROLLNAME":"ZETR_E_CONTRDATE",
+    "DDLANGUAGE":"T",
+    "AS4LOCAL":"N",
+    "AS4VERS":0,
+    "DDTEXT":"Kontrat Tarihi",
+    "REPTEXT":"Kontrat Tarihi",
+    "SCRTEXT_S":"Kont.Tar.",
+    "SCRTEXT_M":"Kontrat Tarihi",
+    "SCRTEXT_L":"Kontrat Tarihi"
    }
   ]
  },

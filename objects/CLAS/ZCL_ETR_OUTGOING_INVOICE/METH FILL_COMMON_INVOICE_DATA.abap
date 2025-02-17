@@ -250,4 +250,26 @@
       INTO <ls_document_reference>-issuedate-content
       SEPARATED BY '-'.
     <ls_document_reference>-documenttype-content = 'BELNR'.
+
+    IF ( ms_document-invty = 'IADE' OR ms_document-invty = 'TEVIADE' ) AND
+       ms_invoice_ubl-billingreference IS INITIAL AND
+       ms_document-retdn IS NOT INITIAL.
+      SPLIT ms_document-retdn AT '-' INTO TABLE DATA(lt_return_docnum).
+      SPLIT ms_document-retdd AT '-' INTO TABLE DATA(lt_return_docdat).
+      LOOP AT lt_return_docnum INTO DATA(ls_return_docnum).
+        DATA(lv_index) = sy-tabix.
+        APPEND INITIAL LINE TO ms_invoice_ubl-billingreference ASSIGNING FIELD-SYMBOL(<ls_billingreference>).
+        <ls_billingreference>-invoicedocumentreference-id-content = ls_return_docnum.
+
+        READ TABLE lt_return_docdat INTO DATA(ls_return_docdat) INDEX lv_index.
+        IF sy-subrc = 0.
+          <ls_billingreference>-invoicedocumentreference-issuedate-content = ls_return_docdat+6(4) && '_' &&
+                                                                             ls_return_docdat+3(2) && '_' &&
+                                                                             ls_return_docdat+0(2).
+
+        ENDIF.
+        <ls_billingreference>-invoicedocumentreference-documenttypecode-content = 'IADE'.
+        <ls_billingreference>-invoicedocumentreference-documenttype-content = 'İade Edilen Fatura'.
+      ENDLOOP.
+    ENDIF.
   ENDMETHOD.
