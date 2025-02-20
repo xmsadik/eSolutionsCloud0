@@ -263,8 +263,8 @@
 
         READ TABLE lt_return_docdat INTO DATA(ls_return_docdat) INDEX lv_index.
         IF sy-subrc = 0.
-          <ls_billingreference>-invoicedocumentreference-issuedate-content = ls_return_docdat+6(4) && '_' &&
-                                                                             ls_return_docdat+3(2) && '_' &&
+          <ls_billingreference>-invoicedocumentreference-issuedate-content = ls_return_docdat+4(4) && '-' &&
+                                                                             ls_return_docdat+2(2) && '-' &&
                                                                              ls_return_docdat+0(2).
 
         ENDIF.
