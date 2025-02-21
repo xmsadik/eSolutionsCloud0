@@ -1,13 +1,14 @@
   METHOD if_oo_adt_classrun~main.
-    DATA(lv_doc) = 'F989CF44-BCA6-1EEF-9EF9-2909744831B4'.
-    out->write( 'https://' && zcl_etr_regulative_common=>get_ui_url( ) &&
-                '/sap/opu/odata/sap/ZETR_DDL_D_INCOMING_INV/InvoiceContents(DocumentUUID=guid''' &&
-                lv_doc && ''',ContentType=''PDF'',DocumentType=''INCINVDOC'')/$value' ).
-
-    DATA lv_amount TYPE wrbtr_cs VALUE '100987.23'.
-    DATA lv_date TYPE datum VALUE '20240131'.
-    out->write( |{ lv_amount CURRENCY = 'TRY' NUMBER = USER }| ).
-    out->write( |{ lv_date COUNTRY = 'TR ' }| ).
+  out->write( 'deneme' ).
+*    DATA(lv_doc) = 'F989CF44-BCA6-1EEF-9EF9-2909744831B4'.
+*    out->write( 'https://' && zcl_etr_regulative_common=>get_ui_url( ) &&
+*                '/sap/opu/odata/sap/ZETR_DDL_D_INCOMING_INV/InvoiceContents(DocumentUUID=guid''' &&
+*                lv_doc && ''',ContentType=''PDF'',DocumentType=''INCINVDOC'')/$value' ).
+*
+*    DATA lv_amount TYPE wrbtr_cs VALUE '100987.23'.
+*    DATA lv_date TYPE datum VALUE '20240131'.
+*    out->write( |{ lv_amount CURRENCY = 'TRY' NUMBER = USER }| ).
+*    out->write( |{ lv_date COUNTRY = 'TR ' }| ).
 
 
 *    DATA(Descriptor) = CAST cl_abap_structdescr( cl_abap_datadescr=>describe_by_name( p_name = 'ZETR_DDL_I_INCOMING_INVOICES' ) ).
