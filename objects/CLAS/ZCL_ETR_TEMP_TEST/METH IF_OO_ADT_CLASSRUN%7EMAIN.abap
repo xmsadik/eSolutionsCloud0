@@ -1,5 +1,104 @@
   METHOD if_oo_adt_classrun~main.
-  out->write( 'deneme' ).
+
+    DATA lt_taxpayers TYPE STANDARD TABLE OF zetr_t_inv_ruser.
+    APPEND INITIAL LINE TO lt_taxpayers ASSIGNING FIELD-SYMBOL(<ls_taxpayer>).
+    <ls_taxpayer>-aliass = 'urn:mail:defaultpk@hotmail.com'.
+    <ls_taxpayer>-recno = '001'.
+    <ls_taxpayer>-regdt = '20250121'.
+    <ls_taxpayer>-regtm = '130641'.
+    <ls_taxpayer>-taxid = '31150234526'.
+    <ls_taxpayer>-title = 'BARIŞ AYDIN'.
+    <ls_taxpayer>-txpty = 'OZEL'.
+
+    INSERT zetr_t_inv_ruser FROM TABLE @lt_taxpayers.
+
+
+*    DATA : gr_budat TYPE RANGE OF datum,
+*           gr_belnr TYPE RANGE OF belnr_d.
+*
+*    TYPES: BEGIN OF ty_budat,
+*             sign   TYPE c LENGTH 1,
+*             option TYPE c LENGTH 2,
+*             low    TYPE datum,
+*             high   TYPE datum,
+*           END OF ty_budat.
+*    DATA lr_budat TYPE ty_budat.
+*
+*    DATA(ledger_general) = NEW zcl_etr_ledger_general( ).
+*
+*    lr_budat-option = 'BT'.
+*    lr_budat-sign = 'I'.
+*    lr_budat-low = '20240101'.
+*    lr_budat-high = '20240131'.
+*    APPEND lr_budat TO gr_budat.
+*
+*    DATA(lv_bukrs) = '1000'.
+*    DATA : lv_gjahr TYPE gjahr.
+*    lv_gjahr = '2024'.
+*    DATA : lv_monat TYPE monat.
+*    lv_monat = '01'.
+*
+*    ledger_general->generate_ledger_data(
+*      EXPORTING
+*        i_bukrs  = lv_bukrs
+*        i_bcode  = ' '
+*        i_tsfyd  = ' '
+*        i_ledger = 'X'
+*        tr_budat = gr_budat
+*        tr_belnr = gr_belnr
+*      IMPORTING
+*        te_return = DATA(return)
+*        te_ledger = DATA(ledger)
+*        ).
+*
+*    ledger_general->set_ledger_partial(
+*      i_bukrs = lv_bukrs
+*      i_monat = lv_monat
+*      i_gjahr = lv_gjahr
+*    ).
+*
+*    ledger_general->process_xml_data(
+*      EXPORTING
+*        iv_bukrs       = lv_bukrs
+*        it_budat_range = gr_budat
+*        iv_tsfyd       = ' '
+**        iv_auto        =
+*      IMPORTING
+*        ev_subrc       = DATA(subrc)
+*    ).
+*
+*
+*    ledger_general->send_ledger_to_service(
+*      EXPORTING
+*        iv_bukrs  = lv_bukrs
+*        iv_gjahr  = lv_gjahr
+*        iv_monat  = lv_monat
+*      IMPORTING
+*        ev_return = DATA(ev_return2)
+*        s_subrc   = DATA(s_subrc)
+*        tr_budat  = DATA(tr_budat)
+*        te_return = DATA(return1)
+*    ).
+*
+*    ledger_general->delete_ledger(
+*      EXPORTING
+*        iv_bukrs  = lv_bukrs
+*        iv_gjahr  = lv_gjahr
+*        iv_monat  = lv_monat
+*      RECEIVING
+*        rs_return = DATA(return2)
+*    ).
+*
+*
+*    out->write( return ).
+*    out->write( ledger ).
+*    out->write( return2 ).
+
+
+
+
+
+
 *    DATA(lv_doc) = 'F989CF44-BCA6-1EEF-9EF9-2909744831B4'.
 *    out->write( 'https://' && zcl_etr_regulative_common=>get_ui_url( ) &&
 *                '/sap/opu/odata/sap/ZETR_DDL_D_INCOMING_INV/InvoiceContents(DocumentUUID=guid''' &&
@@ -30,7 +129,6 @@
 *    ENDLOOP.
 *
 *    CHECK sy-subrc = 0.
-
 
 
 
