@@ -13,33 +13,6 @@
       gs_bukrs-maxcr = 5000.
     ENDIF.
 
-    IF gv_bcode IS NOT INITIAL.
-      SELECT SINGLE *
-        FROM zetr_t_sbblg
-       WHERE bukrs = @gv_bukrs
-         AND bcode = @gv_bcode
-       INTO @gs_bcode.
-
-      IF ( gs_bcode-sub_bukrs IS NOT INITIAL AND
-           gs_bcode-sub_gsber IS INITIAL ) OR
-         gs_bcode-btype EQ 'BUKRS'.
-
-        gv_bukrs     = gs_bcode-sub_bukrs.
-        gv_bukrs_tmp = gs_bcode-bukrs.
-
-        gs_bukrs-adress1     = gs_bcode-adress1.
-        gs_bukrs-adress2     = gs_bcode-adress2.
-        gs_bukrs-house_num   = gs_bcode-house_num.
-        gs_bukrs-postal_code = gs_bcode-postal_code.
-        gs_bukrs-city        = gs_bcode-city.
-        gs_bukrs-country_u   = gs_bcode-country.
-        gs_bukrs-tel_number  = gs_bcode-tel_number.
-        gs_bukrs-fax_number  = gs_bcode-fax_number.
-        gs_bukrs-email       = gs_bcode-email.
-        gs_bukrs-creator     = gs_bcode-creator.
-        gs_bukrs-days45      = gs_bcode-days45.
-      ENDIF.
-    ENDIF.
 
     IF gs_bukrs-creator IS INITIAL.
       SELECT SINGLE PersonFullName
@@ -51,7 +24,6 @@
     SELECT SINGLE *
       FROM zetr_t_dopvr
      WHERE bukrs = @gv_bukrs_tmp
-       AND bcode = @gv_bcode
      INTO @gs_params.
 
     SELECT SINGLE companycode AS bukrs,
@@ -83,7 +55,6 @@
     SELECT SINGLE waers
       FROM zetr_t_dopvr
      WHERE bukrs = @gv_bukrs_tmp
-       AND bcode = @gv_bcode
        INTO @gv_waers.
     IF sy-subrc NE 0 OR gv_waers IS INITIAL.
       gv_waers = 'TRY'.
@@ -96,7 +67,8 @@
 
     SELECT GLAccount AS saknr, GLAccountLongName AS txt50
       FROM I_GLAccountText
-     WHERE ChartOfAccounts = @gs_t001-ktopl
+     WHERE Language = 'T' AND
+          ChartOfAccounts = @gs_t001-ktopl
       INTO TABLE @gt_skat.
     IF sy-subrc NE 0 AND gs_bukrs-ktopl IS NOT INITIAL.
       SELECT skat~GLAccount AS saknr, skat~GLAccountLongName AS txt50

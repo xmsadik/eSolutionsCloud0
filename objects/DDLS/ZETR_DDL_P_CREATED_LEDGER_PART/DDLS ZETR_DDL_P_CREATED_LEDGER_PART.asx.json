@@ -9,10 +9,10 @@
     "AS4USER":"SAP_CUSTOMER",
     "AS4DATE":"0000-00-00",
     "AS4TIME":"00:00:00",
-    "SOURCE":"@AccessControl.authorizationCheck: #NOT_REQUIRED\r\n@EndUserText.label: 'Created Ledgers - Parts'\r\n@Metadata.ignorePropagatedAnnotations: true\r\n@Metadata.allowExtensions: true\r\ndefine view entity zetr_ddl_p_created_ledger_part\r\n  as projection on zetr_ddl_i_created_ledger_part\r\n{\r\n  key bukrs,\r\n  key bcode,\r\n  key gjahr,\r\n  key monat,\r\n  key datbi,\r\n  key partn,\r\n      parno,\r\n      datab,\r\n      tsfyd,\r\n      syevno,\r\n      eyevno,\r\n      slinen,\r\n      elinen,\r\n      @Semantics.amount.currencyCode: 'waers'\r\n      debit,\r\n      @Semantics.amount.currencyCode: 'waers'\r\n      credit,\r\n      pdatab,\r\n      pdatbi,\r\n      serok,\r\n      yevok,\r\n      yvbok,\r\n      kebok,\r\n      kbbok,\r\n      gbyok,\r\n      derok,\r\n      gbkok,\r\n      uiyev,\r\n      uikeb,\r\n      uider,\r\n      fssyr,\r\n      fseyr,\r\n      ernam,\r\n      erdat,\r\n      erzet,\r\n      isyvk,\r\n      igyvk,\r\n      iskbk,\r\n      igkbk,\r\n      isgyk,\r\n      iggyk,\r\n      isgkk,\r\n      iggkk,\r\n      manup,\r\n      waers,\r\n      /* Associations */\r\n      _createdLedger : redirected to parent zetr_ddl_p_created_ledger\r\n}\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[\n\"ZETR_DDL_I_CREATED_LEDGER_PART\"\n],\n\"ASSOCIATED\":\n[\n\"ZETR_DDL_I_CREATED_LEDGER\",\n\"ZETR_DDL_P_CREATED_LEDGER\"\n],\n\"BASE\":\n[\n\"ZETR_DDL_I_CREATED_LEDGER_PART\"\n],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
+    "SOURCE":"@AccessControl.authorizationCheck: #NOT_REQUIRED\r\n@EndUserText.label: 'Created Ledgers - Parts'\r\n@Metadata.ignorePropagatedAnnotations: true\r\n@Metadata.allowExtensions: true\r\ndefine view entity zetr_ddl_p_created_ledger_part\r\n  as projection on zetr_ddl_i_created_ledger_part\r\n{\r\n  key     bukrs,\r\n  key     bcode,\r\n  key     gjahr,\r\n  key     monat,\r\n  key     datbi,\r\n  key     partn,\r\n          parno,\r\n          datab,\r\n          tsfyd,\r\n          syevno,\r\n          eyevno,\r\n          slinen,\r\n          elinen,\r\n          @Semantics.amount.currencyCode: 'waers'\r\n          debit,\r\n          @Semantics.amount.currencyCode: 'waers'\r\n          credit,\r\n          pdatab,\r\n          pdatbi,\r\n          serok,\r\n          yevok,\r\n          yvbok,\r\n          kebok,\r\n          kbbok,\r\n          gbyok,\r\n          derok,\r\n          gbkok,\r\n          uiyev,\r\n          uikeb,\r\n          uider,\r\n          fssyr,\r\n          fseyr,\r\n          ernam,\r\n          erdat,\r\n          erzet,\r\n          isyvk,\r\n          igyvk,\r\n          iskbk,\r\n          igkbk,\r\n          isgyk,\r\n          iggyk,\r\n          isgkk,\r\n          iggkk,\r\n          manup,\r\n          Filename,\r\n          @Semantics.mimeType: true\r\n          MimeType,\r\n          @Semantics.largeObject: { mimeType      : 'MimeType',\r\n                                    fileName      : 'Filename',\r\n                                    contentDispositionPreference: #ATTACHMENT }\r\n          Attachment,\r\n          @ObjectModel.virtualElementCalculatedBy: 'ABAP:ZCL_ETR_LEDPAR_CONT_VIREL'\r\n  virtual ContentURL : abap.string(0),\r\n          waers,\r\n          /* Associations */\r\n          _createdLedger : redirected to parent zetr_ddl_p_created_ledger\r\n\r\n}\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[\n\"ZETR_DDL_I_CREATED_LEDGER_PART\"\n],\n\"ASSOCIATED\":\n[\n\"ZETR_DDL_I_CREATED_LEDGER\",\n\"ZETR_DDL_P_CREATED_LEDGER\"\n],\n\"BASE\":\n[\n\"ZETR_DDL_I_CREATED_LEDGER_PART\"\n],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
     "PARENTNAME":"",
     "ACTFLAG":"",
-    "CHGFLAG":"J,WT42Z",
+    "CHGFLAG":"",
     "SOURCE_TYPE":"P",
     "SOURCE_ORIGIN":"0",
     "ABAP_LANGUAGE_VERSION":"5"
@@ -48,6 +48,48 @@
   "table":"DDFIELDANNO",
   "data":
   [
+   {
+    "STRUCOBJN":"ZETR_DDL_P_CREATED_LEDGER_PART",
+    "LFIELDNAME":"ATTACHMENT",
+    "NAME":"SEMANTICS.LARGEOBJECT",
+    "POSITION":9,
+    "VALUE":""
+   },
+   {
+    "STRUCOBJN":"ZETR_DDL_P_CREATED_LEDGER_PART",
+    "LFIELDNAME":"ATTACHMENT",
+    "NAME":"SEMANTICS.LARGEOBJECT.CONTENTDISPOSITIONPREFERENCE",
+    "POSITION":12,
+    "VALUE":"#ATTACHMENT"
+   },
+   {
+    "STRUCOBJN":"ZETR_DDL_P_CREATED_LEDGER_PART",
+    "LFIELDNAME":"ATTACHMENT",
+    "NAME":"SEMANTICS.LARGEOBJECT.FILENAME",
+    "POSITION":11,
+    "VALUE":"'Filename'"
+   },
+   {
+    "STRUCOBJN":"ZETR_DDL_P_CREATED_LEDGER_PART",
+    "LFIELDNAME":"ATTACHMENT",
+    "NAME":"SEMANTICS.LARGEOBJECT.MIMETYPE",
+    "POSITION":10,
+    "VALUE":"'MimeType'"
+   },
+   {
+    "STRUCOBJN":"ZETR_DDL_P_CREATED_LEDGER_PART",
+    "LFIELDNAME":"CONTENTURL",
+    "NAME":"OBJECTMODEL",
+    "POSITION":13,
+    "VALUE":""
+   },
+   {
+    "STRUCOBJN":"ZETR_DDL_P_CREATED_LEDGER_PART",
+    "LFIELDNAME":"CONTENTURL",
+    "NAME":"OBJECTMODEL.VIRTUALELEMENTCALCULATEDBY",
+    "POSITION":14,
+    "VALUE":"'ABAP:ZCL_ETR_LEDPAR_CONT_VIREL'"
+   },
    {
     "STRUCOBJN":"ZETR_DDL_P_CREATED_LEDGER_PART",
     "LFIELDNAME":"CREDIT",
@@ -89,6 +131,20 @@
     "NAME":"ABAPCATALOG.INTERNAL.ISMANDT",
     "POSITION":2,
     "VALUE":""
+   },
+   {
+    "STRUCOBJN":"ZETR_DDL_P_CREATED_LEDGER_PART",
+    "LFIELDNAME":"MIMETYPE",
+    "NAME":"SEMANTICS",
+    "POSITION":7,
+    "VALUE":""
+   },
+   {
+    "STRUCOBJN":"ZETR_DDL_P_CREATED_LEDGER_PART",
+    "LFIELDNAME":"MIMETYPE",
+    "NAME":"SEMANTICS.MIMETYPE",
+    "POSITION":8,
+    "VALUE":"true"
    }
   ]
  },

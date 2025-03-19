@@ -7,9 +7,9 @@
     "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER",
     "VERSION":"A",
     "CHANGED_BY":"SAP_CUSTOMER",
-    "CHANGED_ON":"2024-09-19",
-    "CHANGED_AT":"08:55:58",
-    "UUID":"CF477070255A1EEF9DCC9F8DA9FBE1C1",
+    "CHANGED_ON":"2025-03-18",
+    "CHANGED_AT":"08:18:27",
+    "UUID":"41DA9F4B20AC1FE080FA3219CE7343F1",
     "ABAP_LANGUAGE_VERSION":"5"
    }
   ]
@@ -34,7 +34,7 @@
     "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER",
     "VERSION":"A",
     "UUID":"",
-    "SOURCE":"@Metadata.layer: #CORE\r\n@UI:{\r\nheaderInfo:{\r\n                typeNamePlural: 'Created Ledgers',\r\n                typeName: 'Created Ledger',\r\n                title:{ type: #STANDARD, label: 'Created Ledgers', value: 'monat' }\r\n           }\r\n}\r\nannotate entity zetr_ddl_p_created_ledger with\r\n{\r\n  @UI.facet     : [ { id:              'CreatedLedger',\r\n                 purpose:         #STANDARD,\r\n                 type:            #COLLECTION,\r\n                 label:           'Created Ledger',\r\n                 position:        10 },\r\n               { id:              'Totals',\r\n                 purpose:         #STANDARD,\r\n                 type:            #IDENTIFICATION_REFERENCE,\r\n                 label:           'Ledger Totals',\r\n                 position:        20,\r\n                 targetElement:   '_ledgerTotals' },\r\n               { id:              'Parts',\r\n                 purpose:         #STANDARD,\r\n                 type:            #LINEITEM_REFERENCE,\r\n                 label:           'Ledger Parts',\r\n                 position:        30,\r\n                 targetElement:   '_ledgerParts' } ]\r\n  @UI           : { lineItem:       [ { position: 1, importance: #HIGH } ],\r\n                    identification: [ { position: 1 } ],\r\n                    selectionField: [ { position: 1 } ] }\r\n  @Consumption.filter : {  multipleSelections: true }\r\n  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_CompanyCodeVH', element: 'CompanyCode' }}]\r\n  bukrs;\r\n  @UI           : { lineItem:       [ { position: 2, importance: #HIGH },\r\n                  { type: #FOR_ACTION, dataAction: 'create_ledger', label: 'Create Ledger' } ],                    \r\n                    identification: [ { position: 2 } ],\r\n                    selectionField: [ { position: 2 } ] }\r\n  gjahr;\r\n  @UI           : { lineItem:       [ { position: 3, importance: #HIGH } ],\r\n                    identification: [ { position: 3 } ],\r\n                    selectionField: [ { position: 3 } ] }\r\n  monat;\r\n  @UI           : { lineItem:       [ { position: 4 } ],\r\n                    identification: [ { position: 4 } ] }\r\n  elprc;\r\n  @UI           : { lineItem:       [ { position: 5 } ],\r\n                    identification: [ { position: 5 } ] }\r\n  stldr;\r\n  @UI           : { lineItem:       [ { position: 6 } ],\r\n                    identification: [ { position: 6 } ] }\r\n  etldr;\r\n  @UI           : { lineItem:       [ { position: 7 } ],\r\n                    identification: [ { position: 7 } ] }\r\n  stldd;\r\n  @UI           : { lineItem:       [ { position: 8 } ],\r\n                    identification: [ { position: 8 } ] }\r\n  stsds;\r\n  @UI           : { lineItem:       [ { position: 9 } ],\r\n                    identification: [ { position: 9 } ] }\r\n  etsds;\r\n  @UI           : { lineItem:       [ { position: 10 } ],\r\n                    identification: [ { position: 10 } ] }\r\n  sgbsn;\r\n  @UI           : { lineItem:       [ { position: 11 } ],\r\n                    identification: [ { position: 11 } ] }\r\n  egbsn;\r\n  @UI           : { lineItem:       [ { position: 12 } ],\r\n                    identification: [ { position: 12 } ] }\r\n  dcdrs;\r\n  @UI           : { lineItem:       [ { position: 13 } ],\r\n                    identification: [ { position: 13 } ] }\r\n  heror;\r\n  @UI           : { lineItem:       [ { position: 14 } ],\r\n                    identification: [ { position: 14 } ] }\r\n  manup;\r\n  @UI           : { lineItem:       [ { position: 15 } ],\r\n                    identification: [ { position: 15 } ] }\r\n  ernam;\r\n  @UI           : { lineItem:       [ { position: 16 } ],\r\n                    identification: [ { position: 16 } ] }\r\n  erdat;\r\n  @UI           : { lineItem:       [ { position: 17 } ],\r\n                    identification: [ { position: 17 } ] }\r\n  erzet;\r\n\r\n}"
+    "SOURCE":"@Metadata.layer: #CORE\r\n@UI:{\r\nheaderInfo:{\r\n                typeNamePlural: 'Created Ledgers',\r\n                typeName: 'Created Ledger',\r\n                title:{ type: #STANDARD, label: 'Created Ledgers', value: 'monat' }\r\n           }\r\n}\r\nannotate entity zetr_ddl_p_created_ledger with\r\n{\r\n  @UI.facet     : [ { id:              'CreatedLedger',\r\n                 purpose:         #STANDARD,\r\n                 type:            #COLLECTION,\r\n                 label:           'Created Ledger',\r\n                 position:        10 },\r\n               { id:              'Totals',\r\n                 purpose:         #STANDARD,\r\n                 type:            #IDENTIFICATION_REFERENCE,\r\n                 label:           'Ledger Totals',\r\n                 position:        20,\r\n                 targetElement:   '_ledgerTotals' },\r\n               { id:              'Parts',\r\n                 purpose:         #STANDARD,\r\n                 type:            #LINEITEM_REFERENCE,\r\n                 label:           'Ledger Parts',\r\n                 position:        30,\r\n                 targetElement:   '_ledgerParts' },\r\n               { id:              'Logs',\r\n                 purpose:         #STANDARD,\r\n                 type:            #LINEITEM_REFERENCE,\r\n                 label:           'Ledger Logs',\r\n                 position:        40,\r\n                 targetElement:   '_ledgerLogs' } ]\r\n  @UI           : { lineItem:       [ { position: 1, importance: #HIGH } ],\r\n                    identification: [ { position: 1 } ],\r\n                    selectionField: [ { position: 1 } ] }\r\n  @Consumption.filter : {  multipleSelections: true }\r\n  @Consumption.valueHelpDefinition: [ { entity: { name: 'I_CompanyCodeVH', element: 'CompanyCode' }}]\r\n  bukrs;\r\n  @UI           : { lineItem:       [ { position: 2, importance: #HIGH },\r\n                  { type: #FOR_ACTION, dataAction: 'create_ledger', label: 'Create Ledger' },\r\n                  { type: #FOR_ACTION, dataAction: 'delete_ledger', label: 'Delete Ledger' },\r\n                  { type: #FOR_ACTION, dataAction: 'send_ledger', label: 'Send Ledger' } ],                    \r\n                    identification: [ { position: 2 } ],\r\n                    selectionField: [ { position: 2 } ] }\r\n  gjahr;\r\n  @UI           : { lineItem:       [ { position: 3, importance: #HIGH } ],\r\n                    identification: [ { position: 3 } ],\r\n                    selectionField: [ { position: 3 } ] }\r\n  monat;\r\n  @UI           : { lineItem:       [ { position: 4 } ],\r\n                    identification: [ { position: 4 } ] }\r\n  elprc;\r\n  @UI           : { lineItem:       [ { position: 5 } ],\r\n                    identification: [ { position: 5 } ] }\r\n  stldr;\r\n  @UI           : { lineItem:       [ { position: 6 } ],\r\n                    identification: [ { position: 6 } ] }\r\n  etldr;\r\n  @UI           : { lineItem:       [ { position: 7 } ],\r\n                    identification: [ { position: 7 } ] }\r\n  stldd;\r\n  @UI           : { lineItem:       [ { position: 8 } ],\r\n                    identification: [ { position: 8 } ] }\r\n  stsds;\r\n  @UI           : { lineItem:       [ { position: 9 } ],\r\n                    identification: [ { position: 9 } ] }\r\n  etsds;\r\n  @UI           : { lineItem:       [ { position: 10 } ],\r\n                    identification: [ { position: 10 } ] }\r\n  sgbsn;\r\n  @UI           : { lineItem:       [ { position: 11 } ],\r\n                    identification: [ { position: 11 } ] }\r\n  egbsn;\r\n  @UI           : { lineItem:       [ { position: 12 } ],\r\n                    identification: [ { position: 12 } ] }\r\n  dcdrs;\r\n  @UI           : { lineItem:       [ { position: 13 } ],\r\n                    identification: [ { position: 13 } ] }\r\n  heror;\r\n  @UI           : { lineItem:       [ { position: 14 } ],\r\n                    identification: [ { position: 14 } ] }\r\n  manup;\r\n  @UI           : { lineItem:       [ { position: 15 } ],\r\n                    identification: [ { position: 15 } ] }\r\n  ernam;\r\n  @UI           : { lineItem:       [ { position: 16 } ],\r\n                    identification: [ { position: 16 } ] }\r\n  erdat;\r\n  @UI           : { lineItem:       [ { position: 17 } ],\r\n                    identification: [ { position: 17 } ] }\r\n  erzet;\r\n\r\n}"
    }
   ]
  },
@@ -214,6 +214,48 @@
     "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER",
     "ELEMENT":"BUKRS",
     "NAME":"UI.FACET$3$.TYPE",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"#LINEITEM_REFERENCE"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER",
+    "ELEMENT":"BUKRS",
+    "NAME":"UI.FACET$4$.ID",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'Logs'"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER",
+    "ELEMENT":"BUKRS",
+    "NAME":"UI.FACET$4$.LABEL",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'Ledger Logs'"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER",
+    "ELEMENT":"BUKRS",
+    "NAME":"UI.FACET$4$.POSITION",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"40"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER",
+    "ELEMENT":"BUKRS",
+    "NAME":"UI.FACET$4$.PURPOSE",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"#STANDARD"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER",
+    "ELEMENT":"BUKRS",
+    "NAME":"UI.FACET$4$.TARGETELEMENT",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'_ledgerLogs'"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER",
+    "ELEMENT":"BUKRS",
+    "NAME":"UI.FACET$4$.TYPE",
     "ELEMENT_TYPE":"S",
     "VALUE":"#LINEITEM_REFERENCE"
    },
@@ -402,6 +444,48 @@
    {
     "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER",
     "ELEMENT":"GJAHR",
+    "NAME":"UI.LINEITEM$3$.DATAACTION",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'delete_ledger'"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER",
+    "ELEMENT":"GJAHR",
+    "NAME":"UI.LINEITEM$3$.LABEL",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'Delete Ledger'"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER",
+    "ELEMENT":"GJAHR",
+    "NAME":"UI.LINEITEM$3$.TYPE",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"#FOR_ACTION"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER",
+    "ELEMENT":"GJAHR",
+    "NAME":"UI.LINEITEM$4$.DATAACTION",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'send_ledger'"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER",
+    "ELEMENT":"GJAHR",
+    "NAME":"UI.LINEITEM$4$.LABEL",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'Send Ledger'"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER",
+    "ELEMENT":"GJAHR",
+    "NAME":"UI.LINEITEM$4$.TYPE",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"#FOR_ACTION"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER",
+    "ELEMENT":"GJAHR",
     "NAME":"UI.SELECTIONFIELD$1$.POSITION",
     "ELEMENT_TYPE":"S",
     "VALUE":"2"
@@ -569,9 +653,30 @@
    {
     "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER",
     "DDLANGUAGE":"E",
+    "ELEMENT":"BUKRS",
+    "NAME":"UI.FACET$4$.LABEL",
+    "TEXT":"Ledger Logs"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER",
+    "DDLANGUAGE":"E",
     "ELEMENT":"GJAHR",
     "NAME":"UI.LINEITEM$2$.LABEL",
     "TEXT":"Create Ledger"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER",
+    "DDLANGUAGE":"E",
+    "ELEMENT":"GJAHR",
+    "NAME":"UI.LINEITEM$3$.LABEL",
+    "TEXT":"Delete Ledger"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER",
+    "DDLANGUAGE":"E",
+    "ELEMENT":"GJAHR",
+    "NAME":"UI.LINEITEM$4$.LABEL",
+    "TEXT":"Send Ledger"
    },
    {
     "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER",
@@ -633,8 +738,8 @@
     "EXTENDED_ARTIFACT":"ZETR_DDL_P_CREATED_LEDGER",
     "VARIANT":"",
     "LAYER":1500,
-    "DT_UUID":"CF477070255A1EEF9DCC9F8DA9FBE1C1",
-    "RT_HASH":"09B105AB769C9FC10C155F0C2E7247F07DA10241",
+    "DT_UUID":"41DA9F4B20AC1FE080FA3219CE7343F1",
+    "RT_HASH":"009D6E9BD4081BB4DFD804CC0A1746F1F031AC46",
     "GEN_VERSION":"0",
     "TYPE":"0"
    }
@@ -703,6 +808,26 @@
     "REF_OBJECT_SUBTYPE":"DOF",
     "REF_OBJECT_NAME":"ZETR_DDL_P_CREATED_LEDGER",
     "REF_OBJECT_ELEMENT":"_LEDGERPARTS"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER",
+    "ELEMENT":"BUKRS",
+    "NAME":"UI.FACET$4$.TARGETELEMENT",
+    "PATH":"_LEDGERLOGS",
+    "REF_OBJECT_TYPE":"STOB",
+    "REF_OBJECT_SUBTYPE":"DO",
+    "REF_OBJECT_NAME":"ZETR_DDL_P_CREATED_LEDGER_LOGS",
+    "REF_OBJECT_ELEMENT":""
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER",
+    "ELEMENT":"BUKRS",
+    "NAME":"UI.FACET$4$.TARGETELEMENT",
+    "PATH":"_LEDGERLOGS",
+    "REF_OBJECT_TYPE":"STOB",
+    "REF_OBJECT_SUBTYPE":"DOF",
+    "REF_OBJECT_NAME":"ZETR_DDL_P_CREATED_LEDGER",
+    "REF_OBJECT_ELEMENT":"_LEDGERLOGS"
    }
   ]
  },

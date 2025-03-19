@@ -122,6 +122,12 @@ CLASS zcl_etr_invoice_operations DEFINITION
       RAISING
         zcx_etr_regulative_exception.
 
+    METHODS update_einvoice_users2
+      IMPORTING
+        iv_db_write TYPE abap_boolean DEFAULT abap_true
+      RAISING
+        zcx_etr_regulative_exception.
+
     METHODS accounting_document_check
       IMPORTING
         !is_accountingdocheader TYPE zcl_etr_invoice_exits=>mty_accdoc_header

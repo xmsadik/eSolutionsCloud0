@@ -69,6 +69,8 @@
             WITH es_status-staex(50) es_status-staex+50(50) es_status-staex+100(50) es_status-staex+150(*).
       ELSE.
         ev_integrator_uuid = ls_xml_line-value.
+        ev_invoice_uuid = is_ubl_structure-uuid-content.
+        ev_invoice_no = is_ubl_structure-id-content.
       ENDIF.
     ENDIF.
   ENDMETHOD.

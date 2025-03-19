@@ -29,3 +29,7 @@
         it_xml_table TYPE zcl_etr_regulative_common=>mty_xml_nodes
       CHANGING
         cs_invoice   TYPE zetr_t_icinv.
+
+    METHODS save_registered_taxpayers
+      IMPORTING
+        it_list TYPE zcl_etr_einvoice_ws_efinans=>mty_user_list.

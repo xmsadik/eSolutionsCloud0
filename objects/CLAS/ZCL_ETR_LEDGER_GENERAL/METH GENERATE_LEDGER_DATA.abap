@@ -16,13 +16,13 @@
     set_date( ).
     set_blart( ).
     get_f51_params( ).
+    get_ledger_datas( ).
 
     IF gt_return[] IS NOT INITIAL.
       te_return[] = gt_return[].
       EXIT.
     ENDIF.
 
-    get_ledger_datas( ).
 
     te_return[] = gt_return[].
     te_ledger[] = gt_ledger[].

@@ -1,6 +1,5 @@
   METHOD get_accounts.
     CLEAR:gr_hkont,gr_hkont[],gt_skb1,gt_skb1[].
-
     SELECT ssign AS sign,
            soptn AS option,
            splow AS low,

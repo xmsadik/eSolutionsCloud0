@@ -7,9 +7,9 @@
     "SRVDNAME":"ZETR_DDL_S_INVOICE_USERS",
     "VERSION":"A",
     "CHANGED_BY":"SAP_CUSTOMER",
-    "CHANGED_ON":"2023-10-20",
-    "CHANGED_AT":"07:44:42",
-    "DT_UUID":"C3AC60E0797F1EDE9BE390E82C375E68",
+    "CHANGED_ON":"2025-03-11",
+    "CHANGED_AT":"11:06:36",
+    "DT_UUID":"41DA9F4B20AC1EEFBFCD1CBF5C3803DA",
     "SOURCE_ORIGIN":"0",
     "SRVD_SOURCE_TYPE":"S",
     "ABAP_LANGUAGE_VERSION":"5"
@@ -35,7 +35,7 @@
    {
     "SRVDNAME":"ZETR_DDL_S_INVOICE_USERS",
     "VERSION":"A",
-    "SOURCE":"@EndUserText.label: 'eInvoice Users'\r\ndefine service Zetr_ddl_s_invoice_users {\r\n  expose zetr_ddl_p_invoice_users;\r\n}"
+    "SOURCE":"@EndUserText.label: 'eInvoice Users'\r\ndefine service Zetr_ddl_s_invoice_users {\r\n  expose zetr_ddl_p_invoice_users;\r\n  expose I_CompanyCodeVH;\r\n}"
    }
   ]
  },
@@ -69,6 +69,15 @@
    {
     "SRVDNAME":"ZETR_DDL_S_INVOICE_USERS",
     "SERVICE":"ZETR_DDL_S_INVOICE_USERS",
+    "EXPOSED_ARTIFACT":"I_COMPANYCODEVH",
+    "EXPOSED_ARTIFACT_TYPE":"E",
+    "EXPOSED_ALIAS":"",
+    "EXPOSED_ALIAS_RAW":"",
+    "INCL_SERVICE":""
+   },
+   {
+    "SRVDNAME":"ZETR_DDL_S_INVOICE_USERS",
+    "SERVICE":"ZETR_DDL_S_INVOICE_USERS",
     "EXPOSED_ARTIFACT":"ZETR_DDL_P_INVOICE_USERS",
     "EXPOSED_ARTIFACT_TYPE":"E",
     "EXPOSED_ALIAS":"",
@@ -86,8 +95,8 @@
     "SERVICE":"ZETR_DDL_S_INVOICE_USERS",
     "SERVICE_RAW":"Zetr_ddl_s_invoice_users",
     "SOURCE_TYPE":"S",
-    "DT_UUID":"C3AC60E0797F1EDE9BE390E82C375E68",
-    "RT_HASH":"D0B552C972027D6BB300CAED11D31B33969AA090",
+    "DT_UUID":"41DA9F4B20AC1EEFBFCD1CBF5C3803DA",
+    "RT_HASH":"ED9D82E7CED56D89716AE60C8276ED4F5A8F0C03",
     "GEN_VERSION":"0"
    }
   ]

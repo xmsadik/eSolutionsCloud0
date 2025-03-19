@@ -68,7 +68,7 @@
     "AS4LOCAL":"N",
     "VALPOS":2,
     "AS4VERS":0,
-    "DOMVALUE_L":"SOVOS",
+    "DOMVALUE_L":"KOC",
     "DOMVALUE_H":"",
     "APPVAL":""
    },
@@ -77,7 +77,7 @@
     "AS4LOCAL":"N",
     "VALPOS":3,
     "AS4VERS":0,
-    "DOMVALUE_L":"UYUMSOFT",
+    "DOMVALUE_L":"SOV",
     "DOMVALUE_H":"",
     "APPVAL":""
    },
@@ -86,7 +86,16 @@
     "AS4LOCAL":"N",
     "VALPOS":4,
     "AS4VERS":0,
-    "DOMVALUE_L":"LOGO",
+    "DOMVALUE_L":"HTK",
+    "DOMVALUE_H":"",
+    "APPVAL":""
+   },
+   {
+    "DOMNAME":"ZETR_D_INTID",
+    "AS4LOCAL":"N",
+    "VALPOS":5,
+    "AS4VERS":0,
+    "DOMVALUE_L":"ELG",
     "DOMVALUE_H":"",
     "APPVAL":""
    }
@@ -113,10 +122,10 @@
     "AS4LOCAL":"N",
     "VALPOS":2,
     "AS4VERS":0,
-    "DDTEXT":"Sovos",
+    "DDTEXT":"Koç System",
     "DOMVAL_LD":"",
     "DOMVAL_HD":"",
-    "DOMVALUE_L":"SOVOS"
+    "DOMVALUE_L":"KOC"
    },
    {
     "DOMNAME":"ZETR_D_INTID",
@@ -124,10 +133,10 @@
     "AS4LOCAL":"N",
     "VALPOS":3,
     "AS4VERS":0,
-    "DDTEXT":"Uyumsoft",
+    "DDTEXT":"Sovos",
     "DOMVAL_LD":"",
     "DOMVAL_HD":"",
-    "DOMVALUE_L":"UYUMSOFT"
+    "DOMVALUE_L":"SOV"
    },
    {
     "DOMNAME":"ZETR_D_INTID",
@@ -135,54 +144,21 @@
     "AS4LOCAL":"N",
     "VALPOS":4,
     "AS4VERS":0,
-    "DDTEXT":"Logo",
+    "DDTEXT":"Hızlı Teknoloji",
     "DOMVAL_LD":"",
     "DOMVAL_HD":"",
-    "DOMVALUE_L":"LOGO"
+    "DOMVALUE_L":"HTK"
    },
    {
     "DOMNAME":"ZETR_D_INTID",
-    "DDLANGUAGE":"T",
+    "DDLANGUAGE":"E",
     "AS4LOCAL":"N",
-    "VALPOS":1,
+    "VALPOS":5,
     "AS4VERS":0,
-    "DDTEXT":"eFinans",
+    "DDTEXT":"E-Logo",
     "DOMVAL_LD":"",
     "DOMVAL_HD":"",
-    "DOMVALUE_L":"EFINANS"
-   },
-   {
-    "DOMNAME":"ZETR_D_INTID",
-    "DDLANGUAGE":"T",
-    "AS4LOCAL":"N",
-    "VALPOS":2,
-    "AS4VERS":0,
-    "DDTEXT":"Sovos",
-    "DOMVAL_LD":"",
-    "DOMVAL_HD":"",
-    "DOMVALUE_L":"SOVOS"
-   },
-   {
-    "DOMNAME":"ZETR_D_INTID",
-    "DDLANGUAGE":"T",
-    "AS4LOCAL":"N",
-    "VALPOS":3,
-    "AS4VERS":0,
-    "DDTEXT":"Uyumsoft",
-    "DOMVAL_LD":"",
-    "DOMVAL_HD":"",
-    "DOMVALUE_L":"UYUMSOFT"
-   },
-   {
-    "DOMNAME":"ZETR_D_INTID",
-    "DDLANGUAGE":"T",
-    "AS4LOCAL":"N",
-    "VALPOS":4,
-    "AS4VERS":0,
-    "DDTEXT":"Logo",
-    "DOMVAL_LD":"",
-    "DOMVAL_HD":"",
-    "DOMVALUE_L":"LOGO"
+    "DOMVALUE_L":"ELG"
    }
   ]
  },

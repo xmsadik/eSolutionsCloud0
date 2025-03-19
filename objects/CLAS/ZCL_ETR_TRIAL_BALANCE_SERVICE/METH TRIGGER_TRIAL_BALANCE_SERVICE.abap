@@ -4,11 +4,14 @@
           lv_temp_datum TYPE datum,
           lv_temp_endda TYPE datum.
 
-    get_service_info(  ).
+    SELECT SINGLE *
+      FROM zetr_t_serv_user
+      WHERE service_id = 'TRIBAL'
+      INTO @DATA(service_info).
 
-    DATA(service_info) = VALUE #( mt_users[ 1 ] OPTIONAL ).
-
-    service_info-service_url = 'https://' && zcl_etr_regulative_common=>get_api_url( ) && '/sap/opu/odata/sap/C_TRIALBALANCE_CDS/C_TRIALBALANCE'.
+    IF service_info-service_url IS INITIAL.
+      service_info-service_url = 'https://' && zcl_etr_regulative_common=>get_api_url( ) && '/sap/opu/odata/sap/C_TRIALBALANCE_CDS/C_TRIALBALANCE'.
+    ENDIF.
 
     IF iv_gjahr IS NOT INITIAL AND iv_monat IS NOT INITIAL.
       DATA(lv_filter_begda) = iv_gjahr && '-' && iv_monat && '-01T00:00:00'.

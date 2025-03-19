@@ -23,7 +23,8 @@ CLASS lhc_zetr_ddl_i_invoice_users IMPLEMENTATION.
     IF lv_exists = abap_true.
       TRY.
           DATA(lo_invoice_operations) = zcl_etr_invoice_operations=>factory( iv_company = ls_key-%param-companycode ).
-          DATA(lt_data) = lo_invoice_operations->update_einvoice_users( iv_db_write = abap_true ).
+          lo_invoice_operations->update_einvoice_users2( iv_db_write = abap_true ).
+*          DATA(lt_data) = lo_invoice_operations->update_einvoice_users2( iv_db_write = abap_true ).
 *          DATA lt_old_data TYPE TABLE FOR DELETE zetr_ddl_i_invoice_users.
 *          SELECT *
 *            FROM zetr_ddl_i_invoice_users

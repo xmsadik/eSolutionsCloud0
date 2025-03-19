@@ -56,10 +56,10 @@
     "AS4LOCAL":"N",
     "AS4VERS":0,
     "DDTEXT":"Branch",
-    "REPTEXT":"Branch",
-    "SCRTEXT_S":"Branch",
-    "SCRTEXT_M":"Branch",
-    "SCRTEXT_L":"Branch"
+    "REPTEXT":"Şube Kodu",
+    "SCRTEXT_S":"Şube Kodu",
+    "SCRTEXT_M":"Şube Kodu",
+    "SCRTEXT_L":"Şube Kodu"
    },
    {
     "ROLLNAME":"ZETR_E_BCODE",

@@ -7,9 +7,9 @@
     "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER_PART",
     "VERSION":"A",
     "CHANGED_BY":"SAP_CUSTOMER",
-    "CHANGED_ON":"2024-09-18",
-    "CHANGED_AT":"10:28:25",
-    "UUID":"CF477070255A1EEF9DB5177EC16661BD",
+    "CHANGED_ON":"2025-03-19",
+    "CHANGED_AT":"14:57:22",
+    "UUID":"41DA9F4B20AC1FE0819A4ECF5E2E43F6",
     "ABAP_LANGUAGE_VERSION":"5"
    }
   ]
@@ -34,7 +34,7 @@
     "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER_PART",
     "VERSION":"A",
     "UUID":"",
-    "SOURCE":"@Metadata.layer: #CORE\r\n@UI:{\r\nheaderInfo:{\r\n                typeNamePlural: 'Ledger Parts',\r\n                typeName: 'Ledger Part',\r\n                title:{ type: #STANDARD, label: 'Ledger Parts', value: 'partn' }\r\n           }\r\n}\r\nannotate entity zetr_ddl_p_created_ledger_part with\r\n{\r\n  @UI.hidden     : true\r\n  bukrs;\r\n  @UI.hidden     : true\r\n  bcode;\r\n  @UI.hidden     : true\r\n  gjahr;\r\n  @UI.hidden     : true\r\n  monat;\r\n  @UI            : { lineItem: [ { position: 5 } ] }\r\n  datbi;\r\n  @UI            : { lineItem: [ { position: 6 } ] }\r\n  partn;\r\n  @UI            : { lineItem: [ { position: 7 } ] }\r\n  parno;\r\n  @UI            : { lineItem: [ { position: 8 } ] }\r\n  datab;\r\n  @UI            : { lineItem: [ { position: 9 } ] }\r\n  tsfyd;\r\n  @UI            : { lineItem: [ { position: 10 } ] }\r\n  syevno;\r\n  @UI            : { lineItem: [ { position: 11 } ] }\r\n  eyevno;\r\n  @UI            : { lineItem: [ { position: 12 } ] }\r\n  slinen;\r\n  @UI            : { lineItem: [ { position: 13 } ] }\r\n  elinen;\r\n  @UI            : { lineItem: [ { position: 14 } ] }\r\n  debit;\r\n  @UI            : { lineItem: [ { position: 15 } ] }\r\n  credit;\r\n  @UI            : { lineItem: [ { position: 16 } ] }\r\n  pdatab;\r\n  @UI            : { lineItem: [ { position: 17 } ] }\r\n  pdatbi;\r\n  @UI            : { lineItem: [ { position: 18 } ] }\r\n  serok;\r\n  @UI            : { lineItem: [ { position: 19 } ] }\r\n  yevok;\r\n  @UI            : { lineItem: [ { position: 20 } ] }\r\n  yvbok;\r\n  @UI            : { lineItem: [ { position: 21 } ] }\r\n  kebok;\r\n  @UI            : { lineItem: [ { position: 22 } ] }\r\n  kbbok;\r\n  @UI            : { lineItem: [ { position: 23 } ] }\r\n  gbyok;\r\n  @UI            : { lineItem: [ { position: 24 } ] }\r\n  derok;\r\n  @UI            : { lineItem: [ { position: 25 } ] }\r\n  gbkok;\r\n  @UI            : { lineItem: [ { position: 26 } ] }\r\n  uiyev;\r\n  @UI            : { lineItem: [ { position: 27 } ] }\r\n  uikeb;\r\n  @UI            : { lineItem: [ { position: 28 } ] }\r\n  uider;\r\n  @UI            : { lineItem: [ { position: 29 } ] }\r\n  fssyr;\r\n  @UI            : { lineItem: [ { position: 30 } ] }\r\n  fseyr;\r\n  @UI            : { lineItem: [ { position: 31 } ] }\r\n  ernam;\r\n  @UI            : { lineItem: [ { position: 32 } ] }\r\n  erdat;\r\n  @UI            : { lineItem: [ { position: 33 } ] }\r\n  erzet;\r\n  @UI            : { lineItem: [ { position: 34 } ] }\r\n  isyvk;\r\n  @UI            : { lineItem: [ { position: 35 } ] }\r\n  igyvk;\r\n  @UI            : { lineItem: [ { position: 36 } ] }\r\n  iskbk;\r\n  @UI            : { lineItem: [ { position: 37 } ] }\r\n  igkbk;\r\n  @UI            : { lineItem: [ { position: 38 } ] }\r\n  isgyk;\r\n  @UI            : { lineItem: [ { position: 39 } ] }\r\n  iggyk;\r\n  @UI            : { lineItem: [ { position: 40 } ] }\r\n  isgkk;\r\n  @UI            : { lineItem: [ { position: 41 } ] }\r\n  iggkk;\r\n  @UI            : { lineItem: [ { position: 42 } ] }\r\n  manup;\r\n  @UI.hidden: true\r\n  waers;\r\n}"
+    "SOURCE":"@Metadata.layer: #CORE\r\n@UI:{\r\nheaderInfo:{\r\n                typeNamePlural: 'Ledger Parts',\r\n                typeName: 'Ledger Part',\r\n                title:{ type: #STANDARD, label: 'Ledger Parts', value: 'partn'  }\r\n           }\r\n}\r\nannotate entity zetr_ddl_p_created_ledger_part with\r\n{\r\n  @UI.hidden     : true\r\n  bukrs;\r\n  @UI.hidden     : true\r\n  bcode;\r\n  @UI.hidden     : true\r\n  gjahr;\r\n  @UI.hidden     : true\r\n  monat;\r\n  @UI            : { lineItem: [ { position: 5 } ] }\r\n  datbi;\r\n  @UI            : { lineItem: [ { position: 6 } ] }\r\n  partn;\r\n  @UI            : { lineItem: [ { position: 7 } ] }\r\n  parno;\r\n  @UI            : { lineItem: [ { position: 8 } ] }\r\n  datab;\r\n  @UI            : { lineItem: [ { position: 9 } ] }\r\n  tsfyd;\r\n  @UI            : { lineItem: [ { position: 10 } ] }\r\n  syevno;\r\n  @UI            : { lineItem: [ { position: 11 } ] }\r\n  eyevno;\r\n  @UI            : { lineItem: [ { position: 12 } ] }\r\n  slinen;\r\n  @UI            : { lineItem: [ { position: 13 } ] }\r\n  elinen;\r\n  @UI            : { lineItem: [ { position: 14 } ] }\r\n  debit;\r\n  @UI            : { lineItem: [ { position: 15 } ] }\r\n  credit;\r\n  @UI            : { lineItem: [ { position: 16 } ] }\r\n  pdatab;\r\n  @UI            : { lineItem: [ { position: 17 } ] }\r\n  pdatbi;\r\n  @UI            : { lineItem: [ { position: 18 } ] }\r\n  serok;\r\n  @UI            : { lineItem: [ { position: 19 } ] }\r\n  yevok;\r\n  @UI            : { lineItem: [ { position: 20 } ] }\r\n  yvbok;\r\n  @UI            : { lineItem: [ { position: 21 } ] }\r\n  kebok;\r\n  @UI            : { lineItem: [ { position: 22 } ] }\r\n  kbbok;\r\n  @UI            : { lineItem: [ { position: 23 } ] }\r\n  gbyok;\r\n  @UI            : { lineItem: [ { position: 24 } ] }\r\n  derok;\r\n  @UI            : { lineItem: [ { position: 25 } ] }\r\n  gbkok;\r\n  @UI            : { lineItem: [ { position: 26 } ] }\r\n  uiyev;\r\n  @UI            : { lineItem: [ { position: 27 } ] }\r\n  uikeb;\r\n  @UI            : { lineItem: [ { position: 28 } ] }\r\n  uider;\r\n  @UI            : { lineItem: [ { position: 29 } ] }\r\n  fssyr;\r\n  @UI            : { lineItem: [ { position: 30 } ] }\r\n  fseyr;\r\n  @UI            : { lineItem: [ { position: 31 } ] }\r\n  ernam;\r\n  @UI            : { lineItem: [ { position: 32 } ] }\r\n  erdat;\r\n  @UI            : { lineItem: [ { position: 33 } ] }\r\n  erzet;\r\n  @UI            : { lineItem: [ { position: 34 } ] }\r\n  isyvk;\r\n  @UI            : { lineItem: [ { position: 35 } ] }\r\n  igyvk;\r\n  @UI            : { lineItem: [ { position: 36 } ] }\r\n  iskbk;\r\n  @UI            : { lineItem: [ { position: 37 } ] }\r\n  igkbk;\r\n  @UI            : { lineItem: [ { position: 38 } ] }\r\n  isgyk;\r\n  @UI            : { lineItem: [ { position: 39 } ] }\r\n  iggyk;\r\n  @UI            : { lineItem: [ { position: 40 } ] }\r\n  isgkk;\r\n  @UI            : { lineItem: [ { position: 41 } ] }\r\n  iggkk;\r\n  @UI            : { lineItem: [ { position: 42 } ] }\r\n  manup;\r\n  @UI.hidden: true\r\n  Attachment;\r\n  @UI.hidden: true\r\n  MimeType;\r\n  @UI            : { lineItem: [ { type: #WITH_URL, url: 'ContentURL', position: 4, label: 'Defter' } ] }\r\n  Filename;\r\n  @UI.hidden: true\r\n  ContentURL;\r\n  @UI.hidden: true\r\n  waers;\r\n}"
    }
   ]
  },
@@ -79,6 +79,13 @@
    },
    {
     "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER_PART",
+    "ELEMENT":"ATTACHMENT",
+    "NAME":"UI.HIDDEN",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"true"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER_PART",
     "ELEMENT":"BCODE",
     "NAME":"UI.HIDDEN",
     "ELEMENT_TYPE":"S",
@@ -87,6 +94,13 @@
    {
     "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER_PART",
     "ELEMENT":"BUKRS",
+    "NAME":"UI.HIDDEN",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"true"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER_PART",
+    "ELEMENT":"CONTENTURL",
     "NAME":"UI.HIDDEN",
     "ELEMENT_TYPE":"S",
     "VALUE":"true"
@@ -160,6 +174,34 @@
     "NAME":"UI.LINEITEM$1$.POSITION",
     "ELEMENT_TYPE":"S",
     "VALUE":"11"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER_PART",
+    "ELEMENT":"FILENAME",
+    "NAME":"UI.LINEITEM$1$.LABEL",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'Defter'"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER_PART",
+    "ELEMENT":"FILENAME",
+    "NAME":"UI.LINEITEM$1$.POSITION",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"4"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER_PART",
+    "ELEMENT":"FILENAME",
+    "NAME":"UI.LINEITEM$1$.TYPE",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"#WITH_URL"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER_PART",
+    "ELEMENT":"FILENAME",
+    "NAME":"UI.LINEITEM$1$.URL",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'ContentURL'"
    },
    {
     "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER_PART",
@@ -272,6 +314,13 @@
     "NAME":"UI.LINEITEM$1$.POSITION",
     "ELEMENT_TYPE":"S",
     "VALUE":"42"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER_PART",
+    "ELEMENT":"MIMETYPE",
+    "NAME":"UI.HIDDEN",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"true"
    },
    {
     "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER_PART",
@@ -407,6 +456,13 @@
    },
    {
     "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER_PART",
+    "DDLANGUAGE":"E",
+    "ELEMENT":"FILENAME",
+    "NAME":"UI.LINEITEM$1$.LABEL",
+    "TEXT":"Defter"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER_PART",
     "DDLANGUAGE":"T",
     "ELEMENT":"",
     "NAME":"UI.HEADERINFO.TITLE.LABEL",
@@ -437,8 +493,8 @@
     "EXTENDED_ARTIFACT":"ZETR_DDL_P_CREATED_LEDGER_PART",
     "VARIANT":"",
     "LAYER":1500,
-    "DT_UUID":"CF477070255A1EEF9DB5177EC16661BD",
-    "RT_HASH":"4F9B99F34B9F1C1169D0520E6F72592AB3A7B4AF",
+    "DT_UUID":"41DA9F4B20AC1FE0819A4ECF5E2E43F6",
+    "RT_HASH":"6CE16BE00274451B61390C522EB5F9671CF815F2",
     "GEN_VERSION":"0",
     "TYPE":"0"
    }
@@ -457,6 +513,16 @@
     "REF_OBJECT_SUBTYPE":"DOF",
     "REF_OBJECT_NAME":"ZETR_DDL_P_CREATED_LEDGER_PART",
     "REF_OBJECT_ELEMENT":"PARTN"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER_PART",
+    "ELEMENT":"FILENAME",
+    "NAME":"UI.LINEITEM$1$.URL",
+    "PATH":"CONTENTURL",
+    "REF_OBJECT_TYPE":"STOB",
+    "REF_OBJECT_SUBTYPE":"DOF",
+    "REF_OBJECT_NAME":"ZETR_DDL_P_CREATED_LEDGER_PART",
+    "REF_OBJECT_ELEMENT":"CONTENTURL"
    }
   ]
  },

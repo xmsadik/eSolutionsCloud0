@@ -24,7 +24,7 @@ lock dependent by _CreatedLedger
 authorization dependent by _CreatedLedger
 //etag master <field_name>
 {
-  //  update;
+    update;
   //  delete;
   field ( readonly ) bukrs, gjahr, monat, datbi, partn;
   association _CreatedLedger;
