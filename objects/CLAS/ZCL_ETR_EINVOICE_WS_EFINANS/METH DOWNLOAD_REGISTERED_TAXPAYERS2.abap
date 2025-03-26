@@ -50,12 +50,13 @@
     CALL TRANSFORMATION zetr_inv_userlist_efn
       SOURCE XML lv_taxpayers_xml
       RESULT efaturakayitlikullaniciliste = ls_user_list.
+    SORT ls_user_list-efaturakayitlikullanici BY vkntckn.
 
     DATA lv_taxid TYPE string.
     DATA ls_list_bg TYPE mty_user_list.
     DATA lt_default_aliases TYPE TABLE OF zetr_t_inv_ruser.
 
-    SELECT taxid, aliass
+    SELECT *
       FROM zetr_t_inv_ruser
       WHERE defal = @abap_true
       INTO TABLE @lt_default_aliases.
