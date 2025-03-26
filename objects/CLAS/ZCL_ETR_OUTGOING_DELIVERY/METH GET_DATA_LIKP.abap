@@ -1,9 +1,15 @@
   METHOD get_data_likp.
-    SELECT SINGLE deliverydocument AS vbeln,
-                  deliverydocumenttype AS lfart
-      FROM I_DeliveryDocument
-      WHERE deliverydocument = @ms_document-belnr
-      INTO @ms_outdel_data-likp.
+    SELECT SINGLE DeliveryDocument AS vbeln,
+                  DeliveryDate AS bldat,
+                  CreationDate AS erdat,
+                  CreationTime AS erzet,
+                  DeliveryDocumentType AS lfart,
+                  ShipToParty AS kunnr,
+                  CreatedByUser AS ernam,
+                  overallgoodsmovementstatus AS wbstk
+    FROM I_DeliveryDocument
+    WHERE deliverydocument = @ms_document-belnr
+    INTO @ms_outdel_data-likp.
     CHECK sy-subrc = 0.
 
     SELECT lips~DeliveryDocument AS vbeln,

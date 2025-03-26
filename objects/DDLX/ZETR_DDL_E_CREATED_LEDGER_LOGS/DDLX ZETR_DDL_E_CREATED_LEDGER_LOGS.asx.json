@@ -173,6 +173,27 @@
     "ELEMENT":"",
     "NAME":"UI.HEADERINFO.TYPENAMEPLURAL",
     "TEXT":"Ledger Logs"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER_LOGS",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"",
+    "NAME":"UI.HEADERINFO.TITLE.LABEL",
+    "TEXT":"Defter Logları"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER_LOGS",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"",
+    "NAME":"UI.HEADERINFO.TYPENAME",
+    "TEXT":"Defter Logları"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER_LOGS",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"",
+    "NAME":"UI.HEADERINFO.TYPENAMEPLURAL",
+    "TEXT":"Defter Logları"
    }
   ]
  },

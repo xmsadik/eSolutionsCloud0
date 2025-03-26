@@ -243,6 +243,34 @@
     "ELEMENT":"COMPANYCODE",
     "NAME":"UI.FACET$1$.LABEL",
     "TEXT":"Ref.Doc. Mandatory TRA Doc.Types"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_LEDGER_REFMAN_DOCTY",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"",
+    "NAME":"UI.HEADERINFO.TITLE.LABEL",
+    "TEXT":"Ref.Alanı Zorunlu GİB Blg.Türleri"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_LEDGER_REFMAN_DOCTY",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"",
+    "NAME":"UI.HEADERINFO.TYPENAME",
+    "TEXT":"Ref.Alanı Zorunlu GİB Blg.Türleri"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_LEDGER_REFMAN_DOCTY",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"",
+    "NAME":"UI.HEADERINFO.TYPENAMEPLURAL",
+    "TEXT":"Ref.Alanı Zorunlu GİB Blg.Türleri"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_LEDGER_REFMAN_DOCTY",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"COMPANYCODE",
+    "NAME":"UI.FACET$1$.LABEL",
+    "TEXT":"Ref.Alanı Zorunlu GİB Blg.Türleri"
    }
   ]
  },

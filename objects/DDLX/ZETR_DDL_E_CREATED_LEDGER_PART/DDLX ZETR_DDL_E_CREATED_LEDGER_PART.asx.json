@@ -481,6 +481,13 @@
     "ELEMENT":"",
     "NAME":"UI.HEADERINFO.TYPENAMEPLURAL",
     "TEXT":"Defter Parçaları"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER_PART",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"FILENAME",
+    "NAME":"UI.LINEITEM$1$.LABEL",
+    "TEXT":"Defter"
    }
   ]
  },

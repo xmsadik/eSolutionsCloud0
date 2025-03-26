@@ -18,6 +18,7 @@
              lfart TYPE zetr_e_lfart,
              kunnr TYPE zetr_e_partner,
              ernam TYPE abp_creation_user,
+             wbstk TYPE c LENGTH 1,
            END OF ty_likp,
            BEGIN OF ty_lips,
              posnr TYPE n LENGTH 6,
@@ -50,7 +51,8 @@
                     CreationTime AS erzet,
                     DeliveryDocumentType AS lfart,
                     ShipToParty AS kunnr,
-                    CreatedByUser AS ernam
+                    CreatedByUser AS ernam,
+                    overallgoodsmovementstatus AS wbstk
         FROM i_deliverydocument
         WHERE DeliveryDocument = @iv_belnr
         INTO @ls_likp.
@@ -60,7 +62,7 @@
         WAIT UP TO '0.1' SECONDS.
       ENDIF.
     ENDDO.
-    CHECK ls_likp IS NOT INITIAL.
+    CHECK ls_likp IS NOT INITIAL AND ( ls_likp-wbstk = 'C' OR ls_likp-wbstk IS INITIAL ).
 
     SELECT SINGLE datab, datbi, genid, prfid
       FROM zetr_t_edpar

@@ -29,11 +29,6 @@
     FREE mt_list-efaturakayitlikullanici.
 
     CHECK rt_list IS NOT INITIAL.
-    SELECT taxid, aliass
-      FROM zetr_t_inv_ruser
-      WHERE defal = @abap_true
-      INTO TABLE @DATA(lt_default_aliases).
-    SORT lt_default_aliases BY taxid aliass.
 
     SORT rt_list BY taxid.
     DATA: lv_taxid     TYPE zetr_e_taxid,
@@ -46,8 +41,8 @@
       lv_record_no += 1.
       <ls_taxpayer>-recno = lv_record_no.
 
-      IF lt_default_aliases IS NOT INITIAL.
-        READ TABLE lt_default_aliases
+      IF mt_default_aliases IS NOT INITIAL.
+        READ TABLE mt_default_aliases
             WITH KEY taxid = <ls_taxpayer>-taxid
                      aliass = <ls_taxpayer>-aliass
             BINARY SEARCH

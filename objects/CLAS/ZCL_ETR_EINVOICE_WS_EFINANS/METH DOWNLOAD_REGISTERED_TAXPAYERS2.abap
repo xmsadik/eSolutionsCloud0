@@ -53,10 +53,19 @@
 
     DATA lv_taxid TYPE string.
     DATA ls_list_bg TYPE mty_user_list.
-    delete FROM zetr_t_inv_ruser.
+    DATA lt_default_aliases TYPE TABLE OF zetr_t_inv_ruser.
+
+    SELECT taxid, aliass
+      FROM zetr_t_inv_ruser
+      WHERE defal = @abap_true
+      INTO TABLE @lt_default_aliases.
+
+    DELETE FROM zetr_t_inv_ruser.
+
     LOOP AT ls_user_list-efaturakayitlikullanici INTO DATA(ls_list).
       IF lv_taxid <> ls_list-vkntckn AND lines( ls_list_bg-efaturakayitlikullanici ) > 100000.
-        save_registered_taxpayers( ls_list_bg ).
+        save_registered_taxpayers( it_list = ls_list_bg
+                                   it_defal = lt_default_aliases ).
         CLEAR ls_list_bg.
         FREE ls_list_bg.
       ELSEIF lv_taxid <> ls_list-vkntckn.
@@ -67,7 +76,8 @@
     ENDLOOP.
 
     IF ls_list_bg-efaturakayitlikullanici IS NOT INITIAL.
-      save_registered_taxpayers( ls_list_bg ).
+      save_registered_taxpayers( it_list = ls_list_bg
+                                 it_defal = lt_default_aliases ).
       CLEAR ls_list_bg.
       FREE ls_list_bg.
     ENDIF.

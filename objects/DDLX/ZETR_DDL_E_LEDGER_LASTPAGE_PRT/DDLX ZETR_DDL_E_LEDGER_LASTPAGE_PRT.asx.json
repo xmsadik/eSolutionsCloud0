@@ -173,6 +173,27 @@
     "ELEMENT":"",
     "NAME":"UI.HEADERINFO.TYPENAMEPLURAL",
     "TEXT":"Last Page Entry Parts"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_LEDGER_LASTPAGE_PRT",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"",
+    "NAME":"UI.HEADERINFO.TITLE.LABEL",
+    "TEXT":"Ara Dönem Geçişi Parçalar"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_LEDGER_LASTPAGE_PRT",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"",
+    "NAME":"UI.HEADERINFO.TYPENAME",
+    "TEXT":"Ara Dönem Geçişi Parça"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_LEDGER_LASTPAGE_PRT",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"",
+    "NAME":"UI.HEADERINFO.TYPENAMEPLURAL",
+    "TEXT":"Ara Dönem Geçişi Parçalar"
    }
   ]
  },

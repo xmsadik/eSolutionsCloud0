@@ -32,4 +32,5 @@
 
     METHODS save_registered_taxpayers
       IMPORTING
-        it_list TYPE zcl_etr_einvoice_ws_efinans=>mty_user_list.
+        it_list  TYPE zcl_etr_einvoice_ws_efinans=>mty_user_list
+        it_defal TYPE zcl_etr_einvoice_ws_efinans=>mty_taxpayers_list OPTIONAL.

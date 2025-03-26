@@ -296,6 +296,17 @@
     "DOMVAL_LD":"",
     "DOMVAL_HD":"",
     "DOMVALUE_L":"7"
+   },
+   {
+    "DOMNAME":"ZETR_D_LXML_TYPES",
+    "DDLANGUAGE":"T",
+    "AS4LOCAL":"N",
+    "VALPOS":8,
+    "AS4VERS":0,
+    "DDTEXT":"INT",
+    "DOMVAL_LD":"",
+    "DOMVAL_HD":"",
+    "DOMVALUE_L":"8"
    }
   ]
  },

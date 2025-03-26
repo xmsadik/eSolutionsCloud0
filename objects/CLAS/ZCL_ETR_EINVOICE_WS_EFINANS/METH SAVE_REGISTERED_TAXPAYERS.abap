@@ -4,7 +4,8 @@
 *    DATA lo_process_factory TYPE REF TO if_bgmc_process_factory.
 *    DATA lx_bgmc            TYPE REF TO cx_bgmc.
 
-    DATA(lo_operation) = NEW zcl_etr_save_invoice_users( it_list ).
+    DATA(lo_operation) = NEW zcl_etr_save_invoice_users( it_list = it_list
+                                                         it_defal = it_defal ).
     lo_operation->modify( ).
     lo_operation->save( ).
     CLEAR lo_operation.

@@ -143,7 +143,13 @@ CLASS zcl_etr_outgoing_delivery DEFINITION
 
     TYPES BEGIN OF mty_likp.
     TYPES vbeln TYPE belnr_d.
-    TYPES lfart TYPE c LENGTH 4.
+    TYPES bldat TYPE datum.
+    TYPES erdat TYPE abp_creation_date.
+    TYPES erzet TYPE abp_creation_time.
+    TYPES lfart TYPE zetr_e_lfart.
+    TYPES kunnr TYPE zetr_e_partner.
+    TYPES ernam TYPE abp_creation_user.
+    TYPES wbstk TYPE c LENGTH 1.
     TYPES END OF mty_likp.
 
     TYPES BEGIN OF mty_lips.

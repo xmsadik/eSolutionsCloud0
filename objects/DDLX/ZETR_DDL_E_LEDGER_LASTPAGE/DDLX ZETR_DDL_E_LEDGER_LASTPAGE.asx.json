@@ -341,6 +341,48 @@
     "ELEMENT":"GJAHR",
     "NAME":"UI.LINEITEM$2$.LABEL",
     "TEXT":"Create Ledger"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_LEDGER_LASTPAGE",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"",
+    "NAME":"UI.HEADERINFO.TITLE.LABEL",
+    "TEXT":"Ara Dönem Geçişi"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_LEDGER_LASTPAGE",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"",
+    "NAME":"UI.HEADERINFO.TYPENAME",
+    "TEXT":"Ara Dönem Geçişi"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_LEDGER_LASTPAGE",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"",
+    "NAME":"UI.HEADERINFO.TYPENAMEPLURAL",
+    "TEXT":"Ara Dönem Geçişi"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_LEDGER_LASTPAGE",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"BUKRS",
+    "NAME":"UI.FACET$1$.LABEL",
+    "TEXT":"Oluşturulan Defter"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_LEDGER_LASTPAGE",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"BUKRS",
+    "NAME":"UI.FACET$2$.LABEL",
+    "TEXT":"Defter Parçaları"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_LEDGER_LASTPAGE",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"GJAHR",
+    "NAME":"UI.LINEITEM$2$.LABEL",
+    "TEXT":"Defter Oluştur"
    }
   ]
  },

@@ -341,6 +341,34 @@
     "ELEMENT":"COMPANYCODE",
     "NAME":"UI.FACET$1$.LABEL",
     "TEXT":"Cash Journal Documents"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_LEDGER_CASHDOC",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"",
+    "NAME":"UI.HEADERINFO.TITLE.LABEL",
+    "TEXT":"Kasa Belgeleri"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_LEDGER_CASHDOC",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"",
+    "NAME":"UI.HEADERINFO.TYPENAME",
+    "TEXT":"Kasa Belgeleri"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_LEDGER_CASHDOC",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"",
+    "NAME":"UI.HEADERINFO.TYPENAMEPLURAL",
+    "TEXT":"Kasa Belgeleri"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_LEDGER_CASHDOC",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"COMPANYCODE",
+    "NAME":"UI.FACET$1$.LABEL",
+    "TEXT":"Kasa Belgeleri"
    }
   ]
  },
