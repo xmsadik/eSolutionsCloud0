@@ -62,7 +62,7 @@
         WAIT UP TO '0.1' SECONDS.
       ENDIF.
     ENDDO.
-    CHECK ls_likp IS NOT INITIAL AND ( ls_likp-wbstk = 'C' OR ls_likp-wbstk IS INITIAL ).
+    CHECK ls_likp IS NOT INITIAL." AND ( ls_likp-wbstk = 'C' OR ls_likp-wbstk IS INITIAL ).
 
     SELECT SINGLE datab, datbi, genid, prfid
       FROM zetr_t_edpar
