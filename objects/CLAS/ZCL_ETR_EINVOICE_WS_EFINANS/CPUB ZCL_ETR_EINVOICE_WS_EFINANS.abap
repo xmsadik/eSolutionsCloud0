@@ -208,3 +208,4 @@ CLASS zcl_etr_einvoice_ws_efinans DEFINITION
     METHODS: outgoing_invoice_get_status REDEFINITION.
     METHODS: outgoing_invoice_cancel REDEFINITION.
     METHODS: download_registered_taxpayers2 REDEFINITION.
+    METHODS: download_registered_taxpayers3 REDEFINITION.

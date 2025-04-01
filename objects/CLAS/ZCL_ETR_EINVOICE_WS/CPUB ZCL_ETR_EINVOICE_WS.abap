@@ -61,6 +61,11 @@ CLASS zcl_etr_einvoice_ws DEFINITION
       RAISING
         zcx_etr_regulative_exception .
 
+    METHODS download_registered_taxpayers3
+      ABSTRACT
+      RAISING
+        zcx_etr_regulative_exception .
+
     METHODS outgoing_invoice_download
       ABSTRACT
       IMPORTING

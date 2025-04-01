@@ -495,14 +495,14 @@ CLASS lhc_zetr_ddl_i_outgoing_invoic IMPLEMENTATION.
           WHEN OTHERS.
             CHECK line_exists( lt_auto_mail[ bukrs = InvoiceLine-CompanyCode prfid = 'EFATURA' ] ).
         ENDCASE.
-
+        APPEND VALUE #( name = 'S_DOCUI' t_value = VALUE #( ( sign = 'I' option = 'EQ' low = invoiceline-DocumentUUID ) ) ) TO lt_parameters.
 *        APPEND CORRESPONDING #( InvoiceLine ) TO lt_mail_list.
       ENDLOOP.
       TRY.
-          cl_apj_rt_api=>schedule_job( iv_job_template_name   = 'ZETR_AJT_INVOICE_SEND_MAIL'
-                                       iv_job_text            = 'Send Mail'
-                                       is_start_info          = VALUE #( start_immediately = abap_true )
-                                       it_job_parameter_value = lt_parameters ).
+          cl_apj_rt_api=>schedule_job_commit_immstart( iv_job_template_name   = 'ZETR_AJT_INVOICE_SEND_MAIL'
+                                                       iv_job_text            = 'eSolutions - Send Mail'
+                                                       is_start_info          = VALUE #( start_immediately = abap_true )
+                                                       it_job_parameter_value = lt_parameters ).
         CATCH cx_apj_rt.
       ENDTRY.
 *      send_mail_to_partner( lt_mail_list ).

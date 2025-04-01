@@ -18,7 +18,7 @@
       ENDCASE.
     ENDLOOP.
 
-    IF lt_datum_range IS INITIAL.
+    IF lt_datum_range IS INITIAL AND lt_docui_range IS INITIAL.
       APPEND INITIAL LINE TO lt_datum_range ASSIGNING <ls_datum>.
       <ls_datum>-sign = 'I'.
       <ls_datum>-option = 'BT'.
