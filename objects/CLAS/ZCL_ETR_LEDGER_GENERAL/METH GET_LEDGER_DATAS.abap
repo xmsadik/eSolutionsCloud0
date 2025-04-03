@@ -226,7 +226,42 @@
         AND AccountingDocumentType     IN @gr_blart
       INTO CORRESPONDING FIELDS OF TABLE @lt_bkpf.
 
-    IF lt_bkpf IS INITIAL.
+    IF lt_bkpf IS NOT INITIAL.
+      SELECT CompanyCode, GLAccount, FiscalYear, fiscalPeriod, BusinessArea, AlternativeGLAccount,
+             AccountingDocument, LedgerGLLineItem, PostingDate, DocumentDate,
+             CompanyCodeCurrency, DebitCreditCode, TaxCode, AmountInCompanyCodeCurrency,
+             customer, supplier, FinancialAccountType, DocumentItemText
+        FROM I_JournalEntryItem
+        FOR ALL ENTRIES IN @lt_bkpf  " Use the header table for selection
+        WHERE CompanyCode        = @lt_bkpf-CompanyCode
+          AND AccountingDocument = @lt_bkpf-AccountingDocument
+          AND FiscalYear         = @lt_bkpf-FiscalYear
+        INTO CORRESPONDING FIELDS OF TABLE @lt_bseg. " Store all items here
+
+      " Select customer names
+      SELECT
+      customer,
+        OrganizationBPName1 AS name1,
+        OrganizationBPName2 AS name2
+      FROM
+        I_Customer
+      FOR ALL ENTRIES IN @lt_bseg
+      WHERE
+        Customer = @lt_bseg-customer
+      INTO TABLE @lt_customer_names.
+
+      " Select vendor names
+      SELECT
+      supplier,
+        OrganizationBPName1 AS name1,
+        OrganizationBPName2 AS name2
+      FROM
+        I_Supplier
+      FOR ALL ENTRIES IN @lt_bseg
+      WHERE
+        Supplier = @lt_bseg-supplier
+      INTO TABLE @lt_vendor_names.
+    ELSE.
       gs_return-id = 'ZETR_EDF_MSG'.
       gs_return-type = 'E'.
       gs_return-message = 'Belirtilen yıl ve döneme ait muhasebe kaydı bulunamadı. Lütfen girişlerinizi kontrol edin.'.
@@ -250,17 +285,17 @@
 
       DATA t_bkpf_add TYPE TABLE OF I_JournalEntry.
 
-      SELECT CompanyCode,GLAccount,FiscalYear,fiscalPeriod,BusinessArea,AlternativeGLAccount,
-             AccountingDocument,LedgerGLLineItem,PostingDate,DocumentDate,
-             CompanyCodeCurrency,DebitCreditCode,TaxCode,AmountInCompanyCodeCurrency,
-             customer,supplier,FinancialAccountType,DocumentItemText
-      FROM
-        I_JournalEntryItem
-      WHERE
-        CompanyCode = @ls_bkpf-CompanyCode AND
-        AccountingDocument = @ls_bkpf-AccountingDocument AND
-        FiscalYear = @ls_bkpf-FiscalYear
-      INTO CORRESPONDING FIELDS OF TABLE @lt_bseg.
+*      SELECT CompanyCode,GLAccount,FiscalYear,fiscalPeriod,BusinessArea,AlternativeGLAccount,
+*             AccountingDocument,LedgerGLLineItem,PostingDate,DocumentDate,
+*             CompanyCodeCurrency,DebitCreditCode,TaxCode,AmountInCompanyCodeCurrency,
+*             customer,supplier,FinancialAccountType,DocumentItemText
+*      FROM
+*        I_JournalEntryItem
+*      WHERE
+*        CompanyCode = @ls_bkpf-CompanyCode AND
+*        AccountingDocument = @ls_bkpf-AccountingDocument AND
+*        FiscalYear = @ls_bkpf-FiscalYear
+*      INTO CORRESPONDING FIELDS OF TABLE @lt_bseg.
 
       READ TABLE lt_ex_docs  INTO DATA(ls_ex_docs) WITH KEY belnr = ls_bkpf-AccountingDocument
                                                             gjahr = ls_bkpf-FiscalYear.
@@ -423,46 +458,23 @@
             MODIFY lt_blart_tmp FROM ls_blart_tmp.
           ENDIF.
         ENDLOOP.
-      ENDLOOP.
+*      ENDLOOP.
 
-* Select customer names
-      SELECT
-      customer,
-        OrganizationBPName1 AS name1,
-        OrganizationBPName2 AS name2
-      FROM
-        I_Customer
-      FOR ALL ENTRIES IN @lt_bseg
-      WHERE
-        Customer = @lt_bseg-customer
-      INTO TABLE @lt_customer_names.
 
-* Select vendor names
-      SELECT
-      supplier,
-        OrganizationBPName1 AS name1,
-        OrganizationBPName2 AS name2
-      FROM
-        I_Supplier
-      FOR ALL ENTRIES IN @lt_bseg
-      WHERE
-        Supplier = @lt_bseg-supplier
-      INTO TABLE @lt_vendor_names.
+        READ TABLE Gt_blart INTO DATA(ls_blart) WITH KEY blart = ls_bkpf-accountingdocumenttype.
 
-      READ TABLE Gt_blart INTO DATA(ls_blart) WITH KEY blart = ls_bkpf-accountingdocumenttype.
+        LOOP AT lt_blart_tmp INTO ls_blart_tmp WHERE chcok IS NOT INITIAL.
+          EXIT.
+        ENDLOOP.
+        IF sy-subrc = 0.
+          ls_blart-blart_t = ls_blart_tmp-blart_t.
+          ls_blart-gbtur   = ls_blart_tmp-gbtur.
+          ls_blart-oturu   = ls_blart_tmp-oturu.
+        ENDIF.
 
-      LOOP AT lt_blart_tmp INTO ls_blart_tmp WHERE chcok IS NOT INITIAL.
-        EXIT.
-      ENDLOOP.
-      IF sy-subrc = 0.
-        ls_blart-blart_t = ls_blart_tmp-blart_t.
-        ls_blart-gbtur   = ls_blart_tmp-gbtur.
-        ls_blart-oturu   = ls_blart_tmp-oturu.
-      ENDIF.
-
-      LOOP AT lt_bseg INTO ls_bseg WHERE     CompanyCode        = ls_bkpf-CompanyCode
-                                         AND AccountingDocument = ls_bkpf-AccountingDocument
-                                         AND FiscalYear         = ls_bkpf-FiscalYear.
+*      LOOP AT lt_bseg INTO ls_bseg WHERE     CompanyCode        = ls_bkpf-CompanyCode
+*                                         AND AccountingDocument = ls_bkpf-AccountingDocument
+*                                         AND FiscalYear         = ls_bkpf-FiscalYear.
 
         IF gv_alternative IS INITIAL.
           lv_hkont = |{ ls_bseg-GLAccount ALPHA = OUT }|.
@@ -494,7 +506,6 @@
             bktxt              = ls_bkpf-AccountingDocumentHeaderText
             budat              = ls_bkpf-PostingDate
             bldat              = ls_bkpf-DocumentDate
-
             " Fields from ls_bseg
             hkont              = ls_bseg-GLAccount
             buzei              = ls_bseg-ledgergllineitem
@@ -560,8 +571,6 @@
 
     SORT lt_ledger .
 
-
-
     ls_defcl = VALUE #(
                 " Fields from ls_bkpf
                 bukrs              = ls_bkpf-CompanyCode
@@ -572,7 +581,6 @@
                 erzet              = sy-uzeit
                 elprc              = abap_true
                 ).
-
 
     TRY.
         IF gv_ledger IS INITIAL AND lt_ledger[] IS NOT INITIAL.
