@@ -365,6 +365,168 @@
    },
    {
     "ID":"NA",
+    "OBJECT":"ZETR_EDF_MSG083",
+    "LANGU":"D",
+    "TYP":"E",
+    "DOKVERSION":1,
+    "DOKSTATE":"N",
+    "DOKFORM":"S_DOCU_SHOW",
+    "DOKSTYLE":"S_DOCUS1",
+    "DOKFUSER":"SAP_CUSTOMER",
+    "DOKFRELES":"",
+    "DOKFDATE":"0000-00-00",
+    "DOKFTIME":"00:00:00",
+    "DOKLUSER":"SAP_CUSTOMER",
+    "DOKLRELES":"",
+    "DOKLDATE":"0000-00-00",
+    "DOKLTIME":"00:00:00"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"ZETR_EDF_MSG084",
+    "LANGU":"D",
+    "TYP":"E",
+    "DOKVERSION":1,
+    "DOKSTATE":"N",
+    "DOKFORM":"S_DOCU_SHOW",
+    "DOKSTYLE":"S_DOCUS1",
+    "DOKFUSER":"SAP_CUSTOMER",
+    "DOKFRELES":"",
+    "DOKFDATE":"0000-00-00",
+    "DOKFTIME":"00:00:00",
+    "DOKLUSER":"SAP_CUSTOMER",
+    "DOKLRELES":"",
+    "DOKLDATE":"0000-00-00",
+    "DOKLTIME":"00:00:00"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"ZETR_EDF_MSG085",
+    "LANGU":"D",
+    "TYP":"E",
+    "DOKVERSION":1,
+    "DOKSTATE":"N",
+    "DOKFORM":"S_DOCU_SHOW",
+    "DOKSTYLE":"S_DOCUS1",
+    "DOKFUSER":"SAP_CUSTOMER",
+    "DOKFRELES":"",
+    "DOKFDATE":"0000-00-00",
+    "DOKFTIME":"00:00:00",
+    "DOKLUSER":"SAP_CUSTOMER",
+    "DOKLRELES":"",
+    "DOKLDATE":"0000-00-00",
+    "DOKLTIME":"00:00:00"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"ZETR_EDF_MSG086",
+    "LANGU":"D",
+    "TYP":"E",
+    "DOKVERSION":1,
+    "DOKSTATE":"N",
+    "DOKFORM":"S_DOCU_SHOW",
+    "DOKSTYLE":"S_DOCUS1",
+    "DOKFUSER":"SAP_CUSTOMER",
+    "DOKFRELES":"",
+    "DOKFDATE":"0000-00-00",
+    "DOKFTIME":"00:00:00",
+    "DOKLUSER":"SAP_CUSTOMER",
+    "DOKLRELES":"",
+    "DOKLDATE":"0000-00-00",
+    "DOKLTIME":"00:00:00"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"ZETR_EDF_MSG087",
+    "LANGU":"D",
+    "TYP":"E",
+    "DOKVERSION":1,
+    "DOKSTATE":"N",
+    "DOKFORM":"S_DOCU_SHOW",
+    "DOKSTYLE":"S_DOCUS1",
+    "DOKFUSER":"SAP_CUSTOMER",
+    "DOKFRELES":"",
+    "DOKFDATE":"0000-00-00",
+    "DOKFTIME":"00:00:00",
+    "DOKLUSER":"SAP_CUSTOMER",
+    "DOKLRELES":"",
+    "DOKLDATE":"0000-00-00",
+    "DOKLTIME":"00:00:00"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"ZETR_EDF_MSG088",
+    "LANGU":"D",
+    "TYP":"E",
+    "DOKVERSION":1,
+    "DOKSTATE":"N",
+    "DOKFORM":"S_DOCU_SHOW",
+    "DOKSTYLE":"S_DOCUS1",
+    "DOKFUSER":"SAP_CUSTOMER",
+    "DOKFRELES":"",
+    "DOKFDATE":"0000-00-00",
+    "DOKFTIME":"00:00:00",
+    "DOKLUSER":"SAP_CUSTOMER",
+    "DOKLRELES":"",
+    "DOKLDATE":"0000-00-00",
+    "DOKLTIME":"00:00:00"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"ZETR_EDF_MSG089",
+    "LANGU":"D",
+    "TYP":"E",
+    "DOKVERSION":1,
+    "DOKSTATE":"N",
+    "DOKFORM":"S_DOCU_SHOW",
+    "DOKSTYLE":"S_DOCUS1",
+    "DOKFUSER":"SAP_CUSTOMER",
+    "DOKFRELES":"",
+    "DOKFDATE":"0000-00-00",
+    "DOKFTIME":"00:00:00",
+    "DOKLUSER":"SAP_CUSTOMER",
+    "DOKLRELES":"",
+    "DOKLDATE":"0000-00-00",
+    "DOKLTIME":"00:00:00"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"ZETR_EDF_MSG090",
+    "LANGU":"D",
+    "TYP":"E",
+    "DOKVERSION":1,
+    "DOKSTATE":"N",
+    "DOKFORM":"S_DOCU_SHOW",
+    "DOKSTYLE":"S_DOCUS1",
+    "DOKFUSER":"SAP_CUSTOMER",
+    "DOKFRELES":"",
+    "DOKFDATE":"0000-00-00",
+    "DOKFTIME":"00:00:00",
+    "DOKLUSER":"SAP_CUSTOMER",
+    "DOKLRELES":"",
+    "DOKLDATE":"0000-00-00",
+    "DOKLTIME":"00:00:00"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"ZETR_EDF_MSG091",
+    "LANGU":"D",
+    "TYP":"E",
+    "DOKVERSION":1,
+    "DOKSTATE":"N",
+    "DOKFORM":"S_DOCU_SHOW",
+    "DOKSTYLE":"S_DOCUS1",
+    "DOKFUSER":"SAP_CUSTOMER",
+    "DOKFRELES":"",
+    "DOKFDATE":"0000-00-00",
+    "DOKFTIME":"00:00:00",
+    "DOKLUSER":"SAP_CUSTOMER",
+    "DOKLRELES":"",
+    "DOKLDATE":"0000-00-00",
+    "DOKLTIME":"00:00:00"
+   },
+   {
+    "ID":"NA",
     "OBJECT":"ZETR_EDF_MSG109",
     "LANGU":"D",
     "TYP":"E",
@@ -384,6 +546,42 @@
    {
     "ID":"NA",
     "OBJECT":"ZETR_EDF_MSG113",
+    "LANGU":"D",
+    "TYP":"E",
+    "DOKVERSION":1,
+    "DOKSTATE":"N",
+    "DOKFORM":"S_DOCU_SHOW",
+    "DOKSTYLE":"S_DOCUS1",
+    "DOKFUSER":"SAP_CUSTOMER",
+    "DOKFRELES":"",
+    "DOKFDATE":"0000-00-00",
+    "DOKFTIME":"00:00:00",
+    "DOKLUSER":"SAP_CUSTOMER",
+    "DOKLRELES":"",
+    "DOKLDATE":"0000-00-00",
+    "DOKLTIME":"00:00:00"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"ZETR_EDF_MSG114",
+    "LANGU":"D",
+    "TYP":"E",
+    "DOKVERSION":1,
+    "DOKSTATE":"N",
+    "DOKFORM":"S_DOCU_SHOW",
+    "DOKSTYLE":"S_DOCUS1",
+    "DOKFUSER":"SAP_CUSTOMER",
+    "DOKFRELES":"",
+    "DOKFDATE":"0000-00-00",
+    "DOKFTIME":"00:00:00",
+    "DOKLUSER":"SAP_CUSTOMER",
+    "DOKLRELES":"",
+    "DOKLDATE":"0000-00-00",
+    "DOKLTIME":"00:00:00"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"ZETR_EDF_MSG115",
     "LANGU":"D",
     "TYP":"E",
     "DOKVERSION":1,
@@ -627,6 +825,105 @@
    },
    {
     "ID":"NA",
+    "OBJECT":"ZETR_EDF_MSG083",
+    "LANGU":"D",
+    "TYP":"E",
+    "VERSION":1,
+    "MASTERLANG":"X",
+    "TXTLINES":0,
+    "DOKSTATE":"N",
+    "SELFDEF":"3"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"ZETR_EDF_MSG084",
+    "LANGU":"D",
+    "TYP":"E",
+    "VERSION":1,
+    "MASTERLANG":"X",
+    "TXTLINES":0,
+    "DOKSTATE":"N",
+    "SELFDEF":"3"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"ZETR_EDF_MSG085",
+    "LANGU":"D",
+    "TYP":"E",
+    "VERSION":1,
+    "MASTERLANG":"X",
+    "TXTLINES":0,
+    "DOKSTATE":"N",
+    "SELFDEF":"3"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"ZETR_EDF_MSG086",
+    "LANGU":"D",
+    "TYP":"E",
+    "VERSION":1,
+    "MASTERLANG":"X",
+    "TXTLINES":0,
+    "DOKSTATE":"N",
+    "SELFDEF":"3"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"ZETR_EDF_MSG087",
+    "LANGU":"D",
+    "TYP":"E",
+    "VERSION":1,
+    "MASTERLANG":"X",
+    "TXTLINES":0,
+    "DOKSTATE":"N",
+    "SELFDEF":"3"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"ZETR_EDF_MSG088",
+    "LANGU":"D",
+    "TYP":"E",
+    "VERSION":1,
+    "MASTERLANG":"X",
+    "TXTLINES":0,
+    "DOKSTATE":"N",
+    "SELFDEF":"3"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"ZETR_EDF_MSG089",
+    "LANGU":"D",
+    "TYP":"E",
+    "VERSION":1,
+    "MASTERLANG":"X",
+    "TXTLINES":0,
+    "DOKSTATE":"N",
+    "SELFDEF":"3"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"ZETR_EDF_MSG090",
+    "LANGU":"D",
+    "TYP":"E",
+    "VERSION":1,
+    "MASTERLANG":"X",
+    "TXTLINES":0,
+    "DOKSTATE":"N",
+    "SELFDEF":"3"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"ZETR_EDF_MSG091",
+    "LANGU":"D",
+    "TYP":"E",
+    "VERSION":1,
+    "MASTERLANG":"X",
+    "TXTLINES":0,
+    "DOKSTATE":"N",
+    "SELFDEF":"3"
+   },
+   {
+    "ID":"NA",
     "OBJECT":"ZETR_EDF_MSG109",
     "LANGU":"D",
     "TYP":"E",
@@ -639,6 +936,28 @@
    {
     "ID":"NA",
     "OBJECT":"ZETR_EDF_MSG113",
+    "LANGU":"D",
+    "TYP":"E",
+    "VERSION":1,
+    "MASTERLANG":"X",
+    "TXTLINES":0,
+    "DOKSTATE":"N",
+    "SELFDEF":"3"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"ZETR_EDF_MSG114",
+    "LANGU":"D",
+    "TYP":"E",
+    "VERSION":1,
+    "MASTERLANG":"X",
+    "TXTLINES":0,
+    "DOKSTATE":"N",
+    "SELFDEF":"3"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"ZETR_EDF_MSG115",
     "LANGU":"D",
     "TYP":"E",
     "VERSION":1,
@@ -776,6 +1095,60 @@
    {
     "SPRSL":"E",
     "ARBGB":"ZETR_EDF_MSG",
+    "MSGNR":"083",
+    "TEXT":"&1-&2-&3  Defter oluşturma başarıyla tamamlandı"
+   },
+   {
+    "SPRSL":"E",
+    "ARBGB":"ZETR_EDF_MSG",
+    "MSGNR":"084",
+    "TEXT":"İş başlatıldı: Şirket Kodu: &1 Yıl: &2 Dönem: &3"
+   },
+   {
+    "SPRSL":"E",
+    "ARBGB":"ZETR_EDF_MSG",
+    "MSGNR":"085",
+    "TEXT":"Ayın son günü hesaplanırken hata oluştu."
+   },
+   {
+    "SPRSL":"E",
+    "ARBGB":"ZETR_EDF_MSG",
+    "MSGNR":"086",
+    "TEXT":"Parçalara ayırma işlemi çağrılıyor..."
+   },
+   {
+    "SPRSL":"E",
+    "ARBGB":"ZETR_EDF_MSG",
+    "MSGNR":"087",
+    "TEXT":"XML/CSV işleme çağrılıyor..."
+   },
+   {
+    "SPRSL":"E",
+    "ARBGB":"ZETR_EDF_MSG",
+    "MSGNR":"088",
+    "TEXT":"XML/CSV işleme tamamlandı."
+   },
+   {
+    "SPRSL":"E",
+    "ARBGB":"ZETR_EDF_MSG",
+    "MSGNR":"089",
+    "TEXT":"XML/CSV işleme başarısız oldu."
+   },
+   {
+    "SPRSL":"E",
+    "ARBGB":"ZETR_EDF_MSG",
+    "MSGNR":"090",
+    "TEXT":"&1-&2-&3  Defter oluşturmada hataları nedeniyle sonraki adımlar atlandı"
+   },
+   {
+    "SPRSL":"E",
+    "ARBGB":"ZETR_EDF_MSG",
+    "MSGNR":"091",
+    "TEXT":"&1-&2-&3  Defter oluşturma adımları sırasında hata"
+   },
+   {
+    "SPRSL":"E",
+    "ARBGB":"ZETR_EDF_MSG",
     "MSGNR":"109",
     "TEXT":"Gönderime hazır data bulunamadı."
    },
@@ -784,6 +1157,18 @@
     "ARBGB":"ZETR_EDF_MSG",
     "MSGNR":"113",
     "TEXT":"Defter manuel olarak yüklenmiş olarak kaydedildi."
+   },
+   {
+    "SPRSL":"E",
+    "ARBGB":"ZETR_EDF_MSG",
+    "MSGNR":"114",
+    "TEXT":"&1-&2-&3 Girilen Mali Yıl ve Döneme Ait Kayıt Mevcut, Kayıt oluşturalamaz"
+   },
+   {
+    "SPRSL":"E",
+    "ARBGB":"ZETR_EDF_MSG",
+    "MSGNR":"115",
+    "TEXT":"İş beklenmedik şekilde başarısız oldu"
    }
   ]
  },
@@ -822,154 +1207,231 @@
     "ARBGB":"ZETR_EDF_MSG",
     "MSGNR":"016",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-04-03",
+    "DATUM":"2025-04-09",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"ZETR_EDF_MSG",
     "MSGNR":"029",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-04-03",
+    "DATUM":"2025-04-09",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"ZETR_EDF_MSG",
     "MSGNR":"030",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-04-03",
+    "DATUM":"2025-04-09",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"ZETR_EDF_MSG",
     "MSGNR":"031",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-04-03",
+    "DATUM":"2025-04-09",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"ZETR_EDF_MSG",
     "MSGNR":"034",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-04-03",
+    "DATUM":"2025-04-09",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"ZETR_EDF_MSG",
     "MSGNR":"035",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-04-03",
+    "DATUM":"2025-04-09",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"ZETR_EDF_MSG",
     "MSGNR":"036",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-04-03",
+    "DATUM":"2025-04-09",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"ZETR_EDF_MSG",
     "MSGNR":"037",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-04-03",
+    "DATUM":"2025-04-09",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"ZETR_EDF_MSG",
     "MSGNR":"041",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-04-03",
+    "DATUM":"2025-04-09",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"ZETR_EDF_MSG",
     "MSGNR":"042",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-04-03",
+    "DATUM":"2025-04-09",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"ZETR_EDF_MSG",
     "MSGNR":"045",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-04-03",
+    "DATUM":"2025-04-09",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"ZETR_EDF_MSG",
     "MSGNR":"057",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-04-03",
+    "DATUM":"2025-04-09",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"ZETR_EDF_MSG",
     "MSGNR":"060",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-04-03",
+    "DATUM":"2025-04-09",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"ZETR_EDF_MSG",
     "MSGNR":"062",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-04-03",
+    "DATUM":"2025-04-09",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"ZETR_EDF_MSG",
     "MSGNR":"063",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-04-03",
+    "DATUM":"2025-04-09",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"ZETR_EDF_MSG",
     "MSGNR":"064",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-04-03",
+    "DATUM":"2025-04-09",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"ZETR_EDF_MSG",
     "MSGNR":"071",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-04-03",
+    "DATUM":"2025-04-09",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"ZETR_EDF_MSG",
     "MSGNR":"077",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-04-03",
+    "DATUM":"2025-04-09",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"ZETR_EDF_MSG",
     "MSGNR":"078",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-04-03",
+    "DATUM":"2025-04-09",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"ZETR_EDF_MSG",
     "MSGNR":"082",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-04-03",
+    "DATUM":"2025-04-09",
+    "SELFDEF":"3"
+   },
+   {
+    "ARBGB":"ZETR_EDF_MSG",
+    "MSGNR":"083",
+    "NAME":"SAP_CUSTOMER",
+    "DATUM":"2025-04-09",
+    "SELFDEF":"3"
+   },
+   {
+    "ARBGB":"ZETR_EDF_MSG",
+    "MSGNR":"084",
+    "NAME":"SAP_CUSTOMER",
+    "DATUM":"2025-04-09",
+    "SELFDEF":"3"
+   },
+   {
+    "ARBGB":"ZETR_EDF_MSG",
+    "MSGNR":"085",
+    "NAME":"SAP_CUSTOMER",
+    "DATUM":"2025-04-09",
+    "SELFDEF":"3"
+   },
+   {
+    "ARBGB":"ZETR_EDF_MSG",
+    "MSGNR":"086",
+    "NAME":"SAP_CUSTOMER",
+    "DATUM":"2025-04-09",
+    "SELFDEF":"3"
+   },
+   {
+    "ARBGB":"ZETR_EDF_MSG",
+    "MSGNR":"087",
+    "NAME":"SAP_CUSTOMER",
+    "DATUM":"2025-04-09",
+    "SELFDEF":"3"
+   },
+   {
+    "ARBGB":"ZETR_EDF_MSG",
+    "MSGNR":"088",
+    "NAME":"SAP_CUSTOMER",
+    "DATUM":"2025-04-09",
+    "SELFDEF":"3"
+   },
+   {
+    "ARBGB":"ZETR_EDF_MSG",
+    "MSGNR":"089",
+    "NAME":"SAP_CUSTOMER",
+    "DATUM":"2025-04-09",
+    "SELFDEF":"3"
+   },
+   {
+    "ARBGB":"ZETR_EDF_MSG",
+    "MSGNR":"090",
+    "NAME":"SAP_CUSTOMER",
+    "DATUM":"2025-04-09",
+    "SELFDEF":"3"
+   },
+   {
+    "ARBGB":"ZETR_EDF_MSG",
+    "MSGNR":"091",
+    "NAME":"SAP_CUSTOMER",
+    "DATUM":"2025-04-09",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"ZETR_EDF_MSG",
     "MSGNR":"109",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-04-03",
+    "DATUM":"2025-04-09",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"ZETR_EDF_MSG",
     "MSGNR":"113",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-04-03",
+    "DATUM":"2025-04-09",
+    "SELFDEF":"3"
+   },
+   {
+    "ARBGB":"ZETR_EDF_MSG",
+    "MSGNR":"114",
+    "NAME":"SAP_CUSTOMER",
+    "DATUM":"2025-04-09",
+    "SELFDEF":"3"
+   },
+   {
+    "ARBGB":"ZETR_EDF_MSG",
+    "MSGNR":"115",
+    "NAME":"SAP_CUSTOMER",
+    "DATUM":"2025-04-09",
     "SELFDEF":"3"
    }
   ]

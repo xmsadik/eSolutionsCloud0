@@ -60,6 +60,10 @@
    {
     "OBJECT":"ZETR_ALO_REGULATIVE",
     "SUBOBJECT":"INVOICE_USERS_JOB"
+   },
+   {
+    "OBJECT":"ZETR_ALO_REGULATIVE",
+    "SUBOBJECT":"LEDGER_CREATE_JOB"
    }
   ]
  },
@@ -114,6 +118,12 @@
     "OBJECT":"ZETR_ALO_REGULATIVE",
     "SUBOBJECT":"INVOICE_USERS_JOB",
     "SUBOBJTXT":"Invoice Users Job Log"
+   },
+   {
+    "SPRAS":"E",
+    "OBJECT":"ZETR_ALO_REGULATIVE",
+    "SUBOBJECT":"LEDGER_CREATE_JOB",
+    "SUBOBJTXT":"Ledger Create JOB"
    },
    {
     "SPRAS":"T",
