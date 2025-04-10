@@ -18,7 +18,6 @@
 
 *    lv_bcode = iv_bcode.
 
-
 *    me->calculate_budat_range(
 *      EXPORTING
 *        iv_gjahr = lv_gjahr
@@ -61,7 +60,7 @@
           iv_msgid = 'ZETR_EDF_MSG' ).
 
       ev_subrc = 2.
-      RETURN.
+*      RETURN.
     ENDIF.
 
     " Check for non-processed entries
@@ -75,7 +74,7 @@
         AND gbtur <> @space
       INTO @DATA(lv_has_unprocessed).
 
-    IF lv_has_unprocessed = abap_FALSE."TEST EDİLECEK.
+    IF lv_has_unprocessed = abap_true.
       " Create log entry
 
       create_log(
@@ -88,7 +87,7 @@
           iv_msgid = 'ZETR_EDF_MSG'   ).
 
       ev_subrc = 3.
-      RETURN.
+*      RETURN.
     ENDIF.
 
     " Check for errors in processing history
@@ -112,7 +111,7 @@
         iv_msgty = 'W'
         iv_msgid = 'ZETR_EDF_MSG'  ).
       ev_subrc = 4.
-      RETURN.
+*      RETURN.
     ENDIF.
 
     " For automatic processing, check if chart of accounts is maintained
@@ -166,8 +165,8 @@
                   iv_msgv1 = lv_hkont  ).
             ENDLOOP.
 
-            ev_subrc = 4.
-            RETURN.
+*            ev_subrc = 4.
+*            RETURN.
           ENDIF.
         ENDIF.
       ENDIF.

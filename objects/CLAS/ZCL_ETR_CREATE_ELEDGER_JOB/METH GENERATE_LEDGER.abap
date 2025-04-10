@@ -37,19 +37,10 @@
           lv_last_day  TYPE datum.
     CONCATENATE me->mv_gjahr me->mv_monat '01' INTO lv_first_day.
 
-    TRY.
         ledger_general->last_day_of_months(
           EXPORTING day_in = lv_first_day
           RECEIVING last_day_of_month = lv_last_day
         ).
-      CATCH cx_root INTO DATA(lx_date_error).
-        io_log->add_item( cl_bali_message_setter=>create(
-        severity = if_bali_constants=>c_severity_error
-        id = 'ZETR_EDF_MSG'
-        number = '085' ) ).
-        io_log->add_item( cl_bali_exception_setter=>create( severity = if_bali_constants=>c_severity_error exception = lx_date_error ) ).
-        RAISE EXCEPTION lx_date_error. " Stop job on date calculation error
-    ENDTRY.
 
     lr_budat-low  = lv_first_day.
     lr_budat-high = lv_last_day.
@@ -101,8 +92,7 @@
             io_log->add_item( cl_bali_message_setter=>create(
                                 severity   = if_bali_constants=>c_severity_error
                                 id         = 'ZETR_EDF_MSG' number   = '089' ) )."Hatalı
-            RAISE EXCEPTION TYPE cx_apj_rt. " Stop job on XML processing error
-            RAISE EXCEPTION TYPE cx_apj_rt_content. " Stop job on XML processing error
+
 
           ENDIF.
 
@@ -114,7 +104,7 @@
                                  variable_1 = CONV zetr_e_char50( me->mv_bukrs )
                                  variable_2 = CONV zetr_e_char50( me->mv_gjahr )
                                  variable_3 = CONV zetr_e_char50( me->mv_monat ) ) ).
-          RAISE EXCEPTION TYPE cx_apj_rt. " Stop job if initial data generation failed
+
         ENDIF.
 
       CATCH cx_root INTO DATA(lx_generate_error).
@@ -127,7 +117,7 @@
                               variable_3 = CONV zetr_e_char50( me->mv_monat ) ) ).
 
         io_log->add_item( cl_bali_exception_setter=>create( severity = if_bali_constants=>c_severity_error exception = lx_generate_error ) ).
-        RAISE EXCEPTION lx_generate_error. " Re-throw to mark job as failed
+
     ENDTRY.
 
   ENDMETHOD.

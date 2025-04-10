@@ -542,6 +542,10 @@
           ls_ledger-shkzg_srt = 'B'.
         ENDIF.
 
+        IF ls_ledger-xblnr IS INITIAL AND ls_ledger-gbtur = 'other'.
+          ls_ledger-xblnr  = ls_bseg-AccountingDocument.
+        ENDIF.
+
         IF ls_ledger-kunnr IS NOT INITIAL AND ls_ledger-kname IS INITIAL.
 
           READ TABLE lt_customer_names INTO ls_customer_names WITH KEY customer = ls_ledger-kunnr.
