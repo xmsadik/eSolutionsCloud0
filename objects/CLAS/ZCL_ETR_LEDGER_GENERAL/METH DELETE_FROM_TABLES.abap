@@ -1,5 +1,36 @@
   METHOD delete_from_tables.
+
     DATA: lv_count TYPE i.
+
+    TYPES: BEGIN OF ty_budat,
+             sign   TYPE c LENGTH 1,
+             option TYPE c LENGTH 2,
+             low    TYPE datum,
+             high   TYPE datum,
+           END OF ty_budat.
+    DATA: lr_budat TYPE ty_budat.
+
+    DATA: mv_bukrs TYPE bukrs,
+          mv_monat TYPE monat,
+          mv_gjahr TYPE gjahr.
+    " Prepare date range
+    lr_budat-option = 'BT'.
+    lr_budat-sign = 'I'.
+
+    " Calculate first and last day of the month
+    DATA: lv_first_day TYPE datum,
+          lv_last_day  TYPE datum.
+    CONCATENATE gv_gjahr gv_monat '01' INTO lv_first_day.
+
+    me->last_day_of_months(
+      EXPORTING day_in = lv_first_day
+      RECEIVING last_day_of_month = lv_last_day
+    ).
+
+    lr_budat-low  = lv_first_day.
+    lr_budat-high = lv_last_day.
+    APPEND lr_budat TO gr_budat.
+
 
     " Check if records exist in zetr_t_oldef
     SELECT COUNT(*)

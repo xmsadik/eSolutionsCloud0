@@ -577,8 +577,8 @@
 
     ls_defcl = VALUE #(
                 " Fields from ls_bkpf
-                bukrs              = ls_bkpf-CompanyCode
-                gjahr              = ls_bkpf-FiscalYear
+                bukrs              = gv_bukrs
+                gjahr              = gv_gjahr
                 monat              = gv_monat
                 ernam              = sy-uname
                 erdat              = sy-datum
@@ -590,7 +590,6 @@
         IF gv_ledger IS INITIAL AND lt_ledger[] IS NOT INITIAL.
           INSERT zetr_t_defky FROM TABLE @lt_ledger[].
           INSERT zetr_t_defcl FROM  @ls_defcl.
-
         ELSE.
           APPEND LINES OF lt_ledger TO Gt_ledger.
         ENDIF.
