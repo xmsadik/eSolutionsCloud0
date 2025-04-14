@@ -86,7 +86,7 @@
           iv_msgty = 'W'
           iv_msgid = 'ZETR_EDF_MSG'   ).
 
-      ev_subrc = 3.
+      ev_subrc = 0.
 *      RETURN.
     ENDIF.
 
