@@ -589,7 +589,9 @@
     TRY.
         IF gv_ledger IS INITIAL AND lt_ledger[] IS NOT INITIAL.
           INSERT zetr_t_defky FROM TABLE @lt_ledger[].
+          WAIT UP TO 5 SECONDS.
           INSERT zetr_t_defcl FROM  @ls_defcl.
+          WAIT UP TO 1 SECONDS.
         ELSE.
           APPEND LINES OF lt_ledger TO Gt_ledger.
         ENDIF.

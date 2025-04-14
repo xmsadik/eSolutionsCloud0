@@ -180,13 +180,13 @@
         AND gjahr = @lv_gjahr
         AND monat = @lv_monat
               INTO @ls_defcl.
+    IF sy-subrc = 0.
+      " Update status
+      ls_defcl-stsds = 'X'.
 
-    " Update status
-    ls_defcl-stsds = 'X'.
-
-    " Update the record
-    MODIFY zetr_t_defcl FROM @ls_defcl.
-
+      " Update the record
+      MODIFY zetr_t_defcl FROM @ls_defcl.
+    ENDIF.
     " Return success
     ev_subrc = 0.
 
