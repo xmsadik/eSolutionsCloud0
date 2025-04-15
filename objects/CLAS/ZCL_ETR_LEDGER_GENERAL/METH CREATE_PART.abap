@@ -226,7 +226,7 @@
                 cs_yevno-erdat  = sy-datum.
                 cs_yevno-erzet  = sy-uzeit.
                 cs_yevno-ernam  = sy-uname.
-                INSERT zetr_t_oldef FROM @cs_yevno.
+                MODIFY zetr_t_oldef FROM @cs_yevno.
 
 *        PERFORM set_tosys TABLES t_ledger USING cs_yevno.
 
@@ -468,7 +468,7 @@
                   cs_yevno-erdat  = user_date.
                   cs_yevno-erzet  = user_time.
                   cs_yevno-ernam  = sy-uname.
-                  INSERT zetr_t_oldef FROM @cs_yevno.
+                  MODIFY zetr_t_oldef FROM @cs_yevno.
 
                   " Update sequence numbers for next iteration
                   cs_yevno-slinen = cs_yevno-elinen + 1.
@@ -692,7 +692,7 @@
                 cs_yevno-ernam  = sy-uname.
 
 
-                INSERT zetr_t_oldef FROM @cs_yevno.
+                MODIFY zetr_t_oldef FROM @cs_yevno.
 
 *        PERFORM set_tosys TABLES t_ledger USING cs_yevno.
 
@@ -827,7 +827,7 @@
       cs_yevno-erdat  = sy-datum.
       cs_yevno-erzet  = sy-uzeit.
       cs_yevno-ernam  = sy-uname.
-      INSERT zetr_t_oldef FROM @cs_yevno.
+      MODIFY zetr_t_oldef FROM @cs_yevno.
       UPDATE zetr_t_defcl
        SET etldr = @abap_true
      WHERE bukrs = @gv_bukrs
