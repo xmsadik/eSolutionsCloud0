@@ -227,7 +227,7 @@
                 cs_yevno-erzet  = sy-uzeit.
                 cs_yevno-ernam  = sy-uname.
                 MODIFY zetr_t_oldef FROM @cs_yevno.
-                COMMIT WORK AND WAIT.
+
 *        PERFORM set_tosys TABLES t_ledger USING cs_yevno.
 
                 cs_yevno-slinen = cs_yevno-elinen + 1.
@@ -469,7 +469,7 @@
                   cs_yevno-erzet  = user_time.
                   cs_yevno-ernam  = sy-uname.
                   MODIFY zetr_t_oldef FROM @cs_yevno.
-                  COMMIT WORK AND WAIT.
+
                   " Update sequence numbers for next iteration
                   cs_yevno-slinen = cs_yevno-elinen + 1.
                   cs_yevno-syevno = cs_yevno-eyevno + 1.
@@ -693,7 +693,7 @@
 
 
                 MODIFY zetr_t_oldef FROM @cs_yevno.
-                COMMIT WORK AND WAIT.
+
 *        PERFORM set_tosys TABLES t_ledger USING cs_yevno.
 
                 cs_yevno-slinen = cs_yevno-elinen + 1.
@@ -828,7 +828,7 @@
       cs_yevno-erzet  = sy-uzeit.
       cs_yevno-ernam  = sy-uname.
       MODIFY zetr_t_oldef FROM @cs_yevno.
-      COMMIT WORK AND WAIT.
+
       UPDATE zetr_t_defcl
        SET etldr = @abap_true
      WHERE bukrs = @gv_bukrs
@@ -842,5 +842,5 @@
     ENDIF.
 
 
-
+    COMMIT WORK .
   ENDMETHOD.
