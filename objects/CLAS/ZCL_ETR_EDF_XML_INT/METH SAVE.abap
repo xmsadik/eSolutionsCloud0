@@ -85,7 +85,7 @@
           AND gjahr EQ @iv_gjahr
           AND monat EQ @iv_monat
           AND partn EQ @iv_partn.
-
+        commit work.
       " Daha sonra sadece attachment'ı ayrı update et
       UPDATE zetr_t_oldef SET
           attachment = @lv_filex
@@ -94,7 +94,7 @@
           AND gjahr EQ @iv_gjahr
           AND monat EQ @iv_monat
           AND partn EQ @iv_partn.
-
+        commit work.
 
     ENDIF.
 
