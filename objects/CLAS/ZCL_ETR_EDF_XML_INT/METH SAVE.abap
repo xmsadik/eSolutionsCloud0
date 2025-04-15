@@ -44,6 +44,10 @@
       lv_mime = 'text/csv' . " 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'.
       lv_filename = |{ ls_dihhd-partn }.csv|.
 
+      MODIFY zetr_t_dihhd FROM TABLE @lt_dihhd[].
+      CLEAR ls_dihhd.
+
+
       UPDATE zetr_t_oldef SET     yevok = @abap_true,
                                   yvbok = @abap_true,
                                   kebok = @abap_true,
@@ -61,8 +65,7 @@
                                 AND monat EQ @iv_monat
                                 AND partn EQ @iv_partn.
 
-      MODIFY zetr_t_dihhd FROM TABLE @lt_dihhd[].
-      CLEAR ls_dihhd.
+
     ENDIF.
 
   ENDMETHOD.
