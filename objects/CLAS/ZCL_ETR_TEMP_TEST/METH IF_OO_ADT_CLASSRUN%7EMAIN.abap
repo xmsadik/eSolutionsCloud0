@@ -84,6 +84,9 @@
       " Calculate first and last day of the month
       DATA: lv_first_day TYPE datum,
             lv_last_day  TYPE datum.
+      mv_bukrs = '1000'.
+      mv_monat = '10'.
+      mv_gjahr = '2024'.
       CONCATENATE mv_gjahr mv_monat '01' INTO lv_first_day.
 
       ledger_general->last_day_of_months(
@@ -108,7 +111,7 @@
           te_return = DATA(lt_return)
           te_ledger = DATA(ledger) " Can be removed if not used later
       ).
-      CHECK 1 = 2.
+
       ledger_general->set_ledger_partial(
         i_bukrs = mv_bukrs
         i_monat = mv_monat
@@ -116,7 +119,6 @@
       ).
       " Consider checking for errors from set_ledger_partial if possible
 
-      CHECK 1 = 2.
       ledger_general->process_xml_data(
         EXPORTING
           iv_bukrs       = mv_bukrs
