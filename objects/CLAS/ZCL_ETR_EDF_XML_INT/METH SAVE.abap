@@ -34,7 +34,7 @@
       ls_dihhd-partn = iv_partn.
 
       APPEND ls_dihhd TO lt_dihhd.
-*      CLEAR ls_dihhd.
+
     ENDIF.
 
     IF lines( lt_dihhd ) GT 0.
@@ -47,54 +47,51 @@
       MODIFY zetr_t_dihhd FROM TABLE @lt_dihhd[].
       CLEAR ls_dihhd.
 
-*      UPDATE zetr_t_oldef SET     yevok = @abap_true,
-*                                  yvbok = @abap_true,
-*                                  kebok = @abap_true,
-*                                  kbbok = @abap_true,
-*                                  gbyok = @space,
-*                                  gbkok = @space,
-*                                  derok = @abap_true,
-*                                  serok = @abap_true,
-*                                  filename = @lv_filename,
-*                                  mimetype = @lv_mime,
-*                                  attachment = @lv_filex
-*                              WHERE bukrs EQ @iv_bukrs
-*                                AND bcode EQ @iv_bcode
-*                                AND gjahr EQ @iv_gjahr
-*                                AND monat EQ @iv_monat
-*                                AND partn EQ @iv_partn.
+      UPDATE zetr_t_oldef SET     yevok = @abap_true,
+                                  yvbok = @abap_true,
+                                  kebok = @abap_true,
+                                  kbbok = @abap_true,
+                                  gbyok = @space,
+                                  gbkok = @space,
+                                  derok = @abap_true,
+                                  serok = @abap_true,
+                                  filename = @lv_filename,
+                                  mimetype = @lv_mime,
+                                  attachment = @lv_filex
+                              WHERE bukrs EQ @iv_bukrs
+                                AND bcode EQ @iv_bcode
+                                AND gjahr EQ @iv_gjahr
+                                AND monat EQ @iv_monat
+                                AND partn EQ @iv_partn.
 
-      DATA: lv_filex_len TYPE i.
 
-      lv_filex_len = xstrlen( lv_filex ).
-
-      " İlk önce normal alanları güncelle
-      UPDATE zetr_t_oldef SET
-          yevok = @abap_true,
-          yvbok = @abap_true,
-          kebok = @abap_true,
-          kbbok = @abap_true,
-          gbyok = @space,
-          gbkok = @space,
-          derok = @abap_true,
-          serok = @abap_true,
-          filename = @lv_filename,
-          mimetype = @lv_mime
-        WHERE bukrs EQ @iv_bukrs
-          AND bcode EQ @iv_bcode
-          AND gjahr EQ @iv_gjahr
-          AND monat EQ @iv_monat
-          AND partn EQ @iv_partn.
-        commit work.
-      " Daha sonra sadece attachment'ı ayrı update et
-      UPDATE zetr_t_oldef SET
-          attachment = @lv_filex
-        WHERE bukrs EQ @iv_bukrs
-          AND bcode EQ @iv_bcode
-          AND gjahr EQ @iv_gjahr
-          AND monat EQ @iv_monat
-          AND partn EQ @iv_partn.
-        commit work.
+*      " İlk önce normal alanları güncelle
+*      UPDATE zetr_t_oldef SET
+*          yevok = @abap_true,
+*          yvbok = @abap_true,
+*          kebok = @abap_true,
+*          kbbok = @abap_true,
+*          gbyok = @space,
+*          gbkok = @space,
+*          derok = @abap_true,
+*          serok = @abap_true,
+*          filename = @lv_filename,
+*          mimetype = @lv_mime
+*        WHERE bukrs EQ @iv_bukrs
+*          AND bcode EQ @iv_bcode
+*          AND gjahr EQ @iv_gjahr
+*          AND monat EQ @iv_monat
+*          AND partn EQ @iv_partn.
+*        commit work.
+*      " Daha sonra sadece attachment'ı ayrı update et
+*      UPDATE zetr_t_oldef SET
+*          attachment = @lv_filex
+*        WHERE bukrs EQ @iv_bukrs
+*          AND bcode EQ @iv_bcode
+*          AND gjahr EQ @iv_gjahr
+*          AND monat EQ @iv_monat
+*          AND partn EQ @iv_partn.
+*        commit work.
 
     ENDIF.
 
