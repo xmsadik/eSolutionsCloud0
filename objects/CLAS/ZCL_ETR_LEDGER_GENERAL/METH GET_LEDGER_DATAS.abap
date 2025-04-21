@@ -236,6 +236,7 @@
         WHERE CompanyCode        = @lt_bkpf-CompanyCode
           AND AccountingDocument = @lt_bkpf-AccountingDocument
           AND FiscalYear         = @lt_bkpf-FiscalYear
+          AND Ledger             = @gs_bukrs-rldnr
         INTO CORRESPONDING FIELDS OF TABLE @lt_bseg. " Store all items here
 
       " Select customer names
