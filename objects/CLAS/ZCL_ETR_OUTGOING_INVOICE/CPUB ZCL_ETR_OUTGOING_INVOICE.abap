@@ -85,7 +85,7 @@ CLASS zcl_etr_outgoing_invoice DEFINITION
     TYPES t005u TYPE SORTED TABLE OF mty_t005u WITH UNIQUE KEY land1 bland.
     TYPES bkpf TYPE mty_bkpf.
     TYPES bsec TYPE mty_bsec.
-    TYPES bseg TYPE SORTED TABLE OF mty_bseg WITH UNIQUE KEY buzei
+    TYPES bseg TYPE STANDARD TABLE OF mty_bseg WITH DEFAULT KEY
                                              WITH NON-UNIQUE SORTED KEY by_koart COMPONENTS koart shkzg
                                              WITH NON-UNIQUE SORTED KEY by_hkont COMPONENTS hkont shkzg.
 
