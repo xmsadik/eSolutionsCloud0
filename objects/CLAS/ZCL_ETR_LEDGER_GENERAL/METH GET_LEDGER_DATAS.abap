@@ -565,6 +565,7 @@
         REPLACE ALL OCCURRENCES OF PCRE '[^0-9a-zA-Z\s]' IN ls_ledger-sgtxt WITH ''.
         REPLACE ALL OCCURRENCES OF PCRE '[^0-9a-zA-Z\s]' IN ls_ledger-kname WITH ''.
         REPLACE ALL OCCURRENCES OF PCRE '[^0-9a-zA-Z\s]' IN ls_ledger-lname WITH ''.
+        REPLACE ALL OCCURRENCES OF PCRE '[\n]' IN ls_ledger-sgtxt WITH ''.
 
         APPEND ls_ledger TO lt_ledger.CLEAR ls_ledger.
 
