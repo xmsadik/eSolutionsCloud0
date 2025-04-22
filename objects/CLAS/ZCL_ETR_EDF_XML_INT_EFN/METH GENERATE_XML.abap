@@ -68,23 +68,24 @@
           ENDIF.
         ENDLOOP.
 
+        CONSTANTS lc_mimetype TYPE c LENGTH 50 VALUE 'text/plain; charset=utf-8'.
+*
+*        "Convert string to xstring using transformation
+*        CALL TRANSFORMATION id
+*          SOURCE data = lv_csv_str
+*          RESULT XML lv_xstring.
 
+        lv_xstring = cl_abap_conv_codepage=>create_out( )->convert( lv_csv_str ).
 
-
-
-        "Convert string to xstring using transformation
-        CALL TRANSFORMATION id
-          SOURCE data = lv_csv_str
-          RESULT XML lv_xstring.
 
         "Add BOM for UTF-8
-        ev_filex = lc_bom_utf8 && lv_xstring.
+        ev_filex = lv_xstring.
         ev_ftype = 'CSV'.
 
-
+        "lc_bom_utf8 && *
 
         DATA(lo_conv) = cl_abap_conv_codepage=>create_out( codepage = 'UTF-8' ).
-        ev_rawstring  = lo_conv->convert( source = lv_csv_str ).
+        ev_rawstring  = lo_conv->convert( source = lv_csv_str  ).
         ev_csv_str    = lv_csv_str.
 
 
