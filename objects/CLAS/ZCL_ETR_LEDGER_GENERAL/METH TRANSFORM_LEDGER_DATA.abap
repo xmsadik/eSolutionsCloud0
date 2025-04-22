@@ -345,18 +345,6 @@
       <ls_parts>-uikeb = create_guid( ).
       <ls_parts>-uikeb = create_guid( ).
 
-*      CALL FUNCTION '/ITETR/EDF_CREATE_GUID'
-*        IMPORTING
-*          e_guid = <ls_parts>-uiyev.
-**    WAIT UP TO 1 SECONDS.
-*      CALL FUNCTION '/ITETR/EDF_CREATE_GUID'
-*        IMPORTING
-*          e_guid = <ls_parts>-uikeb.
-**    WAIT UP TO 1 SECONDS.
-*      CALL FUNCTION '/ITETR/EDF_CREATE_GUID'
-*        IMPORTING
-*          e_guid = <ls_parts>-uider.
-
       UPDATE zetr_t_oldef
          SET uiyev = @<ls_parts>-uiyev,
              uikeb = @<ls_parts>-uikeb,
@@ -745,17 +733,18 @@
               SHIFT ls_xml_item-accountsubid LEFT DELETING LEADING space.
               SHIFT ls_xml_item-accountsubid LEFT DELETING LEADING '0'.
               ls_xml_item-accountsubdescription = ls_skat-ChartOfAccountsName.
+              REPLACE ALL OCCURRENCES OF PCRE '[^0-9a-zA-Z\s]' IN ls_xml_item-accountsubdescription WITH ''.
             ENDIF.
           ENDIF.
 
           ls_xml_item-debitamount  = lv_debit.
           ls_xml_item-creditamount = lv_credit.
 
-*          CALL FUNCTION '/ITETR/EDF_EXIT_007'
-*            EXPORTING
-*              is_item     = ls_item
-*            CHANGING
-*              cs_xml_item = ls_xml_item.
+
+
+
+
+
 
           IF gs_params-xhtml IS INITIAL.
             lo_xml_generator->set_item_y( EXPORTING is_item = ls_xml_item ).
