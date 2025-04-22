@@ -79,7 +79,7 @@
 
 
         "Add BOM for UTF-8
-        ev_filex = lv_xstring.
+        ev_filex = lc_bom_utf8 &&  lv_xstring.
         ev_ftype = 'CSV'.
 
         "lc_bom_utf8 && *
