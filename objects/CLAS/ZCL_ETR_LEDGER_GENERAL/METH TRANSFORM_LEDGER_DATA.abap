@@ -72,7 +72,7 @@
     DATA ls_items                    TYPE zetr_t_defky.
     DATA lv_belnr                    TYPE zetr_t_defky-belnr.
     DATA lt_skat                     TYPE TABLE OF I_ChartOfAccountsText.
-    DATA ls_skat                     TYPE I_ChartOfAccountsText.
+    DATA ls_skat                     TYPE ty_skat.
     DATA lv_ktopl                    TYPE I_CompanyCode-ChartOfAccounts.
     DATA lv_filename                 TYPE string.
     DATA lv_zipped_file              TYPE xstring.
@@ -732,7 +732,7 @@
               ls_xml_item-accountsubid = ls_item-hkont.
               SHIFT ls_xml_item-accountsubid LEFT DELETING LEADING space.
               SHIFT ls_xml_item-accountsubid LEFT DELETING LEADING '0'.
-              ls_xml_item-accountsubdescription = ls_skat-ChartOfAccountsName.
+              ls_xml_item-accountsubdescription = ls_skat-txt50.
               REPLACE ALL OCCURRENCES OF PCRE '[^0-9a-zA-Z\s]' IN ls_xml_item-accountsubdescription WITH ''.
             ENDIF.
           ENDIF.

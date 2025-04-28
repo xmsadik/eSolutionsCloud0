@@ -13,4 +13,6 @@
       FROM I_GLAccountInCompanyCode
      WHERE CompanyCode = @gv_bukrs
      INTO CORRESPONDING FIELDS OF TABLE @gt_skb1.
+
+
   ENDMETHOD.
