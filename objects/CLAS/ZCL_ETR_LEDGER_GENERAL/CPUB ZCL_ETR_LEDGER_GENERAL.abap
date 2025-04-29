@@ -155,6 +155,27 @@ CLASS zcl_etr_ledger_general DEFINITION
            END OF ts_api_return.
     TYPES: tt_budat_range TYPE STANDARD TABLE OF ty_budat_range WITH DEFAULT KEY.
 
+    TYPES: BEGIN OF ty_bkpf,
+             CompanyCode                  TYPE bukrs,
+             AccountingDocument           TYPE belnr_d,
+             FiscalYear                   TYPE gjahr,
+             accountingdocumenttype       TYPE blart,
+             ReferenceDocumentType        TYPE c LENGTH 5,
+             OriginalReferenceDocument    TYPE c LENGTH 20,
+             ReverseDocument              TYPE belnr_d,
+             DocumentReferenceID          TYPE xblnr1,
+             AccountingDocumentCategory   TYPE zetr_e_bstat,
+             TransactionCode              TYPE tcode,
+             AccountingDocumentHeaderText TYPE bktxt,
+             PostingDate                  TYPE budat,
+             DocumentDate                 TYPE bldat,
+             Ledger                       TYPE fins_ledger,
+           END OF ty_bkpf.
+
+    TYPES: t_bkpf  TYPE SORTED TABLE OF ty_bkpf
+                WITH UNIQUE KEY CompanyCode AccountingDocument FiscalYear
+                              AccountingDocumentCategory ReferenceDocumentType.
+
     CLASS-METHODS:
       factory
         IMPORTING

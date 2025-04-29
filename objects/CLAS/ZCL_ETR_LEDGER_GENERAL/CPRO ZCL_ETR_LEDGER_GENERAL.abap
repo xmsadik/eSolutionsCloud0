@@ -12,6 +12,7 @@
       set_blart,
       get_f51_params,
       get_ledger_datas,
+      create_ledger CHANGING t_bkpf TYPE t_bkpf ,
 
       modify_partial_ledger,
       transform_ledger_data,
