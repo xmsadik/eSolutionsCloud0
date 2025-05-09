@@ -14,10 +14,10 @@
         " Create HTTP client
         mo_client = cl_web_http_client_manager=>create_by_http_destination( lo_destination ).
 
-
-        " Close HTTP client
-*        mo_client->close( ).
-
+*        " Close HTTP client
+*        IF mo_client IS BOUND.
+*          mo_client->close( ).
+*        ENDIF.
       CATCH cx_http_dest_provider_error INTO DATA(lx_dest_provider_error).
 
       CATCH cx_web_http_client_error INTO DATA(lx_web_http_client_error).

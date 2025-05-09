@@ -74,4 +74,14 @@
       RECEIVING
         rs_msg_response = rs_msg_response.
 
+    " Close HTTP client
+    IF mo_client IS BOUND.
+      TRY.
+          mo_client->close( ).
+        CATCH cx_web_http_client_error INTO DATA(lx_close_error).
+          " Log or handle close error
+      ENDTRY.
+
+    ENDIF.
+
   ENDMETHOD.
