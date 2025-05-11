@@ -244,14 +244,16 @@
           CHANGING
             t_bkpf = lt_bkpf_send
         ).
+
       ENDIF.
 
-      IF lv_count_send IS NOT INITIAL.
+      IF lv_count_send IS NOT INITIAL .
         me->create_ledger(
           CHANGING
             t_bkpf = lt_bkpf_send
         ).
       ENDIF.
+
 
       CLEAR : lv_count_send, lt_bkpf_send, lt_bkpf_send[].
 

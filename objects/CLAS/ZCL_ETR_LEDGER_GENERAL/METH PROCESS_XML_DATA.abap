@@ -63,7 +63,7 @@
 *      RETURN.
     ENDIF.
 
-    " Check for non-processed entries
+*    " Check for non-processed entries
     SELECT SINGLE @abap_true
       FROM zetr_t_defky
       WHERE bukrs = @lv_bukrs
