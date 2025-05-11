@@ -418,68 +418,102 @@ CLASS lhc_zetr_ddl_i_created_ledger IMPLEMENTATION.
   ENDMETHOD.
 
   METHOD send_ledger.
-    " Data declarations
-    DATA: ls_reported TYPE RESPONSE FOR REPORTED zetr_ddl_i_created_ledger.
-    DATA(ledger_general) = NEW zcl_etr_ledger_general( ).
-    " Read selection parameters
+
+    DATA: lt_job_parameter     TYPE cl_apj_rt_api=>tt_job_parameter_value,
+          lv_job_text          TYPE cl_apj_rt_api=>ty_job_text,
+          lv_has_error_message TYPE abap_boolean,
+          ls_reported          TYPE RESPONSE FOR REPORTED zetr_ddl_i_created_ledger.
+
+    " Parametreleri Oku
     READ ENTITIES OF zetr_ddl_i_created_ledger IN LOCAL MODE
         ENTITY CreatedLedger
         ALL FIELDS WITH CORRESPONDING #( keys )
         RESULT DATA(lt_params).
 
-    " Get the first parameter record
+    " İlk parametre kaydını al
     DATA(ls_params) = VALUE #( keys[ 1 ]-%key DEFAULT VALUE #( ) ).
 
     TRY.
-        ledger_general->send_ledger_to_service(
-          EXPORTING
-           iv_bukrs  = ls_params-bukrs
-           iv_gjahr  = ls_params-gjahr
-           iv_monat  = ls_params-monat
-          IMPORTING
-            ev_return = DATA(return_message)
+        " İş Parametrelerini Hazırla
+        lt_job_parameter = VALUE cl_apj_rt_api=>tt_job_parameter_value(
+            ( name = 'P_BUKRS' t_value = VALUE cl_apj_rt_api=>tt_value_range( ( sign = 'I' option = 'EQ' low = ls_params-bukrs ) ) )
+            ( name = 'P_GJAHR' t_value = VALUE cl_apj_rt_api=>tt_value_range( ( sign = 'I' option = 'EQ' low = ls_params-gjahr ) ) )
+            ( name = 'P_MONAT' t_value = VALUE cl_apj_rt_api=>tt_value_range( ( sign = 'I' option = 'EQ' low = ls_params-monat ) ) )
         ).
 
-        " Process messages
-        CASE return_message-type.
-          WHEN 'S'. " Success
-            APPEND VALUE #( %msg = new_message_with_text(
-                           severity = if_abap_behv_message=>severity-success
-                           text     = return_message-message )
-                         %element-bukrs = if_abap_behv=>mk-on )
-              TO ls_reported-createdledger.
-          WHEN 'E'. " Error
-            APPEND VALUE #( %msg = new_message_with_text(
+        " İş Metnini Hazırla
+        lv_job_text = |E-Defter Gönderim: { ls_params-bukrs }/{ ls_params-gjahr }/{ ls_params-monat }|.
+
+        " İşi Zamanla
+        cl_apj_rt_api=>schedule_job(
+          EXPORTING
+            iv_job_template_name = 'ZETR_ELEDGER_SEND_JT'
+            iv_job_text          = lv_job_text
+            it_job_parameter_value = lt_job_parameter
+            is_start_info        = VALUE #( start_immediately = abap_true )
+          IMPORTING
+            ev_jobname           = DATA(lv_jobname)
+            ev_jobcount          = DATA(lv_jobcount)
+            et_message           = DATA(lt_message)
+        ).
+
+        " Mesajları İşle
+        lv_has_error_message = abap_false.
+        LOOP AT lt_message INTO DATA(ls_message).
+          DATA lv_severity TYPE if_abap_behv_message=>t_severity.
+          CASE ls_message-type.
+            WHEN 'S'. lv_severity = if_abap_behv_message=>severity-success.
+            WHEN 'I'. lv_severity = if_abap_behv_message=>severity-information.
+            WHEN 'W'. lv_severity = if_abap_behv_message=>severity-warning.
+            WHEN 'E' OR 'A'.
+              lv_severity = if_abap_behv_message=>severity-error.
+              lv_has_error_message = abap_true.
+            WHEN OTHERS. lv_severity = if_abap_behv_message=>severity-none.
+          ENDCASE.
+
+          IF lv_severity IS NOT INITIAL AND lv_severity <> if_abap_behv_message=>severity-none.
+            APPEND VALUE #(
+                %msg = new_message(
+                           id       = ls_message-id
+                           number   = ls_message-number
+                           severity = lv_severity
+                           v1       = ls_message-message_v1
+                           v2       = ls_message-message_v2
+                           v3       = ls_message-message_v3
+                           v4       = ls_message-message_v4
+                       )
+            ) TO  ls_reported-createdledger.
+          ENDIF.
+        ENDLOOP.
+
+        " Başarı Mesajı
+        IF lv_has_error_message = abap_false.
+          APPEND VALUE #(
+              %msg = new_message_with_text(
+                         severity = if_abap_behv_message=>severity-success
+                         text     = |Defter gönderim işi başlatıldı (İş Adı: { lv_jobname }, İş Sayacı: { lv_jobcount })| )
+          ) TO ls_reported-createdledger.
+        ENDIF.
+
+      CATCH cx_apj_rt INTO DATA(lx_schedule_error).
+        " İş zamanlama hatası
+        APPEND VALUE #( %msg = new_message_with_text(
                            severity = if_abap_behv_message=>severity-error
-                           text     = return_message-message )
-                         %element-bukrs = if_abap_behv=>mk-on )
-              TO ls_reported-createdledger.
-          WHEN 'W'. " Warning
-            APPEND VALUE #( %msg = new_message_with_text(
-                           severity = if_abap_behv_message=>severity-warning
-                           text     = return_message-message )
-                         %element-bukrs = if_abap_behv=>mk-on )
-              TO ls_reported-createdledger.
-          WHEN 'I'. " Information
-            APPEND VALUE #( %msg = new_message_with_text(
-                           severity = if_abap_behv_message=>severity-information
-                           text     = return_message-message )
-                         %element-bukrs = if_abap_behv=>mk-on )
-              TO ls_reported-createdledger.
-        ENDCASE.
+                           text     = |Defter gönderim işi sırasında hata: { lx_schedule_error->get_text( ) }| )
+        ) TO  ls_reported-createdledger.
 
       CATCH cx_root INTO DATA(lx_error).
-        " Handle any exceptions
+        " Genel hata
         APPEND VALUE #( %msg = new_message_with_text(
-                       severity = if_abap_behv_message=>severity-error
-                       text     = lx_error->get_text( ) )
-                     %element-bukrs = if_abap_behv=>mk-on )
-          TO ls_reported-createdledger.
+                           severity = if_abap_behv_message=>severity-error
+                           text     = |Beklenmeyen hata: { lx_error->get_text( ) }| )
+        ) TO  ls_reported-createdledger.
     ENDTRY.
 
-    " Return messages
+    " Mesajları Döndür
     reported = CORRESPONDING #( DEEP ls_reported ).
 
   ENDMETHOD.
+
 
 ENDCLASS.
