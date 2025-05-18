@@ -11,7 +11,8 @@ CLASS zcl_etr_einvoice_ws DEFINITION
         tlist TYPE mty_taxpayers_list,
       END OF mty_taxpayers_split,
       mty_taxpayers_split_t TYPE STANDARD TABLE OF mty_taxpayers_split WITH EMPTY KEY,
-      mty_incoming_list    TYPE STANDARD TABLE OF zetr_t_icinv WITH DEFAULT KEY,
+      mty_incoming_list     TYPE STANDARD TABLE OF zetr_t_icinv WITH DEFAULT KEY,
+      mty_incoming_items    TYPE STANDARD TABLE OF zetr_t_icini WITH DEFAULT KEY,
       BEGIN OF mty_outgoing_document_status,
         stacd TYPE zetr_e_stacd,
         staex TYPE zetr_e_staex,
@@ -85,8 +86,8 @@ CLASS zcl_etr_einvoice_ws DEFINITION
         !iv_invoice_uuid    TYPE zetr_e_duich OPTIONAL
       EXPORTING
         !ev_message         TYPE bapi_msg
-      RETURNING
-        VALUE(rt_list)      TYPE mty_incoming_list
+        rt_list             TYPE mty_incoming_list
+        rt_items            TYPE mty_incoming_items
       RAISING
         zcx_etr_regulative_exception .
 

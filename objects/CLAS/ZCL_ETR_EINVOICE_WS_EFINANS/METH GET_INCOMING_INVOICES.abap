@@ -52,7 +52,8 @@
         EXPORTING
           it_xml_table = lt_xml_table
         CHANGING
-          cs_invoice   = <ls_list> ).
+          cs_invoice   = <ls_list>
+          ct_items     = rt_items ).
 
       set_incoming_invoice_received( <ls_list>-invui ).
     ENDLOOP.

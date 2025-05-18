@@ -19,6 +19,7 @@ define behavior for zetr_ddl_p_incoming_invoices alias InvoiceList
 
   use association _invoiceContents;
   use association _invoiceLogs;
+  use association _invoiceItems;
 }
 
 define behavior for zetr_ddl_p_incoming_invcont alias InvoiceContents
@@ -30,5 +31,11 @@ define behavior for zetr_ddl_p_incoming_invcont alias InvoiceContents
 define behavior for zetr_ddl_p_incoming_invlogs alias InvoiceLogs
 {
   use update;
+  use association _incomingInvoices;
+}
+
+define behavior for zetr_ddl_p_incoming_invitem alias InvoiceItems
+{
+  //  use update;
   use association _incomingInvoices;
 }

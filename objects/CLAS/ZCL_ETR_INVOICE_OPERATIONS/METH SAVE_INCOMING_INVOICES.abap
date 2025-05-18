@@ -1,5 +1,6 @@
   METHOD save_incoming_invoices.
     INSERT zetr_t_icinv FROM TABLE @it_list.
+    INSERT zetr_t_icini FROM TABLE @it_items.
 
     GET TIME STAMP FIELD DATA(lv_timestamp).
     CONVERT TIME STAMP lv_timestamp TIME ZONE space INTO DATE DATA(lv_erdat) TIME DATA(lv_erzet).

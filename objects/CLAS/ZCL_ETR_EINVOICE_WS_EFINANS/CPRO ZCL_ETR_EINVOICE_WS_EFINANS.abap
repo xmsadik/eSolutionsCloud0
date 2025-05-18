@@ -28,7 +28,8 @@
       IMPORTING
         it_xml_table TYPE zcl_etr_regulative_common=>mty_xml_nodes
       CHANGING
-        cs_invoice   TYPE zetr_t_icinv.
+        cs_invoice   TYPE zetr_t_icinv
+        ct_items     TYPE mty_incoming_items.
 
     METHODS save_registered_taxpayers
       IMPORTING

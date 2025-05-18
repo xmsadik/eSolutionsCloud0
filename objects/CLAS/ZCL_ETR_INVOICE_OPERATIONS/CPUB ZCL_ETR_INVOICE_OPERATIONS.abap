@@ -12,6 +12,7 @@ CLASS zcl_etr_invoice_operations DEFINITION
         title           TYPE zetr_e_title,
       END OF mty_partner_register_data,
       mty_incoming_list      TYPE STANDARD TABLE OF zetr_t_icinv WITH DEFAULT KEY,
+      mty_incoming_items     TYPE STANDARD TABLE OF zetr_t_icini WITH DEFAULT KEY,
       mty_incoming_full_list TYPE STANDARD TABLE OF zetr_ddl_i_incoming_invoices WITH DEFAULT KEY,
       BEGIN OF mty_outgoing_document_status,
         stacd TYPE zetr_e_stacd,
@@ -222,7 +223,8 @@ CLASS zcl_etr_invoice_operations DEFINITION
 
     METHODS save_incoming_invoices
       IMPORTING
-        !it_list TYPE mty_incoming_list
+        !it_list  TYPE mty_incoming_list
+        !it_items TYPE mty_incoming_items
       RAISING
         zcx_etr_regulative_exception .
 

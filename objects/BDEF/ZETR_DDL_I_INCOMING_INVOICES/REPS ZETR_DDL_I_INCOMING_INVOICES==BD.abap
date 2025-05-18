@@ -70,6 +70,7 @@ authorization master ( instance )
   field ( features : instance ) PurchasingGroup;
   association _invoiceContents { create; }
   association _invoiceLogs { create; }
+  association _invoiceItems { }
 
   action ( features : instance ) addNote parameter ZETR_DDL_I_NOTE_SELECTION result [1] $self;
   action ( features : instance ) changePrintStatus result [1] $self;
@@ -128,5 +129,39 @@ authorization dependent by _incomingInvoices
   //    delete;
   field ( readonly ) documentuuid, createdby, creationdate, creationtime, logcode, lognote;
   field ( readonly : update ) LogUUID;
+  association _incomingInvoices;
+}
+
+define behavior for zetr_ddl_i_incoming_invitem alias InvoiceItems
+persistent table zetr_t_icini
+//with unmanaged save
+lock dependent by _incomingInvoices
+authorization dependent by _incomingInvoices
+//etag master <field_name>
+//late numbering
+{
+  mapping for zetr_t_icini
+    {
+      DocumentUUID                   = docui;
+      LineNumber                     = linno;
+      MaterialDescription            = mdesc;
+      Description                    = descr;
+      ModelName                      = mdlnm;
+      Brand                          = brand;
+      BuyerItemIdentification        = buyii;
+      SellerItemIdentification       = selii;
+      ManufacturerItemIdentification = manii;
+      Price                          = netpr;
+      DiscountRate                   = disrt;
+      discountAmount                 = disam;
+      Amount                         = wrbtr;
+      TaxAmount                      = fwste;
+      Currency                       = waers;
+      Quantity                       = menge;
+      UnitofMeasure                  = meins;
+    }
+  // update;
+  //    delete;
+  field ( readonly : update ) documentuuid, LineNumber;
   association _incomingInvoices;
 }

@@ -41,4 +41,52 @@
           ENDLOOP.
       ENDCASE.
     ENDLOOP.
+
+    LOOP AT it_xml_table INTO ls_xml_line WHERE node_type = 'CO_NT_ELEMENT_OPEN' AND name = 'faturaSatir'.
+      DATA(lv_index) = sy-tabix + 1.
+      APPEND INITIAL LINE TO ct_items ASSIGNING FIELD-SYMBOL(<ls_item>).
+      <ls_item>-docui = cs_invoice-docui.
+      <ls_item>-waers = cs_invoice-waers.
+      LOOP AT it_xml_table INTO DATA(ls_xml_line2) FROM lv_index.
+        IF ls_xml_line2-node_type = 'CO_NT_ELEMENT_CLOSE' AND ls_xml_line2-name = 'faturaSatir'.
+          EXIT.
+        ENDIF.
+        CHECK ls_xml_line2-node_type = 'CO_NT_VALUE'.
+        CASE ls_xml_line2-name.
+          WHEN 'siraNo'.
+            <ls_item>-linno = ls_xml_line2-value.
+          WHEN 'aliciUrunKodu'.
+            <ls_item>-buyii = ls_xml_line2-value.
+          WHEN 'saticiUrunKodu'.
+            <ls_item>-selii = ls_xml_line2-value.
+          WHEN 'ureticiUrunKodu'.
+            <ls_item>-manii = ls_xml_line2-value.
+          WHEN 'markaAdi'.
+            <ls_item>-brand = ls_xml_line2-value.
+          WHEN 'modelAdi'.
+            <ls_item>-mdlnm = ls_xml_line2-value.
+          WHEN 'urunAdi'.
+            <ls_item>-mdesc = ls_xml_line2-value.
+          WHEN 'tanim'.
+            <ls_item>-descr = ls_xml_line2-value.
+          WHEN 'birimFiyat'.
+            <ls_item>-netpr = ls_xml_line2-value.
+          WHEN 'malHizmetMiktari'.
+            <ls_item>-wrbtr = ls_xml_line2-value.
+          WHEN 'toplamVergiTutari'.
+            <ls_item>-fwste = ls_xml_line2-value.
+          WHEN 'iskontoOrani'.
+            <ls_item>-disrt = ls_xml_line2-value.
+          WHEN 'iskontoTutari'.
+            <ls_item>-disam = ls_xml_line2-value.
+          WHEN 'miktar'.
+            <ls_item>-menge = ls_xml_line2-value.
+          WHEN 'birimKodu'.
+            SELECT SINGLE meins
+              FROM zetr_t_untmc
+              WHERE unitc = @ls_xml_line2-value
+              INTO @<ls_item>-meins.
+        ENDCASE.
+      ENDLOOP.
+    ENDLOOP.
   ENDMETHOD.
