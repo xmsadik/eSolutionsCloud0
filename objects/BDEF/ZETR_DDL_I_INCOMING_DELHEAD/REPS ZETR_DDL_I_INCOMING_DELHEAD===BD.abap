@@ -35,6 +35,9 @@ authorization master ( instance )
       ResponseUUID          = ruuid;
       ResponseUUIDConverted = ruuidc;
       ItemResponseStatus    = itmrs;
+      CustomField1          = cusfl1;
+      CustomField2          = cusfl2;
+      CustomField3          = cusfl3;
     }
   //  create;
   update;

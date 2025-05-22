@@ -60,70 +60,12 @@
         IMPORTING
           ev_output_data_str = DATA(lv_document_xml) ).
       DATA(lt_xml_table) = zcl_etr_regulative_common=>parse_xml( lv_document_xml ).
-      LOOP AT lt_xml_table INTO DATA(ls_xml_line).
-        CASE ls_xml_line-name.
-          WHEN 'irsaliyeSatir'.
-            CHECK ls_xml_line-node_type = 'CO_NT_ELEMENT_OPEN'.
-            DATA(lv_item_index) = sy-tabix + 1.
-            APPEND INITIAL LINE TO et_items ASSIGNING FIELD-SYMBOL(<ls_item>).
-            <ls_item>-docui = <ls_list>-docui.
-            LOOP AT lt_xml_table INTO DATA(ls_xml_item) FROM lv_item_index.
-              CASE ls_xml_item-name.
-                WHEN 'irsaliyeSatir'.
-                  CHECK ls_xml_line-node_type = 'CO_NT_ELEMENT_CLOSE'.
-                  UNASSIGN <ls_item>.
-                  EXIT.
-                WHEN 'paraBirimi'.
-                  CHECK ls_xml_item-node_type = 'CO_NT_VALUE'.
-                  <ls_item>-waers = ls_xml_item-value.
-                WHEN 'siraNo'.
-                  CHECK ls_xml_item-node_type = 'CO_NT_VALUE' AND <ls_item>-linno IS INITIAL.
-                  <ls_item>-linno = ls_xml_item-value.
-                WHEN 'gonderilenMalAdedi'.
-                  CHECK ls_xml_item-node_type = 'CO_NT_VALUE'.
-                  <ls_item>-menge = ls_xml_item-value.
-                WHEN 'birimKodu'.
-                  CHECK ls_xml_item-node_type = 'attribute' AND <ls_item>-meins IS INITIAL.
-                  SELECT SINGLE meins
-                    FROM zetr_t_untmc
-                    WHERE unitc = @ls_xml_item-value
-                    INTO @<ls_item>-meins.
-                WHEN 'aciklama'.
-                  CHECK ls_xml_item-node_type = 'CO_NT_VALUE' AND <ls_item>-descr IS INITIAL.
-                  <ls_item>-descr = ls_xml_item-value.
-                WHEN 'adi'.
-                  CHECK ls_xml_item-node_type = 'CO_NT_VALUE' AND <ls_item>-mdesc IS INITIAL.
-                  <ls_item>-mdesc = ls_xml_item-value.
-                WHEN 'aliciUrunKodu'.
-                  CHECK ls_xml_item-node_type = 'CO_NT_VALUE'.
-                  <ls_item>-buyii = ls_xml_item-value.
-                WHEN 'saticiUrunKodu'.
-                  CHECK ls_xml_item-node_type = 'CO_NT_VALUE'.
-                  <ls_item>-selii = ls_xml_item-value.
-                WHEN 'ureticiUrunKodu'.
-                  CHECK ls_xml_item-node_type = 'CO_NT_VALUE'.
-                  <ls_item>-manii = ls_xml_item-value.
-                WHEN 'birimFiyat'.
-                  CHECK ls_xml_item-node_type = 'CO_NT_VALUE' AND <ls_item>-netpr IS INITIAL.
-                  <ls_item>-netpr = ls_xml_item-value.
-              ENDCASE.
-            ENDLOOP.
-          WHEN 'irsaliyeTuru'.
-            CHECK ls_xml_line-node_type = 'CO_NT_VALUE'.
-            <ls_list>-prfid = ls_xml_line-value(5).
-          WHEN 'urunDegeri'.
-            CHECK ls_xml_line-node_type = 'CO_NT_VALUE'.
-            <ls_list>-wrbtr = ls_xml_line-value.
-          WHEN 'irsaliyeTipi'.
-            CHECK ls_xml_line-node_type = 'CO_NT_VALUE'.
-            <ls_list>-dlvty = ls_xml_line-value.
-          WHEN 'paraBirimi'.
-            IF <ls_item> IS NOT ASSIGNED AND ls_xml_line-node_type = 'CO_NT_VALUE'.
-              <ls_list>-waers = ls_xml_line-value.
-            ENDIF.
-        ENDCASE.
-      ENDLOOP.
-
+      incoming_delivery_get_fields(
+        EXPORTING
+          it_xml_table = lt_xml_table
+        CHANGING
+          cs_delivery  = <ls_list>
+          ct_items     = et_items ).
       set_incoming_delivery_received( <ls_list>-dlvui ).
     ENDLOOP.
   ENDMETHOD.

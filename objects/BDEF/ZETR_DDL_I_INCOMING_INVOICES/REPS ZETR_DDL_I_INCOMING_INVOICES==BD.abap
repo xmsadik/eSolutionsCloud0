@@ -40,6 +40,9 @@ authorization master ( instance )
       PurchasingGroup   = ekgrp;
       PurchaseOrders    = ebeln;
       AccountingDone    = accok;
+      CustomField1      = cusfl1;
+      CustomField2      = cusfl2;
+      CustomField3      = cusfl3;
     }
 
   //  create;
