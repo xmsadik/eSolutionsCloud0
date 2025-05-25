@@ -18,7 +18,7 @@
     IF iv_email IS NOT INITIAL.
       lo_matcher = cl_abap_matcher=>create( pattern     = lv_regular_expression
                                             text        = iv_email
-                                            ignore_case = 'X').
+                                            ignore_case = 'X' ).
 
       lv_match = lo_matcher->match( ).
       IF lv_match IS NOT INITIAL.

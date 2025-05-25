@@ -13,6 +13,7 @@ CLASS zcl_etr_regulative_common DEFINITION
            END OF mty_xml_node,
            mty_xml_nodes TYPE TABLE OF mty_xml_node WITH EMPTY KEY,
            mty_hash      TYPE c LENGTH 32.
+
     CLASS-METHODS parse_xml
       IMPORTING
         iv_xml_string  TYPE string
