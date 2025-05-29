@@ -144,6 +144,7 @@ authorization dependent by _eInvoiceParameters
       InvoiceTypeInput          = ityin;
       SalesOrganization         = vkorg;
       DistributionChannel       = vtweg;
+      Division                  = spart;
       Plant                     = werks;
       SalesDocumentItemCategory = pstyv;
       BillingDocumentType       = sddty;

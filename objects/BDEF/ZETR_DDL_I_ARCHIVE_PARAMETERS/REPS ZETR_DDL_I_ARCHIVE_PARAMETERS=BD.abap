@@ -138,6 +138,7 @@ authorization dependent by _earchiveParameters
       InvoiceTypeInput          = ityin;
       SalesOrganization         = vkorg;
       DistributionChannel       = vtweg;
+      Division                  = spart;
       Plant                     = werks;
       SalesDocumentItemCategory = pstyv;
       BillingDocumentType       = sddty;

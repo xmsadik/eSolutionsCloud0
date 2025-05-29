@@ -6,6 +6,7 @@
         fkart TYPE zetr_e_fkart,
         vkorg TYPE zetr_e_vkorg,
         vtweg TYPE zetr_e_vtweg,
+        spart TYPE spart,
         rfbsk TYPE c LENGTH 1,
         ernam TYPE usnam,
         erdat TYPE datum,
@@ -77,6 +78,7 @@
                   billingdocumenttype AS fkart,
                   salesorganization AS vkorg,
                   distributionchannel AS vtweg,
+                  division AS spart,
                   accountingtransferstatus AS rfbsk,
                   createdbyuser AS ernam,
                   creationdate AS erdat,
@@ -146,12 +148,14 @@
     ls_document-ernam = ls_vbrk-ernam.
     ls_document-vkorg = ls_vbrk-vkorg.
     ls_document-vtweg = ls_vbrk-vtweg.
+    ls_document-spart = ls_vbrk-spart.
 
     ls_invoice_rule_input-awtyp = iv_awtyp.
     ls_invoice_rule_input-sddty = ls_vbrk-fkart.
     ls_invoice_rule_input-partner = ls_document-partner.
     ls_invoice_rule_input-vkorg = ls_vbrk-vkorg.
     ls_invoice_rule_input-vtweg = ls_vbrk-vtweg.
+    ls_invoice_rule_input-spart = ls_vbrk-spart.
     ls_invoice_rule_input-vbeln = ls_vbrk-vbeln.
 
     DATA(lt_vbrp_temp) = lt_vbrp.

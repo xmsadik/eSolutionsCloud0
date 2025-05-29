@@ -19,6 +19,7 @@
              kunnr TYPE zetr_e_partner,
              ernam TYPE abp_creation_user,
              wbstk TYPE c LENGTH 1,
+             vkorg TYPE zetr_e_vkorg,
            END OF ty_likp,
            BEGIN OF ty_lips,
              posnr TYPE n LENGTH 6,
@@ -33,6 +34,8 @@
              umlgo TYPE zetr_e_umlgo,
              sobkz TYPE sobkz,
              bwart TYPE bwart,
+             vtweg TYPE zetr_e_vtweg,
+             spart TYPE spart,
            END OF ty_lips.
     DATA: lt_lips          TYPE STANDARD TABLE OF ty_lips,
           ls_lips          TYPE ty_lips,
@@ -52,7 +55,8 @@
                     DeliveryDocumentType AS lfart,
                     ShipToParty AS kunnr,
                     CreatedByUser AS ernam,
-                    overallgoodsmovementstatus AS wbstk
+                    overallgoodsmovementstatus AS wbstk,
+                    salesorganization AS vkorg
         FROM i_deliverydocument
         WHERE DeliveryDocument = @iv_belnr
         INTO @ls_likp.
@@ -81,7 +85,9 @@
            IssuingOrReceivingPlant AS umwrk,
            IssuingOrReceivingStorageLoc AS umlgo,
            InventorySpecialStockType AS sobkz,
-           GoodsMovementType AS bwart
+           GoodsMovementType AS bwart,
+           distributionchannel AS vtweg,
+           division AS spart
       FROM I_DeliveryDocumentItem
       WHERE DeliveryDocument = @iv_belnr
       INTO TABLE @lt_lips.
@@ -111,6 +117,9 @@
     ls_edrule_input-umlgo = ls_lips-umlgo.
     ls_edrule_input-sobkz = ls_lips-sobkz.
     ls_edrule_input-bwart = ls_lips-bwart.
+    ls_edrule_input-vkorg = ls_likp-vkorg.
+    ls_edrule_input-vtweg = ls_lips-vtweg.
+    ls_edrule_input-spart = ls_lips-spart.
 
     CLEAR ls_edrule_output.
     ls_edrule_output = get_edelivery_rule( iv_rule_type   = 'P'

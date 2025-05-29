@@ -141,6 +141,7 @@ authorization dependent by _eDeliveryParameters
       eDeliveryTypeInput       = dtyin;
       SalesOrganization        = vkorg;
       DistributionChannel      = vtweg;
+      Division                 = spart;
       Plant                    = werks;
       StorageLocation          = lgort;
       ReceivingPlant           = umwrk;
