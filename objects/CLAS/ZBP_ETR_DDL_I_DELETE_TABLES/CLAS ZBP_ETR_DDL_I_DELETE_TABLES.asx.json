@@ -17,7 +17,7 @@
    {
     "CLSNAME":"ZBP_ETR_DDL_I_DELETE_TABLES",
     "CLSTYPE":0,
-    "UUID":"Nw5gk3VQHu+GtPCG591Abg==",
+    "UUID":"+hY+u89+H+CQxkItZIOk1A==",
     "REMOTE":""
    }
   ]
@@ -34,7 +34,7 @@
     "STATE":1,
     "RELEASE":0,
     "AUTHOR":"",
-    "CREATEDON":"2024-05-24",
+    "CREATEDON":"2025-06-05",
     "CHANGEDBY":"",
     "CHANGEDON":"0000-00-00",
     "CHGDANYBY":"",
@@ -51,7 +51,7 @@
     "UNICODE":"5",
     "RSTAT":"",
     "CLSBCIMPL":"",
-    "R3RELEASE":"795",
+    "R3RELEASE":"914",
     "CLSBCTRANS":"",
     "CLSBCCAT":0,
     "CLSBCNODEL":"",
@@ -101,8 +101,8 @@
     "CRELEASE":"",
     "DELFLAG":"",
     "TRANSLTTXT":"",
-    "CREATED_ON":"2024-05-24",
-    "CHECK_DATE":"2024-05-24",
+    "CREATED_ON":"2025-06-05",
+    "CHECK_DATE":"2025-06-05",
     "CHECK_CFG":""
    }
   ]

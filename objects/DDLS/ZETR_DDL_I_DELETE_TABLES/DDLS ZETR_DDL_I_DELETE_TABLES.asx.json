@@ -9,10 +9,10 @@
     "AS4USER":"SAP_CUSTOMER",
     "AS4DATE":"0000-00-00",
     "AS4TIME":"00:00:00",
-    "SOURCE":"@EndUserText.label: 'Delete Tables'\r\n@ObjectModel.query.implementedBy:'ABAP:ZCL_ETR_DELETE_TABLES'\r\n//@Search.searchable: true\r\n@UI:{\r\nheaderInfo:{\r\n                typeNamePlural: 'Delete Table Data',\r\n                typeName: 'Delete Table Data',\r\n                title:{ type: #STANDARD, label: 'Delete Table Data', value: 'belnr' }\r\n           }\r\n}\r\ndefine root custom entity zetr_ddl_i_delete_tables\r\n  // with parameters parameter_name : parameter_type\r\n{\r\n      @UI   : { lineItem:       [ { position: 1 },\r\n                { type: #FOR_ACTION,\r\n                  dataAction: 'deleteDocuments',\r\n                  label: 'Delete' } ],\r\n                selectionField: [ { position: 1 } ] }\r\n  key docui : sysuuid_c22;\r\n      @UI   : { lineItem:       [ { position: 2, importance: #HIGH } ],\r\n                selectionField: [ { position: 2 } ] }\r\n      @Consumption.filter : {  multipleSelections: true }\r\n      @Consumption.valueHelpDefinition: [ { entity: { name: 'I_CompanyCodeVH', element: 'CompanyCode' }}]\r\n      bukrs : bukrs;\r\n      @UI   : { lineItem:       [ { position: 3, importance: #HIGH } ],\r\n                selectionField: [ { position: 3 } ] }\r\n      belnr : belnr_d;\r\n      @UI   : { lineItem:       [ { position: 4 } ],\r\n                selectionField: [ { position: 4 } ] }\r\n      gjahr : gjahr;\r\n      @UI   : { lineItem:       [ { position: 5 } ],\r\n                selectionField: [ { position: 5 } ] }\r\n      taxid : zetr_e_taxid;\r\n      @Consumption.filter : {  multipleSelections: true, mandatory: true }\r\n      @Consumption.valueHelpDefinition: [ { entity: { name: 'ZETR_DDL_VH_TABLE', element: 'TableName' }}]\r\n      @UI   : { lineItem:       [ { position: 6 } ],\r\n                selectionField: [ { position: 6 } ] }\r\n      tabnm : zetr_e_table;\r\n\r\n}\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[],\n\"ASSOCIATED\":\n[],\n\"BASE\":\n[],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
+    "SOURCE":"@EndUserText.label: 'Delete Tables'\r\n@ObjectModel.query.implementedBy:'ABAP:ZCL_ETR_DELETE_TABLES'\r\n//@Search.searchable: true\r\n@UI:{\r\nheaderInfo:{\r\n                typeNamePlural: 'Delete Table Data',\r\n                typeName: 'Delete Table Data',\r\n                title:{ type: #STANDARD, label: 'Delete Table Data', value: 'belnr' }\r\n           }\r\n}\r\ndefine root custom entity zetr_ddl_i_delete_tables\r\n  // with parameters parameter_name : parameter_type\r\n{\r\n      @UI   : { lineItem:       [ { position: 1 }\r\n      //                { type: #FOR_ACTION,\r\n      //                  dataAction: 'deleteDocuments',\r\n      //                  label: 'Delete' }\r\n                  ],\r\n                selectionField: [ { position: 2 } ] }\r\n  key docui : sysuuid_c22;\r\n      @Consumption.filter : {  multipleSelections: true, mandatory: true }\r\n      @Consumption.valueHelpDefinition: [ { entity: { name: 'ZETR_DDL_VH_TABLE', element: 'TableName' }}]\r\n      @UI   : { lineItem:       [ { position: 2 } ],\r\n                selectionField: [ { position: 1 } ] }\r\n  key tabnm : zetr_e_table;\r\n      @UI   : { lineItem:       [ { position: 3, importance: #HIGH } ],\r\n                selectionField: [ { position: 3 } ] }\r\n      @Consumption.filter : {  multipleSelections: true }\r\n      @Consumption.valueHelpDefinition: [ { entity: { name: 'I_CompanyCodeVH', element: 'CompanyCode' }}]\r\n      bukrs : bukrs;\r\n      @UI   : { lineItem:       [ { position: 4 } ],\r\n                selectionField: [ { position: 4 } ] }\r\n      docno : xblnr;\r\n      @UI   : { lineItem:       [ { position: 5 } ],\r\n                selectionField: [ { position: 5 } ] }\r\n      belnr : belnr_d;\r\n      @UI   : { lineItem:       [ { position: 6 } ],\r\n                selectionField: [ { position: 6 } ] }\r\n      gjahr : gjahr;\r\n      @UI   : { lineItem:       [ { position: 7 } ],\r\n                selectionField: [ { position: 7 } ] }\r\n      taxid : zetr_e_taxid;\r\n\r\n}\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[],\n\"ASSOCIATED\":\n[],\n\"BASE\":\n[],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
     "PARENTNAME":"",
     "ACTFLAG":"",
-    "CHGFLAG":",W4T",
+    "CHGFLAG":"54",
     "SOURCE_TYPE":"Q",
     "SOURCE_ORIGIN":"0",
     "ABAP_LANGUAGE_VERSION":"5"
@@ -52,99 +52,113 @@
     "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
     "LFIELDNAME":"BELNR",
     "NAME":"UI",
-    "POSITION":17,
+    "POSITION":27,
     "VALUE":""
    },
    {
     "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
     "LFIELDNAME":"BELNR",
-    "NAME":"UI.LINEITEM$1$.IMPORTANCE",
-    "POSITION":19,
-    "VALUE":"#HIGH"
-   },
-   {
-    "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
-    "LFIELDNAME":"BELNR",
     "NAME":"UI.LINEITEM$1$.POSITION",
-    "POSITION":18,
-    "VALUE":"3"
+    "POSITION":28,
+    "VALUE":"5"
    },
    {
     "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
     "LFIELDNAME":"BELNR",
     "NAME":"UI.SELECTIONFIELD$1$.POSITION",
-    "POSITION":20,
-    "VALUE":"3"
+    "POSITION":29,
+    "VALUE":"5"
    },
    {
     "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
     "LFIELDNAME":"BUKRS",
     "NAME":"CONSUMPTION",
-    "POSITION":13,
+    "POSITION":20,
     "VALUE":""
    },
    {
     "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
     "LFIELDNAME":"BUKRS",
     "NAME":"CONSUMPTION.FILTER",
-    "POSITION":11,
+    "POSITION":18,
     "VALUE":""
    },
    {
     "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
     "LFIELDNAME":"BUKRS",
     "NAME":"CONSUMPTION.FILTER.MULTIPLESELECTIONS",
-    "POSITION":12,
+    "POSITION":19,
     "VALUE":"true"
    },
    {
     "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
     "LFIELDNAME":"BUKRS",
     "NAME":"CONSUMPTION.VALUEHELPDEFINITION$1$.ENTITY",
-    "POSITION":14,
+    "POSITION":21,
     "VALUE":""
    },
    {
     "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
     "LFIELDNAME":"BUKRS",
     "NAME":"CONSUMPTION.VALUEHELPDEFINITION$1$.ENTITY.ELEMENT",
-    "POSITION":16,
+    "POSITION":23,
     "VALUE":"'CompanyCode'"
    },
    {
     "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
     "LFIELDNAME":"BUKRS",
     "NAME":"CONSUMPTION.VALUEHELPDEFINITION$1$.ENTITY.NAME",
-    "POSITION":15,
+    "POSITION":22,
     "VALUE":"'I_CompanyCodeVH'"
    },
    {
     "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
     "LFIELDNAME":"BUKRS",
     "NAME":"UI",
-    "POSITION":7,
+    "POSITION":14,
     "VALUE":""
    },
    {
     "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
     "LFIELDNAME":"BUKRS",
     "NAME":"UI.LINEITEM$1$.IMPORTANCE",
-    "POSITION":9,
+    "POSITION":16,
     "VALUE":"#HIGH"
    },
    {
     "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
     "LFIELDNAME":"BUKRS",
     "NAME":"UI.LINEITEM$1$.POSITION",
-    "POSITION":8,
-    "VALUE":"2"
+    "POSITION":15,
+    "VALUE":"3"
    },
    {
     "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
     "LFIELDNAME":"BUKRS",
     "NAME":"UI.SELECTIONFIELD$1$.POSITION",
-    "POSITION":10,
-    "VALUE":"2"
+    "POSITION":17,
+    "VALUE":"3"
+   },
+   {
+    "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
+    "LFIELDNAME":"DOCNO",
+    "NAME":"UI",
+    "POSITION":24,
+    "VALUE":""
+   },
+   {
+    "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
+    "LFIELDNAME":"DOCNO",
+    "NAME":"UI.LINEITEM$1$.POSITION",
+    "POSITION":25,
+    "VALUE":"4"
+   },
+   {
+    "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
+    "LFIELDNAME":"DOCNO",
+    "NAME":"UI.SELECTIONFIELD$1$.POSITION",
+    "POSITION":26,
+    "VALUE":"4"
    },
    {
     "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
@@ -163,155 +177,121 @@
    {
     "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
     "LFIELDNAME":"DOCUI",
-    "NAME":"UI.LINEITEM$2$.DATAACTION",
-    "POSITION":4,
-    "VALUE":"'deleteDocuments'"
-   },
-   {
-    "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
-    "LFIELDNAME":"DOCUI",
-    "NAME":"UI.LINEITEM$2$.LABEL",
-    "POSITION":5,
-    "VALUE":"'Delete'"
-   },
-   {
-    "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
-    "LFIELDNAME":"DOCUI",
-    "NAME":"UI.LINEITEM$2$.TYPE",
-    "POSITION":3,
-    "VALUE":"#FOR_ACTION"
-   },
-   {
-    "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
-    "LFIELDNAME":"DOCUI",
     "NAME":"UI.SELECTIONFIELD$1$.POSITION",
-    "POSITION":6,
-    "VALUE":"1"
+    "POSITION":3,
+    "VALUE":"2"
    },
    {
     "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
     "LFIELDNAME":"GJAHR",
     "NAME":"UI",
-    "POSITION":21,
+    "POSITION":30,
     "VALUE":""
    },
    {
     "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
     "LFIELDNAME":"GJAHR",
     "NAME":"UI.LINEITEM$1$.POSITION",
-    "POSITION":22,
-    "VALUE":"4"
+    "POSITION":31,
+    "VALUE":"6"
    },
    {
     "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
     "LFIELDNAME":"GJAHR",
     "NAME":"UI.SELECTIONFIELD$1$.POSITION",
-    "POSITION":23,
-    "VALUE":"4"
+    "POSITION":32,
+    "VALUE":"6"
    },
    {
     "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
     "LFIELDNAME":"TABNM",
     "NAME":"CONSUMPTION",
-    "POSITION":30,
+    "POSITION":7,
     "VALUE":""
    },
    {
     "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
     "LFIELDNAME":"TABNM",
     "NAME":"CONSUMPTION.FILTER",
-    "POSITION":27,
+    "POSITION":4,
     "VALUE":""
    },
    {
     "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
     "LFIELDNAME":"TABNM",
     "NAME":"CONSUMPTION.FILTER.MANDATORY",
-    "POSITION":29,
+    "POSITION":6,
     "VALUE":"true"
    },
    {
     "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
     "LFIELDNAME":"TABNM",
     "NAME":"CONSUMPTION.FILTER.MULTIPLESELECTIONS",
-    "POSITION":28,
+    "POSITION":5,
     "VALUE":"true"
    },
    {
     "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
     "LFIELDNAME":"TABNM",
     "NAME":"CONSUMPTION.VALUEHELPDEFINITION$1$.ENTITY",
-    "POSITION":31,
+    "POSITION":8,
     "VALUE":""
    },
    {
     "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
     "LFIELDNAME":"TABNM",
     "NAME":"CONSUMPTION.VALUEHELPDEFINITION$1$.ENTITY.ELEMENT",
-    "POSITION":33,
+    "POSITION":10,
     "VALUE":"'TableName'"
    },
    {
     "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
     "LFIELDNAME":"TABNM",
     "NAME":"CONSUMPTION.VALUEHELPDEFINITION$1$.ENTITY.NAME",
-    "POSITION":32,
+    "POSITION":9,
     "VALUE":"'ZETR_DDL_VH_TABLE'"
    },
    {
     "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
     "LFIELDNAME":"TABNM",
     "NAME":"UI",
-    "POSITION":34,
+    "POSITION":11,
     "VALUE":""
    },
    {
     "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
     "LFIELDNAME":"TABNM",
     "NAME":"UI.LINEITEM$1$.POSITION",
-    "POSITION":35,
-    "VALUE":"6"
+    "POSITION":12,
+    "VALUE":"2"
    },
    {
     "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
     "LFIELDNAME":"TABNM",
     "NAME":"UI.SELECTIONFIELD$1$.POSITION",
-    "POSITION":36,
-    "VALUE":"6"
+    "POSITION":13,
+    "VALUE":"1"
    },
    {
     "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
     "LFIELDNAME":"TAXID",
     "NAME":"UI",
-    "POSITION":24,
+    "POSITION":33,
     "VALUE":""
    },
    {
     "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
     "LFIELDNAME":"TAXID",
     "NAME":"UI.LINEITEM$1$.POSITION",
-    "POSITION":25,
-    "VALUE":"5"
+    "POSITION":34,
+    "VALUE":"7"
    },
    {
     "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
     "LFIELDNAME":"TAXID",
     "NAME":"UI.SELECTIONFIELD$1$.POSITION",
-    "POSITION":26,
-    "VALUE":"5"
-   }
-  ]
- },
- {
-  "table":"DDFIELDANNOT",
-  "data":
-  [
-   {
-    "STRUCOBJN":"ZETR_DDL_I_DELETE_TABLES",
-    "DDLANGUAGE":"E",
-    "LFIELDNAME":"DOCUI",
-    "NAME":"UI.LINEITEM$2$.LABEL",
-    "TEXT":"Delete"
+    "POSITION":35,
+    "VALUE":"7"
    }
   ]
  },

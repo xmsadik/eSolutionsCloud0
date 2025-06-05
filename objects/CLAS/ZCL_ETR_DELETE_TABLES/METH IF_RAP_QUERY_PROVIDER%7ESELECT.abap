@@ -1,15 +1,15 @@
   METHOD if_rap_query_provider~select.
     TRY.
         DATA(lt_filter) = io_request->get_filter( )->get_as_ranges( ).
-        DATA: lt_bukrs_range  TYPE RANGE OF bukrs,
-              lt_belnr_range  TYPE RANGE OF belnr_d,
-              lt_gjahr_range  TYPE RANGE OF gjahr,
-              lt_taxid_range  TYPE RANGE OF zetr_e_taxid,
-              lt_table_range  TYPE RANGE OF zetr_e_table,
-              lt_docui_range  TYPE RANGE OF sysuuid_c22,
-              lt_docui_rtemp  TYPE RANGE OF sysuuid_c22,
-              lt_output       TYPE TABLE OF zetr_ddl_i_delete_tables,
-              lt_final_output TYPE TABLE OF zetr_ddl_i_delete_tables.
+        DATA: lt_bukrs_range TYPE RANGE OF bukrs,
+              lt_belnr_range TYPE RANGE OF belnr_d,
+              lt_gjahr_range TYPE RANGE OF gjahr,
+              lt_taxid_range TYPE RANGE OF zetr_e_taxid,
+              lt_table_range TYPE RANGE OF zetr_e_table,
+              lt_docui_range TYPE RANGE OF sysuuid_c22,
+              lt_docui_rtemp TYPE RANGE OF sysuuid_c22,
+              lt_output      TYPE TABLE OF zetr_ddl_i_delete_tables.
+*              lt_final_output TYPE TABLE OF zetr_ddl_i_delete_tables.
         DATA(lo_paging) = io_request->get_paging( ).
         DATA(lv_offset) = lo_paging->get_offset( ).
         DATA(lv_page_size) = lo_paging->get_page_size( ).
@@ -31,7 +31,7 @@
         ENDLOOP.
 
         IF 'OGINV' IN lt_table_range.
-          SELECT docui, bukrs, belnr, gjahr, taxid, 'OGINV' AS tabnm
+          SELECT docui, bukrs, invno AS docno, belnr, gjahr, taxid, 'OGINV' AS tabnm
             FROM zetr_t_oginv
             WHERE docui IN @lt_docui_range
               AND bukrs IN @lt_bukrs_range
@@ -49,7 +49,7 @@
         ENDIF.
 
         IF 'OGDLV' IN lt_table_range.
-          SELECT docui, bukrs, belnr, gjahr, taxid, 'OGDLV' AS tabnm
+          SELECT docui, bukrs, dlvno AS docno, belnr, gjahr, taxid, 'OGDLV' AS tabnm
             FROM zetr_t_ogdlv
             WHERE docui IN @lt_docui_range
               AND bukrs IN @lt_bukrs_range
@@ -67,7 +67,7 @@
         ENDIF.
 
         IF 'ICINV' IN lt_table_range.
-          SELECT docui, bukrs, taxid, 'ICINV' AS tabnm
+          SELECT docui, bukrs, invno AS docno, taxid, 'ICINV' AS tabnm
             FROM zetr_t_icinv
             WHERE docui IN @lt_docui_range
               AND bukrs IN @lt_bukrs_range
@@ -83,7 +83,7 @@
         ENDIF.
 
         IF 'ICDLV' IN lt_table_range.
-          SELECT docui, bukrs, taxid, 'ICDLV' AS tabnm
+          SELECT docui, bukrs, dlvno AS docno, taxid, 'ICDLV' AS tabnm
             FROM zetr_t_icdlv
             WHERE docui IN @lt_docui_range
               AND bukrs IN @lt_bukrs_range
@@ -98,13 +98,14 @@
 *          ENDIF.
         ENDIF.
 
-        DATA(lv_start) = lv_offset + 1.
-        DATA(lv_end) = lv_page_size + lv_offset.
-        APPEND LINES OF lt_output FROM lv_start TO lv_end TO lt_final_output .
+*        DATA(lv_start) = lv_offset + 1.
+*        DATA(lv_end) = lv_page_size + lv_offset.
+*        APPEND LINES OF lt_output FROM lv_start TO lv_end TO lt_final_output .
         IF io_request->is_total_numb_of_rec_requested(  ).
           io_response->set_total_number_of_records( iv_total_number_of_records = lines( lt_output ) ).
         ENDIF.
-        io_response->set_data( it_data = lt_final_output ).
+        io_response->set_data( it_data = lt_output ).
+*        io_response->set_data( it_data = lt_final_output ).
       CATCH cx_rap_query_filter_no_range.
     ENDTRY.
   ENDMETHOD.
