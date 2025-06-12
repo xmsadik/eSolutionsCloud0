@@ -16,10 +16,10 @@
            END OF ty_blart.
 
     TYPES: BEGIN OF ty_colitem,
-             bukrs TYPE bukrs,
-             belnr TYPE belnr_d,
-             gjahr TYPE gjahr,
-             buzei TYPE buzei,
+             companycode TYPE bukrs,
+             AccountingDocument TYPE belnr_d,
+             FiscalYear TYPE gjahr,
+             ledgergllineitem TYPE c LENGTH 6,
              docln TYPE c LENGTH 6,
              cldoc TYPE zetr_e_descr255,
            END OF ty_colitem.
@@ -130,8 +130,8 @@
           lt_bseg_dat TYPE TABLE OF ty_bseg.
 
 * Collection Items
-    DATA: lt_colitm      TYPE SORTED TABLE OF ty_colitem WITH UNIQUE KEY bukrs belnr gjahr buzei docln,
-          lt_colitm_bseg TYPE SORTED TABLE OF ty_colitem WITH UNIQUE KEY bukrs belnr gjahr,
+    DATA: lt_colitm      TYPE SORTED TABLE OF ty_colitem WITH UNIQUE KEY companycode AccountingDocument FiscalYear ledgergllineitem docln,
+          lt_colitm_bseg TYPE SORTED TABLE OF ty_colitem WITH UNIQUE KEY companycode AccountingDocument FiscalYear,
           ls_colitm      LIKE LINE OF lt_colitm.
 
 * Ledger and Account Data
@@ -333,6 +333,60 @@
       IF lt_bseg[] IS INITIAL.
         EXIT.
       ENDIF.
+
+">>>>>Tutar göstergesinin tersinde çalışıyor.
+
+
+IF gs_params-dfvhs IS NOT INITIAL.
+      data(lv_subrc) = 4.
+      LOOP AT lt_bseg TRANSPORTING NO FIELDS
+                      WHERE companycode = ls_bkpf-companycode
+                         AND accountingdocument = ls_bkpf-accountingdocument
+                         AND fiscalyear = ls_bkpf-fiscalyear
+                         AND debitcreditcode = 'S'
+                         AND AmountInCompanyCodeCurrency < 0.
+        lv_subrc = 0.
+        EXIT.
+      ENDLOOP.
+
+      LOOP AT lt_bseg TRANSPORTING NO FIELDS
+                      WHERE companycode = ls_bkpf-companycode
+                        AND accountingdocument = ls_bkpf-accountingdocument
+                        AND fiscalyear = ls_bkpf-fiscalyear
+                        AND debitcreditcode = 'H'
+                        AND AmountInCompanyCodeCurrency > 0.
+        lv_subrc = 0.
+        EXIT.
+      ENDLOOP.
+
+      IF lv_subrc EQ 0.
+        SELECT SINGLE COUNT(*)
+          FROM i_journalentryitem
+         WHERE CompanyCode EQ @ls_bkpf-companycode
+           AND AccountingDocument EQ @ls_bkpf-accountingdocument
+           AND fiscalyear EQ @ls_bkpf-fiscalyear.
+        IF sy-subrc EQ 0.
+
+          DELETE lt_bseg WHERE companycode EQ ls_bkpf-companycode
+                           AND accountingdocument EQ ls_bkpf-accountingdocument
+                           AND fiscalyear EQ ls_bkpf-fiscalyear.
+
+          SELECT *
+            FROM i_journalentryitem
+           WHERE companycode EQ @ls_bkpf-companycode
+             AND accountingdocument EQ @ls_bkpf-accountingdocument
+             AND fiscalyear EQ @ls_bkpf-fiscalyear
+             APPENDING CORRESPONDING FIELDS OF  TABLE  @lt_bseg.
+
+          CLEAR ls_colitm.
+          MOVE-CORRESPONDING ls_bkpf TO ls_colitm.
+          INSERT ls_colitm INTO TABLE lt_colitm_bseg.
+        ENDIF.
+      ENDIF.
+    ENDIF.
+
+
+"<<<<<Tutar göstergesinin tersinde çalışıyor.
 
       LOOP AT lt_bseg INTO ls_bseg WHERE     CompanyCode        = ls_bkpf-CompanyCode
                                          AND AccountingDocument = ls_bkpf-AccountingDocument
