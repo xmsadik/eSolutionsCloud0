@@ -371,16 +371,16 @@ IF gs_params-dfvhs IS NOT INITIAL.
                            AND accountingdocument EQ ls_bkpf-accountingdocument
                            AND fiscalyear EQ ls_bkpf-fiscalyear.
 
-          SELECT *
-            FROM i_journalentryitem
-           WHERE companycode EQ @ls_bkpf-companycode
-             AND accountingdocument EQ @ls_bkpf-accountingdocument
-             AND fiscalyear EQ @ls_bkpf-fiscalyear
-             APPENDING CORRESPONDING FIELDS OF  TABLE  @lt_bseg.
-
-          CLEAR ls_colitm.
-          MOVE-CORRESPONDING ls_bkpf TO ls_colitm.
-          INSERT ls_colitm INTO TABLE lt_colitm_bseg.
+*          SELECT *
+*            FROM i_journalentryitem
+*           WHERE companycode EQ @ls_bkpf-companycode
+*             AND accountingdocument EQ @ls_bkpf-accountingdocument
+*             AND fiscalyear EQ @ls_bkpf-fiscalyear
+*             APPENDING CORRESPONDING FIELDS OF  TABLE  @lt_bseg.
+*
+*          CLEAR ls_colitm.
+*          MOVE-CORRESPONDING ls_bkpf TO ls_colitm.
+*          INSERT ls_colitm INTO TABLE lt_colitm_bseg.
         ENDIF.
       ENDIF.
     ENDIF.
