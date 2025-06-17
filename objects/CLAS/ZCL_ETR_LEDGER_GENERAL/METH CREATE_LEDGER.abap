@@ -385,6 +385,143 @@ IF gs_params-dfvhs IS NOT INITIAL.
       ENDIF.
     ENDIF.
 
+"2. kısım
+
+
+*    IF is_params-dfvhs IS NOT INITIAL.
+*      "BSEG negatif kayıt tutmuyor
+*      "BSEG ile çekilen hatalı kayıtlar için bu işlemi yapmasın
+*      READ TABLE lt_colitm_bseg WITH KEY bukrs = t_bkpf-bukrs
+*                                         belnr = t_bkpf-belnr
+*                                         gjahr = t_bkpf-gjahr.
+*      IF sy-subrc NE 0.
+*        LOOP AT lt_bseg INTO ls_bseg WHERE bukrs = t_bkpf-bukrs
+*                                       AND belnr = t_bkpf-belnr
+*                                       AND gjahr = t_bkpf-gjahr
+*                                       AND shkzg = 'S'
+*                                       AND dmbtr < 0.
+*
+*          ls_bseg-dmbtr = abs( ls_bseg-dmbtr ).
+*
+*          LOOP AT lt_bseg WHERE bukrs = t_bkpf-bukrs
+*                            AND belnr = t_bkpf-belnr
+*                            AND gjahr = t_bkpf-gjahr
+*                            AND shkzg = 'S'
+*                            AND dmbtr > ls_bseg-dmbtr.
+*
+*            IF lt_bseg-buzei EQ ls_bseg-buzei AND
+*               lt_bseg-docln EQ ls_bseg-docln.
+*              CONTINUE.
+*            ENDIF.
+*
+*            LOOP AT lt_colitm INTO ls_colitm WHERE bukrs = lt_bseg-bukrs
+*                                               AND belnr = lt_bseg-belnr
+*                                               AND gjahr = lt_bseg-gjahr
+*                                               AND buzei = lt_bseg-buzei
+*                                               AND docln = lt_bseg-docln.
+*              IF ls_bseg-buzei IS NOT INITIAL AND ls_bseg-docln IS NOT INITIAL.
+*                CONCATENATE ls_bseg-buzei ',' ls_bseg-docln INTO lv_char.
+*              ELSEIF ls_bseg-docln IS NOT INITIAL.
+*                lv_char = ls_bseg-docln.
+*              ELSEIF ls_bseg-buzei IS NOT INITIAL.
+*                lv_char = ls_bseg-buzei.
+*              ENDIF.
+*
+*              CONCATENATE ls_colitm-cldoc '/' lv_char INTO ls_colitm-cldoc.
+*              MODIFY lt_colitm FROM ls_colitm.
+*            ENDLOOP.
+*            IF sy-subrc NE 0.
+*              CLEAR ls_colitm.
+*
+*              IF ls_bseg-buzei IS NOT INITIAL AND ls_bseg-docln IS NOT INITIAL.
+*                CONCATENATE ls_bseg-buzei ',' ls_bseg-docln INTO lv_char.
+*              ELSEIF ls_bseg-docln IS NOT INITIAL.
+*                lv_char = ls_bseg-docln.
+*              ELSEIF ls_bseg-buzei IS NOT INITIAL.
+*                lv_char = ls_bseg-buzei.
+*              ENDIF.
+*
+*              ls_colitm-bukrs = lt_bseg-bukrs.
+*              ls_colitm-belnr = lt_bseg-belnr.
+*              ls_colitm-gjahr = lt_bseg-gjahr.
+*              ls_colitm-buzei = lt_bseg-buzei.
+*              ls_colitm-docln = lt_bseg-docln.
+*              ls_colitm-cldoc = lv_char.
+*              INSERT ls_colitm INTO TABLE lt_colitm.
+*            ENDIF.
+*
+*            lt_bseg-dmbtr = lt_bseg-dmbtr - ls_bseg-dmbtr.
+*            MODIFY lt_bseg.
+*            EXIT.
+*          ENDLOOP.
+*
+*          DELETE lt_bseg.CONTINUE.
+*        ENDLOOP.
+*
+*        LOOP AT lt_bseg INTO ls_bseg WHERE bukrs = t_bkpf-bukrs
+*                                       AND belnr = t_bkpf-belnr
+*                                       AND gjahr = t_bkpf-gjahr
+*                                       AND shkzg = 'H'
+*                                       AND dmbtr > 0.
+*
+*          ls_bseg-dmbtr = abs( ls_bseg-dmbtr ).
+*
+*          LOOP AT lt_bseg WHERE bukrs = t_bkpf-bukrs
+*                            AND belnr = t_bkpf-belnr
+*                            AND gjahr = t_bkpf-gjahr
+*                            AND shkzg = 'H'
+*                            AND dmbtr < ls_bseg-dmbtr.
+*
+*            IF lt_bseg-buzei EQ ls_bseg-buzei AND
+*               lt_bseg-docln EQ ls_bseg-docln.
+*              CONTINUE.
+*            ENDIF.
+*
+*            LOOP AT lt_colitm INTO ls_colitm WHERE bukrs = lt_bseg-bukrs
+*                                               AND belnr = lt_bseg-belnr
+*                                               AND gjahr = lt_bseg-gjahr
+*                                               AND buzei = lt_bseg-buzei
+*                                               AND docln = lt_bseg-docln.
+*              IF ls_bseg-buzei IS NOT INITIAL AND ls_bseg-docln IS NOT INITIAL.
+*                CONCATENATE ls_bseg-buzei ',' ls_bseg-docln INTO lv_char.
+*              ELSEIF ls_bseg-docln IS NOT INITIAL.
+*                lv_char = ls_bseg-docln.
+*              ELSEIF ls_bseg-buzei IS NOT INITIAL.
+*                lv_char = ls_bseg-buzei.
+*              ENDIF.
+*
+*              CONCATENATE ls_colitm-cldoc '/' lv_char INTO ls_colitm-cldoc.
+*              MODIFY lt_colitm FROM ls_colitm.
+*            ENDLOOP.
+*            IF sy-subrc NE 0.
+*              CLEAR ls_colitm.
+*
+*              IF ls_bseg-buzei IS NOT INITIAL AND ls_bseg-docln IS NOT INITIAL.
+*                CONCATENATE ls_bseg-buzei ',' ls_bseg-docln INTO lv_char.
+*              ELSEIF ls_bseg-docln IS NOT INITIAL.
+*                lv_char = ls_bseg-docln.
+*              ELSEIF ls_bseg-buzei IS NOT INITIAL.
+*                lv_char = ls_bseg-buzei.
+*              ENDIF.
+*
+*              ls_colitm-bukrs = lt_bseg-bukrs.
+*              ls_colitm-belnr = lt_bseg-belnr.
+*              ls_colitm-gjahr = lt_bseg-gjahr.
+*              ls_colitm-buzei = lt_bseg-buzei.
+*              ls_colitm-docln = lt_bseg-docln.
+*              ls_colitm-cldoc = lv_char.
+*              INSERT ls_colitm INTO TABLE lt_colitm.
+*            ENDIF.
+*
+*            lt_bseg-dmbtr = lt_bseg-dmbtr + ls_bseg-dmbtr.
+*            MODIFY lt_bseg.
+*            EXIT.
+*          ENDLOOP.
+*
+*          DELETE lt_bseg.CONTINUE.
+*        ENDLOOP.
+*      ENDIF.
+*    ENDIF.
 
 "<<<<<Tutar göstergesinin tersinde çalışıyor.
 

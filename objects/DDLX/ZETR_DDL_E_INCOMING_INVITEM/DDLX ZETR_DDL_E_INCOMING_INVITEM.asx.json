@@ -7,9 +7,9 @@
     "DDLXNAME":"ZETR_DDL_E_INCOMING_INVITEM",
     "VERSION":"A",
     "CHANGED_BY":"SAP_CUSTOMER",
-    "CHANGED_ON":"2025-05-18",
-    "CHANGED_AT":"17:08:34",
-    "UUID":"FA163EBBCF7E1FE08D815762572684A7",
+    "CHANGED_ON":"2025-06-17",
+    "CHANGED_AT":"12:48:28",
+    "UUID":"FA163EBBCF7E1FE092EF2BBC360304EE",
     "ABAP_LANGUAGE_VERSION":"5"
    }
   ]
@@ -34,7 +34,7 @@
     "DDLXNAME":"ZETR_DDL_E_INCOMING_INVITEM",
     "VERSION":"A",
     "UUID":"",
-    "SOURCE":"@Metadata.layer: #CORE\r\n@UI:{\r\nheaderInfo:{\r\n                typeNamePlural: 'Invoice Items',\r\n                typeName: 'Invoice Item',\r\n                title:{ type: #STANDARD, label: 'Invoice Items', value: 'MaterialDescription' }\r\n           }\r\n}\r\nannotate entity zetr_ddl_p_incoming_invitem with\r\n{\r\n  @UI.facet: [ { id:            'Items',\r\n                 purpose:       #STANDARD,\r\n                 type:          #IDENTIFICATION_REFERENCE,\r\n                 label:         'Invoice Items',\r\n                 position:      10 }  ]\r\n  @UI.hidden: true\r\n  DocumentUUID;\r\n  @UI: { lineItem: [ { position: 20 } ],\r\n         identification: [ { position: 20 } ] }\r\n  LineNumber;\r\n  @UI: { lineItem: [ { position: 30 } ],\r\n         identification: [ { position: 30 } ] }\r\n  MaterialDescription;\r\n  @UI: { lineItem: [ { position: 40 } ],\r\n         identification: [ { position: 40 } ] }\r\n  Description;\r\n  @UI.hidden: true\r\n  ModelName;\r\n  @UI.hidden: true\r\n  Brand;\r\n  @UI.hidden: true\r\n  BuyerItemIdentification;\r\n  @UI: { lineItem: [ { position: 50 } ],\r\n         identification: [ { position: 50 } ] }\r\n  SellerItemIdentification;\r\n  @UI.hidden: true\r\n  ManufacturerItemIdentification;\r\n  @UI: { lineItem: [ { position: 60 } ],\r\n         identification: [ { position: 60 } ] }\r\n  Price;\r\n  @UI: { lineItem: [ { position: 70 } ],\r\n         identification: [ { position: 70 } ] }\r\n  DiscountRate;  \r\n  @UI: { lineItem: [ { position: 80 } ],\r\n         identification: [ { position: 80 } ] }\r\n  DiscountAmount;  \r\n  @UI: { lineItem: [ { position: 90 } ],\r\n         identification: [ { position: 90 } ] }\r\n  Amount;\r\n  @UI: { lineItem: [ { position: 100 } ],\r\n         identification: [ { position: 100 } ] }\r\n  TaxAmount;\r\n  @UI.hidden: true\r\n  Currency;\r\n  @UI: { lineItem: [ { position: 110 } ],\r\n         identification: [ { position: 110 } ] }\r\n  Quantity;\r\n  @UI.hidden: true\r\n  UnitofMeasure;\r\n}"
+    "SOURCE":"@Metadata.layer: #CORE\r\n@UI:{\r\nheaderInfo:{\r\n                typeNamePlural: 'Invoice Items',\r\n                typeName: 'Invoice Item',\r\n                title:{ type: #STANDARD, label: 'Invoice Items', value: 'MaterialDescription' }\r\n           }\r\n}\r\nannotate entity zetr_ddl_p_incoming_invitem with\r\n{\r\n  @UI.facet: [ { id:            'Items',\r\n                 purpose:       #STANDARD,\r\n                 type:          #IDENTIFICATION_REFERENCE,\r\n                 label:         'Invoice Items',\r\n                 position:      10 }  ]\r\n  @UI.hidden: true\r\n  DocumentUUID;\r\n  @UI: { lineItem: [ { position: 20 } ],\r\n         identification: [ { position: 20 } ] }\r\n  LineNumber;\r\n  @UI: { lineItem: [ { position: 30 } ],\r\n         identification: [ { position: 30 } ] }\r\n  MaterialDescription;\r\n  @UI: { lineItem: [ { position: 40 } ],\r\n         identification: [ { position: 40 } ] }\r\n  Description;\r\n  @UI.hidden: true\r\n  ModelName;\r\n  @UI.hidden: true\r\n  Brand;\r\n  @UI.hidden: true\r\n  BuyerItemIdentification;\r\n  @UI: { lineItem: [ { position: 50 } ],\r\n         identification: [ { position: 50 } ] }\r\n  SellerItemIdentification;\r\n  @UI.hidden: true\r\n  ManufacturerItemIdentification;\r\n  @UI: { lineItem: [ { position: 60 } ],\r\n         identification: [ { position: 60 } ] }\r\n  Price;\r\n  @UI: { lineItem: [ { position: 70 } ],\r\n         identification: [ { position: 70 } ] }\r\n  DiscountRate;  \r\n  @UI: { lineItem: [ { position: 80 } ],\r\n         identification: [ { position: 80 } ] }\r\n  DiscountAmount;  \r\n  @UI: { lineItem: [ { position: 90 } ],\r\n         identification: [ { position: 90 } ] }\r\n  Amount;\r\n  @UI: { lineItem: [ { position: 100 } ],\r\n         identification: [ { position: 100 } ] }\r\n  TaxAmount;\r\n  @UI: { lineItem: [ { position: 105 } ],\r\n         identification: [ { position: 105 } ] }  \r\n  TaxRate;\r\n  @UI.hidden: true\r\n  Currency;\r\n  @UI: { lineItem: [ { position: 110 } ],\r\n         identification: [ { position: 110 } ] }\r\n  Quantity;\r\n  @UI.hidden: true\r\n  UnitofMeasure;\r\n}"
    }
   ]
  },
@@ -296,6 +296,20 @@
    },
    {
     "DDLXNAME":"ZETR_DDL_E_INCOMING_INVITEM",
+    "ELEMENT":"TAXRATE",
+    "NAME":"UI.IDENTIFICATION$1$.POSITION",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"105"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_INCOMING_INVITEM",
+    "ELEMENT":"TAXRATE",
+    "NAME":"UI.LINEITEM$1$.POSITION",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"105"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_INCOMING_INVITEM",
     "ELEMENT":"UNITOFMEASURE",
     "NAME":"UI.HIDDEN",
     "ELEMENT_TYPE":"S",
@@ -374,8 +388,8 @@
     "EXTENDED_ARTIFACT":"ZETR_DDL_P_INCOMING_INVITEM",
     "VARIANT":"",
     "LAYER":1500,
-    "DT_UUID":"FA163EBBCF7E1FE08D815762572684A7",
-    "RT_HASH":"DD5D3616981F5CD37AFD2F8AAD62781DDD0A11F4",
+    "DT_UUID":"FA163EBBCF7E1FE092EF2BBC360304EE",
+    "RT_HASH":"4252CF33758AF7378F3E207A710C3088ED5B1785",
     "GEN_VERSION":"0",
     "TYPE":"0"
    }

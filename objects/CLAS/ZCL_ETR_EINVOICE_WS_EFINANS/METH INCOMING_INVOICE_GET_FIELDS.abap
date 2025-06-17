@@ -75,6 +75,8 @@
             <ls_item>-wrbtr = ls_xml_line2-value.
           WHEN 'toplamVergiTutari'.
             <ls_item>-fwste = ls_xml_line2-value.
+          WHEN 'oran'.
+            <ls_item>-taxrt = ls_xml_line2-value.
           WHEN 'iskontoOrani'.
             <ls_item>-disrt = ls_xml_line2-value.
           WHEN 'iskontoTutari'.
