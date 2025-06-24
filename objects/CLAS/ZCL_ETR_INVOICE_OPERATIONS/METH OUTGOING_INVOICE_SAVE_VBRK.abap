@@ -164,6 +164,8 @@
     IF lines( lt_vbrp_temp ) = 1.
       ls_invoice_rule_input-werks = lt_vbrp_temp[ 1 ]-werks.
       ls_invoice_rule_input-pstyv = lt_vbrp_temp[ 1 ]-pstyv.
+    ELSE.
+      ls_invoice_rule_input-werks = ls_document-werks.
     ENDIF.
 
     determine_invoice_scenario(
