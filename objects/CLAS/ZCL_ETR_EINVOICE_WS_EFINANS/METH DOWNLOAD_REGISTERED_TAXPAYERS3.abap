@@ -38,7 +38,8 @@
           CONCATENATE lv_base64_content ls_xml_line-value INTO lv_base64_content.
       ENDCASE.
     ENDLOOP.
-    CLEAR lt_xml_table. FREE lt_xml_table.
+    FREE lt_xml_table.
+
     lv_zipped_file = xco_cp=>string( lv_base64_content )->as_xstring( xco_cp_binary=>text_encoding->base64 )->value.
 *    lv_zipped_file = cl_web_http_utility=>decode_base64( encoded = lv_base64_content ).
     zcl_etr_regulative_common=>unzip_file_single(
@@ -52,24 +53,27 @@
       RESULT efaturakayitlikullaniciliste = ls_user_list.
     SORT ls_user_list-efaturakayitlikullanici BY vkntckn.
 
+    FREE: lv_taxpayers_xml, lv_zipped_file.
+
     DATA lv_taxid TYPE string.
     DATA lt_list_bg TYPE mty_users_t.
 
     LOOP AT ls_user_list-efaturakayitlikullanici INTO DATA(ls_list).
-      IF lv_taxid <> ls_list-vkntckn AND lines( lt_list_bg ) > 100000.
+*      IF lv_taxid <> ls_list-vkntckn AND lines( lt_list_bg ) > 100000.
+      IF lv_taxid <> ls_list-vkntckn AND lines( lt_list_bg ) > 1000.
         save_registered_taxpayers_bckg( it_list = lt_list_bg ).
         CLEAR lt_list_bg.
-        FREE lt_list_bg.
+*        FREE lt_list_bg.
       ELSEIF lv_taxid <> ls_list-vkntckn.
         lv_taxid = ls_list-vkntckn.
       ENDIF.
       APPEND ls_list TO lt_list_bg.
-      DELETE ls_user_list-efaturakayitlikullanici.
+*      DELETE ls_user_list-efaturakayitlikullanici.
     ENDLOOP.
 
     IF lt_list_bg IS NOT INITIAL.
       save_registered_taxpayers_bckg( it_list = lt_list_bg ).
-      CLEAR lt_list_bg.
+*      CLEAR lt_list_bg.
       FREE lt_list_bg.
     ENDIF.
   ENDMETHOD.

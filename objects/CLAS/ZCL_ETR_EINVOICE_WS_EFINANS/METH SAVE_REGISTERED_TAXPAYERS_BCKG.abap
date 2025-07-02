@@ -12,6 +12,8 @@
         lo_process->set_name( 'Invoice Users Save Process' )->set_operation( lo_operation ).
         lo_process->save_for_execution( ).
         COMMIT WORK.
+        CLEAR: lo_process, lo_process_factory, lo_operation.
+        FREE: lo_process, lo_process_factory, lo_operation.
       CATCH cx_bgmc INTO lx_bgmc.
         ROLLBACK WORK.
     ENDTRY.
