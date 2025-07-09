@@ -13,7 +13,7 @@
           LOOP AT it_xml_table INTO DATA(ls_xml_item) FROM lv_item_index.
             CASE ls_xml_item-name.
               WHEN 'irsaliyeSatir'.
-                CHECK ls_xml_line-node_type = 'CO_NT_ELEMENT_CLOSE'.
+                CHECK ls_xml_item-node_type = 'CO_NT_ELEMENT_CLOSE'.
                 UNASSIGN <ls_item>.
                 EXIT.
               WHEN 'paraBirimi'.
