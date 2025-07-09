@@ -7,9 +7,9 @@
     "DDLXNAME":"ZETR_DDL_E_INCOMING_DELCONT",
     "VERSION":"A",
     "CHANGED_BY":"SAP_CUSTOMER",
-    "CHANGED_ON":"2024-10-22",
-    "CHANGED_AT":"18:43:46",
-    "UUID":"C1CC6765374D1EEFA494B2374A53C244",
+    "CHANGED_ON":"2025-07-09",
+    "CHANGED_AT":"17:13:07",
+    "UUID":"FA163EBBCF7E1FE0979CFF67129CC526",
     "ABAP_LANGUAGE_VERSION":"5"
    }
   ]
@@ -34,7 +34,7 @@
     "DDLXNAME":"ZETR_DDL_E_INCOMING_DELCONT",
     "VERSION":"A",
     "UUID":"",
-    "SOURCE":"@Metadata.layer: #CORE\r\n@UI:{\r\nheaderInfo:{\r\n                typeNamePlural: 'Delivery Contents',\r\n                typeName: 'Delivery Content',\r\n                title:{ type: #STANDARD, label: 'Delivery Contents', value: 'Filename' }\r\n           }\r\n}\r\nannotate entity zetr_ddl_p_incoming_delcont with\r\n{\r\n  @UI.hidden: true\r\n  DocumentUUID;\r\n  @UI.lineItem: [{ position: 2 }]\r\n  ContentType;\r\n  @UI.lineItem: [{ position: 3 }]\r\n  DocumentType;\r\n  @UI.hidden: true\r\n  DocumentTypeText;\r\n  @UI.hidden: true\r\n  CompanyCode;\r\n  @UI.hidden: true\r\n  Content;\r\n  @UI.hidden: true\r\n  ContentUrl;  \r\n  @UI.hidden: true\r\n  MimeType;\r\n  @UI: { lineItem: [ { type: #WITH_URL, url: 'ContentURL', position: 1 } ] }\r\n  Filename;\r\n}"
+    "SOURCE":"@Metadata.layer: #CORE\r\n@UI:{\r\nheaderInfo:{\r\n                typeNamePlural: 'Delivery Contents',\r\n                typeName: 'Delivery Content',\r\n                title:{ type: #STANDARD, label: 'Delivery Contents', value: 'Filename' }\r\n           }\r\n}\r\nannotate entity zetr_ddl_p_incoming_delcont with\r\n{\r\n  @UI.hidden: true\r\n  DocumentUUID;\r\n  @UI.lineItem: [{ position: 2 }]\r\n  ContentType;\r\n  @UI.lineItem: [{ position: 3 }]\r\n  DocumentType;\r\n  @UI.hidden: true\r\n  DocumentTypeText;\r\n  @UI.hidden: true\r\n  CompanyCode;\r\n  @UI.hidden: true\r\n  Content;\r\n  @UI.hidden: true\r\n  ContentUrl;  \r\n  @UI.hidden: true\r\n  MimeType;\r\n  @UI: { lineItem: [ { type: #WITH_URL, url: 'ContentUrl', position: 1 } ] }\r\n  Filename;\r\n}"
    }
   ]
  },
@@ -145,7 +145,7 @@
     "ELEMENT":"FILENAME",
     "NAME":"UI.LINEITEM$1$.URL",
     "ELEMENT_TYPE":"S",
-    "VALUE":"'ContentURL'"
+    "VALUE":"'ContentUrl'"
    },
    {
     "DDLXNAME":"ZETR_DDL_E_INCOMING_DELCONT",
@@ -206,8 +206,8 @@
     "EXTENDED_ARTIFACT":"ZETR_DDL_P_INCOMING_DELCONT",
     "VARIANT":"",
     "LAYER":1500,
-    "DT_UUID":"C1CC6765374D1EEFA494B2374A53C244",
-    "RT_HASH":"5AB2F10FC89011173EC7CBF43449276EFB8C13DF",
+    "DT_UUID":"FA163EBBCF7E1FE0979CFF67129CC526",
+    "RT_HASH":"2C26DB6F1884798949B375408C88EEAECBA0CBD7",
     "GEN_VERSION":"0",
     "TYPE":"0"
    }
