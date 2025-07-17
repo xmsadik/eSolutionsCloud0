@@ -7,6 +7,7 @@
                   vbrk~BillingDocumentDate AS fkdat,
                   vbrk~BillingDocumentDate AS netdt,
                   vbrk~BillingDocumentType AS fkart,
+                  vbrk~CustomerAccountAssignmentGroup AS ktgrd,
                   vbrk~CustomerPaymentTerms AS zterm,
                   vbrk~AccountingExchangeRate AS kurrf,
                   vbrk~ExchangeRateDate AS kurrf_dat,

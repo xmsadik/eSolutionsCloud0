@@ -39,6 +39,10 @@
    },
    {
     "OBJECT":"ZETR_ALO_REGULATIVE",
+    "SUBOBJECT":"DELIVERY_SEND_JOB"
+   },
+   {
+    "OBJECT":"ZETR_ALO_REGULATIVE",
     "SUBOBJECT":"DELIVERY_UPDOUT_JOB"
    },
    {
@@ -52,6 +56,10 @@
    {
     "OBJECT":"ZETR_ALO_REGULATIVE",
     "SUBOBJECT":"INVOICE_SAVE_JOB"
+   },
+   {
+    "OBJECT":"ZETR_ALO_REGULATIVE",
+    "SUBOBJECT":"INVOICE_SEND_JOB"
    },
    {
     "OBJECT":"ZETR_ALO_REGULATIVE",
@@ -86,6 +94,12 @@
    {
     "SPRAS":"E",
     "OBJECT":"ZETR_ALO_REGULATIVE",
+    "SUBOBJECT":"DELIVERY_SEND_JOB",
+    "SUBOBJTXT":"Outgoing Delivery Send Job"
+   },
+   {
+    "SPRAS":"E",
+    "OBJECT":"ZETR_ALO_REGULATIVE",
     "SUBOBJECT":"DELIVERY_UPDOUT_JOB",
     "SUBOBJTXT":"Outgoing Delivery Update Status Job"
    },
@@ -106,6 +120,12 @@
     "OBJECT":"ZETR_ALO_REGULATIVE",
     "SUBOBJECT":"INVOICE_SAVE_JOB",
     "SUBOBJTXT":"Outgoing Invoice Save Job"
+   },
+   {
+    "SPRAS":"E",
+    "OBJECT":"ZETR_ALO_REGULATIVE",
+    "SUBOBJECT":"INVOICE_SEND_JOB",
+    "SUBOBJTXT":"Outgoing Invoice Send Job"
    },
    {
     "SPRAS":"E",
