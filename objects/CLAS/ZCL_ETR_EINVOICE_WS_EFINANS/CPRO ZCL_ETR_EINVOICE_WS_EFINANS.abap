@@ -36,6 +36,12 @@
         it_list  TYPE zcl_etr_einvoice_ws_efinans=>mty_user_list
         it_defal TYPE zcl_etr_einvoice_ws_efinans=>mty_taxpayers_list OPTIONAL.
 
+    METHODS prepare_taxpayer_data
+      IMPORTING
+        is_user TYPE mty_users
+      CHANGING
+        ct_list TYPE zcl_etr_einvoice_ws=>mty_taxpayers_list.
+
     METHODS save_registered_taxpayers_bckg
       IMPORTING
         it_list TYPE zcl_etr_einvoice_ws_efinans=>mty_users_t.
