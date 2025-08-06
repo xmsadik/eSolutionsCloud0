@@ -18,10 +18,10 @@
       LOOP AT ls_invoice_line-allowancecharge INTO DATA(ls_allowance_charge).
         IF ls_allowance_charge-chargeindicator-content = 'false'.
           ms_invoice_ubl-legalmonetarytotal-allowancetotalamount-content += ls_allowance_charge-amount-content.
-*          ms_invoice_ubl-legalmonetarytotal-lineextensionamount-content += ls_allowance_charge-amount-content.
+          ms_invoice_ubl-legalmonetarytotal-lineextensionamount-content += ls_allowance_charge-amount-content.
         ELSE.
           ms_invoice_ubl-legalmonetarytotal-chargetotalamount-content += ls_allowance_charge-amount-content.
-*          ms_invoice_ubl-legalmonetarytotal-lineextensionamount-content -= ls_allowance_charge-amount-content.
+          ms_invoice_ubl-legalmonetarytotal-lineextensionamount-content -= ls_allowance_charge-amount-content.
         ENDIF.
       ENDLOOP.
     ENDLOOP.
