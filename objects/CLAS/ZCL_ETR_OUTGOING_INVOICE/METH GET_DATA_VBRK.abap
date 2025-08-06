@@ -44,6 +44,12 @@
         ENDIF.
       ENDIF.
       ms_billing_data-vbrk-netdt = duedate.
+
+      SELECT SINGLE PaymentTermsDescription
+        FROM I_PaymentTermsText
+        WHERE Language = @sy-langu
+          AND PaymentTerms = @ms_billing_data-vbrk-zterm
+        INTO @ms_billing_data-vbrk-zterm_text.
     ENDIF.
 
     SELECT SINGLE company~companycode AS bukrs,

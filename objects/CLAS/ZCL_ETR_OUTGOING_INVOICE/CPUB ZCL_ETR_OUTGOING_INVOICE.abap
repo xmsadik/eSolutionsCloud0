@@ -190,7 +190,7 @@ CLASS zcl_etr_outgoing_invoice DEFINITION
     TYPES fkdat TYPE datum.
     TYPES netdt TYPE datum.
     TYPES fkart TYPE zetr_e_fkart.
-    TYPES ktgrd tYPE c LENGTH 2.
+    TYPES ktgrd TYPE c LENGTH 2.
     TYPES zterm TYPE dzterm.
     TYPES kurrf TYPE zetr_e_kursf.
     TYPES kurrf_dat TYPE datum.
@@ -198,6 +198,7 @@ CLASS zcl_etr_outgoing_invoice DEFINITION
     TYPES kunre TYPE zetr_e_partner.
     TYPES adrre TYPE c LENGTH 10.
     TYPES knumv TYPE c LENGTH 10.
+    TYPES zterm_text TYPE zetr_e_descr100.
     TYPES END OF mty_vbrk.
 
     TYPES BEGIN OF mty_vbrp.

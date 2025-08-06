@@ -10,6 +10,7 @@
                   ms_billing_data-vbrk-netdt+6(2)
         INTO ms_invoice_ubl-paymentterms-paymentduedate-content
         SEPARATED BY '-'.
+      ms_invoice_ubl-paymentterms-note-content = ms_billing_data-vbrk-zterm_text.
     ENDIF.
     ms_invoice_ubl-documentcurrencycode-content = ms_billing_data-vbrk-waerk.
     IF ms_billing_data-vbrk-waerk NE ms_billing_data-t001-waers.
