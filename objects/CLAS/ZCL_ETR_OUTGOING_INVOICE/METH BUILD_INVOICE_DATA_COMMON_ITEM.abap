@@ -165,7 +165,7 @@
           ENDIF.
           <ls_taxsubtotal>-taxcategory-taxexemptionreason-content = ls_tax_exemption-Description.
         ENDIF.
-        <ls_taxsubtotal>-taxableamount-content = ls_invoice_items-netwr + ls_invoice_items-surtr - ls_invoice_items-distr.
+        <ls_taxsubtotal>-taxableamount-content = ls_invoice_items-netwr." + ls_invoice_items-surtr - ls_invoice_items-distr.
         <ls_taxsubtotal>-taxableamount-currencyid = ls_invoice_items-waers.
         <ls_taxsubtotal>-percent-content = ls_tax_match-taxrt.
         IF ls_invoice_items-mwsbp IS INITIAL. "as
@@ -185,7 +185,7 @@
           INTO @DATA(ls_parent_tax_data).
         <ls_taxsubtotal>-taxcategory-taxscheme-name-content = ls_parent_tax_data-LongDescription.
         <ls_taxsubtotal>-taxcategory-taxscheme-taxtypecode-content = ls_tax_match-txtyp.
-        <ls_taxsubtotal>-taxableamount-content = ls_invoice_items-netwr + ls_invoice_items-surtr - ls_invoice_items-distr.
+        <ls_taxsubtotal>-taxableamount-content = ls_invoice_items-netwr." + ls_invoice_items-surtr - ls_invoice_items-distr.
         <ls_taxsubtotal>-taxableamount-currencyid = ls_invoice_items-waers.
         <ls_taxsubtotal>-percent-content = ls_tax_match-txrtp.
         lv_amount = ( ls_invoice_items-netwr * ls_tax_match-txrtp ) / 100.
@@ -233,7 +233,7 @@
         APPEND INITIAL LINE TO <ls_invoice_line>-taxtotal-taxsubtotal ASSIGNING <ls_taxsubtotal>.
         <ls_taxsubtotal>-taxcategory-taxscheme-name-content = ls_tax_data-LongDescription.
         <ls_taxsubtotal>-taxcategory-taxscheme-taxtypecode-content = ls_invoice_items-othtt.
-        <ls_taxsubtotal>-taxableamount-content = ls_invoice_items-netwr + ls_invoice_items-surtr - ls_invoice_items-distr..
+        <ls_taxsubtotal>-taxableamount-content = ls_invoice_items-netwr." + ls_invoice_items-surtr - ls_invoice_items-distr..
         <ls_taxsubtotal>-taxableamount-currencyid = ls_invoice_items-waers.
         <ls_taxsubtotal>-percent-content = ls_invoice_items-othtr.
         <ls_taxsubtotal>-taxamount-content = ls_invoice_items-othtx.
