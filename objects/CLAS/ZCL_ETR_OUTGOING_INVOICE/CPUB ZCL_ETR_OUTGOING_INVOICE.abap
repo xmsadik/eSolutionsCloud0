@@ -198,6 +198,7 @@ CLASS zcl_etr_outgoing_invoice DEFINITION
     TYPES kunre TYPE zetr_e_partner.
     TYPES adrre TYPE c LENGTH 10.
     TYPES knumv TYPE c LENGTH 10.
+    TYPES rfbsk TYPE c LENGTH 1.
     TYPES zterm_text TYPE zetr_e_descr100.
     TYPES END OF mty_vbrk.
 
