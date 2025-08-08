@@ -7,7 +7,7 @@
                                        lv_syuzeit+2(2) && ':' &&
                                        lv_syuzeit+4(2).
     ms_invoice_ubl-profileid-content = zcl_etr_invoice_operations=>conversion_profile_id_output( CONV #( ms_document-prfid ) ).
-    ms_invoice_ubl-invoicetypecode-content = zcl_etr_invoice_operations=>conversion_profile_id_output( CONV #( ms_document-invty ) ).
+    ms_invoice_ubl-invoicetypecode-content = zcl_etr_invoice_operations=>conversion_invoice_type_output( CONV #( ms_document-invty ) ).
     ms_invoice_ubl-uuid-content = ms_document-invui.
 
     ms_invoice_ubl-accountingsupplierparty-party = ubl_fill_company_data( iv_bukrs = ms_document-bukrs ).
