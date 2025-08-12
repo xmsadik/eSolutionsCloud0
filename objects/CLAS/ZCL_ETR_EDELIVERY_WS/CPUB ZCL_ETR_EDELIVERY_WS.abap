@@ -55,6 +55,12 @@ CLASS zcl_etr_edelivery_ws DEFINITION
         VALUE(rt_list) TYPE mty_taxpayers_list
       RAISING
         zcx_etr_regulative_exception .
+    METHODS download_registered_taxpayers2
+      ABSTRACT
+      RETURNING
+        VALUE(rt_list) TYPE mty_taxpayers_list
+      RAISING
+        zcx_etr_regulative_exception .
     METHODS get_incoming_deliveries
       ABSTRACT
       IMPORTING

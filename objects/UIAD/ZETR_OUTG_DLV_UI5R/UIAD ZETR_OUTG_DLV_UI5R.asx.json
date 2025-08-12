@@ -108,7 +108,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Outgoing Deliveries"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Outgoing Deliveries",
+    "DESCRIPTION":"eSolutions - Outgoing Deliveries"
    },
    {
     "APP_ID":"ZETR_OUTG_DLV_UI5R",
@@ -117,7 +118,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Giden İrsaliyeler"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Giden İrsaliyeler",
+    "DESCRIPTION":"eÇözümler - Giden İrsaliyeler"
    }
   ]
  },

@@ -12,7 +12,7 @@
     "SOURCE":"@AccessControl.authorizationCheck: #NOT_REQUIRED\r\n@EndUserText.label: 'Ledger - Last Page Entry'\r\n@Metadata.ignorePropagatedAnnotations: true\r\ndefine root view entity zetr_ddl_i_ledger_lastpage\r\n  as select from zetr_t_defcl\r\n  composition [1..*] of zetr_ddl_i_ledger_lastpage_prt as _ledgerParts\r\n{\r\n  key bukrs as bukrs,\r\n  key gjahr as gjahr,\r\n  key monat as monat,\r\n      ernam as ernam,\r\n      erdat as erdat,\r\n      erzet as erzet,\r\n      _ledgerParts // Make association public\r\n}\r\nwhere\r\n  ardnm = 'X'\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[\n\"ZETR_T_DEFCL\"\n],\n\"ASSOCIATED\":\n[\n\"ZETR_DDL_I_LEDGER_LASTPAGE_PRT\"\n],\n\"BASE\":\n[],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
     "PARENTNAME":"",
     "ACTFLAG":"",
-    "CHGFLAG":"DA",
+    "CHGFLAG":"J,WT42Z",
     "SOURCE_TYPE":"W",
     "SOURCE_ORIGIN":"0",
     "ABAP_LANGUAGE_VERSION":"5"

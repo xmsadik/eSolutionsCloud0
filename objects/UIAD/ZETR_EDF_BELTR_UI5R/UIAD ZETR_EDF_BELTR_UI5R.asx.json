@@ -108,7 +108,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Ledger Document Type Parameters"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Ledger Document Type Parameters",
+    "DESCRIPTION":"eSolutions - Ledger Document Type Parameters"
    },
    {
     "APP_ID":"ZETR_EDF_BELTR_UI5R",
@@ -117,7 +118,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Defter Belge Türü Parametreleri"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Defter Belge Türü Parametreleri",
+    "DESCRIPTION":"eÇözümler - Defter Belge Türü Parametreleri"
    }
   ]
  },

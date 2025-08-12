@@ -146,7 +146,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Unit Code Matching"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Unit Code Matching",
+    "DESCRIPTION":"eSolutions - Unit Code Matching"
    },
    {
     "APP_ID":"ZETR_UNT_MTC_UI5R",
@@ -155,7 +156,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Birim Kod Eşleme"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Birim Kod Eşleme",
+    "DESCRIPTION":"eÇözümler - Birim Kod Eşleme"
    }
   ]
  },

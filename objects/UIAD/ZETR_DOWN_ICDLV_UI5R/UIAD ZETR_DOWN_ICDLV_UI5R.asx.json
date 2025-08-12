@@ -146,7 +146,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Download Incoming Deliveries"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Download Incoming Deliveries",
+    "DESCRIPTION":"eSolutions - Download Incoming Deliveries"
    },
    {
     "APP_ID":"ZETR_DOWN_ICDLV_UI5R",
@@ -155,7 +156,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Gelen İrsaliyeleri İndir"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Gelen İrsaliyeleri İndir",
+    "DESCRIPTION":"eÇözümler - Gelen İrsaliyeleri İndir"
    }
   ]
  },

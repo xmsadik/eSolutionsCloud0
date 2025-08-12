@@ -146,7 +146,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Tax Code Matching"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Tax Code Matching",
+    "DESCRIPTION":"eSolutions - Tax Code Matching"
    },
    {
     "APP_ID":"ZETR_TAX_MTC_UI5R",
@@ -155,7 +156,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Vergi Kodu Eşleme"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Vergi Kodu Eşleme",
+    "DESCRIPTION":"eÇözümler - Vergi Kodu Eşleme"
    }
   ]
  },

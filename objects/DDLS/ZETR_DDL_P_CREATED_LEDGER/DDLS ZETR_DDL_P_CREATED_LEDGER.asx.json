@@ -12,7 +12,7 @@
     "SOURCE":"@AccessControl.authorizationCheck: #NOT_REQUIRED\r\n@EndUserText.label: 'Created Ledgers'\r\n@Metadata.ignorePropagatedAnnotations: true\r\n@Metadata.allowExtensions: true\r\ndefine root view entity zetr_ddl_p_created_ledger\r\n  provider contract transactional_query\r\n  as projection on zetr_ddl_i_created_ledger\r\n{\r\n  key bukrs,\r\n  key gjahr,\r\n  key monat,\r\n      elprc,\r\n      stldr,\r\n      etldr,\r\n      stldd,\r\n      stsds,\r\n      etsds,\r\n      sgbsn,\r\n      egbsn,\r\n      dcdrs,\r\n      heror,\r\n      manup,\r\n      ernam,\r\n      erdat,\r\n      erzet,\r\n      /* Associations */\r\n      _ledgerParts  : redirected to composition child zetr_ddl_p_created_ledger_part,\r\n      _ledgerTotals : redirected to composition child zetr_ddl_p_created_ledger_tot,\r\n      _ledgerLogs   : redirected to composition child zetr_ddl_p_created_ledger_logs\r\n}\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[\n\"ZETR_DDL_I_CREATED_LEDGER\"\n],\n\"ASSOCIATED\":\n[\n\"ZETR_DDL_I_CREATED_LEDGER_LOGS\",\n\"ZETR_DDL_I_CREATED_LEDGER_PART\",\n\"ZETR_DDL_I_CREATED_LEDGER_TOT\",\n\"ZETR_DDL_P_CREATED_LEDGER_LOGS\",\n\"ZETR_DDL_P_CREATED_LEDGER_PART\",\n\"ZETR_DDL_P_CREATED_LEDGER_TOT\"\n],\n\"BASE\":\n[\n\"ZETR_DDL_I_CREATED_LEDGER\"\n],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
     "PARENTNAME":"",
     "ACTFLAG":"",
-    "CHGFLAG":"Z",
+    "CHGFLAG":"J,WT42Z",
     "SOURCE_TYPE":"P",
     "SOURCE_ORIGIN":"0",
     "ABAP_LANGUAGE_VERSION":"5"

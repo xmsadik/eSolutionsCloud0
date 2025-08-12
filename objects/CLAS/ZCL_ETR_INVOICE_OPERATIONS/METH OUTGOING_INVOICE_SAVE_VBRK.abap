@@ -13,6 +13,7 @@
         erzet TYPE uzeit,
         kurrf TYPE zetr_e_kursf,
         waerk TYPE waers,
+        ktgrd TYPE c LENGTH 2,
       END OF ty_vbrk,
       BEGIN OF ty_vbrp,
         posnr TYPE sd_sls_document_item,
@@ -84,7 +85,8 @@
                   creationdate AS erdat,
                   creationtime AS erzet,
                   accountingexchangerate AS kurrf,
-                  transactioncurrency AS waerk
+                  transactioncurrency AS waerk,
+                  CustomerAccountAssignmentGroup AS ktgrd
       FROM i_billingdocument
       WHERE billingdocument = @iv_belnr
         AND billingdocumentiscancelled = ''
@@ -157,6 +159,7 @@
     ls_invoice_rule_input-vtweg = ls_vbrk-vtweg.
     ls_invoice_rule_input-spart = ls_vbrk-spart.
     ls_invoice_rule_input-vbeln = ls_vbrk-vbeln.
+    ls_invoice_rule_input-ktgrd = ls_vbrk-ktgrd.
 
     DATA(lt_vbrp_temp) = lt_vbrp.
     SORT lt_vbrp_temp BY werks pstyv.

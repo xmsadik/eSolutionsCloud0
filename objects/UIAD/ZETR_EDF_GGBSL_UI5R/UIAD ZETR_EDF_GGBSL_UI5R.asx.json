@@ -108,7 +108,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Ledger Delete Sent"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Ledger Delete Sent",
+    "DESCRIPTION":"eSolutions - Ledger Delete Sent"
    },
    {
     "APP_ID":"ZETR_EDF_GGBSL_UI5R",
@@ -117,7 +118,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Silinebilecek Defterler"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Silinebilecek Defterler",
+    "DESCRIPTION":"eÇözümler - Silinebilecek Defterler"
    }
   ]
  },

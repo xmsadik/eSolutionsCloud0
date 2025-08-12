@@ -108,7 +108,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Ledger Doc.Statuses To Be Refledted"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Ledger Doc.Statuses To Be Refledted",
+    "DESCRIPTION":"eSolutions - Ledger Doc.Statuses To Be Refledted"
    },
    {
     "APP_ID":"ZETR_EDF_BLDBK_UI5R",
@@ -117,7 +118,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Deftere Yansıyacak Belge Durumları"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Deftere Yansıyacak Belge Durumları",
+    "DESCRIPTION":"eÇözümler - Deftere Yansıyacak Belge Durumları"
    }
   ]
  },

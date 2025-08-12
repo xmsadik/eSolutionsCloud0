@@ -108,7 +108,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Ledger Last Page Entry"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Ledger Last Page Entry",
+    "DESCRIPTION":"eSolutions - Ledger Last Page Entry"
    },
    {
     "APP_ID":"ZETR_EDF_LPENT_UI5R",
@@ -117,7 +118,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇöüzümler - Defter Ara Dönem Girişi"
+    "ALT_SMART_LINK_TITLE":"eÇöüzümler - Defter Ara Dönem Girişi",
+    "DESCRIPTION":"eÇöüzümler - Defter Ara Dönem Girişi"
    }
   ]
  },

@@ -1,5 +1,5 @@
   METHOD update_edelivery_users.
-    rt_list = zcl_etr_edelivery_ws=>factory( mv_company_code )->download_registered_taxpayers( ).
+    rt_list = zcl_etr_edelivery_ws=>factory( mv_company_code )->download_registered_taxpayers2( ).
     IF rt_list IS NOT INITIAL.
       SELECT taxid, aliass
         FROM zetr_t_dlv_ruser

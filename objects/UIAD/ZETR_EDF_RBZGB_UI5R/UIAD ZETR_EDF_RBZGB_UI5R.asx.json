@@ -108,7 +108,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Reference Mandatory Doc.Types"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Reference Mandatory Doc.Types",
+    "DESCRIPTION":"eSolutions - Reference Mandatory Doc.Types"
    },
    {
     "APP_ID":"ZETR_EDF_RBZGB_UI5R",
@@ -117,7 +118,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Referans Zorulun Belge Türleri"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Referans Zorulun Belge Türleri",
+    "DESCRIPTION":"eÇözümler - Referans Zorulun Belge Türleri"
    }
   ]
  },

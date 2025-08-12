@@ -108,7 +108,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Company Information"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Company Information",
+    "DESCRIPTION":"eSolutions - Company Information"
    },
    {
     "APP_ID":"ZETR_CMP_INFO_UI5R",
@@ -117,7 +118,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Şirket Bilgileri"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Şirket Bilgileri",
+    "DESCRIPTION":"eÇözümler - Şirket Bilgileri"
    }
   ]
  },

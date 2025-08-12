@@ -146,7 +146,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - TRA Transport Codes"
+    "ALT_SMART_LINK_TITLE":"eSolutions - TRA Transport Codes",
+    "DESCRIPTION":"eSolutions - TRA Transport Codes"
    },
    {
     "APP_ID":"ZETR_TRA_TRN_UI5R",
@@ -155,7 +156,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - GİB Gönderim Kodları"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - GİB Gönderim Kodları",
+    "DESCRIPTION":"eÇözümler - GİB Gönderim Kodları"
    }
   ]
  },

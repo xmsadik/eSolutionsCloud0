@@ -146,7 +146,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - TRA Status Codes"
+    "ALT_SMART_LINK_TITLE":"eSolutions - TRA Status Codes",
+    "DESCRIPTION":"eSolutions - TRA Status Codes"
    },
    {
     "APP_ID":"ZETR_TRA_STA_UI5R",
@@ -155,7 +156,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - GİB Durum Kodları"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - GİB Durum Kodları",
+    "DESCRIPTION":"eÇözümler - GİB Durum Kodları"
    }
   ]
  },

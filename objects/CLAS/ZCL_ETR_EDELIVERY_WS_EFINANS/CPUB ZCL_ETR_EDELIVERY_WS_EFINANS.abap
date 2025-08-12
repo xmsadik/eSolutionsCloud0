@@ -45,18 +45,18 @@ CLASS zcl_etr_edelivery_ws_efinans DEFINITION
       mty_user_alias_t TYPE STANDARD TABLE OF mty_user_alias WITH DEFAULT KEY .
     TYPES:
       BEGIN OF mty_users,
-        tip         TYPE string,
+        hesaptipi   TYPE string,
         kayitzamani TYPE string,
+        tip         TYPE string,
         unvan       TYPE string,
         vkntckn     TYPE string,
-        hesaptipi   TYPE string,
         aktifetiket TYPE mty_user_alias_t,
       END OF mty_users .
     TYPES:
       mty_users_t TYPE STANDARD TABLE OF mty_users WITH DEFAULT KEY .
     TYPES:
       BEGIN OF mty_user_list,
-        efaturakayitlikullanici TYPE mty_users_t,
+        eIrsaliyeKayitliKullanici TYPE mty_users_t,
       END OF mty_user_list .
 
     METHODS: download_registered_taxpayers REDEFINITION.
@@ -69,3 +69,4 @@ CLASS zcl_etr_edelivery_ws_efinans DEFINITION
       outgoing_delivery_get_status REDEFINITION,
       outgoing_delivery_download REDEFINITION,
       outgoing_delivery_respdown REDEFINITION.
+    METHODS: download_registered_taxpayers2 REDEFINITION.

@@ -146,7 +146,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Delete Table Entries (Technical)"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Delete Table Entries (Technical)",
+    "DESCRIPTION":"eSolutions - Delete Table Entries (Technical)"
    },
    {
     "APP_ID":"ZETR_DEL_TABENT_UI5R",
@@ -155,7 +156,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Tablo İçeriklerini Sil (Teknik)"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Tablo İçeriklerini Sil (Teknik)",
+    "DESCRIPTION":"eÇözümler - Tablo İçeriklerini Sil (Teknik)"
    }
   ]
  },

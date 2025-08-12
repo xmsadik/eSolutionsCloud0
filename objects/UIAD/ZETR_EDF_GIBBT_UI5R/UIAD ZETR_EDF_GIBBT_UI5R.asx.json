@@ -108,7 +108,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Ledger TRA Document Types"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Ledger TRA Document Types",
+    "DESCRIPTION":"eSolutions - Ledger TRA Document Types"
    },
    {
     "APP_ID":"ZETR_EDF_GIBBT_UI5R",
@@ -117,7 +118,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Defter GİB Belge Türleri"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Defter GİB Belge Türleri",
+    "DESCRIPTION":"eÇözümler - Defter GİB Belge Türleri"
    }
   ]
  },

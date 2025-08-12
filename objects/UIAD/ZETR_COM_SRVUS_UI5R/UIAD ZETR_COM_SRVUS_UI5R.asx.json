@@ -108,7 +108,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Service Users"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Service Users",
+    "DESCRIPTION":"eSolutions - Service Users"
    },
    {
     "APP_ID":"ZETR_COM_SRVUS_UI5R",
@@ -117,7 +118,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Servis Bilgileri"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Servis Bilgileri",
+    "DESCRIPTION":"eÇözümler - Servis Bilgileri"
    }
   ]
  },

@@ -12,7 +12,7 @@
     "SOURCE":"@AccessControl.authorizationCheck: #NOT_REQUIRED\r\n@EndUserText.label: 'Ledger - Last Page Entry Parts'\r\n@Metadata.ignorePropagatedAnnotations: true\r\n@Metadata.allowExtensions: true\r\ndefine view entity zetr_ddl_p_ledger_lastpage_prt\r\n  as projection on zetr_ddl_i_ledger_lastpage_prt\r\n{\r\n  key bukrs,\r\n  key bcode,\r\n  key gjahr,\r\n  key monat,\r\n  key datbi,\r\n  key partn,\r\n      parno,\r\n      datab,\r\n      eyevno,\r\n      elinen,\r\n      /* Associations */\r\n      _lastPageEntry : redirected to parent zetr_ddl_p_ledger_lastpage\r\n}\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[\n\"ZETR_DDL_I_LEDGER_LASTPAGE_PRT\"\n],\n\"ASSOCIATED\":\n[\n\"ZETR_DDL_I_LEDGER_LASTPAGE\",\n\"ZETR_DDL_P_LEDGER_LASTPAGE\"\n],\n\"BASE\":\n[\n\"ZETR_DDL_I_LEDGER_LASTPAGE_PRT\"\n],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
     "PARENTNAME":"",
     "ACTFLAG":"",
-    "CHGFLAG":"YDAE",
+    "CHGFLAG":"J,WT42Z",
     "SOURCE_TYPE":"P",
     "SOURCE_ORIGIN":"0",
     "ABAP_LANGUAGE_VERSION":"5"

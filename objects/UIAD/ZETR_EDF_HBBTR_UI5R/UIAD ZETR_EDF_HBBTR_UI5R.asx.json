@@ -108,7 +108,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Account Based Document Types"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Account Based Document Types",
+    "DESCRIPTION":"eSolutions - Account Based Document Types"
    },
    {
     "APP_ID":"ZETR_EDF_HBBTR_UI5R",
@@ -117,7 +118,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Hesap Bazlı Belge Türleri"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Hesap Bazlı Belge Türleri",
+    "DESCRIPTION":"eÇözümler - Hesap Bazlı Belge Türleri"
    }
   ]
  },

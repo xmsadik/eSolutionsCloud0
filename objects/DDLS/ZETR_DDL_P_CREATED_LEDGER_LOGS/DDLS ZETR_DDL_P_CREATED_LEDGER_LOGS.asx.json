@@ -12,7 +12,7 @@
     "SOURCE":"@AccessControl.authorizationCheck: #NOT_REQUIRED\r\n@EndUserText.label: 'Created Ledgers - Logs'\r\n@Metadata.ignorePropagatedAnnotations: true\r\n@Metadata.allowExtensions: true\r\ndefine view entity zetr_ddl_p_created_ledger_logs\r\n  as projection on zetr_ddl_i_created_ledger_logs\r\n{\r\n  key bukrs,\r\n  key bcode,\r\n  key gjahr,\r\n  key monat,\r\n  key lgsno,\r\n      partn,\r\n      lgmes,\r\n      mstyp,\r\n      datum,\r\n      uzeit,\r\n      /* Associations */\r\n      _createdLedger : redirected to parent zetr_ddl_p_created_ledger\r\n}\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[\n\"ZETR_DDL_I_CREATED_LEDGER_LOGS\"\n],\n\"ASSOCIATED\":\n[\n\"ZETR_DDL_I_CREATED_LEDGER\",\n\"ZETR_DDL_P_CREATED_LEDGER\"\n],\n\"BASE\":\n[\n\"ZETR_DDL_I_CREATED_LEDGER_LOGS\"\n],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
     "PARENTNAME":"",
     "ACTFLAG":"",
-    "CHGFLAG":"",
+    "CHGFLAG":"J,WT42Z",
     "SOURCE_TYPE":"P",
     "SOURCE_ORIGIN":"0",
     "ABAP_LANGUAGE_VERSION":"5"

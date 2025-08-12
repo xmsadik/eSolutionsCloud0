@@ -12,7 +12,7 @@
     "SOURCE":"@AccessControl.authorizationCheck: #NOT_REQUIRED\r\n@EndUserText.label: 'Created Ledgers'\r\n//@Metadata.ignorePropagatedAnnotations: true\r\ndefine root view entity zetr_ddl_i_created_ledger\r\n  as select from zetr_t_defcl as Ledger\r\n  composition [1..1] of zetr_ddl_i_created_ledger_tot  as _ledgerTotals\r\n  composition [1..*] of zetr_ddl_i_created_ledger_part as _ledgerParts\r\n  composition [1..*] of zetr_ddl_i_created_ledger_logs as _ledgerLogs\r\n{\r\n  key Ledger.bukrs as bukrs,\r\n  key Ledger.gjahr as gjahr,\r\n  key Ledger.monat as monat,\r\n      Ledger.elprc as elprc,\r\n      Ledger.stldr as stldr,\r\n      Ledger.etldr as etldr,\r\n      Ledger.stldd as stldd,\r\n      Ledger.stsds as stsds,\r\n      Ledger.etsds as etsds,\r\n      Ledger.sgbsn as sgbsn,\r\n      Ledger.egbsn as egbsn,\r\n      Ledger.dcdrs as dcdrs,\r\n      Ledger.heror as heror,\r\n      Ledger.manup as manup,\r\n      Ledger.ernam as ernam,\r\n      Ledger.erdat as erdat,\r\n      Ledger.erzet as erzet,\r\n\r\n      _ledgerTotals,\r\n      _ledgerParts,\r\n      _ledgerLogs\r\n}\r\nwhere\r\n  ardnm = ''\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[\n\"ZETR_T_DEFCL\"\n],\n\"ASSOCIATED\":\n[\n\"ZETR_DDL_I_CREATED_LEDGER_LOGS\",\n\"ZETR_DDL_I_CREATED_LEDGER_PART\",\n\"ZETR_DDL_I_CREATED_LEDGER_TOT\"\n],\n\"BASE\":\n[],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
     "PARENTNAME":"",
     "ACTFLAG":"",
-    "CHGFLAG":"",
+    "CHGFLAG":"J,WT42Z",
     "SOURCE_TYPE":"W",
     "SOURCE_ORIGIN":"0",
     "ABAP_LANGUAGE_VERSION":"5"

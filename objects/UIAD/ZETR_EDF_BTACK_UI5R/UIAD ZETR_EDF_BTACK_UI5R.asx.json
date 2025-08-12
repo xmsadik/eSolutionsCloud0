@@ -108,7 +108,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Ledger Document Type Descriptions"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Ledger Document Type Descriptions",
+    "DESCRIPTION":"eSolutions - Ledger Document Type Descriptions"
    },
    {
     "APP_ID":"ZETR_EDF_BTACK_UI5R",
@@ -117,7 +118,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Belge Türü Açıklamaları"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Belge Türü Açıklamaları",
+    "DESCRIPTION":"eÇözümler - Belge Türü Açıklamaları"
    }
   ]
  },

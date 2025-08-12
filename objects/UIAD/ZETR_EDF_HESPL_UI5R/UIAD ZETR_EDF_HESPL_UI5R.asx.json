@@ -108,7 +108,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Ledger Chart of Accounts"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Ledger Chart of Accounts",
+    "DESCRIPTION":"eSolutions - Ledger Chart of Accounts"
    },
    {
     "APP_ID":"ZETR_EDF_HESPL_UI5R",
@@ -117,7 +118,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Hesap Planları"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Hesap Planları",
+    "DESCRIPTION":"eÇözümler - Hesap Planları"
    }
   ]
  },

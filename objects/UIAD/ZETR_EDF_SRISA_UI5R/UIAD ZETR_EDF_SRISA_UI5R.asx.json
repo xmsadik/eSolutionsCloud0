@@ -108,7 +108,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Ledger Business Areas"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Ledger Business Areas",
+    "DESCRIPTION":"eSolutions - Ledger Business Areas"
    },
    {
     "APP_ID":"ZETR_EDF_SRISA_UI5R",
@@ -117,7 +118,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Defter İş Alanları"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Defter İş Alanları",
+    "DESCRIPTION":"eÇözümler - Defter İş Alanları"
    }
   ]
  },

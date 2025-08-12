@@ -108,7 +108,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Ledger Docs Will Not Be Reflected"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Ledger Docs Will Not Be Reflected",
+    "DESCRIPTION":"eSolutions - Ledger Docs Will Not Be Reflected"
    },
    {
     "APP_ID":"ZETR_EDF_DYBEL_UI5R",
@@ -117,7 +118,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Deftere Yansımayacak Belgeler"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Deftere Yansımayacak Belgeler",
+    "DESCRIPTION":"eÇözümler - Deftere Yansımayacak Belgeler"
    }
   ]
  },

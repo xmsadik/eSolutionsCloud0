@@ -146,7 +146,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Invoice GL Accounts"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Invoice GL Accounts",
+    "DESCRIPTION":"eSolutions - Invoice GL Accounts"
    },
    {
     "APP_ID":"ZETR_INV_ACC_UI5R",
@@ -155,7 +156,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Ana Hesaplar"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Ana Hesaplar",
+    "DESCRIPTION":"eÇözümler - Ana Hesaplar"
    }
   ]
  },

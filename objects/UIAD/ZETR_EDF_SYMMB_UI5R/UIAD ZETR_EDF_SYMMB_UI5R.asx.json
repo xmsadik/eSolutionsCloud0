@@ -108,7 +108,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Ledger SMMM & YMM Info"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Ledger SMMM & YMM Info",
+    "DESCRIPTION":"eSolutions - Ledger SMMM & YMM Info"
    },
    {
     "APP_ID":"ZETR_EDF_SYMMB_UI5R",
@@ -117,7 +118,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Defter SMMM & YMM Info"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Defter SMMM & YMM Info",
+    "DESCRIPTION":"eÇözümler - Defter SMMM & YMM Info"
    }
   ]
  },

@@ -146,7 +146,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Outgoing Invoices"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Outgoing Invoices",
+    "DESCRIPTION":"eSolutions - Outgoing Invoices"
    },
    {
     "APP_ID":"ZETR_OUTG_INV_UI5R",
@@ -155,7 +156,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Giden Faturalar"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Giden Faturalar",
+    "DESCRIPTION":"eÇözümler - Giden Faturalar"
    }
   ]
  },

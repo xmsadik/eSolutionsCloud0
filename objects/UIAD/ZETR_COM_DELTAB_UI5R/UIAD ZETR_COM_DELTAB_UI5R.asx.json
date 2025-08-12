@@ -108,7 +108,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Delete Table Entries (Technical)"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Delete Table Entries (Technical)",
+    "DESCRIPTION":"eSolutions - Delete Table Entries (Technical)"
    },
    {
     "APP_ID":"ZETR_COM_DELTAB_UI5R",
@@ -117,7 +118,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Tablo Kayıt Sil (Teknik)"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Tablo Kayıt Sil (Teknik)",
+    "DESCRIPTION":"eÇözümler - Tablo Kayıt Sil (Teknik)"
    }
   ]
  },

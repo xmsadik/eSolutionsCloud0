@@ -108,7 +108,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Created Ledgers"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Created Ledgers",
+    "DESCRIPTION":"eSolutions - Created Ledgers"
    },
    {
     "APP_ID":"ZETR_EDF_CRLED1_UI5R",
@@ -117,7 +118,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Oluşturulan Defterler"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Oluşturulan Defterler",
+    "DESCRIPTION":"eÇözümler - Oluşturulan Defterler"
    }
   ]
  },

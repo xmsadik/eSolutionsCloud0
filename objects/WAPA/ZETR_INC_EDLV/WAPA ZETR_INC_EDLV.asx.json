@@ -720,7 +720,10 @@
     "IS_START_PAGE":"",
     "LAYOUTLANGU":"E",
     "NO_SCRIPT":"",
-    "DELTA_HANDLING":""
+    "DELTA_HANDLING":"",
+    "HASHED_FILENAME":"",
+    "TRANSLATION_ID":"",
+    "NO_TRANSLATION":""
    },
    {
     "APPLNAME":"ZETR_INC_EDLV",
@@ -750,7 +753,10 @@
     "IS_START_PAGE":"",
     "LAYOUTLANGU":"E",
     "NO_SCRIPT":"",
-    "DELTA_HANDLING":""
+    "DELTA_HANDLING":"",
+    "HASHED_FILENAME":"",
+    "TRANSLATION_ID":"",
+    "NO_TRANSLATION":""
    },
    {
     "APPLNAME":"ZETR_INC_EDLV",
@@ -780,7 +786,10 @@
     "IS_START_PAGE":"",
     "LAYOUTLANGU":"E",
     "NO_SCRIPT":"",
-    "DELTA_HANDLING":""
+    "DELTA_HANDLING":"",
+    "HASHED_FILENAME":"",
+    "TRANSLATION_ID":"",
+    "NO_TRANSLATION":""
    },
    {
     "APPLNAME":"ZETR_INC_EDLV",
@@ -810,7 +819,10 @@
     "IS_START_PAGE":"",
     "LAYOUTLANGU":"E",
     "NO_SCRIPT":"",
-    "DELTA_HANDLING":""
+    "DELTA_HANDLING":"",
+    "HASHED_FILENAME":"",
+    "TRANSLATION_ID":"",
+    "NO_TRANSLATION":""
    },
    {
     "APPLNAME":"ZETR_INC_EDLV",
@@ -840,7 +852,10 @@
     "IS_START_PAGE":"",
     "LAYOUTLANGU":"E",
     "NO_SCRIPT":"",
-    "DELTA_HANDLING":""
+    "DELTA_HANDLING":"",
+    "HASHED_FILENAME":"",
+    "TRANSLATION_ID":"",
+    "NO_TRANSLATION":""
    },
    {
     "APPLNAME":"ZETR_INC_EDLV",
@@ -870,7 +885,10 @@
     "IS_START_PAGE":"",
     "LAYOUTLANGU":"E",
     "NO_SCRIPT":"",
-    "DELTA_HANDLING":""
+    "DELTA_HANDLING":"",
+    "HASHED_FILENAME":"",
+    "TRANSLATION_ID":"",
+    "NO_TRANSLATION":""
    },
    {
     "APPLNAME":"ZETR_INC_EDLV",
@@ -900,7 +918,10 @@
     "IS_START_PAGE":"",
     "LAYOUTLANGU":"E",
     "NO_SCRIPT":"",
-    "DELTA_HANDLING":""
+    "DELTA_HANDLING":"",
+    "HASHED_FILENAME":"",
+    "TRANSLATION_ID":"",
+    "NO_TRANSLATION":""
    },
    {
     "APPLNAME":"ZETR_INC_EDLV",
@@ -930,7 +951,10 @@
     "IS_START_PAGE":"X",
     "LAYOUTLANGU":"E",
     "NO_SCRIPT":"",
-    "DELTA_HANDLING":""
+    "DELTA_HANDLING":"",
+    "HASHED_FILENAME":"",
+    "TRANSLATION_ID":"",
+    "NO_TRANSLATION":""
    },
    {
     "APPLNAME":"ZETR_INC_EDLV",
@@ -960,7 +984,10 @@
     "IS_START_PAGE":"",
     "LAYOUTLANGU":"E",
     "NO_SCRIPT":"",
-    "DELTA_HANDLING":""
+    "DELTA_HANDLING":"",
+    "HASHED_FILENAME":"",
+    "TRANSLATION_ID":"",
+    "NO_TRANSLATION":""
    },
    {
     "APPLNAME":"ZETR_INC_EDLV",
@@ -990,7 +1017,10 @@
     "IS_START_PAGE":"",
     "LAYOUTLANGU":"E",
     "NO_SCRIPT":"",
-    "DELTA_HANDLING":""
+    "DELTA_HANDLING":"",
+    "HASHED_FILENAME":"",
+    "TRANSLATION_ID":"",
+    "NO_TRANSLATION":""
    },
    {
     "APPLNAME":"ZETR_INC_EDLV",
@@ -1020,7 +1050,10 @@
     "IS_START_PAGE":"",
     "LAYOUTLANGU":"E",
     "NO_SCRIPT":"",
-    "DELTA_HANDLING":""
+    "DELTA_HANDLING":"",
+    "HASHED_FILENAME":"",
+    "TRANSLATION_ID":"",
+    "NO_TRANSLATION":""
    },
    {
     "APPLNAME":"ZETR_INC_EDLV",
@@ -1050,7 +1083,10 @@
     "IS_START_PAGE":"",
     "LAYOUTLANGU":"E",
     "NO_SCRIPT":"",
-    "DELTA_HANDLING":""
+    "DELTA_HANDLING":"",
+    "HASHED_FILENAME":"",
+    "TRANSLATION_ID":"",
+    "NO_TRANSLATION":""
    },
    {
     "APPLNAME":"ZETR_INC_EDLV",
@@ -1080,7 +1116,10 @@
     "IS_START_PAGE":"",
     "LAYOUTLANGU":"E",
     "NO_SCRIPT":"",
-    "DELTA_HANDLING":""
+    "DELTA_HANDLING":"",
+    "HASHED_FILENAME":"",
+    "TRANSLATION_ID":"",
+    "NO_TRANSLATION":""
    },
    {
     "APPLNAME":"ZETR_INC_EDLV",
@@ -1110,7 +1149,10 @@
     "IS_START_PAGE":"",
     "LAYOUTLANGU":"E",
     "NO_SCRIPT":"",
-    "DELTA_HANDLING":""
+    "DELTA_HANDLING":"",
+    "HASHED_FILENAME":"",
+    "TRANSLATION_ID":"",
+    "NO_TRANSLATION":""
    },
    {
     "APPLNAME":"ZETR_INC_EDLV",
@@ -1140,7 +1182,10 @@
     "IS_START_PAGE":"",
     "LAYOUTLANGU":"E",
     "NO_SCRIPT":"",
-    "DELTA_HANDLING":""
+    "DELTA_HANDLING":"",
+    "HASHED_FILENAME":"",
+    "TRANSLATION_ID":"",
+    "NO_TRANSLATION":""
    },
    {
     "APPLNAME":"ZETR_INC_EDLV",
@@ -1170,7 +1215,10 @@
     "IS_START_PAGE":"",
     "LAYOUTLANGU":"E",
     "NO_SCRIPT":"",
-    "DELTA_HANDLING":""
+    "DELTA_HANDLING":"",
+    "HASHED_FILENAME":"",
+    "TRANSLATION_ID":"",
+    "NO_TRANSLATION":""
    },
    {
     "APPLNAME":"ZETR_INC_EDLV",
@@ -1200,7 +1248,10 @@
     "IS_START_PAGE":"",
     "LAYOUTLANGU":"E",
     "NO_SCRIPT":"",
-    "DELTA_HANDLING":""
+    "DELTA_HANDLING":"",
+    "HASHED_FILENAME":"",
+    "TRANSLATION_ID":"",
+    "NO_TRANSLATION":""
    }
   ]
  },

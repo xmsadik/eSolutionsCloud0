@@ -146,7 +146,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Registered eDelivery Users"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Registered eDelivery Users",
+    "DESCRIPTION":"eSolutions - Registered eDelivery Users"
    },
    {
     "APP_ID":"ZETR_DLV_USERS_UI5R",
@@ -155,7 +156,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Kayıtlı eİrsaliye Mükellefleri"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Kayıtlı eİrsaliye Mükellefleri",
+    "DESCRIPTION":"eÇözümler - Kayıtlı eİrsaliye Mükellefleri"
    }
   ]
  },

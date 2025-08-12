@@ -108,7 +108,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Ledger Payment Terms"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Ledger Payment Terms",
+    "DESCRIPTION":"eSolutions - Ledger Payment Terms"
    },
    {
     "APP_ID":"ZETR_EDF_ODMTT_UI5R",
@@ -117,7 +118,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Defter Ödeme Türleri"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Defter Ödeme Türleri",
+    "DESCRIPTION":"eÇözümler - Defter Ödeme Türleri"
    }
   ]
  },

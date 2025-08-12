@@ -146,7 +146,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Registered eInvoice Users"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Registered eInvoice Users",
+    "DESCRIPTION":"eSolutions - Registered eInvoice Users"
    },
    {
     "APP_ID":"ZETR_INV_USERS_UI5R",
@@ -155,7 +156,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Kayıtlı eFatura Mükellefleri"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Kayıtlı eFatura Mükellefleri",
+    "DESCRIPTION":"eÇözümler - Kayıtlı eFatura Mükellefleri"
    }
   ]
  },

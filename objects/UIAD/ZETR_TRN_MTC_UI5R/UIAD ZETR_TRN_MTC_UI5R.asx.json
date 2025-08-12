@@ -146,7 +146,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Transport Code Matching"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Transport Code Matching",
+    "DESCRIPTION":"eSolutions - Transport Code Matching"
    },
    {
     "APP_ID":"ZETR_TRN_MTC_UI5R",
@@ -155,7 +156,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Gönderim Kodu Eşleme"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Gönderim Kodu Eşleme",
+    "DESCRIPTION":"eÇözümler - Gönderim Kodu Eşleme"
    }
   ]
  },

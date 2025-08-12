@@ -146,7 +146,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Invoice Conditions"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Invoice Conditions",
+    "DESCRIPTION":"eSolutions - Invoice Conditions"
    },
    {
     "APP_ID":"ZETR_INV_COND_UI5R",
@@ -155,7 +156,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇöüzmler - Faturalama Koşulları"
+    "ALT_SMART_LINK_TITLE":"eÇöüzmler - Faturalama Koşulları",
+    "DESCRIPTION":"eÇöüzmler - Faturalama Koşulları"
    }
   ]
  },

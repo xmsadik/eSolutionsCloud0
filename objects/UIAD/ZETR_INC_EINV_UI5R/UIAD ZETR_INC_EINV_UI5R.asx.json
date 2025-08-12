@@ -146,7 +146,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Incoming Invoices"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Incoming Invoices",
+    "DESCRIPTION":"eSolutions - Incoming Invoices"
    },
    {
     "APP_ID":"ZETR_INC_EINV_UI5R",
@@ -155,7 +156,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Gelen Faturalar"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Gelen Faturalar",
+    "DESCRIPTION":"eÇözümler - Gelen Faturalar"
    }
   ]
  },

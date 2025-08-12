@@ -108,7 +108,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Ledger Documents With Incorrect Type"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Ledger Documents With Incorrect Type",
+    "DESCRIPTION":"eSolutions - Ledger Documents With Incorrect Type"
    },
    {
     "APP_ID":"ZETR_EDF_BTHBL_UI5R",
@@ -117,7 +118,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Belge Türü Hatalı Belgeler"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Belge Türü Hatalı Belgeler",
+    "DESCRIPTION":"eÇözümler - Belge Türü Hatalı Belgeler"
    }
   ]
  },

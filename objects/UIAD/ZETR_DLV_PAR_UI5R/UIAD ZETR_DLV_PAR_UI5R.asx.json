@@ -146,7 +146,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - eDelivery Parameters"
+    "ALT_SMART_LINK_TITLE":"eSolutions - eDelivery Parameters",
+    "DESCRIPTION":"eSolutions - eDelivery Parameters"
    },
    {
     "APP_ID":"ZETR_DLV_PAR_UI5R",
@@ -155,7 +156,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - eİrsaliye Parametreleri"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - eİrsaliye Parametreleri",
+    "DESCRIPTION":"eÇözümler - eİrsaliye Parametreleri"
    }
   ]
  },

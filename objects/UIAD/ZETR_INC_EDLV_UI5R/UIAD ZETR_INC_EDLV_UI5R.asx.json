@@ -146,7 +146,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Incoming eDeliveries"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Incoming eDeliveries",
+    "DESCRIPTION":"eSolutions - Incoming eDeliveries"
    },
    {
     "APP_ID":"ZETR_INC_EDLV_UI5R",
@@ -155,7 +156,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Gelen İrsaliyeler"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Gelen İrsaliyeler",
+    "DESCRIPTION":"eÇözümler - Gelen İrsaliyeler"
    }
   ]
  },

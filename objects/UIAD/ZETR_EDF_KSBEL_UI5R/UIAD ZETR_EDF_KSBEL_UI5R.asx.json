@@ -108,7 +108,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Journal Cash Documents"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Journal Cash Documents",
+    "DESCRIPTION":"eSolutions - Journal Cash Documents"
    },
    {
     "APP_ID":"ZETR_EDF_KSBEL_UI5R",
@@ -117,7 +118,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Kasa Belgeleri"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Kasa Belgeleri",
+    "DESCRIPTION":"eÇözümler - Kasa Belgeleri"
    }
   ]
  },

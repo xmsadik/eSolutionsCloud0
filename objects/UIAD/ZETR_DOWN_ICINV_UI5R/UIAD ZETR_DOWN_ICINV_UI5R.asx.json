@@ -146,7 +146,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Download Incoming Invoices"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Download Incoming Invoices",
+    "DESCRIPTION":"eSolutions - Download Incoming Invoices"
    },
    {
     "APP_ID":"ZETR_DOWN_ICINV_UI5R",
@@ -155,7 +156,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Gelen Faturaları İndir"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Gelen Faturaları İndir",
+    "DESCRIPTION":"eÇözümler - Gelen Faturaları İndir"
    }
   ]
  },

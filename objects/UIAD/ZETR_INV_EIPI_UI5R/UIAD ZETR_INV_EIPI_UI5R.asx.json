@@ -108,7 +108,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Public IBAN Mapping"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Public IBAN Mapping",
+    "DESCRIPTION":"eSolutions - Public IBAN Mapping"
    },
    {
     "APP_ID":"ZETR_INV_EIPI_UI5R",
@@ -117,7 +118,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - KAMU IBAN Eşleme"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - KAMU IBAN Eşleme",
+    "DESCRIPTION":"eÇözümler - KAMU IBAN Eşleme"
    }
   ]
  },

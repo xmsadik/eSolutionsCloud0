@@ -146,7 +146,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - eArchive Parameters"
+    "ALT_SMART_LINK_TITLE":"eSolutions - eArchive Parameters",
+    "DESCRIPTION":"eSolutions - eArchive Parameters"
    },
    {
     "APP_ID":"ZETR_ARC_PAR_UI5R",
@@ -155,7 +156,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇöüzümler - eArşiv Parametreleri"
+    "ALT_SMART_LINK_TITLE":"eÇöüzümler - eArşiv Parametreleri",
+    "DESCRIPTION":"eÇöüzümler - eArşiv Parametreleri"
    }
   ]
  },

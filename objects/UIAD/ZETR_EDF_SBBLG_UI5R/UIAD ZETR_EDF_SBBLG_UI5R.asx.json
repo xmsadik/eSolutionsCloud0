@@ -108,7 +108,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eSolutions - Ledger Branch Informations"
+    "ALT_SMART_LINK_TITLE":"eSolutions - Ledger Branch Informations",
+    "DESCRIPTION":"eSolutions - Ledger Branch Informations"
    },
    {
     "APP_ID":"ZETR_EDF_SBBLG_UI5R",
@@ -117,7 +118,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"eÇözümler - Defter Şube Bilgileri"
+    "ALT_SMART_LINK_TITLE":"eÇözümler - Defter Şube Bilgileri",
+    "DESCRIPTION":"eÇözümler - Defter Şube Bilgileri"
    }
   ]
  },
