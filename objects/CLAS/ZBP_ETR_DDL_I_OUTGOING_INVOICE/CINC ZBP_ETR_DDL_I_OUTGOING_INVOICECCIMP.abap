@@ -269,6 +269,8 @@ CLASS lhc_zetr_ddl_i_outgoing_invoic IMPLEMENTATION.
       ALL FIELDS WITH
       CORRESPONDING #( keys )
       RESULT DATA(InvoiceList).
+    SORT InvoiceList BY DocumentType CompanyCode DocumentNumber FiscalYear.
+    DELETE ADJACENT DUPLICATES FROM InvoiceList COMPARING DocumentType CompanyCode DocumentNumber FiscalYear.
     SORT InvoiceList BY CompanyCode ProfileID DocumentDate DocumentNumber.
 
     IF line_exists( InvoiceList[ ProfileID = 'IHRACAT' ] ).
@@ -286,6 +288,18 @@ CLASS lhc_zetr_ddl_i_outgoing_invoic IMPLEMENTATION.
         ENDSELECT.
       ENDIF.
     ENDIF.
+
+    SELECT
+      FROM ZETR_ddl_i_outgoing_invoices
+      FIELDS DocumentType, CompanyCode, DocumentNumber, FiscalYear
+      FOR ALL ENTRIES IN @InvoiceList
+      WHERE DocumentType = @InvoiceList-DocumentType
+        AND CompanyCode = @InvoiceList-CompanyCode
+        AND DocumentNumber = @InvoiceList-DocumentNumber
+        AND FiscalYear = @InvoiceList-FiscalYear
+        AND StatusCode NOT IN ('','2')
+      INTO TABLE @DATA(lt_sent_invoices).
+    SORT lt_sent_invoices BY DocumentType CompanyCode DocumentNumber FiscalYear.
 
     SELECT bukrs, 'EFATURA' AS prfid
       FROM zetr_t_eipar
@@ -309,6 +323,15 @@ CLASS lhc_zetr_ddl_i_outgoing_invoic IMPLEMENTATION.
         APPEND VALUE #( DocumentUUID = <InvoiceLine>-DocumentUUID
                         %msg = new_message( id       = 'ZETR_COMMON'
                                             number   = '039'
+                                            severity = if_abap_behv_message=>severity-error ) ) TO reported-OutgoingInvoices.
+        DELETE InvoiceList.
+      ELSEIF line_exists( lt_sent_invoices[ DocumentType = <InvoiceLine>-DocumentType
+                                            CompanyCode = <InvoiceLine>-CompanyCode
+                                            DocumentNumber = <InvoiceLine>-DocumentNumber
+                                            FiscalYear = <InvoiceLine>-FiscalYear ] ).
+        APPEND VALUE #( DocumentUUID = <InvoiceLine>-DocumentUUID
+                        %msg = new_message( id       = 'ZETR_COMMON'
+                                            number   = '020'
                                             severity = if_abap_behv_message=>severity-error ) ) TO reported-OutgoingInvoices.
         DELETE InvoiceList.
       ELSE.

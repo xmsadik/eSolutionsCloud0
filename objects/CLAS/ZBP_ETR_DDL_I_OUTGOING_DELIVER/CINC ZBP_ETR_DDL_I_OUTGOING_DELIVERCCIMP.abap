@@ -388,7 +388,21 @@ CLASS lhc_zetr_ddl_i_outgoing_delive IMPLEMENTATION.
       ALL FIELDS WITH
       CORRESPONDING #( keys )
       RESULT DATA(deliveryList).
+    SORT deliveryList BY DocumentType CompanyCode DocumentNumber FiscalYear.
+    DELETE ADJACENT DUPLICATES FROM deliveryList COMPARING DocumentType CompanyCode DocumentNumber FiscalYear.
     SORT deliveryList BY CompanyCode ProfileID DocumentDate DocumentNumber.
+
+    SELECT
+      FROM zetr_ddl_i_outgoing_deliveries
+      FIELDS DocumentType, CompanyCode, DocumentNumber, FiscalYear
+      FOR ALL ENTRIES IN @deliveryList
+      WHERE DocumentType = @deliveryList-DocumentType
+        AND CompanyCode = @deliveryList-CompanyCode
+        AND DocumentNumber = @deliveryList-DocumentNumber
+        AND FiscalYear = @deliveryList-FiscalYear
+        AND StatusCode NOT IN ('','2')
+      INTO TABLE @DATA(lt_sent_deliveries).
+    SORT lt_sent_deliveries BY DocumentType CompanyCode DocumentNumber FiscalYear.
 
     LOOP AT deliveryList ASSIGNING FIELD-SYMBOL(<deliveryLine>).
       IF <deliveryLine>-Reversed = abap_true.
@@ -396,6 +410,15 @@ CLASS lhc_zetr_ddl_i_outgoing_delive IMPLEMENTATION.
                         %msg = new_message( id       = 'ZETR_COMMON'
                                             number   = '036'
                                             severity = if_abap_behv_message=>severity-error ) ) TO reported-Outgoingdeliveries.
+        DELETE deliveryList.
+      ELSEIF line_exists( lt_sent_deliveries[ DocumentType = <deliveryLine>-DocumentType
+                                            CompanyCode = <deliveryLine>-CompanyCode
+                                            DocumentNumber = <deliveryLine>-DocumentNumber
+                                            FiscalYear = <deliveryLine>-FiscalYear ] ).
+        APPEND VALUE #( DocumentUUID = <deliveryLine>-DocumentUUID
+                        %msg = new_message( id       = 'ZETR_COMMON'
+                                            number   = '020'
+                                            severity = if_abap_behv_message=>severity-error ) ) TO reported-outgoingdeliveries.
         DELETE deliveryList.
       ELSE.
         TRY.

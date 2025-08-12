@@ -91,6 +91,7 @@
         ENDIF.
 *        CHECK lt_invoices IS NOT INITIAL.
         SORT lt_invoices BY bukrs awtyp belnr gjahr.
+        DELETE ADJACENT DUPLICATES FROM lt_invoices COMPARING bukrs awtyp belnr gjahr.
 
         LOOP AT lt_invoices INTO DATA(ls_invoice).
           TRY.

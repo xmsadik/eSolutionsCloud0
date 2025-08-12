@@ -95,6 +95,7 @@
         ENDIF.
 *        CHECK lt_deliveries IS NOT INITIAL.
         SORT lt_deliveries BY bukrs awtyp belnr gjahr.
+        DELETE ADJACENT DUPLICATES FROM lt_deliveries COMPARING bukrs awtyp belnr gjahr.
 
         LOOP AT lt_deliveries INTO DATA(ls_delivery).
           TRY.
