@@ -88,6 +88,6 @@
         CHECK ls_rule-partner = is_rule_input-partner.
       ENDIF.
       APPEND CORRESPONDING #( ls_rule ) TO rt_rule_output.
-      EXIT.
+*      EXIT.
     ENDSELECT.
   ENDMETHOD.
