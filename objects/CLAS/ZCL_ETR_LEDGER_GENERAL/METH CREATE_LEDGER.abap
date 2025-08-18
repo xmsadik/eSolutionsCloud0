@@ -16,12 +16,12 @@
            END OF ty_blart.
 
     TYPES: BEGIN OF ty_colitem,
-             companycode TYPE bukrs,
+             companycode        TYPE bukrs,
              AccountingDocument TYPE belnr_d,
-             FiscalYear TYPE gjahr,
-             ledgergllineitem TYPE c LENGTH 6,
-             docln TYPE c LENGTH 6,
-             cldoc TYPE zetr_e_descr255,
+             FiscalYear         TYPE gjahr,
+             ledgergllineitem   TYPE c LENGTH 6,
+             docln              TYPE c LENGTH 6,
+             cldoc              TYPE zetr_e_descr255,
            END OF ty_colitem.
 
     TYPES: BEGIN OF ty_bkpf,
@@ -334,42 +334,42 @@
         EXIT.
       ENDIF.
 
-">>>>>Tutar göstergesinin tersinde çalışıyor.
+      ">>>>>Tutar göstergesinin tersinde çalışıyor.
 
 
-IF gs_params-dfvhs IS NOT INITIAL.
-      data(lv_subrc) = 4.
-      LOOP AT lt_bseg TRANSPORTING NO FIELDS
-                      WHERE companycode = ls_bkpf-companycode
-                         AND accountingdocument = ls_bkpf-accountingdocument
-                         AND fiscalyear = ls_bkpf-fiscalyear
-                         AND debitcreditcode = 'S'
-                         AND AmountInCompanyCodeCurrency < 0.
-        lv_subrc = 0.
-        EXIT.
-      ENDLOOP.
+      IF gs_params-dfvhs IS NOT INITIAL.
+        DATA(lv_subrc) = 4.
+        LOOP AT lt_bseg TRANSPORTING NO FIELDS
+                        WHERE companycode = ls_bkpf-companycode
+                           AND accountingdocument = ls_bkpf-accountingdocument
+                           AND fiscalyear = ls_bkpf-fiscalyear
+                           AND debitcreditcode = 'S'
+                           AND AmountInCompanyCodeCurrency < 0.
+          lv_subrc = 0.
+          EXIT.
+        ENDLOOP.
 
-      LOOP AT lt_bseg TRANSPORTING NO FIELDS
-                      WHERE companycode = ls_bkpf-companycode
-                        AND accountingdocument = ls_bkpf-accountingdocument
-                        AND fiscalyear = ls_bkpf-fiscalyear
-                        AND debitcreditcode = 'H'
-                        AND AmountInCompanyCodeCurrency > 0.
-        lv_subrc = 0.
-        EXIT.
-      ENDLOOP.
+        LOOP AT lt_bseg TRANSPORTING NO FIELDS
+                        WHERE companycode = ls_bkpf-companycode
+                          AND accountingdocument = ls_bkpf-accountingdocument
+                          AND fiscalyear = ls_bkpf-fiscalyear
+                          AND debitcreditcode = 'H'
+                          AND AmountInCompanyCodeCurrency > 0.
+          lv_subrc = 0.
+          EXIT.
+        ENDLOOP.
 
-      IF lv_subrc EQ 0.
-        SELECT SINGLE COUNT(*)
-          FROM i_journalentryitem
-         WHERE CompanyCode EQ @ls_bkpf-companycode
-           AND AccountingDocument EQ @ls_bkpf-accountingdocument
-           AND fiscalyear EQ @ls_bkpf-fiscalyear.
-        IF sy-subrc EQ 0.
+        IF lv_subrc EQ 0.
+          SELECT SINGLE COUNT(*)
+            FROM i_journalentryitem
+           WHERE CompanyCode EQ @ls_bkpf-companycode
+             AND AccountingDocument EQ @ls_bkpf-accountingdocument
+             AND fiscalyear EQ @ls_bkpf-fiscalyear.
+          IF sy-subrc EQ 0.
 
-          DELETE lt_bseg WHERE companycode EQ ls_bkpf-companycode
-                           AND accountingdocument EQ ls_bkpf-accountingdocument
-                           AND fiscalyear EQ ls_bkpf-fiscalyear.
+            DELETE lt_bseg WHERE companycode EQ ls_bkpf-companycode
+                             AND accountingdocument EQ ls_bkpf-accountingdocument
+                             AND fiscalyear EQ ls_bkpf-fiscalyear.
 
 *          SELECT *
 *            FROM i_journalentryitem
@@ -381,11 +381,11 @@ IF gs_params-dfvhs IS NOT INITIAL.
 *          CLEAR ls_colitm.
 *          MOVE-CORRESPONDING ls_bkpf TO ls_colitm.
 *          INSERT ls_colitm INTO TABLE lt_colitm_bseg.
+          ENDIF.
         ENDIF.
       ENDIF.
-    ENDIF.
 
-"2. kısım
+      "2. kısım
 
 
 *    IF is_params-dfvhs IS NOT INITIAL.
@@ -523,7 +523,7 @@ IF gs_params-dfvhs IS NOT INITIAL.
 *      ENDIF.
 *    ENDIF.
 
-"<<<<<Tutar göstergesinin tersinde çalışıyor.
+      "<<<<<Tutar göstergesinin tersinde çalışıyor.
 
       LOOP AT lt_bseg INTO ls_bseg WHERE     CompanyCode        = ls_bkpf-CompanyCode
                                          AND AccountingDocument = ls_bkpf-AccountingDocument
