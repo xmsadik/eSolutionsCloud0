@@ -134,6 +134,15 @@
     "DOMVALUE_L":"EARSIV",
     "DOMVALUE_H":"",
     "APPVAL":""
+   },
+   {
+    "DOMNAME":"ZETR_D_INPRF",
+    "AS4LOCAL":"N",
+    "VALPOS":10,
+    "AS4VERS":0,
+    "DOMVALUE_L":"ENERJI",
+    "DOMVALUE_H":"",
+    "APPVAL":""
    }
   ]
  },
@@ -242,6 +251,17 @@
    },
    {
     "DOMNAME":"ZETR_D_INPRF",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "VALPOS":10,
+    "AS4VERS":0,
+    "DDTEXT":"Energy (Power) Invoice",
+    "DOMVAL_LD":"",
+    "DOMVAL_HD":"",
+    "DOMVALUE_L":"ENERJI"
+   },
+   {
+    "DOMNAME":"ZETR_D_INPRF",
     "DDLANGUAGE":"T",
     "AS4LOCAL":"N",
     "VALPOS":1,
@@ -338,6 +358,17 @@
     "DOMVAL_LD":"",
     "DOMVAL_HD":"",
     "DOMVALUE_L":"EARSIV"
+   },
+   {
+    "DOMNAME":"ZETR_D_INPRF",
+    "DDLANGUAGE":"T",
+    "AS4LOCAL":"N",
+    "VALPOS":10,
+    "AS4VERS":0,
+    "DDTEXT":"Enerji Fatura",
+    "DOMVAL_LD":"",
+    "DOMVAL_HD":"",
+    "DOMVALUE_L":"ENERJI"
    }
   ]
  },

@@ -95,6 +95,10 @@ CLASS zcl_etr_outgoing_delivery DEFINITION
     TYPES mblnr TYPE belnr_d.
     TYPES mjahr TYPE gjahr.
     TYPES blart TYPE blart.
+    TYPES bldat TYPE datum.
+    TYPES budat TYPE datum.
+    TYPES erdat TYPE abp_creation_date.
+    TYPES erzet TYPE abp_creation_time.
     TYPES END OF mty_mkpf.
 
     TYPES BEGIN OF mty_mseg.

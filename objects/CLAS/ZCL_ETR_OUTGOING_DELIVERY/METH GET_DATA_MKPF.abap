@@ -1,5 +1,6 @@
   METHOD get_data_mkpf.
-    SELECT SINGLE MaterialDocument AS mblnr, MaterialDocumentYear AS mjahr, AccountingDocumentType AS blart
+    SELECT SINGLE MaterialDocument AS mblnr, MaterialDocumentYear AS mjahr, AccountingDocumentType AS blart,
+                  DocumentDate AS bldat, postingdate AS budat, creationdate AS erdat, creationtime AS erzet
       FROM I_MaterialDocumentHeader_2
       WHERE MaterialDocument = @ms_document-belnr
         AND MaterialDocumentYear = @ms_document-gjahr

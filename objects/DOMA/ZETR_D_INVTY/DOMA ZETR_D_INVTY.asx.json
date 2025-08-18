@@ -152,6 +152,24 @@
     "DOMVALUE_L":"KONAKLAMA",
     "DOMVALUE_H":"",
     "APPVAL":""
+   },
+   {
+    "DOMNAME":"ZETR_D_INVTY",
+    "AS4LOCAL":"N",
+    "VALPOS":12,
+    "AS4VERS":0,
+    "DOMVALUE_L":"SARJ",
+    "DOMVALUE_H":"",
+    "APPVAL":""
+   },
+   {
+    "DOMNAME":"ZETR_D_INVTY",
+    "AS4LOCAL":"N",
+    "VALPOS":13,
+    "AS4VERS":0,
+    "DOMVALUE_L":"SARJANLIK",
+    "DOMVALUE_H":"",
+    "APPVAL":""
    }
   ]
  },
@@ -282,6 +300,28 @@
    },
    {
     "DOMNAME":"ZETR_D_INVTY",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "VALPOS":12,
+    "AS4VERS":0,
+    "DDTEXT":"Charge",
+    "DOMVAL_LD":"",
+    "DOMVAL_HD":"",
+    "DOMVALUE_L":"SARJ"
+   },
+   {
+    "DOMNAME":"ZETR_D_INVTY",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "VALPOS":13,
+    "AS4VERS":0,
+    "DDTEXT":"Instant Charge",
+    "DOMVAL_LD":"",
+    "DOMVAL_HD":"",
+    "DOMVALUE_L":"SARJANLIK"
+   },
+   {
+    "DOMNAME":"ZETR_D_INVTY",
     "DDLANGUAGE":"T",
     "AS4LOCAL":"N",
     "VALPOS":1,
@@ -400,6 +440,28 @@
     "DOMVAL_LD":"",
     "DOMVAL_HD":"",
     "DOMVALUE_L":"KONAKLAMA"
+   },
+   {
+    "DOMNAME":"ZETR_D_INVTY",
+    "DDLANGUAGE":"T",
+    "AS4LOCAL":"N",
+    "VALPOS":12,
+    "AS4VERS":0,
+    "DDTEXT":"Şarj",
+    "DOMVAL_LD":"",
+    "DOMVAL_HD":"",
+    "DOMVALUE_L":"SARJ"
+   },
+   {
+    "DOMNAME":"ZETR_D_INVTY",
+    "DDLANGUAGE":"T",
+    "AS4LOCAL":"N",
+    "VALPOS":13,
+    "AS4VERS":0,
+    "DDTEXT":"Şarj Anlık",
+    "DOMVAL_LD":"",
+    "DOMVAL_HD":"",
+    "DOMVALUE_L":"SARJANLIK"
    }
   ]
  },
