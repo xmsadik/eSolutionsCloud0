@@ -1,4 +1,5 @@
   METHOD read_and_update_eledger_record.
+
     " Metodun başlangıcında dönüş parametresini varsayılan olarak 'başarısız' (abap_false) ayarlayalım.
     rv_is_updated = abap_false.
 
