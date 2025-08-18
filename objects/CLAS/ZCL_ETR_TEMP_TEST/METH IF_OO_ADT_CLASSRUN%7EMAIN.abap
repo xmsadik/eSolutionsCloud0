@@ -73,42 +73,57 @@
 *
 *
 *
-*    IF 1 = 2.        " Example of using the class
-*
-*      DATA: gr_budat TYPE RANGE OF datum,
-*            gr_belnr TYPE RANGE OF belnr_d.
-*      TYPES: BEGIN OF ty_budat,
-*               sign   TYPE c LENGTH 1,
-*               option TYPE c LENGTH 2,
-*               low    TYPE datum,
-*               high   TYPE datum,
-*             END OF ty_budat.
-*      DATA: lr_budat TYPE ty_budat.
-*      DATA(ledger_general) = NEW zcl_etr_ledger_general( ).
-*      DATA: mv_bukrs TYPE bukrs,
-*            mv_monat TYPE monat,
-*            mv_gjahr TYPE gjahr.
-*      " Prepare date range
-*      lr_budat-option = 'BT'.
-*      lr_budat-sign = 'I'.
-*
-*      " Calculate first and last day of the month
-*      DATA: lv_first_day TYPE datum,
-*            lv_last_day  TYPE datum.
-*      mv_bukrs = '1000'.
-*      mv_monat = '10'.
-*      mv_gjahr = '2024'.
-*      CONCATENATE mv_gjahr mv_monat '01' INTO lv_first_day.
-*
-*      ledger_general->last_day_of_months(
-*        EXPORTING day_in = lv_first_day
-*        RECEIVING last_day_of_month = lv_last_day
-*      ).
-*
-*      lr_budat-low  = lv_first_day.
-*      lr_budat-high = lv_last_day.
-*      APPEND lr_budat TO gr_budat.
-*
+    IF 1 = 2.        " Example of using the class
+
+      DATA: gr_budat TYPE RANGE OF datum,
+            gr_belnr TYPE RANGE OF belnr_d.
+      TYPES: BEGIN OF ty_budat,
+               sign   TYPE c LENGTH 1,
+               option TYPE c LENGTH 2,
+               low    TYPE datum,
+               high   TYPE datum,
+             END OF ty_budat.
+      DATA: lr_budat TYPE ty_budat.
+      DATA(ledger_general) = NEW zcl_etr_ledger_general( ).
+      DATA: mv_bukrs TYPE bukrs,
+            mv_monat TYPE monat,
+            mv_gjahr TYPE gjahr.
+      " Prepare date range
+      lr_budat-option = 'BT'.
+      lr_budat-sign = 'I'.
+
+      " Calculate first and last day of the month
+      DATA: lv_first_day TYPE datum,
+            lv_last_day  TYPE datum.
+      mv_bukrs = '1000'.
+      mv_monat = '10'.
+      mv_gjahr = '2024'.
+      CONCATENATE mv_gjahr mv_monat '01' INTO lv_first_day.
+
+      ledger_general->delete_eledger_logs(
+        EXPORTING
+          iv_bukrs      = mv_bukrs
+          iv_gjahr      = mv_gjahr
+          iv_monat      = mv_monat
+        RECEIVING
+          rv_is_deleted = DATA(lv_is_deleted)
+      ).
+
+      DATA: ls_record TYPE zetr_t_defcl.
+
+      ledger_general->read_and_update_eledger_record(
+        EXPORTING
+          iv_bukrs      = mv_bukrs
+          iv_gjahr      = mv_gjahr
+          iv_monat      = mv_monat
+        CHANGING
+          cs_record     = ls_record
+        RECEIVING
+          rv_is_updated = DATA(lv_is_updated)
+      ).
+
+
+
 *      CHECK 1 = 2.
 *      ledger_general->generate_ledger_data(
 *        EXPORTING
@@ -149,6 +164,6 @@
 *          rs_return = DATA(lt_return2)
 *      ).
 *
-*    ENDIF.
+    ENDIF.
 
   ENDMETHOD.

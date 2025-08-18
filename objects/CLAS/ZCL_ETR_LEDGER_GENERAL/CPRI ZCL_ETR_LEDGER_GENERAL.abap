@@ -58,24 +58,8 @@
           ev_result      TYPE string
           ev_errors      TYPE zetr_s_api_return
           ev_errors_type TYPE zetr_s_api_return
-          es_apiret      TYPE zetr_s_api_return,
+          es_apiret      TYPE zetr_s_api_return.
 
-      delete_eledger_logs
-        IMPORTING
-                  iv_bukrs             TYPE bukrs
-                  iv_gjahr             TYPE gjahr
-                  iv_monat             TYPE monat
-        RETURNING VALUE(rv_is_deleted) TYPE abap_bool,
-
-      read_and_update_eledger_record
-        IMPORTING
-          VALUE(iv_bukrs)      TYPE bukrs
-          VALUE(iv_gjahr)      TYPE gjahr
-          VALUE(iv_monat)      TYPE monat
-        CHANGING
-          cs_record            TYPE zetr_t_defcl
-        RETURNING
-          VALUE(rv_is_updated) TYPE abap_bool.
 
 
 

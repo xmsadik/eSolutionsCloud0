@@ -295,4 +295,26 @@ CLASS zcl_etr_ledger_general DEFINITION
         IMPORTING
           is_params        TYPE ts_params
         RETURNING
-          VALUE(rs_result) TYPE ts_result.
+          VALUE(rs_result) TYPE ts_result,
+
+      delete_eledger_logs
+        IMPORTING
+                  iv_bukrs             TYPE bukrs
+                  iv_gjahr             TYPE gjahr
+                  iv_monat             TYPE monat
+        RETURNING VALUE(rv_is_deleted) TYPE abap_bool,
+
+      read_and_update_eledger_record
+        IMPORTING
+          VALUE(iv_bukrs)      TYPE bukrs
+          VALUE(iv_gjahr)      TYPE gjahr
+          VALUE(iv_monat)      TYPE monat
+        CHANGING
+          cs_record            TYPE zetr_t_defcl
+        RETURNING
+          VALUE(rv_is_updated) TYPE abap_bool.
+
+
+
+
+
