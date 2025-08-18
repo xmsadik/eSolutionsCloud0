@@ -315,6 +315,13 @@ CLASS zcl_etr_ledger_general DEFINITION
           VALUE(rv_is_updated) TYPE abap_bool.
 
 
-
+    METHODS set_gib_confirmation_flags
+      IMPORTING
+        VALUE(iv_bukrs)      TYPE bukrs
+        VALUE(iv_bcode)      TYPE zetr_e_bcode " Tablo tanımındaki tipe göre varsayıldı
+        VALUE(iv_gjahr)      TYPE gjahr
+        VALUE(iv_monat)      TYPE monat
+      RETURNING
+        VALUE(rv_is_updated) TYPE abap_bool.
 
 

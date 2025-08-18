@@ -96,8 +96,8 @@
       DATA: lv_first_day TYPE datum,
             lv_last_day  TYPE datum.
       mv_bukrs = '1000'.
-      mv_monat = '10'.
-      mv_gjahr = '2024'.
+      mv_monat = '02'.
+      mv_gjahr = '2025'.
       CONCATENATE mv_gjahr mv_monat '01' INTO lv_first_day.
 
       ledger_general->delete_eledger_logs(
@@ -122,6 +122,15 @@
           rv_is_updated = DATA(lv_is_updated)
       ).
 
+      ledger_general->set_gib_confirmation_flags(
+        EXPORTING
+          iv_bukrs      = mv_bukrs
+          iv_bcode      = space
+          iv_gjahr      = mv_gjahr
+          iv_monat      = mv_monat
+  RECEIVING
+    rv_is_updated = DATA(lv_is_updated2)
+      ).
 
 
 *      CHECK 1 = 2.
