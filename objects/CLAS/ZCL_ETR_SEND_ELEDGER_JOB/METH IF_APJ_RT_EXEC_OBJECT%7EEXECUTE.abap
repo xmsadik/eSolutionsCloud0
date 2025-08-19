@@ -10,13 +10,15 @@
 
         " Get and validate job parameters
         me->validate_and_get_params( EXPORTING it_parameters = it_parameters ).
+
         lo_log->add_item( cl_bali_message_setter=>create(
         severity = if_bali_constants=>c_severity_status
         id = 'ZETR_EDF_MSG'
         number = '084'
         variable_1 = CONV #( me->mv_bukrs )
         variable_2 = CONV #( me->mv_gjahr )
-        variable_3 = CONV #( me->mv_monat ) ) ).
+        variable_3 = CONV #( me->mv_monat )
+        variable_4 = CONV #( me->mv_resend ) ) ).
 
         " Execute the main ledger generation logic
         me->send_ledger( lo_log ).
@@ -28,8 +30,8 @@
         number = '083'
         variable_1 = CONV #( me->mv_bukrs )
         variable_2 = CONV #( me->mv_gjahr )
-        variable_3 = CONV #( me->mv_monat
-) ) ).
+        variable_3 = CONV #( me->mv_monat )
+        variable_4 = CONV #( me->mv_resend ) ) ).
 
       CATCH cx_apj_rt INTO DATA(lx_apj_error).
         " Handle parameter or job runtime errors
@@ -53,8 +55,8 @@
         number = '115'
         variable_1 = CONV #( me->mv_bukrs )
         variable_2 = CONV #( me->mv_gjahr )
-        variable_3 = CONV #( me->mv_monat
-) ) ).
+        variable_3 = CONV #( me->mv_monat )
+        variable_4 = CONV #( me->mv_resend ) ) ).
         lo_log->add_item( cl_bali_exception_setter=>create( severity = if_bali_constants=>c_severity_error exception = lx_root ) ).
 
     ENDTRY.

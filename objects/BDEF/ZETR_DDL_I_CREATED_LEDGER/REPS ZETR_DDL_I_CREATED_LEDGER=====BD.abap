@@ -18,6 +18,7 @@ authorization master ( instance )
   static action create_ledger parameter ZETR_DDL_I_FINPERIOD_SELECTION;
   action delete_ledger result [1] $self;
   action send_ledger result [1] $self;
+  action resend_ledger result [1] $self;
 }
 
 define behavior for zetr_ddl_i_created_ledger_part alias LedgerParts

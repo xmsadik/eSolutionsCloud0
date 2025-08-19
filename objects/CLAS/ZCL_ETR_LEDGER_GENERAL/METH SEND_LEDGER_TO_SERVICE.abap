@@ -3,7 +3,7 @@
     DATA: gv_subrc TYPE sy-subrc.
 
     gv_bukrs = iv_bukrs .
-    gv_GJAHR = iv_gjahr .
+    gv_gjahr = iv_gjahr .
     gv_monat = iv_monat .
 
     me->calculate_budat_range(
@@ -29,7 +29,7 @@
           iv_gjahr  = gv_gjahr
           iv_monat  = gv_monat
 *          iv_check  =
-*          iv_error  =
+          iv_error  = iv_resend
         IMPORTING
           es_apiret = DATA(ls_apiret)
         RECEIVING

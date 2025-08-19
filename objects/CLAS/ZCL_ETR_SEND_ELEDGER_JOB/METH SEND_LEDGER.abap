@@ -9,10 +9,10 @@
            iv_bukrs  = me->mv_bukrs
            iv_gjahr  = me->mv_gjahr
            iv_monat  = me->mv_monat
+           iv_resend = me->mv_resend
           IMPORTING
             ev_return = DATA(return_message)
         ).
-
 
         CASE return_message-type.
           WHEN 'S'.

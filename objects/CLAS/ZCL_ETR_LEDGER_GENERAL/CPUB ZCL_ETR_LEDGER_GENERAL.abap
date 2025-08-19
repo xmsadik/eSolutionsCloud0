@@ -256,6 +256,7 @@ CLASS zcl_etr_ledger_general DEFINITION
           iv_bukrs         TYPE bukrs
           iv_gjahr         TYPE gjahr
           iv_monat         TYPE monat
+          iv_resend        TYPE abap_bool OPTIONAL
         EXPORTING
           VALUE(ev_return) TYPE bapiretc "bapiret2
           VALUE(s_subrc)   TYPE sy-subrc

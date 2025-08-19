@@ -7,6 +7,8 @@
           me->mv_gjahr = CONV #( ls_parameter-low ).
         WHEN 'P_MONAT'.
           me->mv_monat = CONV #( ls_parameter-low ).
+        WHEN 'P_RESEND'.
+          me->mv_resend = CONV #( ls_parameter-low ).
       ENDCASE.
     ENDLOOP.
 

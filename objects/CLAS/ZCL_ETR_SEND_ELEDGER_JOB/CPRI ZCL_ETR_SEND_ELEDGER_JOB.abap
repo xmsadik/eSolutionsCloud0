@@ -1,8 +1,9 @@
   PRIVATE SECTION.
     DATA:
-      mv_bukrs TYPE bukrs,
-      mv_gjahr TYPE gjahr,
-      mv_monat TYPE monat.
+      mv_bukrs  TYPE bukrs,
+      mv_gjahr  TYPE gjahr,
+      mv_monat  TYPE monat,
+      mv_resend TYPE c LENGTH 1.
 
     METHODS:
       validate_and_get_params IMPORTING it_parameters TYPE if_apj_rt_exec_object=>tt_templ_val " Standard type for runtime parameters
