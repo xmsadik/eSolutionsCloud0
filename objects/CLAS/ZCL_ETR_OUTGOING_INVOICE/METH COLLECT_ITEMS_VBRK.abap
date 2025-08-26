@@ -74,8 +74,8 @@
           APPEND ls_item_allowance TO mt_items_allowance.
         ENDIF.
       ENDLOOP.
-      ls_items-netwr += ls_items-distr.
-      ls_items-netwr -= ls_items-surtr.
+*      ls_items-netwr += ls_items-distr.
+*      ls_items-netwr -= ls_items-surtr.
 
       LOOP AT ms_billing_data-conditions INTO ls_conditions USING KEY by_cndty WHERE cndty = 'V'.
         READ TABLE ms_billing_data-konv
