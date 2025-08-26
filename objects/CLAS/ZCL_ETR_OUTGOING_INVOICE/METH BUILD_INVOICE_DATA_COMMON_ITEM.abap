@@ -33,7 +33,7 @@
       <ls_invoice_line>-lineextensionamount-currencyid = ls_invoice_items-waers.
       CONDENSE ls_invoice_items-netpr.
       IF ls_invoice_items-netpr IS INITIAL OR ls_invoice_items-netpr = '0.00'.
-        <ls_invoice_line>-price-priceamount-content = ( ls_invoice_items-netwr + ls_invoice_items-distr - ls_invoice_items-surrt ) / ls_invoice_items-fkimg.
+        <ls_invoice_line>-price-priceamount-content = ( ls_invoice_items-netwr + ls_invoice_items-distr - ls_invoice_items-surtr ) / ls_invoice_items-fkimg.
         <ls_invoice_line>-price-priceamount-currencyid = ls_invoice_items-waers.
       ELSE.
         <ls_invoice_line>-price-priceamount-content = ls_invoice_items-netpr / ls_invoice_items-peinh.
