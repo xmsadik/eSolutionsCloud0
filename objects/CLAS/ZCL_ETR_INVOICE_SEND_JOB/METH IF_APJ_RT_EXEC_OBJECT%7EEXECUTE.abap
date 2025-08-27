@@ -387,7 +387,6 @@
                   lo_log->add_item( lo_message ).
                   <InvoiceLine>-StatusCode = '2'.
                   <InvoiceLine>-StatusDetail = ErrorMessage.
-                  EXIT.
               ENDTRY.
             ENDIF.
           ENDLOOP.

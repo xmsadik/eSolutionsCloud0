@@ -308,7 +308,6 @@
                   lo_log->add_item( lo_message ).
                   <DeliveryLine>-StatusCode = '2'.
                   <DeliveryLine>-StatusDetail = ErrorMessage.
-                  EXIT.
               ENDTRY.
             ENDIF.
           ENDLOOP.
