@@ -5,18 +5,6 @@
   [
    {
     "ID":"ZETR_LP_INVOICE_PAGE",
-    "VERSION":"",
-    "PARENT_PAGE_ID":"",
-    "CREATED_BY":"SAP_CUSTOMER",
-    "CREATED_ON":"+020241008120738",
-    "MODIFIED_BY":"SAP_CUSTOMER",
-    "MODIFIED_ON":"+020241008120937",
-    "BASE_ID":"",
-    "MERGE_ID":"",
-    "ABAP_LANGUAGE_VERSION":"5"
-   },
-   {
-    "ID":"ZETR_LP_INVOICE_PAGE",
     "VERSION":"A",
     "PARENT_PAGE_ID":"",
     "CREATED_BY":"SAP_CUSTOMER",
@@ -36,23 +24,9 @@
    {
     "LANGU":"E",
     "ID":"ZETR_LP_INVOICE_PAGE",
-    "VERSION":"",
-    "TITLE":"eSolutions - Invoice",
-    "DESCRIPTION":"eSolutions - Invoice"
-   },
-   {
-    "LANGU":"E",
-    "ID":"ZETR_LP_INVOICE_PAGE",
     "VERSION":"A",
     "TITLE":"eSolutions - Invoice",
     "DESCRIPTION":"eSolutions - Invoice"
-   },
-   {
-    "LANGU":"T",
-    "ID":"ZETR_LP_INVOICE_PAGE",
-    "VERSION":"",
-    "TITLE":"eÇözümler - Fatura",
-    "DESCRIPTION":"eÇözümler - Fatura"
    },
    {
     "LANGU":"T",
@@ -70,13 +44,6 @@
    {
     "PAGE_ID":"ZETR_LP_INVOICE_PAGE",
     "ID":"INVOICE",
-    "VERSION":"",
-    "PARENT_SECTION_ID":"",
-    "IDX":1
-   },
-   {
-    "PAGE_ID":"ZETR_LP_INVOICE_PAGE",
-    "ID":"INVOICE",
     "VERSION":"A",
     "PARENT_SECTION_ID":"",
     "IDX":1
@@ -91,25 +58,9 @@
     "PAGE_ID":"ZETR_LP_INVOICE_PAGE",
     "SECTION_ID":"INVOICE",
     "ID":"GET_INCOMING",
-    "VERSION":"",
-    "TYPE":"AD",
-    "IDX":4
-   },
-   {
-    "PAGE_ID":"ZETR_LP_INVOICE_PAGE",
-    "SECTION_ID":"INVOICE",
-    "ID":"GET_INCOMING",
     "VERSION":"A",
     "TYPE":"AD",
     "IDX":4
-   },
-   {
-    "PAGE_ID":"ZETR_LP_INVOICE_PAGE",
-    "SECTION_ID":"INVOICE",
-    "ID":"INCOMING",
-    "VERSION":"",
-    "TYPE":"AD",
-    "IDX":5
    },
    {
     "PAGE_ID":"ZETR_LP_INVOICE_PAGE",
@@ -123,14 +74,6 @@
     "PAGE_ID":"ZETR_LP_INVOICE_PAGE",
     "SECTION_ID":"INVOICE",
     "ID":"OUTGOING",
-    "VERSION":"",
-    "TYPE":"AD",
-    "IDX":3
-   },
-   {
-    "PAGE_ID":"ZETR_LP_INVOICE_PAGE",
-    "SECTION_ID":"INVOICE",
-    "ID":"OUTGOING",
     "VERSION":"A",
     "TYPE":"AD",
     "IDX":3
@@ -139,25 +82,9 @@
     "PAGE_ID":"ZETR_LP_INVOICE_PAGE",
     "SECTION_ID":"INVOICE",
     "ID":"UNSAVED",
-    "VERSION":"",
-    "TYPE":"AD",
-    "IDX":2
-   },
-   {
-    "PAGE_ID":"ZETR_LP_INVOICE_PAGE",
-    "SECTION_ID":"INVOICE",
-    "ID":"UNSAVED",
     "VERSION":"A",
     "TYPE":"AD",
     "IDX":2
-   },
-   {
-    "PAGE_ID":"ZETR_LP_INVOICE_PAGE",
-    "SECTION_ID":"INVOICE",
-    "ID":"USERS",
-    "VERSION":"",
-    "TYPE":"AD",
-    "IDX":1
    },
    {
     "PAGE_ID":"ZETR_LP_INVOICE_PAGE",
@@ -176,25 +103,9 @@
    {
     "PAGE_ID":"ZETR_LP_INVOICE_PAGE",
     "ID":"GET_INCOMING",
-    "VERSION":"",
-    "UIAD_ID":"ZETR_DOWN_ICINV_UI5R",
-    "TILE_ID":"UI5R_B6159E423A0D97B359B7089415489A86CA297B8C_AL",
-    "TILE_DISPLAY_FORMAT":"TI"
-   },
-   {
-    "PAGE_ID":"ZETR_LP_INVOICE_PAGE",
-    "ID":"GET_INCOMING",
     "VERSION":"A",
     "UIAD_ID":"ZETR_DOWN_ICINV_UI5R",
     "TILE_ID":"UI5R_B6159E423A0D97B359B7089415489A86CA297B8C_AL",
-    "TILE_DISPLAY_FORMAT":"TI"
-   },
-   {
-    "PAGE_ID":"ZETR_LP_INVOICE_PAGE",
-    "ID":"INCOMING",
-    "VERSION":"",
-    "UIAD_ID":"ZETR_INC_EINV_UI5R",
-    "TILE_ID":"UI5R_ECFA4FC4A959AD1E4D7F47E7C85916206918E395_AL",
     "TILE_DISPLAY_FORMAT":"TI"
    },
    {
@@ -208,14 +119,6 @@
    {
     "PAGE_ID":"ZETR_LP_INVOICE_PAGE",
     "ID":"OUTGOING",
-    "VERSION":"",
-    "UIAD_ID":"ZETR_OUTG_INV_UI5R",
-    "TILE_ID":"UI5R_21D1D215B40A20326D3161D88BD245AD44759C36_AL",
-    "TILE_DISPLAY_FORMAT":"TI"
-   },
-   {
-    "PAGE_ID":"ZETR_LP_INVOICE_PAGE",
-    "ID":"OUTGOING",
     "VERSION":"A",
     "UIAD_ID":"ZETR_OUTG_INV_UI5R",
     "TILE_ID":"UI5R_21D1D215B40A20326D3161D88BD245AD44759C36_AL",
@@ -224,25 +127,9 @@
    {
     "PAGE_ID":"ZETR_LP_INVOICE_PAGE",
     "ID":"UNSAVED",
-    "VERSION":"",
-    "UIAD_ID":"ZETR_INV_UNSAVE_UI5R",
-    "TILE_ID":"UI5R_C58C2C8783753298F3CFAB52469D09BF9B5B5A64_AL",
-    "TILE_DISPLAY_FORMAT":"TI"
-   },
-   {
-    "PAGE_ID":"ZETR_LP_INVOICE_PAGE",
-    "ID":"UNSAVED",
     "VERSION":"A",
     "UIAD_ID":"ZETR_INV_UNSAVE_UI5R",
     "TILE_ID":"UI5R_C58C2C8783753298F3CFAB52469D09BF9B5B5A64_AL",
-    "TILE_DISPLAY_FORMAT":"TI"
-   },
-   {
-    "PAGE_ID":"ZETR_LP_INVOICE_PAGE",
-    "ID":"USERS",
-    "VERSION":"",
-    "UIAD_ID":"ZETR_INV_USERS_UI5R",
-    "TILE_ID":"UI5R_BA45D203A702C162ED16C80171698354AEFE313D_AL",
     "TILE_DISPLAY_FORMAT":"TI"
    },
    {
@@ -263,22 +150,8 @@
     "LANGU":"E",
     "PAGE_ID":"ZETR_LP_INVOICE_PAGE",
     "ID":"INVOICE",
-    "VERSION":"",
-    "TITLE":"eSolutions - Invoice"
-   },
-   {
-    "LANGU":"E",
-    "PAGE_ID":"ZETR_LP_INVOICE_PAGE",
-    "ID":"INVOICE",
     "VERSION":"A",
     "TITLE":"eSolutions - Invoice"
-   },
-   {
-    "LANGU":"T",
-    "PAGE_ID":"ZETR_LP_INVOICE_PAGE",
-    "ID":"INVOICE",
-    "VERSION":"",
-    "TITLE":"eÇözümler - Fatura"
    },
    {
     "LANGU":"T",
