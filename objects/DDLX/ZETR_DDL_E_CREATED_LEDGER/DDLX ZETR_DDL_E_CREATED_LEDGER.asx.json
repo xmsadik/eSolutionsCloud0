@@ -775,6 +775,13 @@
     "ELEMENT":"GJAHR",
     "NAME":"UI.LINEITEM$4$.LABEL",
     "TEXT":"Defter Gönder"
+   },
+   {
+    "DDLXNAME":"ZETR_DDL_E_CREATED_LEDGER",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"GJAHR",
+    "NAME":"UI.LINEITEM$5$.LABEL",
+    "TEXT":"Tekrar Gönder"
    }
   ]
  },

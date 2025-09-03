@@ -148,4 +148,25 @@
         WHERE ktopl = @ms_accdoc_data-t001-ktopl
         INTO TABLE @ms_accdoc_data-accounts.
     ENDIF.
+
+    IF ( ms_document-invty = 'IADE' OR ms_document-invty = 'TEVIADE' ) AND
+       ( ms_accdoc_data-bkpf-bktxt IS NOT INITIAL OR ms_accdoc_data-bseg_partner-sgtxt IS NOT INITIAL ) AND
+       ms_document-retdn IS INITIAL AND ms_document-retdd IS INITIAL.
+      IF ms_accdoc_data-bseg_partner-sgtxt IS NOT INITIAL.
+        SPLIT ms_accdoc_data-bseg_partner-sgtxt AT '-' INTO ms_document-retdn ms_document-retdd.
+      ENDIF.
+
+      IF ( ms_document-retdn IS INITIAL OR ms_document-retdd IS INITIAL ) AND ms_accdoc_data-bkpf-bktxt IS NOT INITIAL.
+        CLEAR: ms_document-retdn, ms_document-retdd.
+        SPLIT ms_accdoc_data-bkpf-bktxt AT '-' INTO ms_document-retdn ms_document-retdd.
+      ENDIF.
+
+      IF ms_document-retdn IS INITIAL OR ms_document-retdd IS INITIAL.
+        CLEAR: ms_document-retdn, ms_document-retdd.
+      ELSE.
+        IF strlen( ms_document-retdd ) = 10.
+          REPLACE ALL OCCURRENCES OF '.' IN ms_document-retdd WITH ``.
+        ENDIF.
+      ENDIF.
+    ENDIF.
   ENDMETHOD.

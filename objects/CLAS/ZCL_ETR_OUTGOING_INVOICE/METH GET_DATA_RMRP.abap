@@ -7,7 +7,8 @@
                   ExchangeRate AS exch_rate,
                   InvoiceGrossAmount AS gross_amnt,
                   InvoicingParty AS diff_inv,
-                  DocumentHeaderText AS head_txt
+                  DocumentHeaderText AS head_txt,
+                  SupplierPostingLineItemText AS sgtxt
       FROM I_SupplierInvoiceAPI01
       WHERE SupplierInvoice = @ms_document-belnr
         AND FiscalYear = @ms_document-gjahr
@@ -104,6 +105,27 @@
 *              AND zeile = rs_data-ekbe-buzei
 *              AND NOT EXISTS ( SELECT * FROM mseg WHERE smbln = mseg~mblnr AND sjahr = mseg~mjahr AND smblp = mseg~zeile ).
 *        ENDIF.
+      ENDIF.
+    ENDIF.
+
+    IF ( ms_document-invty = 'IADE' OR ms_document-invty = 'TEVIADE' ) AND
+       ( ms_invrec_data-headerdata-item_text IS NOT INITIAL OR ms_invrec_data-headerdata-head_txt IS NOT INITIAL ) AND
+       ms_document-retdn IS INITIAL AND ms_document-retdd IS INITIAL.
+      IF ms_invrec_data-headerdata-item_text IS NOT INITIAL.
+        SPLIT ms_invrec_data-headerdata-item_text AT '-' INTO ms_document-retdn ms_document-retdd.
+      ENDIF.
+
+      IF ( ms_document-retdn IS INITIAL OR ms_document-retdd IS INITIAL ) AND ms_invrec_data-headerdata-head_txt IS NOT INITIAL.
+        CLEAR: ms_document-retdn, ms_document-retdd.
+        SPLIT ms_invrec_data-headerdata-head_txt AT '-' INTO ms_document-retdn ms_document-retdd.
+      ENDIF.
+
+      IF ms_document-retdn IS INITIAL OR ms_document-retdd IS INITIAL.
+        CLEAR: ms_document-retdn, ms_document-retdd.
+      ELSE.
+        IF strlen( ms_document-retdd ) = 10.
+          REPLACE ALL OCCURRENCES OF '.' IN ms_document-retdd WITH ``.
+        ENDIF.
       ENDIF.
     ENDIF.
   ENDMETHOD.

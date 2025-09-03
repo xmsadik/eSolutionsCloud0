@@ -36,6 +36,9 @@
         <ls_invoice_line>-price-priceamount-content = ( ls_invoice_items-netwr + ls_invoice_items-distr - ls_invoice_items-surtr ) / ls_invoice_items-fkimg.
         <ls_invoice_line>-price-priceamount-currencyid = ls_invoice_items-waers.
       ELSE.
+        IF ls_invoice_items-peinh IS NOT INITIAL.
+          ls_invoice_items-peinh = 1.
+        ENDIF.
         <ls_invoice_line>-price-priceamount-content = ls_invoice_items-netpr / ls_invoice_items-peinh.
         <ls_invoice_line>-price-priceamount-currencyid = ls_invoice_items-netwa.
       ENDIF.
