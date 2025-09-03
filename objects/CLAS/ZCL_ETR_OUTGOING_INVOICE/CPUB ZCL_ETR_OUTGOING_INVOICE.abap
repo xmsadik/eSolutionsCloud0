@@ -235,6 +235,7 @@ CLASS zcl_etr_outgoing_invoice DEFINITION
     TYPES kzwi4 TYPE wrbtr_cs.
     TYPES kzwi5 TYPE wrbtr_cs.
     TYPES kzwi6 TYPE wrbtr_cs.
+    TYPES kondm TYPE c LENGTH 2.
     TYPES END OF mty_vbrp.
 
     TYPES BEGIN OF mty_konv.
