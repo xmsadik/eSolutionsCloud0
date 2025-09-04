@@ -233,7 +233,7 @@
     es_document = ls_document.
 
     LOOP AT lt_mseg INTO DATA(ls_mseg).
-      CHECK ls_mseg-menge IS NOT INITIAL.
+      CHECK ls_mseg-menge IS NOT INITIAL AND ls_mseg-xauto IS INITIAL.
       APPEND INITIAL LINE TO et_items ASSIGNING FIELD-SYMBOL(<ls_items>).
       <ls_items>-docui = es_document-docui.
       <ls_items>-linno = sy-tabix.
