@@ -97,7 +97,7 @@
            vbrp~SalesDocumentItem AS aupos,
            vbak~salesdocumentdate AS audat,
            vbap~MaterialByCustomer AS aumat,
-           ' ' AS aubst,
+           vbap~PurchaseOrderByCustomer AS aubst,
            vbap~ShippingType AS auvsa,
            CASE WHEN vbpa~customer <> ' ' THEN vbpa~customer ELSE @ms_billing_data-vbrk-kunre END AS kunwe,
            CASE WHEN vbpa~addressid <> ' ' THEN vbpa~addressid ELSE @ms_billing_data-vbrk-adrre END AS adrwe,

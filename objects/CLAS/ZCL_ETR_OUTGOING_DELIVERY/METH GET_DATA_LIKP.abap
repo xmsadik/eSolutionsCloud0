@@ -20,7 +20,8 @@
            lips~Material AS matnr,
            lips~ReferenceSDDocument AS vgbel,
            lips~ReferenceSDDocumentItem AS vgpos,
-           vbap~MaterialByCustomer AS kdmat
+           vbap~MaterialByCustomer AS kdmat,
+           vbap~PurchaseOrderByCustomer AS bstkd
        FROM i_deliverydocumentitem AS lips
        LEFT OUTER JOIN i_salesdocumentitem AS vbap
         ON  vbap~salesdocument = lips~ReferenceSDDocument
@@ -36,7 +37,7 @@
       WHERE SDDocument = @ms_document-belnr
       INTO TABLE @ms_outdel_data-vbpa.
 
-    SELECT SalesDocument AS vbeln, SalesDocumentDate AS audat
+    SELECT SalesDocument AS vbeln, SalesDocumentDate AS audat, PurchaseOrderByCustomer AS bstkd
       FROM i_salesdocument
       FOR ALL ENTRIES IN @ms_outdel_data-lips
       WHERE salesdocument = @ms_outdel_data-lips-vgbel

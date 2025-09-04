@@ -166,6 +166,7 @@ CLASS zcl_etr_outgoing_delivery DEFINITION
     TYPES vgbel TYPE belnr_d.
     TYPES vgpos TYPE n LENGTH 6.
     TYPES kdmat TYPE c LENGTH 35.
+    TYPES bstkd TYPE c LENGTH 35.
     TYPES END OF mty_lips.
 
     TYPES BEGIN OF mty_vbpa.
@@ -179,6 +180,7 @@ CLASS zcl_etr_outgoing_delivery DEFINITION
     TYPES BEGIN OF mty_vbak.
     TYPES vbeln TYPE belnr_d.
     TYPES audat TYPE datum.
+    TYPES bstkd TYPE c LENGTH 35.
     TYPES END OF mty_vbak.
 
     TYPES BEGIN OF mty_outdel_data.
