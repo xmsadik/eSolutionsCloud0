@@ -108,7 +108,10 @@
            vbrp~Subtotal4Amount AS kzwi4,
            vbrp~Subtotal5Amount AS kzwi5,
            vbrp~Subtotal6Amount AS kzwi6,
-           vbrp~MaterialPricingGroup AS kondm
+           vbrp~MaterialPricingGroup AS kondm,
+           vbrp~ItemGrossWeight AS brgew,
+           vbrp~ItemNetWeight AS ntgew,
+           vbrp~ItemWeightUnit AS gewei
       FROM i_billingdocumentitem AS vbrp
       LEFT OUTER JOIN I_ProductPlantBasic AS marc
         ON  marc~product = vbrp~product

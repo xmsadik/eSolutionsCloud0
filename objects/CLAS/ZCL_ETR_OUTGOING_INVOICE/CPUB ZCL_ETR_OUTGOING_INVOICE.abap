@@ -236,6 +236,9 @@ CLASS zcl_etr_outgoing_invoice DEFINITION
     TYPES kzwi5 TYPE wrbtr_cs.
     TYPES kzwi6 TYPE wrbtr_cs.
     TYPES kondm TYPE c LENGTH 2.
+    TYPES brgew TYPE brgew.
+    TYPES ntgew TYPE ntgew.
+    TYPES gewei TYPE meins.
     TYPES END OF mty_vbrp.
 
     TYPES BEGIN OF mty_konv.
@@ -308,6 +311,9 @@ CLASS zcl_etr_outgoing_invoice DEFINITION
     TYPES othtt TYPE zetr_e_taxty.
     TYPES othtr TYPE c LENGTH 20.
     TYPES waers TYPE waers.
+    TYPES brgew TYPE brgew.
+    TYPES ntgew TYPE ntgew.
+    TYPES gewei TYPE meins.
     TYPES cfld1 TYPE zetr_e_descr.
     TYPES cfld2 TYPE zetr_e_descr.
     TYPES cfld3 TYPE zetr_e_descr.

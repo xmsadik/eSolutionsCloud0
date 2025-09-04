@@ -44,19 +44,23 @@
                   INTO <ls_delivery>-despatch-actualdespatchtime-content
                   SEPARATED BY ':'.
     ELSE.
-      DATA(lv_datlo) = cl_abap_context_info=>get_system_date( ).
-      DATA(lv_timlo) = cl_abap_context_info=>get_system_time( ).
-      CONCATENATE lv_datlo+0(4)
-                  lv_datlo+4(2)
-                  lv_datlo+6(2)
-        INTO <ls_delivery>-despatch-actualdespatchdate-content
-        SEPARATED BY '-'.
-
-      CONCATENATE lv_timlo+0(2)
-                  lv_timlo+2(2)
-                  lv_timlo+4(2)
-                  INTO <ls_delivery>-despatch-actualdespatchtime-content
-                  SEPARATED BY ':'.
+*      DATA(lv_datlo) = cl_abap_context_info=>get_system_date( ).
+*      DATA(lv_timlo) = cl_abap_context_info=>get_system_time( ).
+*      CONCATENATE lv_datlo+0(4)
+*                  lv_datlo+4(2)
+*                  lv_datlo+6(2)
+*        INTO <ls_delivery>-despatch-actualdespatchdate-content
+*        SEPARATED BY '-'.
+*
+*      CONCATENATE lv_timlo+0(2)
+*                  lv_timlo+2(2)
+*                  lv_timlo+4(2)
+*                  INTO <ls_delivery>-despatch-actualdespatchtime-content
+*                  SEPARATED BY ':'.
+      GET TIME STAMP FIELD FINAL(lv_timestamp).
+      DATA(lv_timestamp_text) = CONV zetr_e_descr100( |{ lv_timestamp  TIMESTAMP = ISO TIMEZONE = 'UTC+3' }| ).
+      <ls_delivery>-despatch-actualdespatchdate-content = lv_timestamp_text(10).
+      <ls_delivery>-despatch-actualdespatchtime-content = lv_timestamp_text+11(8).
     ENDIF.
 
     IF ls_header-taxid IS NOT INITIAL.
