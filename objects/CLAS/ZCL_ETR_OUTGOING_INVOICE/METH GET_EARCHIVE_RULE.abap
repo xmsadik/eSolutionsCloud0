@@ -2,7 +2,10 @@
     DATA: lt_awtyp   TYPE RANGE OF zetr_e_awtyp,
           lt_vkorg   TYPE RANGE OF zetr_e_vkorg,
           lt_vtweg   TYPE RANGE OF zetr_e_vtweg,
+          lt_spart   TYPE RANGE OF spart,
           lt_werks   TYPE RANGE OF werks_d,
+          lt_pstyv   TYPE RANGE OF pstyv,
+          lt_ktgrd   TYPE RANGE OF zetr_e_ktgrd,
           lt_invty   TYPE RANGE OF zetr_e_invty,
           lt_sddty   TYPE RANGE OF zetr_e_fkart,
           lt_mmdty   TYPE RANGE OF zetr_e_mmidt,
@@ -15,7 +18,10 @@
     lt_awtyp   = VALUE #( sign = 'I' option = 'EQ' ( low = ''  ) ( low = is_rule_input-awtyp   ) ).
     lt_vkorg   = VALUE #( sign = 'I' option = 'EQ' ( low = ''  ) ( low = is_rule_input-vkorg   ) ).
     lt_vtweg   = VALUE #( sign = 'I' option = 'EQ' ( low = ''  ) ( low = is_rule_input-vtweg   ) ).
+    lt_spart   = VALUE #( sign = 'I' option = 'EQ' ( low = ''  ) ( low = is_rule_input-spart   ) ).
     lt_werks   = VALUE #( sign = 'I' option = 'EQ' ( low = ''  ) ( low = is_rule_input-werks   ) ).
+    lt_pstyv   = VALUE #( sign = 'I' option = 'EQ' ( low = ''  ) ( low = is_rule_input-pstyv   ) ).
+    lt_ktgrd   = VALUE #( sign = 'I' option = 'EQ' ( low = ''  ) ( low = is_rule_input-ktgrd   ) ).
     lt_invty   = VALUE #( sign = 'I' option = 'EQ' ( low = ''  ) ( low = is_rule_input-ityin   ) ).
     lt_sddty   = VALUE #( sign = 'I' option = 'EQ' ( low = ''  ) ( low = is_rule_input-sddty   ) ).
     lt_mmdty   = VALUE #( sign = 'I' option = 'EQ' ( low = ''  ) ( low = is_rule_input-mmdty   ) ).
@@ -24,8 +30,8 @@
     lt_prfid   = VALUE #( sign = 'I' option = 'EQ' ( low = ''  ) ( low = is_rule_input-pidin   ) ).
     lt_vbeln   = VALUE #( sign = 'I' option = 'EQ' ( low = ''  ) ( low = is_rule_input-vbeln   ) ).
 
-    SORT: lt_awtyp, lt_vkorg, lt_vtweg, lt_werks, lt_invty, lt_sddty, lt_mmdty, lt_fidty, lt_partner, lt_prfid, lt_vbeln.
-    DELETE ADJACENT DUPLICATES FROM: lt_awtyp, lt_vkorg, lt_vtweg, lt_werks, lt_invty, lt_sddty, lt_mmdty, lt_fidty, lt_partner, lt_prfid, lt_vbeln.
+    SORT: lt_awtyp, lt_vkorg, lt_vtweg, lt_spart, lt_werks, lt_invty, lt_sddty, lt_mmdty, lt_fidty, lt_partner, lt_prfid, lt_vbeln, lt_pstyv, lt_ktgrd.
+    DELETE ADJACENT DUPLICATES FROM: lt_awtyp, lt_vkorg, lt_vtweg, lt_spart, lt_werks, lt_invty, lt_sddty, lt_mmdty, lt_fidty, lt_partner, lt_prfid, lt_vbeln, lt_pstyv, lt_ktgrd.
 
     SELECT *
       FROM zetr_t_earules
@@ -34,7 +40,10 @@
         AND awtyp IN @lt_awtyp
         AND vkorg IN @lt_vkorg
         AND vtweg IN @lt_vtweg
+        AND spart IN @lt_spart
         AND werks IN @lt_werks
+        AND pstyv IN @lt_pstyv
+        AND ktgrd IN @lt_ktgrd
         AND ityin IN @lt_invty
         AND sddty IN @lt_sddty
         AND mmdty IN @lt_mmdty
@@ -45,7 +54,10 @@
       ORDER BY  awtyp   DESCENDING,
                 vkorg   DESCENDING,
                 vtweg   DESCENDING,
+                spart   DESCENDING,
                 werks   DESCENDING,
+                pstyv   DESCENDING,
+                ktgrd   DESCENDING,
                 ityin   DESCENDING,
                 sddty   DESCENDING,
                 mmdty   DESCENDING,
@@ -63,8 +75,17 @@
       IF ls_rule-vtweg IS NOT INITIAL.
         CHECK ls_rule-vtweg = is_rule_input-vtweg.
       ENDIF.
+      IF ls_rule-spart IS NOT INITIAL.
+        CHECK ls_rule-spart = is_rule_input-spart.
+      ENDIF.
       IF ls_rule-werks IS NOT INITIAL.
         CHECK ls_rule-werks = is_rule_input-werks.
+      ENDIF.
+      IF ls_rule-pstyv IS NOT INITIAL.
+        CHECK ls_rule-pstyv = is_rule_input-pstyv.
+      ENDIF.
+      IF ls_rule-ktgrd IS NOT INITIAL.
+        CHECK ls_rule-ktgrd = is_rule_input-ktgrd.
       ENDIF.
       IF ls_rule-pidin IS NOT INITIAL.
         CHECK ls_rule-pidin = is_rule_input-pidin.
